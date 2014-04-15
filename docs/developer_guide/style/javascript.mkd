@@ -1,0 +1,275 @@
+# Javascript Code Conventions
+
+This document contains conventions for programming Javascript that should be followed in an effort
+to increase readability, performance and re-usability.  As builds are run against the
+[http://www.jslint.com/ JSLint Code Quality Tool], an effort should be made to conform to the
+guidelines set forth by JSLint.
+
+## General
+ * Always use `===` for comparison
+ * Place semicolons wherever they are required.  While missing semicolons may not throw an error,
+   they can cause unintended behaviors.
+ * Try to avoid or limit the usage of global objects. (Variables declared outside of a function)
+
+## The Katello Global Namespace
+
+The project uses a top level global namespace (KT) to reduce the global object footprint and make
+debugging easier.  The KT object is declared in the top level katello.js such that it is guaranteed
+to be loaded and exist on every page before any other custom scripts.  All modules should be
+attached to the KT global object with appropriate namespacing.  For example, we can attach a module
+named *common* to the top level global KT object and a sub-module to *common* for holding client
+functionality:
+
+```javascript
+
+KT.common = (function($){
+    var hello_world = "hello World";
+  
+    return {
+        hello_world   :  hello_world
+    };
+}(jQuery));
+
+KT.common.client = (function($){
+    var create = function(){};
+
+    return {
+        create   :  create
+    };
+}(jQuery));
+```
+
+## Javascript Libraries
+
+A number of Javascript libraries are used within Katello and may vary in how they are accessed from
+the standard implementation.
+
+  - [jQuery](http://api.jquery.com/): standard access using the '$.' or '$()'
+    methods
+  - [underscorejs](http://documentcloud.github.com/underscore/): accessed under
+    'KT.utils' namespace
+
+## Syntax Conventions
+
+The following are coding conventions related to Javascript syntax in an effort to enhance
+readability and adhere to the semantics of the language itself.
+
+### Variable Declaration
+
+All variable declarations should be placed at the top of a function and a single *var* statement
+with comma separated variables should follow.
+
+Correct
+```javascript
+
+var add = function(list){
+    var sum = 0,
+        length = list.length,
+        i;
+       
+    for( i=0; i < length; i += 1){
+        sum += list[i];
+    }
+
+    return sum;
+};
+```
+
+Incorrect
+```javascript
+
+var add = function(list){
+    var sum = 0;
+       
+    var length = list.length;
+    for(var i=0; i < length; i += 1){
+        sum += list[i];
+    }
+
+    return sum;
+};
+```
+
+### Object Iteration
+
+When iterating over an object the `hasOwnProperty()` function should be invoked on each value to
+ensure errant properties attached to the object via the prototype chain do not cause unintended
+behaviors.
+
+Correct
+```javascript
+
+var find_product = function(items){
+    var product,
+        item;
+
+    for( item in items ){
+        if( items.hasOwnProperty(item) ){
+            if( items[item] 'product' ){
+                product = items[item];
+            }
+        }
+    }
+
+    return product;
+};
+```
+
+Incorrect
+```javascript
+
+var find_product = function(items){
+    var product,
+        item;
+
+    for( item in items ){
+        if( items[item] 'product' ){
+                product = items[item];
+        }
+    }
+
+    return product;
+};
+```
+
+### Array Iteration
+
+The `for-in` loop should never be used to iterate over an array.  Instead, opt to use the
+traditional:
+
+```javascript
+
+var i,
+    length = list.length;
+
+    for( i=0; i < length; i+= 1){
+        list[i];
+    }
+```
+
+## Performance Conventions
+
+These conventions while not directly related to the syntax of the language serve to improve the
+overall performance of any Javascript especially when manipulating the Document Object Model (DOM),
+which is the largest performance bottleneck.
+
+### DOM Manipulation
+
+Accessing the DOM is the largest performance bottleneck of any browser based Javascript
+implementation.  Thus, it is vital to reduce the amount of times the DOM is accessed by caching DOM
+elements into local variables for further manipulation.
+
+Correct
+```javascript
+
+var setWidth = function(){
+    var panel = $('.panel-custom'),
+        sliding_container = panel.find('.sliding_container'),
+        width = panel.width();
+
+    width -= 2;
+    panel.find('.breadcrumb_search').width(width);
+    sliding_container.width(width);
+    sliding_container.find('.slider').width(width);
+    sliding_container.find('.sliding_list').width(width * 2);
+    sliding_container.find('.slide_up_container').width(width);
+};
+```
+
+Incorrect
+```javascript
+
+var setWidth = function(){
+    var width = $('.panel-custom').width();
+
+    width -= 2;
+
+    $('.panel-custom').find('.breadcrumb_search').width(width);
+    $('.panel-custom .sliding_container').width(width);
+    $('.panel-custom .sliding_container .slider').width(width);
+    $('.panel-custom .sliding_list').width(width*2);
+    $('.panel-custom .slide_up_container').width(width);
+};
+```
+
+#### DOM Access Tips
+
+ * Scoping an area of the DOM using an ID and then using `find()` on that element to select children
+   is faster than chaining selectors within the initial jQuery selector call. E.g.
+
+```javascript
+
+$('#container').find('.list').find('li');
+
+is faster than
+
+$('#container .list li');
+```
+
+ * Adding elements to the DOM should be done in bulk where possible.  Specifically, appending to the
+   DOM in a loop should be avoided.  The first example builds a string of HTML that is appended to
+   the proper element.  The second example uses jQuery to create a Document Fragment that acts like
+   an element and allows you to build it up as such and then add it to the true DOM at the end.  The
+   third example shows how not to perform this sort of DOM addition.
+
+```javascript
+
+//Correct
+var addProductList = function(products_list){
+    var content = $('#content'),
+        html = '<ul>',
+        length = products_list.length,
+        i;
+
+    for( i=0; i < length; i += 1){
+        html += '<li class="product" id="' + products_list[i] + '">';
+    }
+
+    html += '</ul>'
+
+    content.append(html);
+};
+
+//Correct using jQuery
+var addProductList = function(products_list){
+    var content = $('#content'),
+        html = jQuery('<ul>'),
+        length = products_list.length,
+        i;
+
+    for( i=0; i < length; i += 1){
+        html.append('<li class="product" id="' + products_list[i] + '">');
+    }
+
+    content.append(html);
+};
+
+//Incorrect
+var addProductList = function(products_list){
+    var content = $('#content'),
+        length = products_list.length,
+        i;
+
+    list_element = content.append('<ul></ul>');
+
+    for( i=0; i < length; i += 1){
+        list_element.append('<li class="product" id="' + products_list[i] + '">');
+    }
+};
+```
+
+### Object Attribute Access
+
+Javascript supports both the dot-operator `myobject.foo` and index-style `myobject["foo"]` object
+attribute access.  While the former can be slightly cleaner or more traditional when calling object
+methods, the latter allows for dynamic properties and can avoid reserved keyword clashes.  For
+example, *package* is a reserved word such that `myobject.package` can cause errors while
+`myobject['package']` will not.  Methods may be called using index-style notation as well -
+`myobject['add_package']()`.
+
+### Checking Your Code
+
+We use [JSHint](http://www.jshint.com/) (a community driven fork of JSLint) to maintain the quality
+of the Javascript code in Katello. For more information about how to run JSHint, see the Linting
+section of our Bastion guide at
+https://github.com/Katello/katello/blob/master/engines/bastion/README.md#linting.
