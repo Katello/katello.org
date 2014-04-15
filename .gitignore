@@ -1,0 +1,4 @@
+.idea*
+.project
+*.swp
+.DS_Store
