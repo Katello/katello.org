@@ -1,3 +1,9 @@
+---
+layout: base
+title: "Style Guide: Javascript"
+sidebar: sidebars/documentation.html
+---
+
 # Javascript Code Conventions
 
 This document contains conventions for programming Javascript that should be followed in an effort

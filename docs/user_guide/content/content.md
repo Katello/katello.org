@@ -1,3 +1,9 @@
+---
+layout: base
+title: Content
+sidebar: sidebars/documentation.html
+---
+
 # Content
 
 Katello can currently host two different types of content, RPMs and puppet modules.

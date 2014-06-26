@@ -1,3 +1,9 @@
+---
+layout: base
+title: Github Workflow
+sidebar: sidebars/documentation.html
+---
+
 # Github Workflow
 
 We use git for version control and Github to help us manage our git repos. This

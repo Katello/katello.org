@@ -1,0 +1,4 @@
+name: Katello
+baseurl: 
+markdown: redcarpet
+pygments: true

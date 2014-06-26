@@ -1,3 +1,9 @@
+---
+layout: base
+title: Red Hat Content
+sidebar: sidebars/documentation.html
+---
+
 # Red Hat Content
 
 Katello can be used to manage content associated with Red Hat products based upon available subscriptions.  This includes content such as RPMs, package groups, errata and distributions. 

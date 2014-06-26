@@ -1,3 +1,9 @@
+---
+layout: base
+title: Testing
+sidebar: sidebars/documentation.html
+---
+
 # Speeding up tests
 
 Running the tests in Katello can take quite a while, especially the ruby ones.

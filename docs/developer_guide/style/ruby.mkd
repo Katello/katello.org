@@ -1,3 +1,9 @@
+---
+layout: base
+title: "Style Guide: Ruby"
+sidebar: sidebars/documentation.html
+---
+
 # Ruby Code Conventions
 
  * When indenting always use two spaces. Never use a tab character.
