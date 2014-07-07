@@ -1,3 +1,9 @@
+---
+layout: base
+title: "Style Guide: Commit Messages"
+sidebar: sidebars/documentation.html
+---
+
 # Git Commit Messages
 
 For Katello, we ask that git commit messages are properly formatted and that they reference an issue

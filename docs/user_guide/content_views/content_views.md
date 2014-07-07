@@ -1,3 +1,9 @@
+---
+layout: base
+title: Content Views
+sidebar: sidebars/documentation.html
+---
+
 # Content Views
 
 What can a Content View be used for?

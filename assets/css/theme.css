@@ -1,0 +1,118 @@
+body {
+  font-size: 14px;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  min-height: 70px;
+}
+
+.navbar .logo {
+  text-decoration: none;
+}
+
+.navbar-header .logo img {
+  width: 7em;
+  height: 7em;
+  position: fixed;
+  margin-left: 1em;
+}
+
+.navbar-inverse .logo span {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 3.5em;
+  color: #FFF;
+  line-height: 70px;
+}
+
+.navbar-nav li a {
+  line-height: 40px;
+  transition: all .8s ease;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+  background: rgba(255, 255, 255, .1);
+}
+
+.container {
+  position: relative;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  text-align: left;
+  background-color: #202020;
+  max-width: 25em;
+}
+
+.sidebar .title {
+  padding-left: 2rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.page-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  background: #00CCCC;
+  line-height: 1.5em;
+  color: #FFF;
+  padding: 2em;
+  height: 1em;
+  font-size: 2.5em;
+}
+
+.has-sidebar {
+  padding-left: 20em;
+}
+
+.context-nav {
+  position: absolute;
+  top: 1.3em;
+  left: 0;
+  width: 17em;
+  margin: 0;
+  padding: 0;
+}
+
+.context-nav ul {
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  padding-start: 0;
+  list-style: none;
+}
+
+.context-nav .nav-item a {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+  display: block;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.sub-context-nav {
+  margin-left: 1em;
+}
+
+.sub-context-nav .nav-item a {
+  border-bottom: none;
+}
+
+pre {
+  font-size: 14px;
+  border-radius: 3px;
+  background: #F8F8F8;
+  border: 1px solid #DDD;
+}

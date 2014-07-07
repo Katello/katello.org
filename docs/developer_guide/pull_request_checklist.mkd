@@ -1,3 +1,9 @@
+---
+layout: base
+title: Pull Request Checklist
+sidebar: sidebars/documentation.html
+---
+
 # Pull Request Checklist
 
 Here is a checklist to help you know when your PR is ready and when a PR can be merged. If you have

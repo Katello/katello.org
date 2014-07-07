@@ -1,3 +1,9 @@
+---
+layout: base
+title: Hammer Dev Environment
+sidebar: sidebars/documentation.html
+---
+
 # Katello Hammer CLI Development Setup
 
 This will allow you to run hammer-cli-foreman and hammer-cli-katello from git for development.
