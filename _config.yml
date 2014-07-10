@@ -1,4 +1,7 @@
 name: Katello
 baseurl: 
-markdown: redcarpet
+markdown: kramdown
 pygments: true
+
+kramdown:
+  auto_id: true
