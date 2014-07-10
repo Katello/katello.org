@@ -60,3 +60,16 @@ This fix also addresses a problem with promoting that was also caused by
 this bug. Promoting also has another bug though that needs to be fixed
 before it works correctly.
 ```
+
+## Multi issue example
+
+Below is an example of a pull request fixing multiple issues (pull requests should only fix a single issue in most cases)
+
+```
+Fixes #1234,#5678 - Fix content view yum publish bug
+
+Fix a problem where content views were not being published if they
+contained yum repositories. The repositories were not being referenced
+correctly. To fix this, I changed the repository look up method to go to
+ElasticSearch and find the attached repos.
+```

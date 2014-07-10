@@ -22,9 +22,9 @@ any problems, feel free to [contact a developer](TODO).
 * Are any gems you added properly packaged as RPMs?
 * Do your git commit messages...
   * Properly explain the problem and the fix?
-  * Reference a [Redmine issue](TODO)?
-  * Reference [a Bugzilla issue](TODO) (if there is one)?
-  * Have [good formatting](TODO)?
+  * Reference a [Redmine issue](http://projects.theforeman.org/projects/katello/issues)?
+  * Reference a Bugzilla issue (if there is one)?
+  * Properly Format [commit messages](/docs/developer_guide/style/git_commit_messages.html)?
 * Did you remove any unnecessary commits like merge commits?
 
 ## Automation
