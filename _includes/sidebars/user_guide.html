@@ -3,33 +3,13 @@
     <a href="{{ site.baseurl }}/docs/user_guide/index.html">User Guide</a>
 
     <ul class="sub-context-nav">
-      <li class="nav-item">
-        <a href="{{ site.baseurl }}/docs/user_guide/content/content.html">Content</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="{{ site.baseurl }}/docs/user_guide/red_hat_content/content.html">Red Hat Content</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="{{ site.baseurl }}/docs/user_guide/content_hosts/index.html">Content Hosts</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="{{ site.baseurl }}/docs/user_guide/content_search/index.html">Content Search</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="{{ site.baseurl }}/docs/user_guide/host_collections/index.html">Host Collections</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="{{ site.baseurl }}/docs/user_guide/lifecycle_management/index.html">Lifecycle Management</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="{{ site.baseurl }}/docs/user_guide/puppet_integration/index.html">Puppet Integration</a>
-      </li>
+      {% for page in site.pages %}
+        {% if page.path contains "docs/user_guide" %}
+          <li class="nav-item">
+            <a href="{{ site.base_url }}{{ page.url }}">{{ page.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
     </ul>
 
   </li>
