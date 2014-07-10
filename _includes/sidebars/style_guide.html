@@ -3,17 +3,13 @@
     <a href="{{ site.baseurl }}/docs/developer_guide/index.html">Style Guides</a>
 
     <ul class="sub-context-nav">
-      <li class="nav-item">
-        <a href="{{ site.baseurl }}/docs/developer_guide/style/git_commit_messages.html">Commit Messages</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="{{ site.baseurl }}/docs/developer_guide/style/ruby.html">Ruby</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="{{ site.baseurl }}/docs/developer_guide/style/javascript.html">Javascript</a>
-      </li>
+      {% for page in site.pages %}
+        {% if page.path contains "docs/developer_guide/style" %}
+          <li class="nav-item">
+            <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
     </ul>
 
   </li>
