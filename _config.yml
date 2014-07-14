@@ -5,3 +5,4 @@ pygments: true
 
 kramdown:
   auto_id: true
+  input: GFM
