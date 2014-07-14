@@ -57,7 +57,7 @@ The following terms are used throughout this document, and are important for the
 : A collection of default settings which represent a physical place. These can be nested so that a user can set up defaults, for example, for Europe, which are refined by Tel Aviv, which are refined by DataCenter East, and then finally by Rack 22.
 
 **Library**
-: The Library is the single origin of all content which can be used. If you are an ITIL shop, it is your definitive software library.
+: The Library is the single origin of all content which can be used. If you are an Information Technology Infrastructure Library (ITIL) shop, it is your definitive media library.
 
 **Manifest**
 : The means of transferring subscriptions from a Subscription Provider (such as the Red Hat Customer portal) to Katello. This is similar in function to certificates used with Spacewalk.
@@ -80,8 +80,17 @@ The following terms are used throughout this document, and are important for the
 **Puppet Agent**
 : An agent that runs on a Host that applies configuration changes to that Host.
 
+**Puppet Class**
+: A Puppet Class is re-usable named block of puppet manifest, similar to a class in an object-oriented programming language. Puppet classes must be included/instantiated in order to use their functionality. Puppet Classes can be parameterized - they can take parameters when they are included/instantiated and those parameters may be used by the underlying manifest to affect the ultimate configuration.
+
+**Puppet Manifest**
+: A Manifest is a simple set of Puppet instructions. Manifests typically have the .pp extension. A manifest is much like a procedure in programming terms.
+
 **Puppet Master**
 : A Capsule component that provides Puppet manifests to Hosts for execution by the Puppet Agent.
+
+**Puppet Module**
+: A Puppet Module is a set of Puppet manifests/classes, template files, tests and other components packaged together in a specific directory format. Puppet Modules are typically associated with specific software (eg: NTP, Apache, etc) and contain various classes used to assist in the installation and configuration of that software. Puppet Labs maintains a repository of official and user-contributed modules called the Puppet Forge.
 
 **Pulp Node**
 : A Capsule component that mirrors content. This is similar to the Spacewalk Proxy in Spacewalk. The main difference is that content can be pre-staged on the Pulp Node before it is used by a Host.
