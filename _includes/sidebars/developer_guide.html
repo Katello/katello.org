@@ -5,7 +5,7 @@
     <ul class="sub-context-nav">
       {% for page in site.pages %}
         {% if page.path contains "docs/developer_guide" %}
-          {% unless page.path contains "style" %}
+          {% unless (page.path contains "style" or page.path contains "bastion") %}
             <li class="nav-item">
               <a href="{{ site.base_url }}{{ page.url }}">{{ page.title }}</a>
             </li>
@@ -15,3 +15,6 @@
     </ul>
   </li>
 </ul>
+
+{% include sidebars/style_guide.html %}
+{% include sidebars/bastion.html %}
