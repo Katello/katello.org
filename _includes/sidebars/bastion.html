@@ -1,0 +1,18 @@
+<ul>
+  <li class="nav-item">
+    <a href="{{ site.baseurl }}/docs/developer_guide/bastion">Bastion</a>
+
+    <ul class="sub-context-nav">
+      {% for page in site.pages %}
+        {% if page.path contains "docs/developer_guide/bastion" %}
+          {% unless page.path contains "index" %}
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+            </li>
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+  </li>
+</ul>
