@@ -6,12 +6,12 @@ sidebar: sidebars/documentation.html
 
 # Bastion: The Katello UI Engine 
 
-Bastion is a single page AngularJS based web client for the Katello server. The code can be found in the Katello code base at the (`engines/bastion`)[https://github.com/katello/katello/tree/master/engines/bastion] path. The layout of the engine is:
+Bastion is a single page AngularJS based web client for the Katello server. The code can be found in the Katello code base at the [`engines/bastion`](https://github.com/katello/katello/tree/master/engines/bastion) path. The layout of the engine is:
 
     app/assets/bastion - application folder for all the JavaScript and view templates
     app/assets/bastion/bastion.js - Rails asset pipeline manifest
     app/assets/bastion/bastion.module.js - master application module that loads up all sub-modules
-    app/assets/bsation/stylesheets - stylesheets used for the UI
+    app/assets/bastion/stylesheets - stylesheets used for the UI
     
     lib/bastion - contains the Rails engine definition and initializes to make assets available to Rails
 
@@ -35,6 +35,52 @@ The only real difference, as far as the user is concerned, is that the applicati
 ### Note on Browser Compatibility
 
 HTML5 session history management is not supported in IE9, Chrome 4.0, Firefox 3.6 and lower.  In these browsers users will continue to see urls with hashes (/bastion/#content-hosts, for example).
+
+## Setup Testing Environment ####
+
+There are two ways to install Node.js: via RPMs and nvm. Much like rvm, nvm lets you easily run multiple Node.js versions. Using nvm is a more advanced setup while the RPM setup is recommended.
+
+## Development Setup
+
+### RPM setup
+
+Install nodejs via the method that corresponds to your particular development environment, for example, on Fedora 18:
+
+    sudo yum install npm
+
+Install the required command line tools globally via npm:
+
+    sudo npm install g phantomjs bower gruntcli
+
+### nvm setup
+
+Install [nvm via the repo instructions](https://github.com/creationix/nvm#installscript).
+
+    curl https://raw.githubusercontent.com/creationix/nvm/v0.5.1/install.sh | sh
+
+Next install the latest version of nodejs.
+
+    nvm install 0.10
+
+Close your console, open a new one, and then install the necessary global packages.
+
+    nvm use 0.10
+    npm install g phantomjs bower gruntcli
+
+
+### Installing Local Packages
+
+Ensure you are in the engines/bastion directory or change to the directory.
+Install the local node modules defined within package.json:
+
+    cd ~/path/to/mykatello/engines/bastion
+    npm install
+
+Install the JavaScript asset libraries used for testing defined within the `devDependencies` section of bower.json:
+
+    grunt bower:dev
+
+Run 'grunt test' to ensure test setup is working.
 
 ## Contributing
 
