@@ -4,7 +4,7 @@ title: "Bastion: The Katello UI Engine"
 sidebar: sidebars/documentation.html
 ---
 
-# Bastion: The Katello UI Engine 
+# Bastion: The Katello UI Engine
 
 Bastion is a single page AngularJS based web client for the Katello server. The code can be found in the Katello code base at the [`engines/bastion`](https://github.com/katello/katello/tree/master/engines/bastion) path. The layout of the engine is:
 
@@ -12,7 +12,7 @@ Bastion is a single page AngularJS based web client for the Katello server. The 
     app/assets/bastion/bastion.js - Rails asset pipeline manifest
     app/assets/bastion/bastion.module.js - master application module that loads up all sub-modules
     app/assets/bastion/stylesheets - stylesheets used for the UI
-    
+
     lib/bastion - contains the Rails engine definition and initializes to make assets available to Rails
 
     test/ - contains JavaScript tests broken down by the same structure as the application
@@ -50,7 +50,7 @@ Install nodejs via the method that corresponds to your particular development en
 
 Install the required command line tools globally via npm:
 
-    sudo npm install g phantomjs bower gruntcli
+    sudo npm install -g phantomjs bower grunt-cli
 
 ### nvm setup
 
@@ -65,7 +65,7 @@ Next install the latest version of nodejs.
 Close your console, open a new one, and then install the necessary global packages.
 
     nvm use 0.10
-    npm install g phantomjs bower gruntcli
+    npm install -g phantomjs bower grunt-cli
 
 
 ### Installing Local Packages
@@ -78,7 +78,7 @@ Install the local node modules defined within package.json:
 
 Install the JavaScript asset libraries used for testing defined within the `devDependencies` section of bower.json:
 
-    grunt bower:dev
+    bower install
 
 Run 'grunt test' to ensure test setup is working.
 
