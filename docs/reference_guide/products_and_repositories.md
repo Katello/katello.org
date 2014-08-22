@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Products and Repositories
 sidebar: sidebars/documentation.html
 ---

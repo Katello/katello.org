@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Subscriptions
 sidebar: sidebars/documentation.html
 ---

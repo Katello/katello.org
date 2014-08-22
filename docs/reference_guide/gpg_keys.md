@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: GPG Keys
 sidebar: sidebars/documentation.html
 ---

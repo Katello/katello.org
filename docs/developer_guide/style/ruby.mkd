@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: "Style Guide: Ruby"
 sidebar: sidebars/documentation.html
 ---

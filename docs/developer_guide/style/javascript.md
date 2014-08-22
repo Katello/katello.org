@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: "Style Guide: Javascript"
 sidebar: sidebars/documentation.html
 ---

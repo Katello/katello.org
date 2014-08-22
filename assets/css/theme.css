@@ -66,9 +66,9 @@ img {
   text-transform: uppercase;
   font-weight: 400;
   background: #00CCCC;
-  line-height: 1.5em;
+  line-height: 1em;
   color: #FFF;
-  padding: 2em;
+  padding: 1.75em;
   height: 1em;
   font-size: 2.5em;
 }
@@ -123,4 +123,68 @@ h1,h2,h3 {
 
 h2,h3 {
   margin-top: 50px;
+}
+
+
+.splash-page-wrapper {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(252, 252, 252);
+}
+
+.splash-page {
+  margin: 0 auto;
+  margin-top: 3em;
+  font-size: 4em;
+  text-transform: uppercase;
+  width: 80%;
+}
+
+.splash-page div {
+  color: rgba(88, 88, 88);
+  text-shadow: 6px 6px rgb(238, 238, 238);
+  position: relative;
+}
+
+.fading-effect {
+  position:absolute;
+  top:0; bottom:0; right:0;
+  width:100%;
+  background: rgb(252, 252, 252);
+  -moz-animation: showHide 2s ease-in forwards; /* Firefox */
+  -webkit-animation: showHide 2s ease-in forwards; /* Safari and Chrome */
+  -ms-animation: showHide 2s ease-in forwards; /* IE10 */
+  -o-animation: showHide 2s ease-in forwards; /* Opera */
+  animation: showHide 2s ease-in forwards;
+}
+
+.effect-1 {
+  -moz-animation-delay: 1.5s; /* Firefox */
+  -webkit-animation-delay: 1.5s; /* Safari and Chrome */
+  -ms-animation-delay: 1.5s; /* IE10 */
+  -o-animation-delay: 1.5s; /* Opera */
+  animation-delay: 1.5s;
+}
+
+@-webkit-keyframes showHide { /* Chrome, Safari */
+  from { width: 100% }
+  to { width: 0% }
+}
+@-moz-keyframes showHide { /* FF */
+  from { width: 100% }
+  to { width: 0% }
+}
+@-ms-keyframes showHide { /* IE10 */
+  from { width: 100% }
+  to { width: 0% }
+}
+@-o-keyframes showHide { /* Opera */
+  from { width: 100% }
+  to { width: 0% }
+}
+@keyframes showHide {
+  from { width: 100% }
+  to { width: 0% }
 }

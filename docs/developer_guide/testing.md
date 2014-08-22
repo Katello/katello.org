@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Testing
 sidebar: sidebars/documentation.html
 ---

@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Glossary
 sidebar: sidebars/documentation.html
 ---

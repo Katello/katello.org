@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Upgrading Pulp
 sidebar: sidebars/documentation.html
 ---

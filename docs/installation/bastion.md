@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: "Bastion: Installation"
 sidebar: sidebars/documentation.html
 ---

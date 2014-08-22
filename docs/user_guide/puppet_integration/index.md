@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Puppet Integration
 sidebar: sidebars/documentation.html
 ---

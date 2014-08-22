@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Content Syncing
 sidebar: sidebars/documentation.html
 ---
