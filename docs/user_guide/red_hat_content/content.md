@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Red Hat Content
 sidebar: sidebars/documentation.html
 ---

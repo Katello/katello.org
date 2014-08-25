@@ -1,0 +1,24 @@
+---
+layout: base
+---
+
+{% include navigation.html %}
+
+<div class="content">
+  <h2 class="page-title">
+    <div class="container">{{ page.title }}</div>
+  </h2>
+
+  <section class="container has-sidebar">
+    {% if page.sidebar %}
+      {% include {{page.sidebar}} %}
+    {% endif %}
+
+    {% if page.markdown == 1 %}
+      {{ content | markdownify }}
+    {% else %}
+      {{ content }}
+    {% endif %}
+  </section>
+
+</div>

@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: "Bastion: Add Entity"
 sidebar: sidebars/documentation.html
 ---

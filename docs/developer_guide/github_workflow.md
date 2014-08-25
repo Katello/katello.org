@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Github Workflow
 sidebar: sidebars/documentation.html
 ---

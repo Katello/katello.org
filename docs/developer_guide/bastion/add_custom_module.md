@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: "Bastion: Adding a Custom Module"
 sidebar: sidebars/documentation.html
 ---

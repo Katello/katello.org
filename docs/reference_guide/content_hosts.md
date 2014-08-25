@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Content Hosts
 sidebar: sidebars/documentation.html
 ---

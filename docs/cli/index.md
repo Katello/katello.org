@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: CLI
 sidebar: sidebars/documentation.html
 ---

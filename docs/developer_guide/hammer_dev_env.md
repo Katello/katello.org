@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Hammer Dev Environment
 sidebar: sidebars/documentation.html
 ---

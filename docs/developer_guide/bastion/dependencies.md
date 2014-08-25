@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: "Bastion: Dependencies"
 sidebar: sidebars/documentation.html
 ---

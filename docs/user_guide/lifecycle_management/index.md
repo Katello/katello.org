@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Lifecycle Environment Management
 sidebar: sidebars/documentation.html
 ---

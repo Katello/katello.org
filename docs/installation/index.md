@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Installation
 sidebar: sidebars/documentation.html
 ---
