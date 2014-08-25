@@ -9,10 +9,12 @@ layout: base
     <div class="container">{{ page.title }}</div>
   </h2>
 
+{% if page.sidebar %}
   <section class="container has-sidebar">
-    {% if page.sidebar %}
-      {% include {{page.sidebar}} %}
-    {% endif %}
+    {% include {{page.sidebar}} %}
+{% else %}
+  <section class="container">
+{% endif %}
 
     {% if page.markdown == 1 %}
       {{ content | markdownify }}
