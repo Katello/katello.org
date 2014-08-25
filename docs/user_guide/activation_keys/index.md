@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: documentation
 title: Activation Keys
 sidebar: sidebars/documentation.html
 ---
