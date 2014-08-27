@@ -125,7 +125,6 @@ h2,h3 {
   margin-top: 50px;
 }
 
-
 .splash-page-wrapper {
   position: absolute;
   top: 0;
@@ -187,4 +186,10 @@ h2,h3 {
 @keyframes showHide {
   from { width: 100% }
   to { width: 0% }
+}
+
+iframe {
+  width: 100%;
+  border: none;
+  height: 800px;
 }
