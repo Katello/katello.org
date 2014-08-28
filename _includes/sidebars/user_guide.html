@@ -3,7 +3,8 @@
     <a href="#">User Guide</a>
 
     <ul class="sub-context-nav">
-      {% for page in site.pages %}
+      {% assign sorted_pages = site.pages | sort:"path" %}
+      {% for page in sorted_pages %}
         {% if page.path contains "docs/user_guide" %}
           <li class="nav-item">
             <a href="{{ site.base_url }}{{ page.url }}">{{ page.title }}</a>
