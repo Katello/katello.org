@@ -18,13 +18,13 @@ What can a Content View be used for?
  * Composite Content View - a Content View that contains a collection of other Content Views.
  * Filter - provides finer grained control over content in a Content View.  Can be used to include or exclude specific packages, package groups, or errata.
  * Publishing - Content Views are 'published' in order to lock their contents in place.  The content of the Content View is cloned and all filters applied.  Publishing creates a new version of the Content View.
- * Promoting - Content Views can be cloned to different [Lifecycle Environments](TODO) (Dev, Test, Production).
+ * Promoting - Content Views can be cloned to different [Lifecycle Environments](/docs/user_guide/lifecycle_environments/environment.html) (Dev, Test, Production).
 
 
 ## General Workflow
 
-First [create a product and repository](TODO) in the library environment and populate the repository with content (by syncing it or uploading content).
-A [Content Host](TODO) can now register directly to library and be attached to the content therein.  Updates will be available as soon as new content is synced or uploaded.
+First [create a product and repository](/docs/user_guide/content/content.html#creating-a-product) in the library environment and populate the repository with content (by syncing it or uploading content).
+A [Content Host](/docs/user_guide/content_hosts/index.html) can now register directly to library and be attached to the content therein.  Updates will be available as soon as new content is synced or uploaded.
 
 To utilize Content Views for filtering and snapshoting:
 
@@ -37,6 +37,7 @@ To utilize Content Views for filtering and snapshoting:
 
 At this point the Content Host will no longer be getting content directly from Library, but from the Content View. Updates to library will not affect this Content Host.
 
+Note that all of the actions below can also done with [hammer, the CLI tool](/docs/cli/index.html), and examples are given at the end of each section.
 
 ## Creating a Content View
 
@@ -51,7 +52,10 @@ Click the *Create New View* button on the top right of the screen.
 From the CLI:
 
 ```
-TODO
+hammer content-view create \
+  --organization="Default Organization" \
+  --name="New Content View" \
+  --description="This is my new content view."
 ```
 
 ## Creating a Composite Content View
@@ -61,13 +65,17 @@ To create a Composite Content View using the web UI follow the above steps for [
 From the CLI:
 
 ```
-TODO
+hammer content-view create \
+  --organization="Default Organization" \
+  --name="New Composite Content View" \
+  --description="This is my new composite content view." \
+  --composite
 ```
 
 ## Adding Repositories
 
 Adding a repository to a Content View means whenever a Content View is published, all of the content contained within the repository at that time is included in the Content View.
-If the [repository is synced](TODO) after publishing the Content View, the Content View will contain the state of the repository prior to syncing.
+If the [repository is synced](/docs/user_guide/content/content.html#syncing-a-repository) after publishing the Content View, the Content View will contain the state of the repository prior to syncing.
 A new version of the Content View must be published in order for the new version to get the contents of the newly synced repository.
 
 To add a repository using the web UI, navigate to:
@@ -79,7 +87,10 @@ Content > Content Views > Select the desired Content View > Content (within sub 
 From the CLI, adding a repository:
 
 ```
-TODO
+hammer content-view add-repository \
+  --organization="Default Organization"
+  --name="New Content View" \
+  --repository="CentOS 6.5"
 ```
 
 ## Adding a Puppet Module
@@ -97,10 +108,21 @@ Content > Content Views > Select the desired Content View > Puppet Modules (with
 ![Adding a puppet module to a Content View 3](add_puppet_module3.png)
 ![Adding a puppet module to a Content View 4](add_puppet_module4.png)
 
-From the CLI, adding a puppet module:
+From the CLI, first find the UUID of your puppet module from the list:
 
 ```
-TODO
+hammer puppet-module list \
+  --organization="Default Organization" \
+  --repository "Puppet Modules"
+```
+
+Then add the puppet module:
+
+```
+hammer content-view puppet-module add \
+  --organization="Default Organization" \
+  --content-view="New Content View" \
+  --uuid=91cc9bb7-dbb3-4798-b50a-45173b763cbb
 ```
 
 ## Adding Content Views to a Composite Content View
@@ -115,10 +137,21 @@ Content > Content Views > Select the desired Content View > Content (within sub 
 
 ![Adding a Content View to a composite Content View 4](add_composite_content_view.png)
 
-From the CLI, adding a Content View to a composite Content View:
+Find the Content View ID of the specific version of the Content View to add:
 
 ```
-TODO
+hammer content-view version list \
+  --organization="Default Organization" \
+  --content-view="New Content View"
+```
+
+From the CLI, add a Content View to a composite Content View:
+
+```
+hammer content-view update \
+  --organization="Default Organization" \
+  --content-view="New Composite Content View" \
+  --component-ids=2
 ```
 
 ## Creating a filter
@@ -136,8 +169,26 @@ Content > Content Views > Select the desired Content View > Content (within sub 
 From the CLI, adding a Content View Filter:
 
 ```
-TODO
+hammer content-view filter create \
+  --organization="Default Organization" \
+  --content-view="New Content View" \
+  --name="New Filter" \
+  --inclusion=false \
+  --type=rpm
 ```
+
+From the CLI, adding a Content View Filter rule:
+
+```
+hammer content-view filter rule create \
+  --organization="Default Organization" \
+  --content-view="New Content View" \
+  --content-view-filter="New Filter" \
+  --name="something-else" \
+  --max-version="10.0.0" \
+  --min-version="10.0.0"
+```
+
 
 ### Selecting which Repositories to Filter
 
@@ -153,7 +204,10 @@ Content > Content Views > Select the desired Content View > Content (within sub 
 From the CLI, adding a Content View Filter:
 
 ```
-TODO
+hammer content-view filter update \
+  --organization="Default Organization" \
+  --name="New Filter" \
+  --repository-ids=2,3,7
 ```
 
 ## Publishing a Content View
@@ -171,7 +225,9 @@ Content > Content Views > Select the desired Content View > Publish New Version
 From the CLI:
 
 ```
-TODO
+hammer content-view publish \
+  --organization="Default Organization" \
+  --name="New Content View"
 ```
 
 
@@ -196,9 +252,12 @@ Hosts > Content Hosts > Select the desired Content Host
 From the CLI:
 
 ```
-TODO
+hammer content-host update \
+  --organization="Default Organization" \
+  --name="dhcp129-211.rdu.redhat.com" \
+  --content-view="New Content View" \
+  --lifecycle-environment="Library"
 ```
-
 
 ## Promoting a Content View
 
@@ -216,6 +275,10 @@ Content > Content Views > Select the desired Content View > Versions (within sub
 To promote a Content View in the CLI:
 
 ```
-TODO
+hammer content-view version promote \
+  --organization="Default Organization" \
+  --content-view="New Content View" \
+  --to-lifecycle-environment="Test" \
+  --version 1
 ```
 
