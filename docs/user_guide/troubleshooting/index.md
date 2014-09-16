@@ -8,7 +8,7 @@ sidebar: sidebars/documentation.html
 
 ## Sub-services status
 
-Katello uses a set of back-end services to perform the actual job. The status of this services can negatively influence the whole system and it's one of the first things to check when some errors occur.
+Katello uses a set of back-end services to perform the actual job. The status of these services can negatively influence the whole system and it's one of the first things to check when some errors occur.
 
 The status of back-end services can be found either from the Web UI on the ``/about`` page:
 
@@ -16,15 +16,15 @@ The status of back-end services can be found either from the Web UI on the ``/ab
 
 Alternatively, the ``hammer ping`` command can be used to get this information.
 
-``katello-service`` tool can be used to restart Katello-related services. See ``man katello-service`` for more details.
+``katello-service`` tool can be used to restart Katello related services. See ``man katello-service`` for more details.
 
 ## Logs
 
-There are multiple log files with potentially valuable data for debugging. `foreman-debug` tool can be used to collect these files for further investigation. See `man foreman-debug` for more details.
+There are multiple log files with potentially valuable data for debugging. The `foreman-debug` tool can be used to collect these files for further investigation. See `man foreman-debug` for more details.
 
 ## Tasks
 
-Katello uses [Foreman Tasks](https://github.com/theforeman/foreman-tasks) for orchestration between the underlying services (local database, Pulp, Candlepin…). The tasks are modeled as [Dynflow](https://github.com/Dynflow/dynflow) processes. When something goes wrong (and there might be many reasons for this happening), Dynflow gives us the tools to recover from this errors to get to the consistent state.
+Katello uses [Foreman Tasks](https://github.com/theforeman/foreman-tasks) for orchestration between the underlying services (local database, Pulp, Candlepin…). The tasks are modeled as [Dynflow](https://github.com/Dynflow/dynflow) processes. When something goes wrong (and there might be many reasons for this happening), Dynflow gives us the tools to recover from these errors to get to the consistent state.
 
 ### Health checking
 
@@ -66,11 +66,11 @@ If this still doesn't help, one possible step is going to a Dynflow console (the
 
 **Caution: Dynflow console is considered a low-level tool and should be used very carefully, ideally discussing other resources first before using its features**
 
-If the failed task was taken cared of by other means (performing the failed steps manually) or it was identified as not critical to the whole task, one can ``skip`` the failed step and ``resume`` the task to continue. These tasks end up with `warning` result at the end, to indicate there was some difficulty during the run.
+If the failed task was taken care of by other means (performing the failed steps manually) or it was identified as not critical to the whole task, one can ``skip`` the failed step and ``resume`` the task to continue. These tasks end up with `warning` result at the end, to indicate there was some difficulty during the run.
 
 ### Dealing with tasks running too long
 
-In came cases, there might be an issue with sub-services that makes it appear as the task is running too long, without any obvious evidence of doing something.
+In came cases, there might be an issue with sub-services that makes it appear as the task is running too long, without any obvious evidence that something is occurring withing the task.
 
 The first place to look in this case is filtering the tasks on ``state = running`` and looking at `Running Steps` in the task details:
 
@@ -78,7 +78,7 @@ The first place to look in this case is filtering the tasks on ``state = running
 
 In this case, the ``"start_time" => nil`` indicates that the task was not picked up by Pulp, which usually means some issues with running the Pulp workers. See (see [Sub-services status](#sub-services-status) for more details).
 
-One can also go to the Dynflow console for even more details: the ``suspended`` state means that the step is waiting for the external task to finish - it itself doesn't have to indicate any error:
+One can also go to the Dynflow console for even more details: the ``suspended`` state means that the step is waiting for the external task to finish - the ``suspended`` state itself doesn't have to indicate any error:
 
 ![Dynflow suspended step](./dynflow-suspended-step.png)
 
