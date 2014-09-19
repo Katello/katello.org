@@ -7,6 +7,7 @@ sidebar: sidebars/documentation.html
 # Installation
 
 For development installation instructions see - [development install](/docs/installation/development.html).
+For Katello 1.4 users looking for information on how to transition to 2.0, please see - [Transition Guide](/docs/installation/2.0-transition.html).
 
 ## Production
 
