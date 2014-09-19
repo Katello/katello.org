@@ -38,6 +38,10 @@ body {
   background: rgba(255, 255, 255, .1);
 }
 
+.content {
+  margin-top: 70px;
+}
+
 .container {
   position: relative;
 }
@@ -66,9 +70,9 @@ img {
   text-transform: uppercase;
   font-weight: 400;
   background: #00CCCC;
-  line-height: 1em;
+  line-height: 0.2em;
   color: #FFF;
-  padding: 1.75em;
+  padding: 1.4em;
   height: 1em;
   font-size: 2.5em;
 }
@@ -123,6 +127,104 @@ h1,h2,h3 {
 
 h2,h3 {
   margin-top: 50px;
+}
+
+.banner {
+  background: #00CCCC;
+  height: 300px;
+}
+
+.banner img {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.foreman-katello-logos {
+  float: right;
+}
+
+.foreman-katello-logos .fa-plus {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 1.5em;
+  color: white;
+  margin-top: 5px;
+}
+
+.tagline {
+  margin-top: 5px;
+  padding-top: 0.75em;
+  font-size: 3em;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+}
+
+.get-started {
+  background: #06A8A8;
+  padding: 5px 80px 5px 80px;
+  font-size: 2em;
+  border: 2px solid #05A3A3;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-right: 15px;
+  border-radius: 3px;
+  color: white;
+  float: right;
+  text-decoration: none;
+}
+
+.get-started:hover {
+  background: #154B4B;
+  color: #00CCCC;
+  text-decoration: none;
+}
+
+.info-section {
+  font-size: 1.2em;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  text-align: justify;
+}
+
+.info-section h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.info-section p {
+  font-size: 0.9em;
+}
+
+.info-section i {
+  margin: 0 6px 0 0;
+}
+
+.info-section ul {
+  list-style: none;
+}
+
+.info-section h4 {
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.news {
+  background: #F7F7F7;
+  border: 1px solid #CCC;
+  border-top: none;
+  min-height: 500px;
+}
+
+.news h1 {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 20px;
+}
+
+.news .snippet {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 .splash-page-wrapper {
