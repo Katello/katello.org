@@ -6,6 +6,8 @@ sidebar: sidebars/documentation.html
 
 # Troubleshooting
 
+For general support information, see [here](/community/index.html#support).
+
 ## Sub-services status
 
 Katello uses a set of back-end services to perform the actual job. The status of these services can negatively influence the whole system and it's one of the first things to check when some errors occur.
