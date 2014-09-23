@@ -46,6 +46,15 @@ body {
   position: relative;
 }
 
+.footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  font-size: 11px;
+  margin-top: 3em;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -77,12 +86,12 @@ img {
   font-size: 2.5em;
 }
 
-.has-sidebar {
-  padding-left: 20em;
+.section {
+  margin-left: 21em;
 }
 
 .context-nav {
-  position: absolute;
+  float: left;
   top: 1.3em;
   left: 0;
   width: 17em;
