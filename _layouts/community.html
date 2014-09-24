@@ -16,11 +16,13 @@ layout: base
   <section class="container">
 {% endif %}
 
-    {% if page.markdown == 1 %}
-      {{ content | markdownify }}
-    {% else %}
-      {{ content }}
-    {% endif %}
+    <div class="section">
+      {% if page.markdown == 1 %}
+        {{ content | markdownify }}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </div>
   </section>
 
 </div>
