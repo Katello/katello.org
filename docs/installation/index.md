@@ -9,6 +9,16 @@ sidebar: sidebars/documentation.html
 For development installation instructions see - [development install](/docs/installation/development.html).
 For Katello 1.4 users looking for information on how to transition to 2.0, please see - [Transition Guide](/docs/installation/2.0-transition.html).
 
+## Hardware Requirements
+
+Katello may be installed onto a baremetal host or on a virtual guest.  The minimum requirements are:
+
+* Two Logical CPUs
+* 4 GB of memory (8 GB highly recommended)
+* The filesystem holding /var/lib/pulp needs to be large, but may vary depending on how many different Operating Systems you wish to syncronize:
+  * Allocate 30 GB of space for each operating system.  Even though an operating system may not take up this much space now, this allows space for future updates that will be syncronized later.
+* The root filesystem needs at least 20 GB of Disk Space
+
 ## Production
 
 Katello provides a puppet based installer for deploying production installations. Production installations are supported on the following OSes:
