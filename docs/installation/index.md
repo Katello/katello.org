@@ -19,6 +19,15 @@ Katello may be installed onto a baremetal host or on a virtual guest.  The minim
   * Allocate 30 GB of space for each operating system.  Even though an operating system may not take up this much space now, this allows space for future updates that will be syncronized later.
 * The root filesystem needs at least 20 GB of Disk Space
 
+## Required Ports
+
+The following ports need to be open to external connections:
+
+* 80 TCP - HTTP, used for provisioning purposes
+* 443 TCP - HTTPS, used for web access and api communication
+* 5671 TCP - qpid ssl - used for client actions
+* 9090 TCP - HTTPS - used for communication with the smart proxy
+
 ## Production
 
 Katello provides a puppet based installer for deploying production installations. Production installations are supported on the following OSes:
@@ -30,6 +39,8 @@ Katello provides a puppet based installer for deploying production installations
 | RHEL 6    |    X    |  X  |
 | RHEL 7    |    X    |  X  |
 ```
+
+Katello can only run on an x86_64 operating systems.
 
 Installation may be done manually or via our recommended approach of using [katello-deploy](#katello-deploy).
 
