@@ -134,10 +134,6 @@ h1,h2,h3 {
   font-weight: bold;
 }
 
-h2,h3 {
-  margin-top: 50px;
-}
-
 .banner {
   background: #00CCCC;
   height: 300px;
