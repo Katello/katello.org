@@ -9,6 +9,8 @@ sidebar: sidebars/documentation.html
 For development installation instructions see - [development install](/docs/installation/development.html).
 For Katello 1.4 users looking for information on how to transition to 2.0, please see - [Transition Guide](/docs/installation/2.0-transition.html).
 
+Note: After installation of Katello, be sure to trust Katello's CA certificate on your system.  This is required for the encrypted NoVNC connections. You will find `katello-default-ca.crt` in the `/pub` directory of your Katello server (e.g. `http://katello.example.com/pub/katello-default-ca.crt`).
+
 ## Hardware Requirements
 
 Katello may be installed onto a baremetal host or on a virtual guest.  The minimum requirements are:
