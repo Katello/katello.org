@@ -60,50 +60,53 @@ RPMs of the bleeding edge code are generated every 4 hours and may be installed 
 
 ### Setup
 
-Depending on your OS, you may need to take some additional steps to get your environment setup prior to running the setup steps. For all installations the Katello, and Foreman repositories need to be setup along with a few external repositories. To do so, run the following ensuring the replace <INSTALL TYPE> with one of the available types and <OS_VERSION> with your RHEL/CentOS version:
+Depending on your OS, you may need to take some additional steps to get your environment setup prior to running the setup steps. For all installations the Katello, and Foreman repositories need to be setup along with a few external repositories. For nightlies, replace **2.0** with **nightly**.
 
-INSTALL_TYPES:
-  
-  * nightly
-  * 2.0
+### Enteprise Linux
 
-OS_VERSION:
+For all variations of enterprise linux (CentOS and RHEL) the following steps need to be taken:
 
-  * 6
-  * 7
+**EL6**
 
 ```
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/<INSTALL TYPE>/katello/RHEL/<OS_VERSION>Server/x86_64/katello-repos-latest.rpm
-yum -y localinstall http://yum.theforeman.org/<INSTALL TYPE>/el<OS_VERSION>/x86_64/foreman-release.rpm
-yum -y localinstall http://mirror.pnl.gov/epel/<OS_VERSION>/x86_64/epel-release-6-8.noarch.rpm
-yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-<OS_VERSION>.noarch.rpm
-```
-
-#### RHEL
-
-Depending on the version of RHEL you are installing on, you'll need to perform the following and substitute the appropriate version for <VERSION>:
-
-```
-yum -y  --disablerepo="*" --enablerepo=rhel-<VERSION>-server-rpms install yum-utils wget
-yum-config-manager --disable "*"
-yum-config-manager --enable rhel-<VERSION>-server-rpms epel
-yum-config-manager --enable rhel-<VERSION>-server-optional-rpms
-yum-config-manager --enable rhel-server-rhscl-<VERSION>-rpms
-```
-
-#### CentOS
-
-For CentOS 6, you'll need to enable the SCL repo:
-
-```
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://yum.theforeman.org/releases/1.6/el6/x86_64/foreman-release.rpm
+yum -y localinstall http://mirror.pnl.gov/epel/6/x86_64/epel-release-6-8.noarch.rpm
+yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
 wget http://dev.centos.org/centos/6/SCL/scl.repo -O /etc/yum.repos.d/scl.repo
 ```
 
-For CentOS 7, you'll need to include two SCL repos from http://softwarecollections.org:
+**EL7**
 
 ```
-https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
-https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://yum.theforeman.org/releases/1.6/el7/x86_64/foreman-release.rpm
+yum -y localinstall http://mirror.pnl.gov/epel/7/x86_64/epel-release-7-2.noarch.rpm
+yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
+yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
+```
+
+### RHEL
+
+Depending on the version of RHEL you are installing on, you'll need to perform the following:
+
+**RHEL6**
+
+```
+yum -y  --disablerepo="*" --enablerepo=rhel-6-server-rpms install yum-utils wget
+yum-config-manager --disable "*"
+yum-config-manager --enable rhel-6-server-rpms epel
+yum-config-manager --enable rhel-6-server-optional-rpms
+```
+
+**RHEL7**
+
+```
+yum -y  --disablerepo="*" --enablerepo=rhel-7-server-rpms install yum-utils wget
+yum-config-manager --disable "*"
+yum-config-manager --enable rhel-7-server-rpms epel
+yum-config-manager --enable rhel-7-server-optional-rpms
 ```
 
 ### Install
