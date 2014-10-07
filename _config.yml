@@ -1,7 +1,7 @@
 name: Katello
 baseurl: 
-markdown: kramdown
-pygments: true
+markdown: KramdownPygments
+highlighter: pygments
 
 kramdown:
   auto_id: true

@@ -12,20 +12,26 @@ Web asset dependencies are stored in `bower.json`. This file denotes what librar
 
 In order to add a new web asset dependency, a new entry into the `bower.json` file must be made along with noting what file(s) to extract from the new package to be placed into source control. For example, to add the `angular-blocks` library, open `bower.json` and add an entry under the `dependencies` section:
 
-    "angular-blocks": "~>0.1.8"
+```javascript
+"angular-blocks": "~>0.1.8"
+```
 
 Since Bower is based off the use of a git repository to define the package contents, installing `angular-blocks` will pull down more files than we want. In order to limit the files places into source control, add an entry to the `exportsOverride` section like so:
 
-    "angular-blocks": {
-      "javascripts/bastion": "src/angular-blocks.js"
-    }
+```javascript
+"angular-blocks": {
+  "javascripts/bastion": "src/angular-blocks.js"
+}
+```
 
 If needing to extract multiple asset types, one can do:
 
-    "alchemy": {
-      "javascripts/bastion": "alchemy.js",
-      "stylesheets/bastion": "*.scss"
-    }
+```javascript
+"alchemy": {
+  "javascripts/bastion": "alchemy.js",
+  "stylesheets/bastion": "*.scss"
+}
+```
 
 A set of files can be included by using an array instead of a string to list the files. After defining the new dependency and the associated file(s), run the following to install the new library:
 
@@ -35,7 +41,9 @@ A set of files can be included by using an array instead of a string to list the
 
 To update a dependency, the version must be bumped in the `bower.json` file, installed and committed to source control. To bump the version, open `bower.json`, locate the proper entry and change the version number. Now, install the new version:
 
-    grunt bower:update
+```bash
+grunt bower:update
+```
 
 Lastly, double check the new files with something like `git status`, add them and commit them with a message indicating that a new dependency version is being committed. We prefer that when committing a new depenendency, a single commit is generated with just the changes from the update.
 

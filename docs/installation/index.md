@@ -68,7 +68,7 @@ For all variations of enterprise linux (CentOS and RHEL) the following steps nee
 
 **EL6**
 
-```
+```bash
 yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://yum.theforeman.org/releases/1.6/el6/x86_64/foreman-release.rpm
 yum -y localinstall http://mirror.pnl.gov/epel/6/x86_64/epel-release-6-8.noarch.rpm
@@ -78,7 +78,7 @@ wget http://dev.centos.org/centos/6/SCL/scl.repo -O /etc/yum.repos.d/scl.repo
 
 **EL7**
 
-```
+```bash
 yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://yum.theforeman.org/releases/1.6/el7/x86_64/foreman-release.rpm
 yum -y localinstall http://mirror.pnl.gov/epel/7/x86_64/epel-release-7-2.noarch.rpm
@@ -93,7 +93,7 @@ Depending on the version of RHEL you are installing on, you'll need to perform t
 
 **RHEL6**
 
-```
+```bash
 yum -y  --disablerepo="*" --enablerepo=rhel-6-server-rpms install yum-utils wget
 yum-config-manager --disable "*"
 yum-config-manager --enable rhel-6-server-rpms epel
@@ -102,7 +102,7 @@ yum-config-manager --enable rhel-6-server-optional-rpms
 
 **RHEL7**
 
-```
+```bash
 yum -y  --disablerepo="*" --enablerepo=rhel-7-server-rpms install yum-utils wget
 yum-config-manager --disable "*"
 yum-config-manager --enable rhel-7-server-rpms epel
@@ -113,19 +113,19 @@ yum-config-manager --enable rhel-7-server-optional-rpms
 
 After setting up the appropriate repositories, install Katello:
 
-```
+```bash
 yum -y install katello
 ```
 
 At this point the `katello-installer` should be available to setup the server. The installation may be customized, to see a list of options:
 
-```
+```bash
 katello-installer --help
 ```
 
 These may be set as command line options or in the answer file (/etc/katello-installer/answers.katello-installer.yaml). Now run the options:
 
-```
+```bash
 katello-installer <options>
 ```
 
