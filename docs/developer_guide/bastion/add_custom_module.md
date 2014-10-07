@@ -13,6 +13,6 @@ various methods and depends on your setup. To declare the inclusion of your modu
 within your JavaScript (we recommend adding it to the top of your mymodulename.module.js file or in a separate 
 mymodulename-bootstrap.js file):
 
-```
+```javascript
 BASTION_MODULES.push('myModuleName');
 ```

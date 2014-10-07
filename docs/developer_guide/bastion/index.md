@@ -46,26 +46,36 @@ There are two ways to install Node.js: via RPMs and nvm. Much like rvm, nvm lets
 
 Install nodejs via the method that corresponds to your particular development environment, for example, on Fedora 18:
 
-    sudo yum install npm
+```bash
+sudo yum install npm
+```
 
 Install the required command line tools globally via npm:
 
-    sudo npm install -g phantomjs bower grunt-cli
+```bash
+sudo npm install -g phantomjs bower grunt-cli
+```
 
 ### nvm setup
 
 Install [nvm via the repo instructions](https://github.com/creationix/nvm#installscript).
 
-    curl https://raw.githubusercontent.com/creationix/nvm/v0.5.1/install.sh | sh
+```bash
+curl https://raw.githubusercontent.com/creationix/nvm/v0.5.1/install.sh | sh
+```
 
 Next install the latest version of nodejs.
 
-    nvm install 0.10
+```bash
+nvm install 0.10
+```
 
 Close your console, open a new one, and then install the necessary global packages.
 
-    nvm use 0.10
-    npm install -g phantomjs bower grunt-cli
+```bash
+nvm use 0.10
+npm install -g phantomjs bower grunt-cli
+```
 
 
 ### Installing Local Packages
@@ -73,12 +83,16 @@ Close your console, open a new one, and then install the necessary global packag
 Ensure you are in the engines/bastion directory or change to the directory.
 Install the local node modules defined within package.json:
 
-    cd ~/path/to/mykatello/engines/bastion
-    npm install
+```bash
+cd ~/path/to/mykatello/engines/bastion
+npm install
+```
 
 Install the JavaScript asset libraries used for testing defined within the `devDependencies` section of bower.json:
 
-    bower install
+```bash
+bower install
+```
 
 Run 'grunt test' to ensure test setup is working.
 
@@ -92,7 +106,9 @@ For code to be accepted upstream, the following conditions must be met:
 
 To help with this, we recommend running the following before opening a pull request:
 
-    grunt ci
+```bash
+grunt ci
+```
 
 ## Testing
 
@@ -114,11 +130,15 @@ The Bastion test suite can either be run as a single test run or as a continuous
 
 To run a single test:
 
-    grunt test
+```bash
+grunt test
+```
 
 To run the test server:
 
-    grunt test:server
+```bash
+grunt test:server
+```
 
 To connect a browser to the test server, point your browser to your machine at port `8081`.
 
@@ -130,7 +150,9 @@ To enforce JavaScript guidelines, we use the [JSHint](http://jshint.com/) librar
 
 To run the JavaScript linter:
 
-    grunt jshint
+```bash
+grunt jshint
+```
 
 ### HTML
 
@@ -138,7 +160,9 @@ To check HTML code, we use [grunt-htmlhint](https://github.com/yaniswang/grunt-h
 
 To run the HTML linter:
 
-    grunt htmlhint
+```bash
+grunt htmlhint
+```
 
 ## Code Conventions
 
