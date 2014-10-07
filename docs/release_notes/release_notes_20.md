@@ -6,7 +6,7 @@ sidebar: sidebars/documentation.html
 
 # Katello 2.0 (Oktoberfest) Release Notes
 
-For the full release notes, see the [Changelog](https://github.com/Katello/katello/blob/KATELLO0.0/CHANGELOG.md).
+For the full release notes, see the [Changelog](https://github.com/Katello/katello/blob/KATELLO-2.0/CHANGELOG.md).
 
 ## Features
 
