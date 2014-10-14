@@ -62,6 +62,28 @@ RPMs of the bleeding edge code are generated every 4 hours and may be installed 
 
 Depending on your OS, you may need to take some additional steps to get your environment setup prior to running the setup steps. For all installations the Katello, and Foreman repositories need to be setup along with a few external repositories. For nightlies, replace **2.0** with **nightly**.
 
+### RHEL
+
+Depending on the version of RHEL you are installing on, you'll need to perform the following:
+
+**RHEL6**
+
+```bash
+yum -y  --disablerepo="*" --enablerepo=rhel-6-server-rpms install yum-utils wget
+yum-config-manager --disable "*"
+yum-config-manager --enable rhel-6-server-rpms epel
+yum-config-manager --enable rhel-6-server-optional-rpms
+```
+
+**RHEL7**
+
+```bash
+yum -y  --disablerepo="*" --enablerepo=rhel-7-server-rpms install yum-utils wget
+yum-config-manager --disable "*"
+yum-config-manager --enable rhel-7-server-rpms epel
+yum-config-manager --enable rhel-7-server-optional-rpms
+```
+
 ### Enteprise Linux
 
 For all variations of enterprise linux (CentOS and RHEL) the following steps need to be taken:
@@ -85,28 +107,6 @@ yum -y localinstall http://mirror.pnl.gov/epel/7/x86_64/epel-release-7-2.noarch.
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
 yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
-```
-
-### RHEL
-
-Depending on the version of RHEL you are installing on, you'll need to perform the following:
-
-**RHEL6**
-
-```bash
-yum -y  --disablerepo="*" --enablerepo=rhel-6-server-rpms install yum-utils wget
-yum-config-manager --disable "*"
-yum-config-manager --enable rhel-6-server-rpms epel
-yum-config-manager --enable rhel-6-server-optional-rpms
-```
-
-**RHEL7**
-
-```bash
-yum -y  --disablerepo="*" --enablerepo=rhel-7-server-rpms install yum-utils wget
-yum-config-manager --disable "*"
-yum-config-manager --enable rhel-7-server-rpms epel
-yum-config-manager --enable rhel-7-server-optional-rpms
 ```
 
 ### Install
