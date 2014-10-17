@@ -82,6 +82,7 @@ yum -y  --disablerepo="*" --enablerepo=rhel-7-server-rpms install yum-utils wget
 yum-config-manager --disable "*"
 yum-config-manager --enable rhel-7-server-rpms epel
 yum-config-manager --enable rhel-7-server-optional-rpms
+yum-config-manager --enable rhel-7-server-extras-rpms
 ```
 
 ### Enteprise Linux
