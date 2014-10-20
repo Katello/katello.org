@@ -150,7 +150,7 @@ Keep track of the 'foreman-oauth-key' and 'foreman-oauth-secret' (or just copy a
 
 ### Registering the Capsule host
 
-The Capsule needs to be registered with subscription-manager to the Katello server prior to running the installer.  For more information about registering with subscription-manager, see [How is a Content Host registered](../content-hosts/index.html#how-is-a-content-host-registered) 
+The Capsule needs to be registered with subscription-manager to the Katello server prior to running the installer.  For more information about registering with subscription-manager, see [How is a Content Host registered](../content_hosts/index.html#how-is-a-content-host-registered) 
 
 ### Installing
 
