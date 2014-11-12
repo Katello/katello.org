@@ -38,6 +38,7 @@ Katello provides a puppet based installer for deploying production installations
 | OS        | nightly | 2.0 |
 |-----------|---------|-----|
 | CentOS 6  |    X    |  X  |
+| CentOS 7  |    X    |  X  |
 | RHEL 6    |    X    |  X  |
 | RHEL 7    |    X    |  X  |
 ```
