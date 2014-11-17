@@ -7,6 +7,7 @@ sidebar: sidebars/documentation.html
 # Content Views
 
 What can a Content View be used for?
+
  * To stage content through environments (Dev, Test, Production).
  * To filter the contents of a repository (include a package or exclude certain errata, for example).
  * To have multiple snapshots of the same repository and/or puppet modules.
