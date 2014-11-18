@@ -4,7 +4,7 @@ title: Glossary
 sidebar: sidebars/documentation.html
 ---
 
-#Glossary
+# Glossary
 
 The following terms are used throughout this document, and are important for the users understanding of Katello.
 
