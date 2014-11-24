@@ -76,7 +76,7 @@ subscription-manager register --org=Default_Organization --environment=Devel/MyV
 
 ### Registering without using a username and password
 
-Activation Keys allow you to register and consume content without using a username and password.  To create an Activation Key see the [Activation Key Guide](http://localhost:4000/docs/reference_guide/activation_keys.html)
+Activation Keys allow you to register and consume content without using a username and password.  To create an Activation Key see the [Activation Key Guide](../activation_keys/index.html)
 
 Once you have created an activation key, register with:
 
