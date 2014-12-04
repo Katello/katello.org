@@ -63,6 +63,10 @@ RPMs of the bleeding edge code are generated every 4 hours and may be installed 
 
 Depending on your OS, you may need to take some additional steps to get your environment setup prior to running the setup steps. For all installations the Katello, and Foreman repositories need to be setup along with a few external repositories. For nightlies, replace **2.0** with **nightly**.
 
+### Time Service
+
+The machine should be set up with a valid time service, since several Katello features will not function well if there is minor clock skew.
+
 ### RHEL
 
 Depending on the version of RHEL you are installing on, you'll need to perform the following:
