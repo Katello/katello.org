@@ -69,22 +69,22 @@ For Enterprise Linux, we require the Katello repos, EPEL and the appropriate set
 For EL6:
 
 ```
-$ rpm -Uvh http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/6/x86_64/katello-repos-latest.rpm
-$ rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-$ rpm -Uvh https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-6-x86_64/download/rhscl-ruby193-epel-6-x86_64.noarch.rpm
-$ rpm -Uvh http://yum.theforeman.org/releases/1.6/el6/x86_64/foreman-release.rpm
-$ yum-config-manager --enable rhel-6-server-optional-rpms
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://yum.theforeman.org/releases/1.6/el6/x86_64/foreman-release.rpm
+yum -y localinstall http://mirror.pnl.gov/epel/6/x86_64/epel-release-6-8.noarch.rpm
+yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
+wget http://dev.centos.org/centos/6/SCL/scl.repo -O /etc/yum.repos.d/scl.repo
 ```
 
 For EL7:
 
 ```
-$ rpm -Uvh http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/7/x86_64/katello-repos-latest.rpm
-$ rpm -Uvh http://download-i2.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-1.noarch.rpm
-$ rpm -Uvh https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
-$ rpm -Uvh https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
-$ rpm -Uvh http://yum.theforeman.org/releases/1.6/el7/x86_64/foreman-release.rpm
-$ yum-config-manager --enable rhel-7-server-optional-rpms
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://yum.theforeman.org/releases/1.6/el7/x86_64/foreman-release.rpm
+yum -y localinstall http://mirror.pnl.gov/epel/7/x86_64/e/epel-release-7-2.noarch.rpm
+yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
+yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
 ```
 
 **Red Hat Enterprise Linux**
