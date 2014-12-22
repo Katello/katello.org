@@ -1,5 +1,5 @@
 name: Katello
-baseurl: '/2.0'
+baseurl: 
 markdown: KramdownPygments
 highlighter: pygments
 
