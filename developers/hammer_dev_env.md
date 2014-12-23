@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Hammer Dev Environment
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Katello Hammer CLI Development Setup
