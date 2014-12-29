@@ -37,11 +37,29 @@ To create a new key,
 - navigate to: Content > Activation Keys
 - click **New Activation Key**
 
-Note the following option:
-
-- *Content Host Limit*: This option will control how many Content Hosts may be registered using the key.
-
 ![Creating a Host Collection](./activation_key_create.png)
+
+- *Name*: This required option has few restrictions on format. However, since this name is used to identify the activation key to command line tools such as *subscription-manager* including spaces and non-ascii characters will need special consideration in such uses.
+
+- *Content Host Limit*: This option will control how many Content Hosts may be registered using the key. An "unlimited" value will not place any limits on usage. Specifying a quantity will limit the number of registered content hosts. Registering with an activation key consumes one of the available limit quantity, while unregistering makes it available again. (ie. This quantity is not a usage counter but a limit of actively registered content hosts.)
+
+- *Description*: A free form description.
+
+- *Environment* and *Content View*: Although optional, at least one activation key used during registration must specify a content view. Taken in order specified to *subscription-manager*, the last activation key with a content view takes precedence.
+
+The following example would use CV_B's content view:
+
+```
+subscription-manager register --org Default_Organization --activationkey NO_CV --activationkey CV_A --activationkey CV_B
+```
+
+Or equivalently:
+
+```
+subscription-manager register --org Default_Organization --activationkey NO_CV,CV_A,CV_B
+```
+
+For registration to succeed, at least one activation key must be successfully applied. For an activation key to succeed, at least one of the listed subscriptions must be successfully attached to the registering content host.
 
 ## Add Subscriptions to an Activation Key
 
@@ -54,7 +72,21 @@ To add subscriptions to a key:
 - select the Subscriptions you would like to add
 - click **Add Selected**
 
+The **Auto-Attach** setting controls how the group of subscriptions are processed during registration.
+
+When 'Auto-Attach' is enabled but no subscriptions are added to the activation key, subscriptions will be automatically added to cover the installed products. This is equivalent to passing the '--auto-attach' flag to the subscription-manager command:
+
+```
+subscription-manager register --org=Default_Organization --auto-attach
+```
+
+When 'Auto-Attach' is enabled and subscriptions are listed for the activation key, two things will happen. First all subscriptions for custom products will be attached to the registering content host. Second, the group of Red Hat subscriptions will be attached as needed to cover the content host's installed Red Hat products. This is most commonly used when there is a group of similar subscriptions (eg. several Red Hat Enterprise Linux from different contracts, or guest subscriptions from different hypervisors) and which one used is not important. Katello's subscription tooling, [Candlepin](http://candlepin.org), will automatically choose the minimal proper subscriptions from the group.
+
+Finally, when 'Auto-Attach' is disabled, all subscriptions on the activation key will attached to the registering content host, regardless of whether needed to cover an installed product or not. For example, adding an OpenStack Platform subscription would then allow that product to be installed after registration.
+
 ![Adding subscriptions to an Activation Key](./activation_key_add_subscriptions.png)
+
+
 
 ## Change Repository Enablement for an Activation Key
 
@@ -88,4 +120,12 @@ To add Host Collections to a key:
 
 ## Register a Content Host using an Activation Key
 
+The simplest form of registering a content host with an activation key is this:
+
+```
+subscription-manager register --org=Default_Organization --activationkey=$KEY_NAME
+```
+
 [Click here for more information](../content_hosts/index.html#how-is-a-content-host-registered)
+
+Note that modifying an activation key does not change anything on content hosts previously registered with the key.
