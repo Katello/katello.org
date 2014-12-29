@@ -37,11 +37,20 @@ To create a new key,
 - navigate to: Content > Activation Keys
 - click **New Activation Key**
 
-Note the following option:
-
-- *Content Host Limit*: This option will control how many Content Hosts may be registered using the key.
-
 ![Creating a Host Collection](./activation_key_create.png)
+
+- *Name*: This required option has few restrictions on format. However, since this name is used to identify the activation key to command line tools such as *subscription-manager* including spaces and non-ascii characters will need special consideration in such uses.
+
+- *Content Host Limit*: This option will control how many Content Hosts may be registered using the key. An "unlimited" value will not place any limits on usage. Specifying a quantity will limit the number of registered content hosts. Registering with an activation key consumes one of the available limit quantity, while unregistering makes it available again. (ie. This quantity is not a usage counter but a limit of actively registered content hosts.)
+
+- *Description*: A free form description.
+
+- *Environment* and *Content View*: Although optional, at least one activation key used during registration must specify a content view. Taken in order specified to *subscription-manager*, the last activation key with a content view takes precedence.
+
+The following example would use CV_B's content view.
+```
+subscription-manager --activationkey NO_CV --activationkey CV_A --activationkey CV_B
+```
 
 ## Add Subscriptions to an Activation Key
 
