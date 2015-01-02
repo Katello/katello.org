@@ -6,7 +6,7 @@ layout: base
 
 <div class="content">
   <h2 class="page-title">
-    <div class="container">{{ page.title }}</div>
+    <div class="container">{% if site.version %}{{ site.version }}: {% endif %}{{ page.title }}</div>
   </h2>
 
 {% if page.sidebar %}
