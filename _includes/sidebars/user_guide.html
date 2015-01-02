@@ -7,7 +7,7 @@
       {% for page in sorted_pages %}
         {% if page.path contains "docs/user_guide" %}
           <li class="nav-item">
-            <a href="{{ site.base_url }}{{ page.url }}">{{ page.title }}</a>
+            <a href="{{ site.base_url }}/docs/{{ site.version }}/user_guide/{{ page.url | split:'user_guide/' | last }}">{{ page.title }}</a>
           </li>
         {% endif %}
       {% endfor %}
