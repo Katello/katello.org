@@ -6,6 +6,10 @@ sidebar: sidebars/documentation.html
 
 # Installation
 
+{% if site.versions %}
+For previous versions - {% for version in site.versions %}[{{ version }}](/docs/{{ version }}/installation/index.html) {% endfor %}
+{% endif %}
+
 For development installation instructions see - [development install](/docs/installation/development.html).
 For Katello 1.4 users looking for information on how to transition to 2.0, please see - [Transition Guide](/docs/installation/2.0-transition.html).
 
@@ -35,21 +39,22 @@ The following ports need to be open to external connections:
 Katello provides a puppet based installer for deploying production installations. Production installations are supported on the following OSes:
 
 ```
-| OS        | nightly | 2.0 |
-|-----------|---------|-----|
-| CentOS 6  |    X    |  X  |
-| CentOS 7  |    X    |  X  |
-| RHEL 6    |    X    |  X  |
-| RHEL 7    |    X    |  X  |
+| OS        |     |
+|-----------|-----|
+| CentOS 6  |  X  |
+| CentOS 7  |  X  |
+| RHEL 6    |  X  |
+| RHEL 7    |  X  |
 ```
 
 Katello can only run on an x86_64 operating systems.
 
 Installation may be done manually or via our recommended approach of using [katello-deploy](#katello-deploy).
 
-**Nightlies**
 
-RPMs of the bleeding edge code are generated every 4 hours and may be installed as a production type installation. We do not recommend nor guarantee the stability of the nightlies. The repository RPMs for nightlies are:
+### Setup
+
+RPMs of the bleeding edge code are generated every 12 hours and may be installed as a production type installation. We do not recommend nor guarantee the stability of the nightlies. The repository RPMs for nightlies are:
 
  * RHEL6 / CentOS 6:
 
@@ -59,9 +64,7 @@ RPMs of the bleeding edge code are generated every 4 hours and may be installed 
 
        http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
 
-### Setup
-
-Depending on your OS, you may need to take some additional steps to get your environment setup prior to running the setup steps. For all installations the Katello, and Foreman repositories need to be setup along with a few external repositories. For nightlies, replace **2.0** with **nightly**.
+Depending on your OS, you may need to take some additional steps to get your environment setup prior to running the setup steps. For all installations the Katello, and Foreman repositories need to be setup along with a few external repositories.
 
 ### Time Service
 
@@ -97,7 +100,7 @@ For all variations of enterprise linux (CentOS and RHEL) the following steps nee
 **EL6**
 
 ```bash
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://yum.theforeman.org/releases/1.6/el6/x86_64/foreman-release.rpm
 yum -y localinstall http://mirror.pnl.gov/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
@@ -107,7 +110,7 @@ wget http://dev.centos.org/centos/6/SCL/scl.repo -O /etc/yum.repos.d/scl.repo
 **EL7**
 
 ```bash
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://yum.theforeman.org/releases/1.6/el7/x86_64/foreman-release.rpm
 yum -y localinstall http://mirror.pnl.gov/epel/7/x86_64/e/epel-release-7-2.noarch.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
