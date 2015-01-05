@@ -19,13 +19,13 @@ What can a Content View be used for?
  * Composite Content View - a Content View that contains a collection of other Content Views.
  * Filter - provides finer grained control over content in a Content View.  Can be used to include or exclude specific packages, package groups, or errata.
  * Publishing - Content Views are 'published' in order to lock their contents in place.  The content of the Content View is cloned and all filters applied.  Publishing creates a new version of the Content View.
- * Promoting - Content Views can be cloned to different [Lifecycle Environments](/docs/user_guide/lifecycle_environments/environment.html) (Dev, Test, Production).
+ * Promoting - Content Views can be cloned to different [Lifecycle Environments](../lifecycle_environments/environment.html) (Dev, Test, Production).
 
 
 ## General Workflow
 
-First [create a product and repository](/docs/user_guide/content/content.html#creating-a-product) in the library environment and populate the repository with content (by syncing it or uploading content).
-A [Content Host](/docs/user_guide/content_hosts/index.html) can now register directly to library and be attached to the content therein.  Updates will be available as soon as new content is synced or uploaded.
+First [create a product and repository](../content/content.html#creating-a-product) in the library environment and populate the repository with content (by syncing it or uploading content).
+A [Content Host](../content_hosts/index.html) can now register directly to library and be attached to the content therein.  Updates will be available as soon as new content is synced or uploaded.
 
 To utilize Content Views for filtering and snapshoting:
 
@@ -38,7 +38,7 @@ To utilize Content Views for filtering and snapshoting:
 
 At this point the Content Host will no longer be getting content directly from Library, but from the Content View. Updates to library will not affect this Content Host.
 
-Note that all of the actions below can also done with [hammer, the CLI tool](/docs/cli/index.html), and examples are given at the end of each section.
+Note that all of the actions below can also done with [hammer, the CLI tool](../../cli/index.html), and examples are given at the end of each section.
 
 ## Creating a Content View
 
@@ -76,7 +76,7 @@ hammer content-view create \
 ## Adding Repositories
 
 Adding a repository to a Content View means whenever a Content View is published, all of the content contained within the repository at that time is included in the Content View.
-If the [repository is synced](/docs/user_guide/content/content.html#syncing-a-repository) after publishing the Content View, the Content View will contain the state of the repository prior to syncing.
+If the [repository is synced](../content/content.html#syncing-a-repository) after publishing the Content View, the Content View will contain the state of the repository prior to syncing.
 A new version of the Content View must be published in order for the new version to get the contents of the newly synced repository.
 
 To add a repository using the web UI, navigate to:
