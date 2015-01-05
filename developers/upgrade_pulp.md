@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Upgrading Pulp
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Upgrading Pulp
