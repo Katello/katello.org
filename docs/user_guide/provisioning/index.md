@@ -10,7 +10,7 @@ See [the Foreman manual](http://theforeman.org/manuals/latest/index.html#4.4Prov
 
 ## Templates
 
-Katello ships a number of templates in addition to the standard Foreman ones. When using these templates, if a host has a Host group with an [Activation Key](/docs/user_guide/activation_keys/index.html), it will register as a Content Host automatically.
+Katello ships a number of templates in addition to the standard Foreman ones. When using these templates, if a host has a Host group with an [Activation Key](../activation_keys/index.html), it will register as a Content Host automatically.
 
   - **Katello Kickstart Default** - Kickstart template for Fedora, CentOS, RHEL, and other Red Hat-compatible operating systems.
   - **Katello Kickstart Default Finish** - image-based provisioning
