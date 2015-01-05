@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Pull Request Checklist
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Pull Request Checklist
