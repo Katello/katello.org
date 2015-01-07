@@ -58,11 +58,11 @@ RPMs of the bleeding edge code are generated every 12 hours and may be installed
 
  * RHEL6 / CentOS 6:
 
-       http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
+       https://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
 
  * RHEL7 / CentOS 7:
 
-       http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+       https://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
 
 Depending on your OS, you may need to take some additional steps to get your environment setup prior to running the setup steps. For all installations the Katello, and Foreman repositories need to be setup along with a few external repositories.
 
@@ -100,7 +100,7 @@ For all variations of enterprise linux (CentOS and RHEL) the following steps nee
 **EL6**
 
 ```bash
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall https://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://yum.theforeman.org/releases/1.6/el6/x86_64/foreman-release.rpm
 yum -y localinstall http://mirror.pnl.gov/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
@@ -110,7 +110,7 @@ wget http://dev.centos.org/centos/6/SCL/scl.repo -O /etc/yum.repos.d/scl.repo
 **EL7**
 
 ```bash
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall https://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://yum.theforeman.org/releases/1.6/el7/x86_64/foreman-release.rpm
 yum -y localinstall http://mirror.pnl.gov/epel/7/x86_64/e/epel-release-7-2.noarch.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
