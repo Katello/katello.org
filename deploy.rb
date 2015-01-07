@@ -8,9 +8,11 @@ class Deployer
   attr_accessor :versions
 
   BUILD_DIR = '_build'
+  DEPLOY_DIR = 'public'
 
   def initialize
     make_builddir
+    make_deploymentdir
     clone_version('nightly')
 
     self.versions = find_versions
@@ -23,9 +25,12 @@ class Deployer
 
   def make_builddir
     puts "Creating build directory at #{BUILD_DIR}"
+    make_dir(BUILD_DIR)
+  end
 
-    syscall("rm -rf #{BUILD_DIR}") if File.exists?(BUILD_DIR)
-    syscall("mkdir #{BUILD_DIR}")
+  def make_deploymentdir
+    puts "Creating deployment directory at #{DEPLOY_DIR}"
+    make_dir(DEPLOY_DIR)
   end
 
   def clone_versions
@@ -67,7 +72,7 @@ class Deployer
       cleanup_config
     end
 
-    FileUtils.cp_r('_build/nightly/_site/.', ".")
+    FileUtils.cp_r('_build/nightly/_site/.', "public/")
   end
 
   def build_versions(versions)
@@ -80,7 +85,7 @@ class Deployer
 
     branch = "remotes/origin/KATELLO-#{version}"
 
-    FileUtils.rmdir('docs/' + version)
+    FileUtils.rmdir('public/docs/' + version)
 
     Dir.chdir(BUILD_DIR + '/' + version) do
       syscall("git checkout #{branch}")
@@ -88,6 +93,7 @@ class Deployer
 
     Dir.chdir(BUILD_DIR + '/nightly') do
       set_config("version: #{version}")
+      set_config("versions: #{@versions}")
       FileUtils.mkdir('docs/' + version)
       syscall("cp -rf ../#{version}/docs/* docs/#{version}")
       jekyll_build
@@ -108,7 +114,7 @@ class Deployer
   def copy_version(version)
     puts "Copying #{version}"
 
-    FileUtils.cp_r("_build/nightly/_site/docs/#{version}/.", "docs/#{version}")
+    FileUtils.cp_r("_build/nightly/_site/docs/#{version}/.", "public/docs/#{version}")
   end
 
   def jekyll_build
@@ -120,9 +126,14 @@ class Deployer
   end
 
   def set_config(values)
-    File.open('_config.build.yml', 'w') do |file|
-      file.write(values)
+    File.open('_config.build.yml', 'a') do |file|
+      file.puts(values)
     end
+  end
+
+  def make_dir(directory)
+    syscall("rm -rf #{directory}") if File.exists?(directory)
+    syscall("mkdir #{directory}")
   end
 
   def syscall(*cmd)
