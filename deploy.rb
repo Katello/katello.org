@@ -137,11 +137,11 @@ class Deployer
   end
 
   def syscall(*cmd)
-    stdout, stderr, status = Open3.capture3(*cmd)
-    if status.success?
-      stdout.slice!(0..-(1 + $/.size)) # strip trailing eol
+    stdin, stdout, stderr = Open3.popen3(*cmd)
+    if stderr.read.empty?
+      stdout.read.slice!(0..-(1 + $/.size)) # strip trailing eol
     else
-      puts stderr
+      puts stderr.read
       false
     end
   end
