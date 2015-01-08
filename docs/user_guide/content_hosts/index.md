@@ -134,6 +134,12 @@ Navigate to:   Hosts > Content Hosts > Select Content Host > Errata
 
 To apply errata, search for the errata you want and select the checkbox beside each errata.  Then click "Apply Selected" at the top right.
 
+The "Show From" filters what applicable errata to show:
+
+* Current Environment - Shows only Applicable Errata available in the Host's Content View & Lifecycle Environment.
+* Previous Environment - Shows Applicable Errata that are available from the Host's Content View but in the previous Lifecycle Environment.  Promoting the Content View Version from that previous Lifecycle Environment to the current Lifecycle Environment for this Host would cause all Applicable Errata shown to then be available.
+* Library Synced Content - Shows Applicable Errata which have been synced to the Library.  This shows you what is applicable even when the Errata have not been published into a Content View.  All applicable Errata are shown regardless of availability to the Content Host.
+
 ## Change Host Collection Asssignments
 
 To change Host Collection assignments for a Content Host, navigate to: Hosts > Content Hosts > Select Content Host > Host Collections
