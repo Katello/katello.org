@@ -39,7 +39,7 @@ class Deployer
 
   def clone_version(version)
     Dir.chdir(BUILD_DIR) do
-      syscall("git clone http://github.com/Katello/katello.org #{version}")
+      syscall("git clone git://github.com/Katello/katello.org #{version}")
     end
   end
 
@@ -118,6 +118,8 @@ class Deployer
   end
 
   def jekyll_build
+    syscall('pwd')
+    syscall('bundle install')
     syscall('jekyll build --config _config.yml,_config.build.yml')
   end
 
@@ -137,7 +139,10 @@ class Deployer
   end
 
   def syscall(*cmd)
+    puts cmd if ARGV.include?('--debug')
+
     stdin, stdout, stderr = Open3.popen3(*cmd)
+
     if stderr.read.empty?
       stdout.read.slice!(0..-(1 + $/.size)) # strip trailing eol
     else
