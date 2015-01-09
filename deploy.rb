@@ -94,8 +94,12 @@ class Deployer
     Dir.chdir(BUILD_DIR + '/nightly') do
       set_config("version: #{version}")
       set_config("versions: #{@versions}")
+
+      syscall("rm -rf docs/")
+      FileUtils.mkdir('docs/')
       FileUtils.mkdir('docs/' + version)
       syscall("cp -rf ../#{version}/docs/* docs/#{version}")
+
       jekyll_build
       cleanup_config
     end
@@ -141,12 +145,12 @@ class Deployer
   def syscall(*cmd)
     puts cmd if ARGV.include?('--debug')
 
-    stdin, stdout, stderr = Open3.popen3(*cmd)
+    stdout, stderr, status = Open3.capture3(*cmd)
 
-    if stderr.read.empty?
-      stdout.read.slice!(0..-(1 + $/.size)) # strip trailing eol
+    if status.success?
+      stdout.slice!(0..-(1 + $/.size)) # strip trailing eol
     else
-      puts stderr.read
+      puts stderr
       false
     end
   end
