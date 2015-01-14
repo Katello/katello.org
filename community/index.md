@@ -42,7 +42,7 @@ There is also a low-traffic list dedicated to release and security announcements
 
 ## Code
 
-Please see the [Developer Guide](/docs/developer_guide/github_workflow.html) for learning how to setup a development environment, testing, and submitting a pull request to GitHub.
+Please see the [Developer Guide](/developers/github_workflow.html) for learning how to setup a development environment, testing, and submitting a pull request to GitHub.
 
 ## Other
 
