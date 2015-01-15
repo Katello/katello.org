@@ -34,16 +34,11 @@ Depending on your Operating System, for:
 
 * RHEL, subscription-manager is installed by default
 * Fedora, subscription-manager is available from the Everything repo for its release: ```yum install subscription-manager```
-* CentOS, enable the upstream subscription-manager repo and then install subscription-manager:
+* CentOS 7, subscription-manager is available in the 'os' repo for its release: ```yum install subscription-manager```
+* CentOS 5/6, enable the upstream subscription-manager repo and then install subscription-manager (be sure to change '6' to '5' if you're on EL5, as the version from 6 will not work):
 
 ~~~
-cat > /etc/yum.repos.d/sub-man.repo << EOF
-[subscription-manager]
-name=An open source entitlement management system.
-baseurl=http://repos.fedorapeople.org/repos/candlepin/subscription-manager/epel-6/x86_64/
-enabled=1
-gpgcheck=0
-EOF
+wget -O /etc/yum.repos.d/subscription-manager.repo http://copr.fedoraproject.org/coprs/dgoodwin/subscription-manager/repo/epel-6/dgoodwin-subscription-manager-epel-6.repo
 
 yum install subscription-manager -y
 ~~~
