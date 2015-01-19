@@ -70,7 +70,7 @@ For EL7:
 
 ```
 $ rpm -Uvh http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/7/x86_64/katello-repos-latest.rpm
-$ rpm -Uvh http://download-i2.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm
+$ rpm -Uvh http://download-i2.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 $ rpm -Uvh https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
 $ rpm -Uvh https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
 $ rpm -Uvh http://yum.theforeman.org/releases/1.6/el7/x86_64/foreman-release.rpm
