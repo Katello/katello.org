@@ -45,7 +45,7 @@ The Capsule server is only supported on x86_64 Operating Systems
 
  * 2 Two Logical CPUs
  * 4 GB of memory
- * Disk space usage is similar to that of the main Katello server [Installation](/docs/installation/index.html)
+ * Disk space usage is similar to that of the main Katello server [Installation](/docs/{{ site.version }}/installation/index.html)
 
 
 ## Required Ports
