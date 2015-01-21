@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Github Workflow
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Github Workflow

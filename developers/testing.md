@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Testing
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Speeding up tests

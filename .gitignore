@@ -3,5 +3,6 @@
 *.swp
 .DS_Store
 _site
+_build
 .bundle
 .ruby-*

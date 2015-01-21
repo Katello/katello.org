@@ -1,20 +1,24 @@
-<ul>
-  <li class="nav-item">
-    <a href="#">Developer Guide</a>
+<nav class="context-nav">
 
-    <ul class="sub-context-nav">
-      {% for page in site.pages %}
-        {% if page.path contains "docs/developer_guide" %}
-          {% unless (page.path contains "style" or page.path contains "bastion") %}
-            <li class="nav-item">
-              <a href="{{ site.base_url }}{{ page.url }}">{{ page.title }}</a>
-            </li>
-          {% endunless %}
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </li>
-</ul>
+  <ul>
+    <li class="nav-item">
+      <a href="#">Developer Guide</a>
 
-{% include sidebars/style_guide.html %}
-{% include sidebars/bastion.html %}
+      <ul class="sub-context-nav">
+        {% for page in site.pages %}
+          {% if page.path contains "developers" %}
+            {% unless (page.path contains "style" or page.path contains "bastion" or page.path contains "developers/index.md") %}
+              <li class="nav-item">
+                <a href="{{ site.base_url }}{{ page.url }}">{{ page.title }}</a>
+              </li>
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+  </ul>
+
+  {% include sidebars/style_guide.html %}
+  {% include sidebars/bastion.html %}
+
+</nav>
