@@ -50,59 +50,12 @@ DESCRIPTION
 
 To start with *katello-disconnected* there are a series of steps you need to take to get it installed and configured. The installation should take place on your Synchronization Server seen above.  This system is the one that has access to the internet and Red Hat's CDN servers.  These instructions point at the ''katello nightly'' builds but you can substitute this for the latest stable version of Katello if you desire.
 
-**1)** Configure repositories on your Synchronization Server:
-
-**Enterprise Linux**
-
-For Enterprise Linux, we require the Katello repos, EPEL and the appropriate set of Software Collection repositories for Ruby 1.9.3.
-
-For EL6:
-
-```
-$ rpm -Uvh http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/6/x86_64/katello-repos-latest.rpm
-$ rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-$ rpm -Uvh https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-6-x86_64/download/rhscl-ruby193-epel-6-x86_64.noarch.rpm
-$ rpm -Uvh http://yum.theforeman.org/releases/1.6/el6/x86_64/foreman-release.rpm
-$ yum-config-manager --enable rhel-6-server-optional-rpms
-```
-
-For EL7:
-
-```
-$ rpm -Uvh http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/7/x86_64/katello-repos-latest.rpm
-$ rpm -Uvh http://download-i2.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
-$ rpm -Uvh https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
-$ rpm -Uvh https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
-$ rpm -Uvh http://yum.theforeman.org/releases/1.6/el7/x86_64/foreman-release.rpm
-$ yum-config-manager --enable rhel-7-server-optional-rpms
-```
-
-**Red Hat Enterprise Linux**
-
-Katello requires your RHEL to be registered to Red Hat channels/repos. We also require the RHEL optional RPMs repo is enabled:
-
-```
-$ yum-config-manager --enable rhel-6-server-optional-rpms
-```
-
-For RHEL 7:
-
-```
-$ yum-config-manager --enable rhel-7-server-optional-rpms
-```
-
-**CentOS**
-
-For CentOS, add the following:
-
-```
-$ wget -O /etc/yum.repos.d/epel-rhsm.repo http://repos.fedorapeople.org/repos/candlepin/subscription-manager/epel-subscription-manager.repo
-```
+**1)** Configure repositories on your Synchronization Server [as per our installation guide](http://localhost:4000/docs/{{ site.version }}/installation/index.html#required-repositories).
 
 **2)** Install katello-utils and associated RPMs:
 
 ```
-$ yum -y install python-qpid-qmf python-qpid  qpid-cpp-server-store katello-utils
+$ yum -y install python-qpid-qmf python-qpid qpid-cpp-server-store katello-utils
 ```
 
 This will install roughly 200 packages depending on your pre-existing configuration.
