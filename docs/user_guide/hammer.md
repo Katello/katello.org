@@ -6,20 +6,13 @@ commands can be run from the command line or used in shell scripts.
 
 ## Installation
 
-The Hammer package is installed as part of Katello. Alternatively, Hammer 
+The Hammer package is installed as part of Katello. Alternatively, Hammer
 can be installed and run from a remote system as long as it can connect to
 Katello via HTTP or HTTPS.
 
 ### Remote install
 
-Install the prerequisite rpms as [per our installation guide](TODO). For EL6,
-this would be:
-
-```
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
-yum -y localinstall http://yum.theforeman.org/releases/1.6/el6/x86_64/foreman-release.rpm
-yum -y localinstall http://mirror.pnl.gov/epel/6/x86_64/epel-release-6-8.noarch.rpm
-```
+Install the prerequisite repositories [as per our installation guide](http://localhost:4000/docs/{{ site.version }}/installation/index.html#required-repositories).
 
 Now install the hammer-cli-katello package:
 
@@ -113,7 +106,7 @@ Options:
  --description DESCRIPTION               Product description
  --gpg-key GPG_KEY_NAME                  Name to search by
  --gpg-key-id GPG_KEY_ID                 gpg key numeric identifier
- --label LABEL                            
+ --label LABEL
  --name NAME                             Product name
  --organization ORGANIZATION_NAME        Organization name to search by
  --organization-id ORGANIZATION_ID       organization ID
