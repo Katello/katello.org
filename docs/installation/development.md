@@ -30,10 +30,10 @@ yum install katello-installer
 ```
 git clone https://github.com/Katello/katello-installer.git
 cd katello-installer
-``` 
+```
 
-The development installer has a variety of options that may be set prior to running the installation. 
-For example, if you have already created a user on the system or have a preferred user name and password these can be configured. 
+The development installer has a variety of options that may be set prior to running the installation.
+For example, if you have already created a user on the system or have a preferred user name and password these can be configured.
 Options can be configured via the answer file or through command line options when running the installer.
 
 **RPM**
