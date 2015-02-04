@@ -23,6 +23,8 @@ Katello may be installed onto a baremetal host or on a virtual guest.  The minim
 * 4 GB of memory (8 GB highly recommended)
 * The filesystem holding /var/lib/pulp needs to be large, but may vary depending on how many different Operating Systems you wish to syncronize:
   * Allocate 30 GB of space for each operating system.  Even though an operating system may not take up this much space now, this allows space for future updates that will be syncronized later.
+* The filesystem holding /var/lib/mongodb needs at least 4Gb to install, but will vary depending on how many different Operating Systems you wish to syncronize:
+  * Allocate around 40% the capacity that has been given to the /var/lib/pulp filesystem
 * The root filesystem needs at least 20 GB of Disk Space
 
 ## Required Ports
@@ -100,8 +102,8 @@ For all variations of enterprise linux (CentOS and RHEL) the following steps nee
 **EL6**
 
 ```bash
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
-yum -y localinstall http://yum.theforeman.org/releases/1.6/el6/x86_64/foreman-release.rpm
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.1/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://yum.theforeman.org/releases/1.7/el6/x86_64/foreman-release.rpm
 yum -y localinstall http://mirror.pnl.gov/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
 wget http://dev.centos.org/centos/6/SCL/scl.repo -O /etc/yum.repos.d/scl.repo
@@ -110,8 +112,8 @@ wget http://dev.centos.org/centos/6/SCL/scl.repo -O /etc/yum.repos.d/scl.repo
 **EL7**
 
 ```bash
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
-yum -y localinstall http://yum.theforeman.org/releases/1.6/el7/x86_64/foreman-release.rpm
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.1/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://yum.theforeman.org/releases/1.7/el7/x86_64/foreman-release.rpm
 yum -y localinstall http://mirror.pnl.gov/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
