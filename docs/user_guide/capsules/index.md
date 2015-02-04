@@ -60,7 +60,7 @@ The following ports need to be open to external connections:
 
 ### Preparing the Capsule server
 
-The same yum repositories need to be configured on the Capsule server as the main Katello server.  See the installation guide for the [list of required repositories](http://localhost:4000/docs/{{ site.version }}/installation/index.html#required-repositories).
+The same yum repositories need to be configured on the Capsule server as the main Katello server.  See the installation guide for the [list of required repositories](/docs/{{ site.version }}/installation/index.html#required-repositories).
 
 ### Install needed packages:
 
