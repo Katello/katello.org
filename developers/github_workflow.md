@@ -14,11 +14,11 @@ Anyone can to contribute to Katello. In order to contribute, you should open a n
 
 To get started, first sign up for a Github account if you don't already have one. Then visit the repository you'd like to work on (e.g. https://github.com/Katello/katello) and fork it to your account.
 
-Be sure to branch locally in git and then once your changes are made, [commit your changes and push back to your Github repo](#TODO). Once you've pushed, open a new pull request either through the web interface or by using [hub](https://github.com/github/hub).
+Be sure to branch locally in git and then once your changes are made, commit your changes and push back to your Github repo. Once you've pushed, open a new pull request either through the web interface or by using [hub](https://github.com/github/hub).
 
 By default, we develop new code in the master branch. If we are working on large features, we sometimes create separate branches but by default code will most likely be merged to master.
 
-For more information about preparing your pull request and what guidelines your code must meet, see [our PR checklist](#TODO).
+For more information about preparing your pull request and what guidelines your code must meet, see [our PR checklist](/developers/pull_request_checklist.html).
 
 ## Contributor Access
 

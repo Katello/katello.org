@@ -61,7 +61,7 @@ hammer content-view create \
 
 ## Creating a Composite Content View
 
-To create a Composite Content View using the web UI follow the above steps for [Creating a Content View]() but check the "Composite View?" checkbox.
+To create a Composite Content View using the web UI follow the above steps for [Creating a Content View](#creating-a-content-view) but check the "Composite View?" checkbox.
 
 From the CLI:
 
