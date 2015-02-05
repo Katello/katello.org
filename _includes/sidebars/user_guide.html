@@ -5,10 +5,12 @@
     <ul class="sub-context-nav">
       {% assign sorted_pages = site.pages | sort:"path" %}
       {% for page in sorted_pages %}
-        {% if page.path contains "docs/user_guide" %}
-          <li class="nav-item">
-            <a href="{{ site.base_url }}/docs/{{ site.version }}/user_guide/{{ page.url | split:'user_guide/' | last }}">{{ page.title }}</a>
-          </li>
+        {% if page.path contains "user_guide" %}
+          {% unless page.path contains "user_guide/index" %}
+            <li class="nav-item">
+              <a href="{{ site.base_url }}/docs/{{ site.version }}/user_guide/{{ page.url | split:'user_guide/' | last }}">{{ page.title }}</a>
+            </li>
+          {% endunless %}
         {% endif %}
       {% endfor %}
     </ul>

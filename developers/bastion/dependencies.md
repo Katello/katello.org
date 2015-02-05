@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: "Bastion: Dependencies"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Dependencies

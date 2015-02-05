@@ -1,15 +1,17 @@
 <ul>
   <li class="nav-item">
-    <a href="#">Style Guides</a>
+    <a href="{{ site.baseurl }}/developers/style">Style Guides</a>
 
     <a href="{{ site.baseurl }}/developers/style/">Style Guides</a>
 
     <ul class="sub-context-nav">
       {% for page in site.pages %}
         {% if page.path contains "developers/style" %}
-          <li class="nav-item">
-            <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-          </li>
+          {% unless page.path contains "style/index" %}
+            <li class="nav-item">
+              <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+            </li>
+          {% endunless %}
         {% endif %}
       {% endfor %}
     </ul>
