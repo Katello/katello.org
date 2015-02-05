@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: "Style Guide: Ruby"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Ruby Code Conventions

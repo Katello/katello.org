@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: "Bastion: Dependencies"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Dependencies
@@ -79,7 +79,7 @@ of the following commands to fix them:
 version of a component has been bumped.
 
 [See also *Installing a New Dependency*](#installing-a-new-dependency) as well as the related section
-[*Updating a New Dependency*](#updating-a-new-dependency)
+[*Updating a New Dependency*](#updating-a-dependency)
 
 - `sudo npm update -g phantomjs bower grunt-cli`
 - `npm install`

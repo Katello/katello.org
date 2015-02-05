@@ -1,14 +1,14 @@
 ---
 layout: documentation
 title: "Style Guide: Commit Messages"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Git Commit Messages
 
 For Katello, we ask that git commit messages are properly formatted and that they reference an issue
 in Redmine. If your change also involves a Bugzilla issue, you must include the Bugzilla number as
-well (see the [Bugzilla section](TODO)).
+well (see the [Bugzilla section](#bugzilla)).
 
 ### Format
 

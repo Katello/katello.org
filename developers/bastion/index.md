@@ -1,12 +1,12 @@
 ---
 layout: documentation
 title: "Bastion: The Katello UI Engine"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Bastion: The Katello UI Engine
 
-Bastion is a single page AngularJS based web client for the Katello server. The code can be found in the Katello code base at the [`engines/bastion`](https://github.com/katello/katello/tree/master/engines/bastion) path. The layout of the engine is:
+Bastion is a single page AngularJS based web client for the Katello server. The bastion plug-in can be found in the [bastion project on GitHub](https://github.com/Katello/bastion)
 
     app/assets/bastion - application folder for all the JavaScript and view templates
     app/assets/bastion/bastion.js - Rails asset pipeline manifest
@@ -166,7 +166,7 @@ grunt htmlhint
 
 ## Code Conventions
 
- * For Javascript code, see the [Katello Javascript Code Conventions](/docs/developer_guide/style/javascript.html).
+ * For Javascript code, see the [Katello Javascript Code Conventions](/developers/style/javascript.html).
  * For CSS, see the [Katello CSS Conventions] (TODO)
  * For HTML, see the [Katello HTML Conventions] (TODO)
 

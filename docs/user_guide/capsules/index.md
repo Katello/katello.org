@@ -60,46 +60,7 @@ The following ports need to be open to external connections:
 
 ### Preparing the Capsule server
 
-The same yum repositories need to be configured on the Capsule server as the main Katello server.  You may wish to sync all of these and have the Capsule server install from Katello instead of the upstream Repositories.
-
-**Enterprise Linux**
-
-For Enterprise Linux, we require the Katello repos, EPEL and the appropriate set of Software Collection repositories for Ruby 1.9.3.
-
-For EL6:
-
-```
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
-yum -y localinstall http://yum.theforeman.org/releases/1.6/el6/x86_64/foreman-release.rpm
-yum -y localinstall http://mirror.pnl.gov/epel/6/x86_64/epel-release-6-8.noarch.rpm
-yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
-wget http://dev.centos.org/centos/6/SCL/scl.repo -O /etc/yum.repos.d/scl.repo
-```
-
-For EL7:
-
-```
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/2.0/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
-yum -y localinstall http://yum.theforeman.org/releases/1.6/el7/x86_64/foreman-release.rpm
-yum -y localinstall http://mirror.pnl.gov/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
-yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
-yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
-yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
-```
-
-**Red Hat Enterprise Linux**
-
-Katello requires your RHEL to be registered to Red Hat channels/repos. We also require the RHEL optional RPMs repo is enabled:
-
-```
-$ yum-config-manager --enable rhel-6-server-optional-rpms
-```
-
-For RHEL 7:
-
-```
-$ yum-config-manager --enable rhel-7-server-optional-rpms
-```
+The same yum repositories need to be configured on the Capsule server as the main Katello server.  See the installation guide for the [list of required repositories](/docs/{{ site.version }}/installation/index.html#required-repositories).
 
 ### Install needed packages:
 
