@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: "Style Guide: Commit Messages"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Git Commit Messages
