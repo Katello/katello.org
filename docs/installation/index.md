@@ -25,8 +25,8 @@ Katello may be installed onto a baremetal host or on a virtual guest.  The minim
 * 4 GB of memory (8 GB highly recommended)
 * The filesystem holding /var/lib/pulp needs to be large, but may vary depending on how many different Operating Systems you wish to syncronize:
   * Allocate 30 GB of space for each operating system.  Even though an operating system may not take up this much space now, this allows space for future updates that will be syncronized later.
-* The filesystem holding /var/lib/mongodb needs at least 4Gb to install, but will vary depending on how many different Operating Systems you wish to syncronize:
-  * Allocate around 40% the capacity that has been given to the /var/lib/pulp filesystem
+* The filesystem holding /var/lib/mongodb needs at least 4 GB to install, but will vary depending on how many different Operating Systems you wish to syncronize:
+  * Allocate around 40% of the capacity that has been given to the /var/lib/pulp filesystem
 * The root filesystem needs at least 20 GB of Disk Space
 
 ## Required Ports
