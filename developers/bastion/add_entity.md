@@ -62,7 +62,7 @@ See the UI router [documentation](http://angular-ui.github.io/ui-router/site/#/a
 
 ### Server Side
 
-On the server side you need to add the entity name to the list of known pages in [engine.rb](https://github.com/Katello/katello/tree/master/engines/bastion/config/routes.rb).
+On the server side you need to add the entity name to the list of known pages in [engine.rb](https://github.com/Katello/katello/blob/master/engines/bastion_katello/lib/bastion_katello/engine.rb).
 
 If the new entity is to be addressable at /new_entity, for example, then you should add new_entity to the `@pages` array.
 
