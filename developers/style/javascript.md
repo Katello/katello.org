@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: "Style Guide: Javascript"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/developer_guide.html
 ---
 
 # Javascript Code Conventions
