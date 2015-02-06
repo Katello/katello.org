@@ -2,18 +2,32 @@
 
 require 'open3'
 require 'fileutils'
+require 'open-uri'
+require 'json'
+require 'optparse'
+
+options = {}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: ./deploy.rb [options]"
+  opts.on("--pr [PR]", "Build against a pull request") { |pr| options[:pr] = pr }
+  opts.parse!
+end
 
 class Deployer
 
-  attr_accessor :versions
+  attr_accessor :versions, :pr
 
   BUILD_DIR = '_build'
   DEPLOY_DIR = 'public'
 
-  def initialize
+  def initialize(pr = nil)
     make_builddir
     make_deploymentdir
     clone_version('nightly')
+
+    self.pr = pr_details(pr)
+    puts "Testing PR #{self.pr[:id]} against branch #{self.pr[:target]}" unless self.pr.empty?
 
     self.versions = find_versions
     puts "Versions found: #{versions.to_s}"
@@ -64,6 +78,7 @@ class Deployer
     reset_nightly
 
     Dir.chdir(BUILD_DIR + '/nightly') do
+      build_pr_branch('master')
       set_config("versions: #{@versions}")
 
       syscall("cat _config.build.yml")
@@ -91,6 +106,8 @@ class Deployer
       syscall("git checkout #{branch}")
     end
 
+    build_pr_branch(branch.split('/').last)
+
     Dir.chdir(BUILD_DIR + '/nightly') do
       set_config("version: #{version}")
       set_config("versions: #{@versions}")
@@ -111,7 +128,7 @@ class Deployer
 
   def reset_nightly
     Dir.chdir(BUILD_DIR + '/nightly') do
-      syscall('git reset origin/master --hard')
+      syscall('git reset HEAD --hard')
     end
   end
 
@@ -155,7 +172,21 @@ class Deployer
     end
   end
 
+  def pr_details(pr)
+    if pr
+      raw = JSON.load(open("https://api.github.com/repos/katello/Katello.org/pulls/#{pr}").read)
+      {:target => raw['base']['ref'], :id => pr}
+    else
+      {}
+    end
+  end
+
+  def build_pr_branch(branch)
+    if branch == pr[:target]
+      syscall("git fetch origin +refs/pull/#{pr[:id]}/merge")
+      syscall("git merge FETCH_HEAD")
+    end
+  end
 end
 
-
-Deployer.new
+Deployer.new(options[:pr])
