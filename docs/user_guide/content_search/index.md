@@ -1,4 +1,4 @@
----
+--
 layout: documentation
 title: Content Search
 sidebar: sidebars/documentation.html
@@ -27,9 +27,9 @@ Content Search provides a mechanism to search, compare, and contrast content acr
 
 ## General Workflow
 
-Below is a general workflow for Content Search. 
+Below is a general workflow for Content Search.
 
-1. [Select Lifecycle Environments](#select-lifecycle-environment)
+1. [Select Lifecycle Environments](#select-lifecycle-environments)
 2. [Search Packages - Basic](#search-packages---basic)
 3. [Search Packages - Advanced](#search-packages---advanced)
 4. [View Package details](#view-package-details)
@@ -79,7 +79,7 @@ List Packages within a Repository:
 
 ## Search Packages - Advanced
 
-[Search Packages - Basic](#search-packages---basic) illustrates how to search for all packages across all Content Views, Products and Repositories, for the selected Lifecycle Environments; however, it is possible to refine the search using the input fields provided within the search widget.  
+[Search Packages - Basic](#search-packages---basic) illustrates how to search for all packages across all Content Views, Products and Repositories, for the selected Lifecycle Environments; however, it is possible to refine the search using the input fields provided within the search widget.
 
 The following is an example search for all kernel packages within a specific Content View:
 
@@ -128,7 +128,7 @@ Select Repositories to Compare:
 Comparison Results:
 
   * A darkened circle indicates that the errata exists in the associated repository and a hyphen (**-**) indicates that it does not.
-  * The image below illustrates a Union comparison for Errata; however, multiple options are available when comparing content.  For example, 
+  * The image below illustrates a Union comparison for Errata; however, multiple options are available when comparing content.  For example,
     * Show:
       * Errata
       * Packages
@@ -137,7 +137,7 @@ Comparison Results:
       * Union: Show all results regardless of which columns they exist in.
       * Intersection: Show only results that exist in all selected columns.
       * Difference: Show only results that do not exist in all selected columns.
-  * In addition, hovering over an Errata ID (e.g. RHBA-2014:1056), Package name (e.g. "busybox") or Puppet Module name (e.g. "httpd") will provide more details on the object, similar to what is shown in [View Package Details](#view-package-details) 
+  * In addition, hovering over an Errata ID (e.g. RHBA-2014:1056), Package name (e.g. "busybox") or Puppet Module name (e.g. "httpd") will provide more details on the object, similar to what is shown in [View Package Details](#view-package-details)
 
 ![Comparison Result](./compare_repositories_compare_result.png)
 

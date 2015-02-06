@@ -1,0 +1,12 @@
+install: gem install rake html-proofer
+language: ruby
+rvm:
+- 2.0
+script: 'rake test:travis'
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+branches:
+  only:
+    - master
+    - /^KATELLO-.*$/
