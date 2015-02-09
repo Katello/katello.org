@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-group :development do
+group :test, :development do
   gem 'therubyracer'
   gem 'jekyll'
   gem 'kramdown'
