@@ -27,15 +27,15 @@ Update the Foreman and Katello release packages:
   * RHEL6 / CentOS 6:
 
 ```
-  # yum update -y http://fedorapeople.org/groups/katello/releases/yum/2.1/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
-  # yum update -y http://yum.theforeman.org/releases/1.7/el6/x86_64/foreman-release.rpm
+  # yum update -y http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
+  # yum update -y http://yum.theforeman.org/nightly/el6/x86_64/foreman-release.rpm
 ```
 
   * RHEL7 / CentOS 7:
 
 ```
-  # yum update -y http://fedorapeople.org/groups/katello/releases/yum/2.1/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
-  # yum update -y http://yum.theforeman.org/releases/1.7/el7/x86_64/foreman-release.rpm
+  # yum update -y http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+  # yum update -y http://yum.theforeman.org/nightly/el7/x86_64/foreman-release.rpm
 ```
 
 ## Step 4 - Update Packages
@@ -60,7 +60,8 @@ The installer with the --upgrade flag will run the right database migrations for
 # katello-installer --upgrade
 ```
 
-**Congratulations! You have now successfully upgraded your Katello to {{ site.version }}! For a rundown of what was added, please see [release notes](/docs/{{ site.version }}/release_notes/release_notes.html).**
+**Congratulations! You have now successfully upgraded your Katello to {% if site.version %}{{ site.version }} For a rundown of what was added, please see [release notes](/docs/{{ site.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
+
 
 If for any reason, the above steps failed, please review /var/log/katello-installer/katello-installer.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
 

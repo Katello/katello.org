@@ -1,11 +1,11 @@
 ---
 layout: documentation
-title: Installation
+title: Katello Installation
 sidebar: sidebars/documentation.html
 script: osmenu.js
 ---
 
-# Installation
+# Katello Installation
 
 {% if site.versions %}
 For previous versions - {% for version in site.versions %}[{{ version }}](/docs/{{ version }}/installation/index.html) {% endfor %}
