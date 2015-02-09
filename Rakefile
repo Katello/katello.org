@@ -7,7 +7,7 @@ namespace :test do
     sh 'git clone https://github.com/Katello/katello.org.git -b deploy deploy'
 
     Dir.chdir 'deploy' do
-      if (pr = ENV['TRAVIS_PULL_REQUEST']) && !pr.empty?
+      if (pr = ENV['TRAVIS_PULL_REQUEST']) && pr =~ /\A[0-9]+\z/
         sh "./deploy.rb --pr #{pr}"
       else
         sh "./deploy.rb"
