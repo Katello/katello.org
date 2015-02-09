@@ -2,6 +2,7 @@ name: Katello
 baseurl: 
 markdown: KramdownPygments
 highlighter: pygments
+latest: 2.1
 
 kramdown:
   auto_id: true
