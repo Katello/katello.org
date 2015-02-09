@@ -17,6 +17,23 @@ For Katello 1.4 users looking for information on how to transition to 2.0, pleas
 
 Note: After installation of Katello, be sure to trust Katello's CA certificate on your system.  This is required for the encrypted NoVNC connections. You will find `katello-default-ca.crt` in the `/pub` directory of your Katello server (e.g. `http://katello.example.com/pub/katello-default-ca.crt`).
 
+## SELinux
+
+Unfortunately due to an issue with a backend service, Katello 2.1 cannot run in enforcing mode.  This will be fixed in Katello 2.2.  Before installing change selinux to run in permissive mode:
+
+```
+setenforce 0
+```
+
+and configure SELINUX=permissive in /etc/selinux/config.
+
+Finally ensure selinux is not enforcing:
+
+```
+$ getenforce
+Permissive
+```
+
 ## Hardware Requirements
 
 Katello may be installed onto a baremetal host or on a virtual guest.  The minimum requirements are:

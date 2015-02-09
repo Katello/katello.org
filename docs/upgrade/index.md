@@ -8,6 +8,23 @@ sidebar: sidebars/documentation.html
 
 Katello supports upgrades from version 2.0.  For users transitioning from 1.4, please see - [Transition Guide](/docs/{{ site.version }}/installation/2.0-transition.html).
 
+## SELinux
+
+Unfortunately due to an issue with a backend service, Katello 2.1 cannot run in enforcing mode.  This will be fixed in Katello 2.2.  Before installing change selinux to run in permissive mode:
+
+```
+setenforce 0
+```
+
+and configure SELINUX=permissive in /etc/selinux/config.
+
+Finally ensure selinux is not enforcing:
+
+```
+$ getenforce
+Permissive
+```
+
 ## Step 1 - Backup
 
 If Katello is running on a Virtual Machine, we reccomend to take a snapshot prior to upgrading. Otherwise, take a backup of the relevant databases by following the [instructions here](/docs/{{ site.version }}/user_guide/backup/).
