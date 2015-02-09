@@ -4,18 +4,17 @@ require 'html/proofer'
 
 namespace :test do
   task :travis do
-    if (pr = ENV['TRAVIS_PULL_REQUEST']) && !pr.empty?
-      sh 'git clone https://github.com/Katello/katello.org.git -b deploy deploy'
+    sh 'git clone https://github.com/Katello/katello.org.git -b deploy deploy'
 
-      Dir.chdir 'deploy' do
+    Dir.chdir 'deploy' do
+      if (pr = ENV['TRAVIS_PULL_REQUEST']) && !pr.empty?
         sh "./deploy.rb --pr #{pr}"
+      else
+        sh "./deploy.rb"
       end
-
-      HTML::Proofer.new("./deploy/public", :href_ignore => ['#'], :file_ignore => [/.*\/docs\/2.0.*/]).run
-    else
-      puts "No PR found. Testing local."
-      Rake::Task['test:local'].invoke
     end
+
+    HTML::Proofer.new("./deploy/public", :href_ignore => ['#'], :file_ignore => [/.*\/docs\/2.0.*/]).run
   end
 
   task :local do
