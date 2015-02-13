@@ -6,17 +6,22 @@ sidebar: sidebars/documentation.html
 
 # Errata
 
-Errata are incremental updates between major releases.  An Erratum is metadata about a group of packages that explains the importance of the package updates.
-Errata may be released individually on an as-needed basis or aggregated as a minor release.  There are three main types of errata:
+Errata are updates between major releases.  An Erratum is metadata about a group of packages that explains the importance of the package updates.  Errata may be released individually on an as-needed basis or aggregated as a minor release.  There are three main types of errata:
 
 - Enhancement:  the new packages contain one or more added features
 - Bugfix: the new packages contain one or more bug fixes
 - Security:  the new packages fix one or more security vulnerabilities
 
+With regard to Content Hosts, Errata is divided into two distinct classifications depending on whether or not the Errata is present in the Content Host's Lifecycle Environment and Content View:
+
+- Applicable: the errata applies to one or more Content Hosts
+- Installable: the errata applies to one or more Content Hosts and is present in the Content Host's Lifecycle Environment and Content View
+
 ## Definitions
 
 - [Content Host](../content_hosts/index.html#what-are-content-hosts)
-- [Lifecycle Environments](../lifecycle_environments/environment.html)
+- [Content View](../content_views/content_views.html)
+- [Lifecycle Environment](../lifecycle_environments/environment.html)
 
 ## General Features
 
@@ -26,6 +31,7 @@ The following is a high-level summary of the Errata features:
 - [View Errata Details](#view-errata-details)
 - [View Affected Content Hosts](#view-affected-content-hosts)
 - [View Repositories Containing Errata](#view-repositories-containing-errata)
+- [Applying Errata](#applying-errata)
 
 ## View List of Errata
 
@@ -70,3 +76,43 @@ Note that you can filter by Lifecycle Environment and Content View.
 
 ![View Repositories Containing Errata](./errata_repositories.png)
 
+## Applying Errata
+
+How Errata is applied to a Content Host(s) depends on whether the Errata is installable.
+
+- If the Errata is already installable then the Errata is applied to the Content Host(s).
+- If the Errata is not installable then an Incremental Update is generated.  An Incremental Update creates a point release of the Content View with the Errata included.  The Errata can also be applied to the Content Host(s) as part of this process.
+
+There are two ways to apply Errata:
+
+- A single Errata can be applied to one or more Content Hosts
+- Several Errata can be applied to one or more Content Hosts via a bulk operation
+
+### Applying a Single Errata
+
+To apply a single Errata:
+
+- Navigate to: Content > Errata
+- Click on an Errata ID
+- Click on the Content Host tab
+- Select the desired Content Hosts
+- Click "Apply to Hosts"
+- Confirm the action
+
+![Select Content Hosts to Apply](./single_errata_select_content_hosts.png)
+![Errata Incremental Update](./single_errata_incremental_update.png)
+
+### Applying Several Errata
+
+To apply several Errata:
+
+- Navigate to: Content > Errata
+- Select the desired Errata
+- Click "Apply Errata"
+- Select the intended Content Hosts
+- Click "Next"
+- Confirm the action
+
+![Select Errata to Apply](./bulk_errata_select.png)
+![Select Content Hosts to Apply](./bulk_errata_select_content_hosts.png)
+![Errata Incremental Update](./bulk_errata_incremental_update.png)
