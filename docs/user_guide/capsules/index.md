@@ -64,7 +64,7 @@ The same yum repositories need to be configured on the Capsule server as the mai
 
 ### Install needed packages:
 
-yum install -y katello-installer
+yum install -y capsule-installer
 
 ### Generate Certificates for the Capules
 
@@ -86,7 +86,7 @@ Installing             Done                                               [100%]
   To finish the installation, follow these steps:
 
   1. Ensure that the capsule-installer is available on the system.
-     The capsule-installer comes from the katello-installer package and
+     The capsule-installer comes from the capsule-installer package and
      should be acquired through the means that are appropriate to your deployment.
   2. Copy ~/mycapsule.example.com-certs.tar to the system mycapsule.example.com
   3. Run the following commands on the Capsule (possibly with the customized
