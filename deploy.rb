@@ -113,9 +113,11 @@ class Deployer
       set_config("versions: #{@versions}")
 
       syscall("rm -rf docs/")
-      FileUtils.mkdir('docs/')
-      FileUtils.mkdir('docs/' + version)
-      syscall("cp -rf ../#{version}/docs/* docs/#{version}")
+
+      ['docs', '_includes/sidebars'].each do |path|
+        FileUtils.mkdir_p("#{path}/#{version}")
+        syscall("cp -rf ../#{version}/#{path}/* #{path}/#{version}")
+      end
 
       jekyll_build
       cleanup_config
