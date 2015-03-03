@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Red Hat Content
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Red Hat Content

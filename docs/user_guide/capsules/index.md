@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Capsules 
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Capsules
