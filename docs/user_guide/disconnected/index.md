@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Disconnected
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Katello Disconnected Utility

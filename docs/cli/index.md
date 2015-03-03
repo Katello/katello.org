@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: CLI
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Hammer
