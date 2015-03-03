@@ -1,7 +1,7 @@
 --
 layout: documentation
 title: Content Search
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Content Search

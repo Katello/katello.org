@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Installation
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 script: osmenu.js
 ---
 

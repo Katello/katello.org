@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Capsule Upgrade
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Capsule Upgrade

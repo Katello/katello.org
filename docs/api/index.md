@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: API
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 <iframe src="apidoc.html">
