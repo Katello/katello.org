@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Host Collections
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Managing Content Hosts using Host Collections

@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Email Notifications
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Email Notifications

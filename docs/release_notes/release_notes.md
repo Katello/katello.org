@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Release Notes
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Katello Nightly () Release Notes
