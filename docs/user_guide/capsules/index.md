@@ -21,7 +21,7 @@ Not all of these features need to be deployed onto a Capsule, as they are all op
 
 The end goal is for all client communication to be able to go through a Capsule server.  Isolating communication through the Capsule prevents the client from needing network connectivity to the Katello server.  There are still a few cases where clients need to communicate directly to the Katello server, but we hope to close those gaps in future releases. 
 
-With a fully configured Capsule, Hosts would boot and get their IP information from the Capsule's DHCP server, PXE boot from the Capsule's tftp server, resolve hostnames using the Capsule's DNS server, provision from kickstart trees that have been synced to the Capsule, configure itself using the Puppet Master running on the Capsule, and recieve content updates directly from the Capsule itself.
+With a fully-configured Capsule, Hosts would boot and get their IP information from the Capsule's DHCP server, PXE boot from the Capsule's tftp server, resolve hostnames using the Capsule's DNS server, provision from kickstart trees that have been synced to the Capsule, configure itself using the Puppet Master running on the Capsule, and recieve content updates directly from the Capsule itself.
 
 ## Deployment
 
@@ -35,7 +35,7 @@ If you are familiar with a Foreman Smart Proxy a Capsule is very similar but add
 
 ## What is the default Capsule?
 
-On every Katello server a Capsule is installed by default with only the Puppet Master feature enabled.  This feature is required to be enabled for proper use of Puppet content within Katello.
+On every Katello server, a Capsule is installed by default with only the Puppet Master feature enabled.  This feature is required to be enabled for proper use of Puppet content within Katello.
 
 There is no 'content mirroring' capability of the default Capsule since Katello already hosts the content locally.
 
@@ -164,9 +164,9 @@ You can associate your Capsule with a Lifecycle Environment by navigating to Inf
 3. Select the desired environments
 4. Click "Submit"
 
-## Manually syncing your Capsules
+## Manually Syncing your Capsules
 
-You can manually syncronize a Capsule using Hammer:
+You can manually synchronize a Capsule using Hammer:
 
 ```
 hammer -u admin -p password  capsule content synchronize --name mycapsule.example.com
@@ -184,7 +184,7 @@ Whenever new content is available within a Lifecycle Environment, whether that b
 
 ## Provisioning using a Capsule
 
-You can instruct a Host to use a Capsule for one or more services by setting the following fields on the host itsef:
+You can instruct a Host to use a Capsule for one or more services by setting the following fields on the host itself:
 
  * Puppet Master
  * Puppet CA
@@ -206,4 +206,4 @@ or after a Content Host is already registered:
 subscription-manager config --rhsm.baseurl="https://mycapsule.example.com/pulp/repos"
 ```
 
-alternatively you can simply set the 'baseurl' option in /etc/rhsm/rhsm.conf to "https://mycapsule.example.com/pulp/repos".
+Alternatively, you can simply set the 'baseurl' option in /etc/rhsm/rhsm.conf to "https://mycapsule.example.com/pulp/repos".
