@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Glossary
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Glossary

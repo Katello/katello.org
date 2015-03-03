@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Backup
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Backup

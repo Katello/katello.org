@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Katello Upgrade
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Katello Upgrade

@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Errata
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Errata
