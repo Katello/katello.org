@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Provisioning
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Provisioning

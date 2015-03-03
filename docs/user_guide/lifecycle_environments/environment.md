@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Lifecycle Environments
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Lifecycle Environments

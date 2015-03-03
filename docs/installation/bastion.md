@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: "Bastion: Installation"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Installing Bastion 
