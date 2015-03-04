@@ -99,6 +99,7 @@ class Deployer
       FileUtils.mkdir('docs/')
       FileUtils.mkdir('docs/' + version)
       syscall("cp -rf ../#{version}/docs/* docs/#{version}")
+      syscall("cp -rf ../#{version}/_includes/sidebars/documentation.html* _includes/sidebars/documentation.html")
 
       jekyll_build
       cleanup_config
