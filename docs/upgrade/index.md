@@ -27,15 +27,15 @@ Update the Foreman and Katello release packages:
   * RHEL6 / CentOS 6:
 
 ```
-  # yum update -y http://fedorapeople.org/groups/katello/releases/yum/2.1/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
-  # yum update -y http://yum.theforeman.org/releases/1.7/el6/x86_64/foreman-release.rpm
+  # yum update -y http://fedorapeople.org/groups/katello/releases/yum/2.2/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
+  # yum update -y http://yum.theforeman.org/releases/1.8/el6/x86_64/foreman-release.rpm
 ```
 
   * RHEL7 / CentOS 7:
 
 ```
-  # yum update -y http://fedorapeople.org/groups/katello/releases/yum/2.1/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
-  # yum update -y http://yum.theforeman.org/releases/1.7/el7/x86_64/foreman-release.rpm
+  # yum update -y http://fedorapeople.org/groups/katello/releases/yum/2.2/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+  # yum update -y http://yum.theforeman.org/releases/1.8/el7/x86_64/foreman-release.rpm
 ```
 
 ## Step 4 - Update Packages
