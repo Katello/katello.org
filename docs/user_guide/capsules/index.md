@@ -65,7 +65,7 @@ Required Connectivity:
 
 ### 2 - Katello Agent
 
-The Katello agent is a goferd plugin that allows you to schedule remote actions on hosts such as package installation, updates, etc. A capsule must be running the Qpid Dispatch Router service for this feature to work.
+The Katello agent is a goferd plugin which allows you to schedule remote actions on hosts such as package installation, updates, etc. A capsule must be running the Qpid Dispatch Router service for this feature to work.
 
 Install Option:
 
@@ -77,7 +77,7 @@ Required Connectivity:
 
 ### 3 - Puppet & Puppet CA
 
-By default, the Puppet CA feature on the Capsule is an indepedent CA which will manage the certificates for all the clients registered against the Capsule. Simply select the Puppetmaster and Puppet CA to be the Capsule when creating a host.
+By default, the Puppet CA feature on the Capsule is an independent CA which will manage the certificates for all the clients registered against the Capsule. Simply select the Puppetmaster and Puppet CA to be the Capsule when creating a host.
 
 Install Option:
 
@@ -101,7 +101,7 @@ Required Connectivity:
 
 ### 5 - Provisioning Services
 
-When provisioning a host using DHCP/PXE, you will need at a minimum the TFTP feature enabled on the capsule, and a DHCP server available. While not required, the Capsule can provide the DHCP service. In order for the installer to obtain it's kickstart template from the Capsule, you should enable the templates feature.
+When provisioning a host using DHCP/PXE, you will need, at a minimum, the TFTP feature enabled on the capsule, and a DHCP server available. While not required, the Capsule can provide the DHCP service. In order for the installer to obtain its kickstart template from the Capsule, you should enable the templates feature.
 
 If a TFTP proxy has the Templates feature as well, Foreman will automatically make the communication isolated. Your clients need to talk to the Capsule on port 67/udp and 68/udp for DHCP, 69/udp for TFTP, and 8000/tcp for Templates.
 
