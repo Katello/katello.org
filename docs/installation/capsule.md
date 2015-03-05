@@ -28,16 +28,16 @@ See the [User Guide](/docs/{{ site.version }}/user_guide/capsules/index.html) fo
 
 ## Installation
 
-### Generate Certificates for the Capules
+### Generate Certificates for the Capsules
 
-Prior to installing the Capsule we need to generate certificates on the main **Katello** server:
+Prior to installing the Capsule, we need to generate certificates on the main **Katello** server:
 
 ```
 capsule-certs-generate --capsule-fqdn "mycapsule.example.com"\
                        --certs-tar    "~/mycapsule.example.com-certs.tar"
 ```
 
-Replacing 'mycapsule.example.com' with your Capsule's fully qualified domain name. This will generate a tar file containing all the needed certificates. You will need to transfer those certificates to the server that you will install your Capsule on using whatever method you prefer (e.g. SCP).
+In the above example, replace 'mycapsule.example.com' with your Capsule's fully qualified domain name. This will generate a tar file containing all the needed certificates. You will need to transfer those certificates to the server that you will install your Capsule on using whatever method you prefer (e.g. SCP).
 
 The capsule-certs-generate command will output an example installation command. For example:
 
