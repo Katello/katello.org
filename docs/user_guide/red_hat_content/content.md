@@ -60,7 +60,7 @@ To enable Red Hat repositories,
 - select one or more Repsitory Sets (e.g. Red Hat Enterprise Linux 6 Server (RPMs))
 - select one or more Repositories (e.g. Red Hat Enterprise Linux 6 Server RPMs x86_64 6Server)
 
-Note: 
+Note:
 
 - When enabling a RHEL repository, Red Hat recommends selecting the Server repo (e.g. 6Server, 5Server) versus a specific release (e.g. 6.2).  When a specific release is necessary, the preferred way is to create a Content View with filters that narrow the content to the desired version (e.g. 6.2)
 - If you plan to provision content hosts, be sure to enable both the RPM and Kickstart repositories.
@@ -87,14 +87,14 @@ To sync multiple repositories as well as track their progress,
 
 Sync plans provide the ability to schedule repository synchronization on a daily, weekly or a monthly basis.  Sync plans can be applied individually or to a set of repositories.
 
-To create a Sync Plan, 
+To create a Sync Plan:
 
 - navigate to: Content > Sync Plans
 - click **New Sync Plan** on the upper right
 
 Note the following options:
 
-- *Start Date* and *Start Time*: specify the day of the week/month and time of the day to run the re-occuring syncs.  For example, a sync plan that starts on Sunday 2014-04-06 at 2:30 will occur every Sunday at 2:30 every week if it has a weekly interval.  If on a monthly interval it would sync every month on the 6th day at 2:30.
+- *Start Date* and *Start Time*: specify the day of the week/month and time of the day to run the recurring syncs.  For example, a sync plan that starts on Sunday 2014-04-06 at 2:30 will occur every Sunday at 2:30 every week if it has a weekly interval.  If on a monthly interval it would sync every month on the 6th day at 2:30.
 
 ![Creating a Sync Plan](./sync_plan_create.png)
 
