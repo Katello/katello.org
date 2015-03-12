@@ -88,9 +88,3 @@ The database password is stored in /var/lib/puppet/foreman_cache_data/candlepin_
 # katello-service restart
 # foreman-rake db:seed
 ```
-
-**Errata import**
-
-```
-# foreman-rake katello:upgrades:2.1:import_errata
-```
