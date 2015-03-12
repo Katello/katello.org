@@ -1,209 +1,108 @@
 ---
 layout: documentation
-title: Capsules 
+title: Capsules
 sidebar: sidebars/documentation.html
 ---
 
 # Capsules
 
 ## What are Capsules?
- The Capsule Server is a separate server that provides services to discover, provision, and configure hosts remotely. The Capsule provides the following features:
-        
-  * Content delivery (Mirror lifecycle enivronments from your Katello server)
-  * DHCP, including ISC DHCP
-  * DNS, including Bind and MS DNS servers
-  * Any UNIX-based TFTP server
-  * Puppet Master servers from 0.24
-  * Puppet CA to manage certificate signing and cleaning
-  * Baseboard Management Controller (BMC) for power management 
 
-Not all of these features need to be deployed onto a Capsule, as they are all optional.  For example, if in a particular network segment dhcp and dns are managed already (possibly by another group) and you only want the content mirroring capability, you can deploy a Capsule with just the content delivery portion.  
+The Capsule server is a Katello component that provides federated services to discover, provision, control, and configure hosts. Each Katello server includes a Default Capsule, and you may deploy additional Capsules to remote data centers. A Capsule server provides the following features:
 
-The end goal is for all client communication to be able to go through a Capsule server.  Isolating communication through the Capsule prevents the client from needing network connectivity to the Katello server.  There are still a few cases where clients need to communicate directly to the Katello server, but we hope to close those gaps in future releases. 
+  * Content features, including:
+    * Repository synchronization
+    * Content delivery
+    * Host action delivery (package installation updates, etc)
+    * Subscription management proxy (RHSM)
+  * Foreman Smart Proxy features, including:
+    * DHCP, including ISC DHCP servers
+    * DNS, including Bind and MS DNS servers
+    * Realm, including FreeIPA
+    * Any UNIX-based TFTP server
+    * Puppet Master servers
+    * Puppet CA to manage certificate signing and cleaning
+    * Baseboard Management Controller (BMC) for power management
+    * Provisioning template proxy
 
-With a fully configured Capsule, Hosts would boot and get their IP information from the Capsule's DHCP server, PXE boot from the Capsule's tftp server, resolve hostnames using the Capsule's DNS server, provision from kickstart trees that have been synced to the Capsule, configure itself using the Puppet Master running on the Capsule, and recieve content updates directly from the Capsule itself.
+The Katello Capsule server is a means to scale out the Katello installation. Organizations can create various capsules in different geographical locations. These are centrally managed through the Katello server. When a Katello user promotes content to a particular environment, the Katello server will push the content to each of the Capsule servers subscribed to that environment. Hosts pull content and configuration from the Katello Capsule servers in their location and not from the central server.
 
-## Deployment
-
-Most deployments would have a single Katello server with multiple Capsules attached.  You may want to deploy a Capsule into each data center, or into each region where there are systems you wish to manage.  Capsules can also be used to scale the number of systems attached to a single Katello server.  
-
-For example, if you have two small data centers hosting 1000 systems and one very large data center hosting 10,000 systems you would likely want to deploy one Capsule server into each of your small data centers and then 2 or more Capsules into your large data center.
+In a fully configured capsule, communication is completely isolated between hosts and the Katello server.
 
 ## How do Capsules differ from Smart Proxies?
 
-If you are familiar with a Foreman Smart Proxy a Capsule is very similar but adds the content mirroring capabilities of yum and puppet content.  You may see the term Capsule and Smart Proxy used interchangeably.
+A Katello Capsule is a Foreman Smart Proxy with the addition of content-related services.
 
-## What is the default Capsule?
+## Deployment
 
-On every Katello server a Capsule is installed by default with only the Puppet Master feature enabled.  This feature is required to be enabled for proper use of Puppet content within Katello.
-
-There is no 'content mirroring' capability of the default Capsule since Katello already hosts the content locally.
-
-## Hardware Requirements
-
-The Capsule server is only supported on x86_64 Operating Systems
-
- * 2 Two Logical CPUs
- * 4 GB of memory
- * Disk space usage is similar to that of the main Katello server [Installation](/docs/{{ site.version }}/installation/index.html)
-
-
-## Required Ports
-
-The following ports need to be open to external connections:
-
-* 80 TCP - HTTP, used for provisioning purposes
-* 443 TCP - HTTPS, used for web access and api communication
-* 9090 TCP - HTTPS - used for communication with the smart proxy
+In the simplest use case, a user may only want to use the Default Capsule. Larger deployments would have a single Katello server with multiple Capsules attached, with these remote Capsules deployed to various datacenters. Capsules can also be used to scale the number of hosts attached to a single Katello server.
 
 ## Installation
 
-### Preparing the Capsule server
+See [Capsule Installation](/docs/{{ site.version }}/installation/capsule.html)
 
-The same yum repositories need to be configured on the Capsule server as the main Katello server.  See the installation guide for the [list of required repositories](/docs/{{ site.version }}/installation/index.html#required-repositories).
+# Capsule Isolation
 
-### Install needed packages:
+The goal of Capsule Isolation is to provide a single endpoint for all of a client's communication, so that in remote network segments, you need only open Firewall ports to the Capsule itself. The following section details the communication clients need to have with a Capsule. The installation options mentioned are the default starting with Katello 2.2.
 
-yum install -y katello-installer
+![Diagram of Communication](./isolation.png)
 
-### Generate Certificates for the Capules
+## Content and Configuration Services
 
-Prior to installing the Capsule we need to generated certificates on the main **Katello** server:
+There are five primary areas that require client communication:
 
-```
-capsule-certs-generate --capsule-fqdn "mycapsule.example.com"\
-                       --certs-tar    "~/mycapsule.example.com-certs.tar"
-```
+### 1 - Content Delivery
 
-Replacing 'mycapsule.example.com' with your Capsule's fully qualified domain name.  This will generate a tar file containing all the needed certificates.  You will need to transfer those certificates to the server that you will install your Capsule on using whatever method you prefer (e.g. SCP).
+That is, yum. Katello Capsules by default have the Pulp feature, which mirrors content for the selected Lifecycle Environments.
 
-The capsule-certs-generate command will output needed information for the next step. For example:
+Install Option:
 
-```
-Installing             Done                                               [100%] [.....................]
-  Success!
+  * `--pulp=true`
 
-  To finish the installation, follow these steps:
+Required Connectivity:
 
-  1. Ensure that the capsule-installer is available on the system.
-     The capsule-installer comes from the katello-installer package and
-     should be acquired through the means that are appropriate to your deployment.
-  2. Copy ~/mycapsule.example.com-certs.tar to the system mycapsule.example.com
-  3. Run the following commands on the Capsule (possibly with the customized
-     parameters, see capsule-installer --help and
-     documentation for more info on setting up additional services):
+  * Clients need to be able to communicate with the Capsule on port 443/tcp.
 
-  rpm -Uvh http://katello-centos6-2.0.example.com/pub/katello-ca-consumer-latest.noarch.rpm
-  subscription-manager register --org "ACME_Corporation"
-  capsule-installer --parent-fqdn          "katello.example.com"\
-                    --register-in-foreman  "true"\
-                    --foreman-oauth-key    "EwZePUX7erQeYbuMqytLCd4jHndY5iH4"\
-                    --foreman-oauth-secret "K5TmVVsEmc29DCAscJEnupDmHcQQFdc4"\
-                    --pulp-oauth-secret    "7TwngPvBSkJELCAQ4fjEmmY9FUn2UGZJ"\
-                    --certs-tar            "~/mycapsule.example.com-certs.tar"\
-                    --puppet               "true"\
-                    --puppetca             "true"\
-                    --pulp                 "true"
-  The full log is at /var/log/katello-installer/capsule-certs-generate.log
-```
+### 2 - Katello Agent
 
-Keep track of the 'foreman-oauth-key' and 'foreman-oauth-secret' (or just copy and paste the entire command).
+The Katello agent is a goferd plugin which allows you to schedule remote actions on hosts such as package installation, updates, etc. A capsule must be running the Qpid Dispatch Router service for this feature to work.
 
-### Registering the Capsule host
+Install Option:
 
-The Capsule needs to be registered with subscription-manager to the Katello server prior to running the installer.  For more information about registering with subscription-manager, see [How is a Content Host registered](../content_hosts/index.html#how-is-a-content-host-registered) 
+  * `--qpid-router=true`
 
-### Installing
+Required Connectivity:
 
-The most common installation options provide Content Mirroring and Puppet Master capabilities. The command printed after generating the certs will do this with no modifications:
+  * Clients need to be able to communicate with the Capsule on port 5467/tcp
 
-```
-  capsule-installer --parent-fqdn          "katello.example.com"\
-                    --register-in-foreman  "true"\
-                    --foreman-oauth-key    "EwZePUX7erQeYbuMqytLCd4jHndY5iH4"\
-                    --foreman-oauth-secret "K5TmVVsEmc29DCAscJEnupDmHcQQFdc4"\
-                    --pulp-oauth-secret    "7TwngPvBSkJELCAQ4fjEmmY9FUn2UGZJ"\
-                    --certs-tar            "~/mycapsule.example.com-certs.tar"\
-                    --puppet               "true"\
-                    --puppetca             "true"\
-                    --pulp                 "true"
-```
- 
-A more complex deployment may have dhcp, dns, and tftp as well. Simply add one or more of these options:
+### 3 - Puppet & Puppet CA
 
-```
-                  --dns                  "true"\
-                  --dns-forwarders       "8.8.8.8"\
-                  --dns-forwarders       "8.8.4.4"\
-                  --dns-interface        "eth1"\
-                  --dns-zone             "example.com"\
-                  --dhcp                 "true"\
-                  --dhcp-interface       "eth1"\
-                  --tftp                 "true"\`
-```
+By default, the Puppet CA feature on the Capsule is an independent CA which will manage the certificates for all the clients registered against the Capsule. Simply select the Puppetmaster and Puppet CA to be the Capsule when creating a host.
 
+Install Option:
 
+  * `--puppet=true --puppetca=true`.
 
-## Associating your Capsule with an Organization and Location
+Required Connectivity:
 
-In order to be useful, you will need to associate your Capsule with an Organization and Location.  Navigate to Infrastructure > Smart Proxies and
+  * Clients need to communicate with the Capsule on port 8140/tcp.
 
-1. Click on your desired Capsule/Smart Proxy
-2. Click on the "Organizations" tab
-3. Select the desired Organizations
-4. Click "Submit"
+### 4 - Subscription Management
 
-Repeat for Locations on the "Locations" tab.  
+Content Hosts utilize [Subscription Manager](/docs/{{ site.version }}/user_guide/content_hosts/index.html#how-is-a-content-host-registered) for registration to Katello and enabling/disabling specific repositories.
 
-## Associating your Capsule with a Lifecycle Environment
+Install Option:
 
-You can associate your Capsule with a Lifecycle Environment by navigating to Infrastructure > Smart Proxies and
+  * `--reverse-proxy=true`
 
-1. Click on your desired Capsule/Smart Proxy
-2. Click on the "Lifecycle Environments" tab
-3. Select the desired environments
-4. Click "Submit"
+Required Connectivity:
 
-## Manually syncing your Capsules
+  * Clients need to talk to the Capsule on port 8443/tcp.
 
-You can manually syncronize a Capsule using Hammer:
+### 5 - Provisioning Services
 
-```
-hammer -u admin -p password  capsule content synchronize --name mycapsule.example.com
-```
+When provisioning a host using DHCP/PXE, you will need, at a minimum, the TFTP feature enabled on the capsule, and a DHCP server available. While not required, the Capsule can provide the DHCP service. In order for the installer to obtain its kickstart template from the Capsule, you should enable the templates feature.
 
-to syncronize only a single Lifecycle Environment:
+If a TFTP proxy has the Templates feature as well, Foreman will automatically make the communication isolated. Your clients need to talk to the Capsule on port 67/udp and 68/udp for DHCP, 69/udp for TFTP, and 8000/tcp for Templates.
 
-````
-hammer -u admin -p password  capsule content synchronize --name=mycapsule.example.com --environment=Production
-```
-
-## Automatic syncing of Capsules
-
-Whenever new content is available within a Lifecycle Environment, whether that be from syncing, publishing a Content View, or promoting a Content View, a Capsule sync is initiated to sync that content to the Capsule.  You can find these tasks under on the Monitor > Tasks page once one of those three actions have completed. 
-
-## Provisioning using a Capsule
-
-You can instruct a Host to use a Capsule for one or more services by setting the following fields on the host itsef:
-
- * Puppet Master
- * Puppet CA
- * Content Source
-
-Content Source determines where the Host will pull its yum content from.
-
-## Manually configurating a client to use a Capsule
-
-To manually configure a client to use a Capsule for yum content, during registration:
-
-```
-subscription-manager register --org="Default_Organization" --environment="Library" --baseurl="https://mycapsule.example.com/pulp/repos"
-```
-
-or after a Content Host is already registered:
-
-```
-subscription-manager config --rhsm.baseurl="https://mycapsule.example.com/pulp/repos"
-```
-
-alternatively you can simply set the 'baseurl' option in /etc/rhsm/rhsm.conf to "https://mycapsule.example.com/pulp/repos".
+Consult the installer's `--help` for the full range of provisioning options.
