@@ -73,7 +73,7 @@ Install Option:
 
 Required Connectivity:
 
-  * Clients need to be able to communicate with the Capsule on port 5467/tcp
+  * Clients need to be able to communicate with the Capsule on port 5647/tcp
 
 ### 3 - Puppet & Puppet CA
 
