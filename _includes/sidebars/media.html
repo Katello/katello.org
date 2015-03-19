@@ -1,11 +1,14 @@
 <nav class="context-nav">
+    <ul>
     {% for page in site.pages %}
       {% if page.path contains "media" %}
-        <ul>
-          <li class="nav-item">
-            <a href="{{ site.base_url }}{{ page.url }}">{{ page.title }}</a>
-          </li>
-        </ul>
+        <li class="nav-item">
+          <a href="{{ site.base_url }}{{ page.url }}">{{ page.title }}</a>
+        </li>
       {% endif %}
     {% endfor %}
+        <li class="nav-item">
+          <a href="https://www.youtube.com/channel/UCCo7AZ1oG6TbG0-dwjRqCmw/videos?live_view=500&sort=dd&view=0&flow=list">YouTube <i class="fa fa-external-link"></i></a>
+        </li>
+    </ul>
 </nav>
