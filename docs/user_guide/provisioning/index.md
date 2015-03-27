@@ -19,4 +19,4 @@ Katello ships a number of templates in addition to the standard Foreman ones. Wh
 
 To customize any of the above templates, simply clone them and add your changes.
 
-When you synchronize a repository with a distribution such as Fedora or CentOS, Katello will automatically create the operating system and assign these default templates.  You may change the defaults by going to Administer / Setttings, and selecting the Katello tab.
+When you synchronize a repository with a distribution such as Fedora or CentOS, Katello will automatically create the operating system and assign these default templates.  You may change the defaults by going to Administer > Settings, and selecting the Katello tab.

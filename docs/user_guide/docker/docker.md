@@ -34,7 +34,7 @@ Then click save and then sync the Repository as you normally would. Katello will
 
 ## How to Upload Docker Images
 
-As an alternative to syncing content, Docker can images can be uploaded directly into Katello either by the UI or the CLI. These images can either be added to Repositories which have been synced from an external source such as Docker Hub or they can be uploaded into Repositories which have no external source. For the latter, you can create a Repository in Katello with no upstream name or registry URL. This is handy if you just want to create a repository from only Docker images you plan to upload.
+As an alternative to syncing content, Docker images can be uploaded directly into Katello either by the UI or the CLI. These images can either be added to Repositories which have been synced from an external source such as Docker Hub, or they can be uploaded into Repositories which have no external source. For the latter, you can create a Repository in Katello with no upstream name or registry URL. This is handy if you just want to create a repository from only Docker images you plan to upload.
 
 In order to upload a Docker image, you'll first need to export it from Docker. To do this, you'll use the Docker `save` command.
 
@@ -81,4 +81,4 @@ Pulling repository localhost:5000/default_organization-library-redisv-Tester-red
 
 See how to provision content in the documentation in the [foreman-docker documentation](http://theforeman.org/plugins/). Provisioning content from Katello works in much the same way.
 
-First, proceed to the new Container page by accessing it from the Containers menu at the top. Then, select the Local Content tab on the second step. This will allow you to select a Docker image from a published Katello repository that's in an environment/content view/capsule. Then just proceed in the wizard as per the Foreman Docker instructions. When you are finished, you should have a new container running from an image in Katello
+First, proceed to the new Container page by accessing it from the Containers menu at the top. Then, select the Local Content tab on the second step. This will allow you to select a Docker image from a published Katello repository which is in an environment/content view/capsule. Then just proceed in the wizard as per the Foreman Docker instructions. When you are finished, you should have a new container running from an image in Katello.
