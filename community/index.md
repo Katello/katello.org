@@ -6,6 +6,10 @@ sidebar: sidebars/community.html
 
 # Community
 
+## Security
+
+Typically the project follows the support and security procedures of the Foreman project, see [Foreman Security Process](http://theforeman.org/security.html) for more information. When reporting security issues please follow the aforementioned process but include `[Katello]` in the subject line so that we know the issue is specific to Katello.
+
 ## Support
 
 To get appropriate support, you need to provide sufficient information about your operating system, environment and setup. You can utilize the foreman-debug tool which collects information about your OS, Foreman, Katello, and related components. If you installed from packages, the command is available to root:
