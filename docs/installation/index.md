@@ -79,9 +79,9 @@ yum-config-manager --enable rhel-6-server-optional-rpms
 ```bash
 yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://yum.theforeman.org/nightly/el6/x86_64/foreman-release.rpm
-yum -y localinstall http://mirror.pnl.gov/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
-wget http://dev.centos.org/centos/6/SCL/scl.repo -O /etc/yum.repos.d/scl.repo
+yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+yum -y install foreman-release-scl
 ```
 </div>
 
@@ -99,10 +99,9 @@ yum-config-manager --enable rhel-7-server-extras-rpms
 ```bash
 yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://yum.theforeman.org/nightly/el7/x86_64/foreman-release.rpm
-yum -y localinstall http://mirror.pnl.gov/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
-yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
-yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
+yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum -y install foreman-release-scl
 ```
 </div>
 
