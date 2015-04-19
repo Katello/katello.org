@@ -29,13 +29,18 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>apply</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/system_errata/apply.en.html">en</a> | <a href="../../apidoc/system_errata/apply.de.html">de</a> | <a href="../../apidoc/system_errata/apply.pt_BR.html">pt_BR</a> | <a href="../../apidoc/system_errata/apply.es.html">es</a> | <a href="../../apidoc/system_errata/apply.sv_SE.html">sv_SE</a> | <a href="../../apidoc/system_errata/apply.en_GB.html">en_GB</a> | <a href="../../apidoc/system_errata/apply.fr.html">fr</a> | <a href="../../apidoc/system_errata/apply.zh_TW.html">zh_TW</a> | <a href="../../apidoc/system_errata/apply.ja.html">ja</a> | <a href="../../apidoc/system_errata/apply.ko.html">ko</a> | <a href="../../apidoc/system_errata/apply.zh_CN.html">zh_CN</a> | <a href="../../apidoc/system_errata/apply.ru.html">ru</a> | <a href="../../apidoc/system_errata/apply.gl.html">gl</a> | <a href="../../apidoc/system_errata/apply.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      PUT /katello/api/systems/:system_id/errata<br>
+      PUT /katello/api/systems/:system_id/errata/apply
+        <code>DEPRECATED</code>
+      <br>
       <small>Schedule errata for installation</small>
     </h1>
   </div>
@@ -59,9 +64,30 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>system_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>System UUID</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>errata_ids </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -70,7 +96,7 @@
 <p>List of Errata ids to install</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>

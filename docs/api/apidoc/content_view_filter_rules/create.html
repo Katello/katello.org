@@ -29,13 +29,17 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/content_view_filter_rules/create.en.html">en</a> | <a href="../../apidoc/content_view_filter_rules/create.de.html">de</a> | <a href="../../apidoc/content_view_filter_rules/create.pt_BR.html">pt_BR</a> | <a href="../../apidoc/content_view_filter_rules/create.es.html">es</a> | <a href="../../apidoc/content_view_filter_rules/create.sv_SE.html">sv_SE</a> | <a href="../../apidoc/content_view_filter_rules/create.en_GB.html">en_GB</a> | <a href="../../apidoc/content_view_filter_rules/create.fr.html">fr</a> | <a href="../../apidoc/content_view_filter_rules/create.zh_TW.html">zh_TW</a> | <a href="../../apidoc/content_view_filter_rules/create.ja.html">ja</a> | <a href="../../apidoc/content_view_filter_rules/create.ko.html">ko</a> | <a href="../../apidoc/content_view_filter_rules/create.zh_CN.html">zh_CN</a> | <a href="../../apidoc/content_view_filter_rules/create.ru.html">ru</a> | <a href="../../apidoc/content_view_filter_rules/create.gl.html">gl</a> | <a href="../../apidoc/content_view_filter_rules/create.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      POST /katello/api/content_view_filters/:content_view_filter_id/rules<br>
+      POST /katello/api/content_view_filters/:content_view_filter_id/rules
+      <br>
       <small>Create a filter rule. The parameters included should be based upon the filter type.</small>
     </h1>
   </div>
@@ -196,7 +200,7 @@
 <p>erratum: IDs or a select all object</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -259,7 +263,7 @@
 <p>erratum: types (enhancement, bugfix, security)</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>

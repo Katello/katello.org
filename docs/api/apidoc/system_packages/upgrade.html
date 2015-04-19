@@ -29,13 +29,18 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>upgrade</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/system_packages/upgrade.en.html">en</a> | <a href="../../apidoc/system_packages/upgrade.de.html">de</a> | <a href="../../apidoc/system_packages/upgrade.pt_BR.html">pt_BR</a> | <a href="../../apidoc/system_packages/upgrade.es.html">es</a> | <a href="../../apidoc/system_packages/upgrade.sv_SE.html">sv_SE</a> | <a href="../../apidoc/system_packages/upgrade.en_GB.html">en_GB</a> | <a href="../../apidoc/system_packages/upgrade.fr.html">fr</a> | <a href="../../apidoc/system_packages/upgrade.zh_TW.html">zh_TW</a> | <a href="../../apidoc/system_packages/upgrade.ja.html">ja</a> | <a href="../../apidoc/system_packages/upgrade.ko.html">ko</a> | <a href="../../apidoc/system_packages/upgrade.zh_CN.html">zh_CN</a> | <a href="../../apidoc/system_packages/upgrade.ru.html">ru</a> | <a href="../../apidoc/system_packages/upgrade.gl.html">gl</a> | <a href="../../apidoc/system_packages/upgrade.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      PUT /api/systems/:system_id/packages/upgrade<br>
+      PUT /katello/api/systems/:system_id/packages/upgrade
+        <code>DEPRECATED</code>
+      <br>
       <small>Update packages remotely</small>
     </h1>
   </div>
@@ -67,7 +72,7 @@
     </td>
     <td>
       
-<p>system identifier</p>
+<p>UUID of the content-host</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
@@ -82,7 +87,7 @@
     <td>
       <strong>packages </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -91,7 +96,7 @@
 <p>list of packages names</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>

@@ -29,14 +29,19 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>remove_systems</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/host_collections/remove_systems.en.html">en</a> | <a href="../../apidoc/host_collections/remove_systems.de.html">de</a> | <a href="../../apidoc/host_collections/remove_systems.pt_BR.html">pt_BR</a> | <a href="../../apidoc/host_collections/remove_systems.es.html">es</a> | <a href="../../apidoc/host_collections/remove_systems.sv_SE.html">sv_SE</a> | <a href="../../apidoc/host_collections/remove_systems.en_GB.html">en_GB</a> | <a href="../../apidoc/host_collections/remove_systems.fr.html">fr</a> | <a href="../../apidoc/host_collections/remove_systems.zh_TW.html">zh_TW</a> | <a href="../../apidoc/host_collections/remove_systems.ja.html">ja</a> | <a href="../../apidoc/host_collections/remove_systems.ko.html">ko</a> | <a href="../../apidoc/host_collections/remove_systems.zh_CN.html">zh_CN</a> | <a href="../../apidoc/host_collections/remove_systems.ru.html">ru</a> | <a href="../../apidoc/host_collections/remove_systems.gl.html">gl</a> | <a href="../../apidoc/host_collections/remove_systems.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      PUT /katello/api/host_collections/:id/remove_systems<br>
-      <small>Remove systems from the host collection</small>
+      PUT /katello/api/host_collections/:id/remove_systems
+        <code>DEPRECATED</code>
+      <br>
+      <small>Remove content hosts from the host collection</small>
     </h1>
   </div>
 
@@ -88,10 +93,10 @@
     </td>
     <td>
       
-<p>Array of system ids</p>
+<p>Array of content host ids</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>

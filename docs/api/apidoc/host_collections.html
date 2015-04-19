@@ -25,7 +25,10 @@
     Host collections
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/host_collections.en.html">en</a> | <a href="../apidoc/host_collections.de.html">de</a> | <a href="../apidoc/host_collections.pt_BR.html">pt_BR</a> | <a href="../apidoc/host_collections.es.html">es</a> | <a href="../apidoc/host_collections.sv_SE.html">sv_SE</a> | <a href="../apidoc/host_collections.en_GB.html">en_GB</a> | <a href="../apidoc/host_collections.fr.html">fr</a> | <a href="../apidoc/host_collections.zh_TW.html">zh_TW</a> | <a href="../apidoc/host_collections.ja.html">ja</a> | <a href="../apidoc/host_collections.ko.html">ko</a> | <a href="../apidoc/host_collections.zh_CN.html">zh_CN</a> | <a href="../apidoc/host_collections.ru.html">ru</a> | <a href="../apidoc/host_collections.gl.html">gl</a> | <a href="../apidoc/host_collections.it.html">it</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -52,7 +55,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/host_collections/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a host collection</small>
         </h2>
     </div>
@@ -111,7 +115,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/host_collections
-          </a><br>
+          </a>
+          <br>
           <small>List host collections</small>
         </h2>
         <h2>
@@ -120,8 +125,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/host_collections
-          </a><br>
-          <small></small>
+          </a>
+          <br>
+          <small>List host collections within an organization</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -129,8 +135,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/activation_keys/:activation_key_id/host_collections
-          </a><br>
-          <small></small>
+          </a>
+          <br>
+          <small>List host collections in an activation key</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -138,8 +145,10 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems/:system_id/host_collections
-          </a><br>
-          <small></small>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>List host collections containing a content host</small>
         </h2>
     </div>
 
@@ -332,7 +341,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -428,7 +437,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/host_collections
-          </a><br>
+          </a>
+          <br>
           <small>Create a host collection</small>
         </h2>
         <h2>
@@ -437,7 +447,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/organizations/:organization_id/host_collections
-          </a><br>
+          </a>
+          <br>
           <small>Create a host collection</small>
         </h2>
     </div>
@@ -490,10 +501,10 @@
     </td>
     <td>
       
-<p>List of system uuids to replace the content hosts in host collection</p>
+<p>List of content host uuids to replace the content hosts in host collection</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -532,10 +543,10 @@
     </td>
     <td>
       
-<p>List of system uuids to be in the host collection</p>
+<p>List of content host uuids to be in the host collection</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -620,7 +631,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/host_collections/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update a host collection</small>
         </h2>
     </div>
@@ -673,10 +685,10 @@
     </td>
     <td>
       
-<p>List of system uuids to be in the host collection</p>
+<p>List of content host uuids to be in the host collection</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -688,7 +700,7 @@
     <td>
       <strong>name </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -715,10 +727,10 @@
     </td>
     <td>
       
-<p>List of system uuids to be in the host collection</p>
+<p>List of content host uuids to be in the host collection</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -803,7 +815,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/host_collections/:id/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List content hosts in the host collection</small>
         </h2>
     </div>
@@ -862,8 +876,10 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/host_collections/:id/add_systems
-          </a><br>
-          <small>Add systems to the host collection</small>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Add content host to the host collection</small>
         </h2>
     </div>
 
@@ -915,10 +931,10 @@
     </td>
     <td>
       
-<p>Array of system ids</p>
+<p>Array of content host ids</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -942,8 +958,10 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/host_collections/:id/remove_systems
-          </a><br>
-          <small>Remove systems from the host collection</small>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Remove content hosts from the host collection</small>
         </h2>
     </div>
 
@@ -995,10 +1013,10 @@
     </td>
     <td>
       
-<p>Array of system ids</p>
+<p>Array of content host ids</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -1022,7 +1040,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/host_collections/:id
-          </a><br>
+          </a>
+          <br>
           <small>Destroy a host collection</small>
         </h2>
     </div>
@@ -1081,7 +1100,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/host_collections/:id/copy
-          </a><br>
+          </a>
+          <br>
           <small>Make copy of a host collection</small>
         </h2>
     </div>

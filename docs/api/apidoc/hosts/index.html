@@ -29,14 +29,46 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/hosts/index.en.html">en</a> | <a href="../../apidoc/hosts/index.de.html">de</a> | <a href="../../apidoc/hosts/index.pt_BR.html">pt_BR</a> | <a href="../../apidoc/hosts/index.es.html">es</a> | <a href="../../apidoc/hosts/index.sv_SE.html">sv_SE</a> | <a href="../../apidoc/hosts/index.en_GB.html">en_GB</a> | <a href="../../apidoc/hosts/index.fr.html">fr</a> | <a href="../../apidoc/hosts/index.zh_TW.html">zh_TW</a> | <a href="../../apidoc/hosts/index.ja.html">ja</a> | <a href="../../apidoc/hosts/index.ko.html">ko</a> | <a href="../../apidoc/hosts/index.zh_CN.html">zh_CN</a> | <a href="../../apidoc/hosts/index.ru.html">ru</a> | <a href="../../apidoc/hosts/index.gl.html">gl</a> | <a href="../../apidoc/hosts/index.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      GET /api/hosts<br>
-      <small>List all hosts.</small>
+      GET /api/hosts
+      <br>
+      <small>List all hosts</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/hostgroups/:hostgroup_id/hosts
+      <br>
+      <small>List all hosts for a host group</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/locations/:location_id/hosts
+      <br>
+      <small>List hosts per location</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/organizations/:organization_id/hosts
+      <br>
+      <small>List hosts per organization</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/environments/:environment_id/hosts
+      <br>
+      <small>List hosts per environment</small>
     </h1>
   </div>
 
@@ -59,6 +91,90 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>hostgroup_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of host group</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of location</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of organization</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of environment</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>search </strong><br>
       <small>
         optional
@@ -67,7 +183,7 @@
     </td>
     <td>
       
-<p>Filter results</p>
+<p>filter results</p>
 
         <br>
         Value: String
@@ -88,7 +204,7 @@
     </td>
     <td>
       
-<p>Sort results</p>
+<p>sort results</p>
 
         <br>
         Value: String

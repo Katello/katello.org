@@ -25,7 +25,10 @@
     Systems
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/systems.en.html">en</a> | <a href="../apidoc/systems.de.html">de</a> | <a href="../apidoc/systems.pt_BR.html">pt_BR</a> | <a href="../apidoc/systems.es.html">es</a> | <a href="../apidoc/systems.sv_SE.html">sv_SE</a> | <a href="../apidoc/systems.en_GB.html">en_GB</a> | <a href="../apidoc/systems.fr.html">fr</a> | <a href="../apidoc/systems.zh_TW.html">zh_TW</a> | <a href="../apidoc/systems.ja.html">ja</a> | <a href="../apidoc/systems.ko.html">ko</a> | <a href="../apidoc/systems.zh_CN.html">zh_CN</a> | <a href="../apidoc/systems.ru.html">ru</a> | <a href="../apidoc/systems.gl.html">gl</a> | <a href="../apidoc/systems.it.html">it</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -52,7 +55,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List content hosts</small>
         </h2>
         <h2>
@@ -61,7 +66,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List content hosts in an organization</small>
         </h2>
         <h2>
@@ -70,7 +77,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/environments/:environment_id/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List content hosts in environment</small>
         </h2>
         <h2>
@@ -79,7 +88,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/host_collections/:host_collection_id/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List content hosts in a host collection</small>
         </h2>
     </div>
@@ -217,6 +228,90 @@
     <td>
       
 <p>Filter by host collection</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>erratum_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter by systems that need an Erratum by uuid</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>errata_ids </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter by systems that need any one of multiple Errata by uuid</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>erratum_restrict_installable </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Return only systems where the Erratum specified by erratum_id or errata_ids is available to systems (default False)</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>erratum_restrict_non_installable </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Return only systems where the Erratum specified by erratum_id or errata_ids is unavailable to systems (default False)</p>
 
         <br>
         Value: String
@@ -411,7 +506,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Register a content host</small>
         </h2>
         <h2>
@@ -420,7 +517,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/environments/:environment_id/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Register a content host in environment</small>
         </h2>
         <h2>
@@ -429,7 +528,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/host_collections/:host_collection_id/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Register a content host in environment</small>
         </h2>
     </div>
@@ -590,7 +691,7 @@
 <p>IDs of the virtual guests running on this content host</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -611,7 +712,7 @@
 <p>List of products installed on the content host</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -747,7 +848,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>host_collection_id </strong><br>
+      <strong>host_collection_ids </strong><br>
       <small>
         optional
         
@@ -755,10 +856,10 @@
     </td>
     <td>
       
-<p>Specify the host collection</p>
+<p>Specify the host collections as an array</p>
 
         <br>
-        Value: String
+        Value: Must be an array of any type
 
 
     </td>
@@ -782,7 +883,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/systems/:id
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Update content host information</small>
         </h2>
     </div>
@@ -964,7 +1067,7 @@
 <p>IDs of the virtual guests running on this content host</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -985,7 +1088,7 @@
 <p>List of products installed on the content host</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -1098,6 +1201,27 @@
   </tr>
 
   
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_collection_ids </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Specify the host collections as an array</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
 
     </tbody>
   </table>
@@ -1114,7 +1238,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems/:id
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Show a content host</small>
         </h2>
     </div>
@@ -1173,7 +1299,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems/:id/available_host_collections
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List host collections the content host does not belong to</small>
         </h2>
     </div>
@@ -1400,7 +1528,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/systems/:id
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Unregister a content host</small>
         </h2>
     </div>
@@ -1459,7 +1589,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems/:id/packages
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List packages installed on the content host</small>
         </h2>
     </div>
@@ -1518,7 +1650,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/systems/:id/refresh_subscriptions
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Trigger a refresh of subscriptions, auto-attaching if enabled</small>
         </h2>
     </div>
@@ -1577,7 +1711,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems/:id/errata
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List errata available for the content host</small>
         </h2>
     </div>
@@ -1620,6 +1756,216 @@
   </tr>
 
   
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Calculate Applicable Errata based on a particular Content View</p>
+
+        <br>
+        Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Calculate Applicable Errata based on a particular Environment</p>
+
+        <br>
+        Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <br>
+        Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <br>
+        Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. ‘name DESC’</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_results </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <br>
+        Value: boolean
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Hash version of ‘order’ param</p>
+
+        <br>
+        Value: Hash
+
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[by] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[order] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+
 
     </tbody>
   </table>
@@ -1636,7 +1982,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/environments/:environment_id/systems/report
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Get content host reports for the environment</small>
         </h2>
         <h2>
@@ -1645,7 +1993,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/systems/report
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Get content host reports for the organization</small>
         </h2>
     </div>
@@ -1671,7 +2021,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems/:id/pools
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List pools a content host is subscribed to</small>
         </h2>
     </div>
@@ -1793,7 +2145,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems/:id/releases
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Show releases available for the content host</small>
         </h2>
     </div>
@@ -1803,6 +2157,66 @@
       
 <p>A hint for choosing the right value for the releaseVer param</p>
 
+
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the content host</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/systems/events.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-events'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/systems/:id/events
+          </a>
+          <br>
+          <small>List Candlepin events for the content host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-events' class='collapse accordion-body'>
+      
 
 
 

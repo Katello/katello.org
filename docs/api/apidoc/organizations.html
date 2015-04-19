@@ -25,7 +25,10 @@
     Organizations
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/organizations.en.html">en</a> | <a href="../apidoc/organizations.de.html">de</a> | <a href="../apidoc/organizations.pt_BR.html">pt_BR</a> | <a href="../apidoc/organizations.es.html">es</a> | <a href="../apidoc/organizations.sv_SE.html">sv_SE</a> | <a href="../apidoc/organizations.en_GB.html">en_GB</a> | <a href="../apidoc/organizations.fr.html">fr</a> | <a href="../apidoc/organizations.zh_TW.html">zh_TW</a> | <a href="../apidoc/organizations.ja.html">ja</a> | <a href="../apidoc/organizations.ko.html">ko</a> | <a href="../apidoc/organizations.zh_CN.html">zh_CN</a> | <a href="../apidoc/organizations.ru.html">ru</a> | <a href="../apidoc/organizations.gl.html">gl</a> | <a href="../apidoc/organizations.it.html">it</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -52,7 +55,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations
-          </a><br>
+          </a>
+          <br>
           <small>List all organizations</small>
         </h2>
     </div>
@@ -258,39 +262,14 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show organization</small>
         </h2>
     </div>
 
 
     <div id='description-show' class='collapse accordion-body'>
-      
-
-
-
-
-
-
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/organizations/update.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-update'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            PUT /katello/api/organizations/:id
-          </a><br>
-          <small>Update organization</small>
-        </h2>
-    </div>
-
-
-    <div id='description-update' class='collapse accordion-body'>
       
 
 
@@ -308,77 +287,18 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>organization </strong><br>
+      <strong>id </strong><br>
       <small>
-        optional
-        , nil allowed
-      </small>
-    </td>
-    <td>
-      
-        <br>
-        Value: Hash
-
-
-    </td>
-
-  </tr>
-
-    <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>organization[name] </strong><br>
-      <small>
-        optional
+        required
         
       </small>
     </td>
     <td>
       
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>description </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>description</p>
+<p>organization ID</p>
 
         <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>redhat_repository_url </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Redhat CDN url</p>
-
-        <br>
-        Value: String
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
 
 
     </td>
@@ -402,7 +322,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/organizations
-          </a><br>
+          </a>
+          <br>
           <small>Create organization</small>
         </h2>
     </div>
@@ -487,6 +408,702 @@
   </tr>
 
   
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Hash
+
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[name] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[description] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[user_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>User IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[smart_proxy_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Smart proxy IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[compute_resource_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Compute resource IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[media_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Media IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[config_template_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Provisioning template IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[domain_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Domain IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[realm_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Realm IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[hostgroup_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Host group IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[environment_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Environment IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[subnet_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Subnet IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/organizations/:id
+          </a>
+          <br>
+          <small>Update organization</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>organization ID</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>redhat_repository_url </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Red Hat CDN URL</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>redhat_docker_registry_url </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Red Hat Docker Registry URL</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Hash
+
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[description] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[user_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>User IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[smart_proxy_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Smart proxy IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[compute_resource_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Compute resource IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[media_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Media IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[config_template_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Provisioning template IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[domain_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Domain IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[realm_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Realm IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[hostgroup_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Host group IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[environment_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Environment IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[subnet_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Subnet IDs</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/destroy.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/organizations/:id
+          </a>
+          <br>
+          <small>Delete an organization</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Organization ID</p>
+
+        <br>
+        Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
 
     </tbody>
   </table>
@@ -503,7 +1120,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/organizations/:id/repo_discover
-          </a><br>
+          </a>
+          <br>
           <small>Discover Repositories</small>
         </h2>
     </div>
@@ -583,7 +1201,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/organizations/:label/cancel_repo_discover
-          </a><br>
+          </a>
+          <br>
           <small>Cancel repository discovery</small>
         </h2>
     </div>
@@ -663,7 +1282,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:label/download_debug_certificate
-          </a><br>
+          </a>
+          <br>
           <small>Download a debug certificate</small>
         </h2>
     </div>
@@ -722,7 +1342,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/organizations/:id/autoattach_subscriptions
-          </a><br>
+          </a>
+          <br>
           <small>Auto-attach available subscriptions to all systems within an organization. Asynchronous operation.</small>
         </h2>
     </div>
@@ -748,7 +1369,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:id/redhat_provider
-          </a><br>
+          </a>
+          <br>
           <small>List all :resource_id</small>
         </h2>
     </div>

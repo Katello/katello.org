@@ -29,25 +29,34 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/systems/create.en.html">en</a> | <a href="../../apidoc/systems/create.de.html">de</a> | <a href="../../apidoc/systems/create.pt_BR.html">pt_BR</a> | <a href="../../apidoc/systems/create.es.html">es</a> | <a href="../../apidoc/systems/create.sv_SE.html">sv_SE</a> | <a href="../../apidoc/systems/create.en_GB.html">en_GB</a> | <a href="../../apidoc/systems/create.fr.html">fr</a> | <a href="../../apidoc/systems/create.zh_TW.html">zh_TW</a> | <a href="../../apidoc/systems/create.ja.html">ja</a> | <a href="../../apidoc/systems/create.ko.html">ko</a> | <a href="../../apidoc/systems/create.zh_CN.html">zh_CN</a> | <a href="../../apidoc/systems/create.ru.html">ru</a> | <a href="../../apidoc/systems/create.gl.html">gl</a> | <a href="../../apidoc/systems/create.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      POST /katello/api/systems<br>
+      POST /katello/api/systems
+        <code>DEPRECATED</code>
+      <br>
       <small>Register a content host</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      POST /katello/api/environments/:environment_id/systems<br>
+      POST /katello/api/environments/:environment_id/systems
+        <code>DEPRECATED</code>
+      <br>
       <small>Register a content host in environment</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      POST /katello/api/host_collections/:host_collection_id/systems<br>
+      POST /katello/api/host_collections/:host_collection_id/systems
+        <code>DEPRECATED</code>
+      <br>
       <small>Register a content host in environment</small>
     </h1>
   </div>
@@ -208,7 +217,7 @@
 <p>IDs of the virtual guests running on this content host</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -229,7 +238,7 @@
 <p>List of products installed on the content host</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -365,7 +374,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>host_collection_id </strong><br>
+      <strong>host_collection_ids </strong><br>
       <small>
         optional
         
@@ -373,10 +382,10 @@
     </td>
     <td>
       
-<p>Specify the host collection</p>
+<p>Specify the host collections as an array</p>
 
         <br>
-        Value: String
+        Value: Must be an array of any type
 
 
     </td>

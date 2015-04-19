@@ -25,7 +25,10 @@
     Interfaces
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/interfaces.en.html">en</a> | <a href="../apidoc/interfaces.de.html">de</a> | <a href="../apidoc/interfaces.pt_BR.html">pt_BR</a> | <a href="../apidoc/interfaces.es.html">es</a> | <a href="../apidoc/interfaces.sv_SE.html">sv_SE</a> | <a href="../apidoc/interfaces.en_GB.html">en_GB</a> | <a href="../apidoc/interfaces.fr.html">fr</a> | <a href="../apidoc/interfaces.zh_TW.html">zh_TW</a> | <a href="../apidoc/interfaces.ja.html">ja</a> | <a href="../apidoc/interfaces.ko.html">ko</a> | <a href="../apidoc/interfaces.zh_CN.html">zh_CN</a> | <a href="../apidoc/interfaces.ru.html">ru</a> | <a href="../apidoc/interfaces.gl.html">gl</a> | <a href="../apidoc/interfaces.it.html">it</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -52,8 +55,29 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hosts/:host_id/interfaces
-          </a><br>
+          </a>
+          <br>
           <small>List all interfaces for host</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/domains/:domain_id/interfaces
+          </a>
+          <br>
+          <small>List all interfaces for domain</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/subnets/:subnet_id/interfaces
+          </a>
+          <br>
+          <small>List all interfaces for subnet</small>
         </h2>
     </div>
 
@@ -84,7 +108,91 @@
     </td>
     <td>
       
-<p>id or name of host</p>
+<p>ID or name of host</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>domain_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID or name of domain</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>subnet_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID or name of subnet</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>paginate results</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>number of entries per request</p>
 
         <br>
         Value: String
@@ -111,7 +219,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hosts/:host_id/interfaces/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show an interface for host</small>
         </h2>
     </div>
@@ -143,7 +252,7 @@
     </td>
     <td>
       
-<p>id or name of nested host</p>
+<p>ID or name of host</p>
 
         <br>
         Value: String
@@ -164,7 +273,7 @@
     </td>
     <td>
       
-<p>id or name of interface</p>
+<p>ID or name of interface</p>
 
         <br>
         Value: String
@@ -191,8 +300,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/hosts/:host_id/interfaces
-          </a><br>
-          <small>Create an interface linked to a host</small>
+          </a>
+          <br>
+          <small>Create an interface on a host</small>
         </h2>
     </div>
 
@@ -223,7 +333,7 @@
     </td>
     <td>
       
-<p>id or name of host</p>
+<p>ID or name of host</p>
 
         <br>
         Value: String
@@ -238,8 +348,8 @@
     <td>
       <strong>interface </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -258,8 +368,8 @@
     <td>
       <strong>interface[mac] </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -279,8 +389,8 @@
     <td>
       <strong>interface[ip] </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -300,16 +410,16 @@
     <td>
       <strong>interface[type] </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
       
-<p>Interface type, i.e: Nic::BMC</p>
+<p>Interface type, e.g: bmc</p>
 
         <br>
-        Value: String
+        Value: Must be one of: interface, bmc, bond.
 
 
     </td>
@@ -321,13 +431,13 @@
     <td>
       <strong>interface[name] </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
       
-<p>Interface name</p>
+<p>Interface’s DNS name</p>
 
         <br>
         Value: String
@@ -348,7 +458,7 @@
     </td>
     <td>
       
-<p>Foreman subnet id of interface</p>
+<p>Foreman subnet ID of interface</p>
 
         <br>
         Value: Fixnum
@@ -369,10 +479,94 @@
     </td>
     <td>
       
-<p>Foreman domain id of interface</p>
+<p>Foreman domain ID of interface</p>
 
         <br>
         Value: Fixnum
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[identifier] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Device identifier, e.g. eth0 or eth1.1</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[managed] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Should this interface be managed via DHCP and DNS smart proxy and should it be configured during provisioning?</p>
+
+        <br>
+        Value: boolean
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[primary] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Should this interface be used for constructing the FQDN of the host? Each managed hosts needs to have one primary interface.</p>
+
+        <br>
+        Value: boolean
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[provision] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Should this interface be used for TFTP of PXELinux (or SSH for image-based hosts)? Each managed hosts needs to have one provision interface.</p>
+
+        <br>
+        Value: boolean
 
 
     </td>
@@ -390,6 +584,8 @@
     </td>
     <td>
       
+<p>Only for BMC interfaces.</p>
+
         <br>
         Value: String
 
@@ -409,6 +605,8 @@
     </td>
     <td>
       
+<p>Only for BMC interfaces.</p>
+
         <br>
         Value: String
 
@@ -428,10 +626,157 @@
     </td>
     <td>
       
-<p>Interface provider, i.e: IPMI</p>
+<p>Interface provider, e.g. IPMI. Only for BMC interfaces.</p>
+
+        <br>
+        Value: Must be one of: IPMI.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[virtual] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Alias or VLAN device</p>
+
+        <br>
+        Value: boolean
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[tag] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>VLAN tag, this attribute has precedence over the subnet VLAN ID. Only for virtual interfaces.</p>
 
         <br>
         Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[attached_to] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Identifier of the interface to which this interface belongs, e.g. eth1. Only for virtual interfaces.</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[mode] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Bond mode of the interface, e.g. balance-rr. Only for bond interfaces.</p>
+
+        <br>
+        Value: Must be one of: balance-rr, active-backup, balance-xor, broadcast, 802.3ad, balance-tlb, balance-alb.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[attached_devices] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Identifiers of slave interfaces, e.g. <code>['eth1', 'eth2']</code>. Only for bond interfaces.</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[bond_options] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Space separated options, e.g. miimon=100. Only for bond interfaces.</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[compute_attributes] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Additional compute resource specific attributes for the interface.</p>
+
+        <br>
+        Value: Hash
 
 
     </td>
@@ -456,8 +801,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/hosts/:host_id/interfaces/:id
-          </a><br>
-          <small>Update host interface</small>
+          </a>
+          <br>
+          <small>Update a host's interface</small>
         </h2>
     </div>
 
@@ -488,7 +834,7 @@
     </td>
     <td>
       
-<p>id or name of host</p>
+<p>ID or name of host</p>
 
         <br>
         Value: String
@@ -509,6 +855,8 @@
     </td>
     <td>
       
+<p>ID of interface</p>
+
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
 
@@ -522,8 +870,8 @@
     <td>
       <strong>interface </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -543,7 +891,7 @@
       <strong>interface[mac] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -564,7 +912,7 @@
       <strong>interface[ip] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -585,15 +933,15 @@
       <strong>interface[type] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
       
-<p>Interface type, i.e: Nic::BMC</p>
+<p>Interface type, e.g: bmc</p>
 
         <br>
-        Value: String
+        Value: Must be one of: interface, bmc, bond.
 
 
     </td>
@@ -606,12 +954,12 @@
       <strong>interface[name] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
       
-<p>Interface name</p>
+<p>Interface’s DNS name</p>
 
         <br>
         Value: String
@@ -632,7 +980,7 @@
     </td>
     <td>
       
-<p>Foreman subnet id of interface</p>
+<p>Foreman subnet ID of interface</p>
 
         <br>
         Value: Fixnum
@@ -653,10 +1001,94 @@
     </td>
     <td>
       
-<p>Foreman domain id of interface</p>
+<p>Foreman domain ID of interface</p>
 
         <br>
         Value: Fixnum
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[identifier] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Device identifier, e.g. eth0 or eth1.1</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[managed] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Should this interface be managed via DHCP and DNS smart proxy and should it be configured during provisioning?</p>
+
+        <br>
+        Value: boolean
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[primary] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Should this interface be used for constructing the FQDN of the host? Each managed hosts needs to have one primary interface.</p>
+
+        <br>
+        Value: boolean
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[provision] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Should this interface be used for TFTP of PXELinux (or SSH for image-based hosts)? Each managed hosts needs to have one provision interface.</p>
+
+        <br>
+        Value: boolean
 
 
     </td>
@@ -674,6 +1106,8 @@
     </td>
     <td>
       
+<p>Only for BMC interfaces.</p>
+
         <br>
         Value: String
 
@@ -693,6 +1127,8 @@
     </td>
     <td>
       
+<p>Only for BMC interfaces.</p>
+
         <br>
         Value: String
 
@@ -712,10 +1148,157 @@
     </td>
     <td>
       
-<p>Interface provider, i.e: IPMI</p>
+<p>Interface provider, e.g. IPMI. Only for BMC interfaces.</p>
+
+        <br>
+        Value: Must be one of: IPMI.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[virtual] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Alias or VLAN device</p>
+
+        <br>
+        Value: boolean
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[tag] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>VLAN tag, this attribute has precedence over the subnet VLAN ID. Only for virtual interfaces.</p>
 
         <br>
         Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[attached_to] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Identifier of the interface to which this interface belongs, e.g. eth1. Only for virtual interfaces.</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[mode] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Bond mode of the interface, e.g. balance-rr. Only for bond interfaces.</p>
+
+        <br>
+        Value: Must be one of: balance-rr, active-backup, balance-xor, broadcast, 802.3ad, balance-tlb, balance-alb.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[attached_devices] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Identifiers of slave interfaces, e.g. <code>['eth1', 'eth2']</code>. Only for bond interfaces.</p>
+
+        <br>
+        Value: Must be an array of any type
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[bond_options] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Space separated options, e.g. miimon=100. Only for bond interfaces.</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>interface[compute_attributes] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Additional compute resource specific attributes for the interface.</p>
+
+        <br>
+        Value: Hash
 
 
     </td>
@@ -740,8 +1323,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/hosts/:host_id/interfaces/:id
-          </a><br>
-          <small>Delete a host interface</small>
+          </a>
+          <br>
+          <small>Delete a host's interface</small>
         </h2>
     </div>
 
@@ -764,6 +1348,27 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>host_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID or name of host</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>id </strong><br>
       <small>
         required
@@ -772,7 +1377,7 @@
     </td>
     <td>
       
-<p>id of interface</p>
+<p>ID of interface</p>
 
         <br>
         Value: String
