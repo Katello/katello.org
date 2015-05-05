@@ -29,13 +29,18 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>remove</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/system_packages/remove.en.html">en</a> | <a href="../../apidoc/system_packages/remove.de.html">de</a> | <a href="../../apidoc/system_packages/remove.pt_BR.html">pt_BR</a> | <a href="../../apidoc/system_packages/remove.es.html">es</a> | <a href="../../apidoc/system_packages/remove.sv_SE.html">sv_SE</a> | <a href="../../apidoc/system_packages/remove.en_GB.html">en_GB</a> | <a href="../../apidoc/system_packages/remove.fr.html">fr</a> | <a href="../../apidoc/system_packages/remove.zh_TW.html">zh_TW</a> | <a href="../../apidoc/system_packages/remove.ja.html">ja</a> | <a href="../../apidoc/system_packages/remove.ko.html">ko</a> | <a href="../../apidoc/system_packages/remove.zh_CN.html">zh_CN</a> | <a href="../../apidoc/system_packages/remove.ru.html">ru</a> | <a href="../../apidoc/system_packages/remove.gl.html">gl</a> | <a href="../../apidoc/system_packages/remove.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      POST /api/systems/:system_id/packages/remove<br>
+      PUT /katello/api/systems/:system_id/packages/remove
+        <code>DEPRECATED</code>
+      <br>
       <small>Uninstall packages remotely</small>
     </h1>
   </div>
@@ -67,7 +72,7 @@
     </td>
     <td>
       
-<p>system identifier</p>
+<p>UUID of the content-host</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
@@ -91,7 +96,7 @@
 <p>List of package names</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -112,7 +117,7 @@
 <p>List of package group names</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>

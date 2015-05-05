@@ -29,19 +29,24 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>available_errata</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/content_view_filters/available_errata.en.html">en</a> | <a href="../../apidoc/content_view_filters/available_errata.de.html">de</a> | <a href="../../apidoc/content_view_filters/available_errata.pt_BR.html">pt_BR</a> | <a href="../../apidoc/content_view_filters/available_errata.es.html">es</a> | <a href="../../apidoc/content_view_filters/available_errata.sv_SE.html">sv_SE</a> | <a href="../../apidoc/content_view_filters/available_errata.en_GB.html">en_GB</a> | <a href="../../apidoc/content_view_filters/available_errata.fr.html">fr</a> | <a href="../../apidoc/content_view_filters/available_errata.zh_TW.html">zh_TW</a> | <a href="../../apidoc/content_view_filters/available_errata.ja.html">ja</a> | <a href="../../apidoc/content_view_filters/available_errata.ko.html">ko</a> | <a href="../../apidoc/content_view_filters/available_errata.zh_CN.html">zh_CN</a> | <a href="../../apidoc/content_view_filters/available_errata.ru.html">ru</a> | <a href="../../apidoc/content_view_filters/available_errata.gl.html">gl</a> | <a href="../../apidoc/content_view_filters/available_errata.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      GET /katello/api/content_views/:content_view_id/filters/:id/available_errata<br>
+      GET /katello/api/content_views/:content_view_id/filters/:id/available_errata
+      <br>
       <small>Get errata that are available to be added to the filter</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /katello/api/content_view_filters/:id/available_errata<br>
+      GET /katello/api/content_view_filters/:id/available_errata
+      <br>
       <small>Get errata that are available to be added to the filter</small>
     </h1>
   </div>
@@ -118,7 +123,7 @@
 <p>Errata types array [‘security’, ‘bugfix’, ‘enhancement’]</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><span class="translation_missing" title="translation missing: ja.apipie.api_documentation">Api Documentation</span></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.ja.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/subscriptions.ja.html'>
+      Subscriptions
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>create</li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/subscriptions/create.en.html">en</a> | <a href="../../apidoc/subscriptions/create.de.html">de</a> | <a href="../../apidoc/subscriptions/create.pt_BR.html">pt_BR</a> | <a href="../../apidoc/subscriptions/create.es.html">es</a> | <a href="../../apidoc/subscriptions/create.sv_SE.html">sv_SE</a> | <a href="../../apidoc/subscriptions/create.en_GB.html">en_GB</a> | <a href="../../apidoc/subscriptions/create.fr.html">fr</a> | <a href="../../apidoc/subscriptions/create.zh_TW.html">zh_TW</a> | <b><a href="../../apidoc/subscriptions/create.ja.html">ja</a></b> | <a href="../../apidoc/subscriptions/create.ko.html">ko</a> | <a href="../../apidoc/subscriptions/create.zh_CN.html">zh_CN</a> | <a href="../../apidoc/subscriptions/create.ru.html">ru</a> | <a href="../../apidoc/subscriptions/create.gl.html">gl</a> | <a href="../../apidoc/subscriptions/create.it.html">it</a> ]
+</li>
+
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      POST /katello/api/subscriptions/:id
+      <br>
+      <small>Add a subscription to a resource</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      POST /katello/api/systems/:system_id/subscriptions
+        <code>DEPRECATED</code>
+      <br>
+      <small>Add a subscription to a system</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      POST /katello/api/activation_keys/:activation_key_id/subscriptions
+      <br>
+      <small>Add a subscription to an activation key</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+
+
+  <h2><span class="translation_missing" title="translation missing: ja.apipie.params">Params</span></h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: ja.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ja.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ja.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Subscription Pool uuid</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>system_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ja.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the system</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>activation_key_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ja.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of the activation key</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>quantity </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ja.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Quantity of this subscriptions to add</p>
+
+        <br>
+        Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>subscriptions </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ja.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of subscriptions to add</p>
+
+        <br>
+        Value: Must be an Array of nested elements
+
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>subscriptions[id] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ja.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Subscription Pool uuid</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>subscriptions[quantity] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ja.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Quantity of this subscriptions to add</p>
+
+        <br>
+        Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

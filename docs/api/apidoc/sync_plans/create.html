@@ -29,13 +29,17 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/sync_plans/create.en.html">en</a> | <a href="../../apidoc/sync_plans/create.de.html">de</a> | <a href="../../apidoc/sync_plans/create.pt_BR.html">pt_BR</a> | <a href="../../apidoc/sync_plans/create.es.html">es</a> | <a href="../../apidoc/sync_plans/create.sv_SE.html">sv_SE</a> | <a href="../../apidoc/sync_plans/create.en_GB.html">en_GB</a> | <a href="../../apidoc/sync_plans/create.fr.html">fr</a> | <a href="../../apidoc/sync_plans/create.zh_TW.html">zh_TW</a> | <a href="../../apidoc/sync_plans/create.ja.html">ja</a> | <a href="../../apidoc/sync_plans/create.ko.html">ko</a> | <a href="../../apidoc/sync_plans/create.zh_CN.html">zh_CN</a> | <a href="../../apidoc/sync_plans/create.ru.html">ru</a> | <a href="../../apidoc/sync_plans/create.gl.html">gl</a> | <a href="../../apidoc/sync_plans/create.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      POST /katello/api/organizations/:organization_id/sync_plans<br>
+      POST /katello/api/organizations/:organization_id/sync_plans
+      <br>
       <small>Create a sync plan</small>
     </h1>
   </div>
@@ -112,7 +116,7 @@
 <p>how often synchronization should run</p>
 
         <br>
-        Value: Must be one of: none, hourly, daily, weekly.
+        Value: Must be one of: hourly, daily, weekly.
 
 
     </td>
@@ -155,6 +159,27 @@
 
         <br>
         Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>enabled </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>enables or disables synchronization</p>
+
+        <br>
+        Value: boolean
 
 
     </td>

@@ -25,7 +25,10 @@
     Packages
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/packages.en.html">en</a> | <a href="../apidoc/packages.de.html">de</a> | <a href="../apidoc/packages.pt_BR.html">pt_BR</a> | <a href="../apidoc/packages.es.html">es</a> | <a href="../apidoc/packages.sv_SE.html">sv_SE</a> | <a href="../apidoc/packages.en_GB.html">en_GB</a> | <a href="../apidoc/packages.fr.html">fr</a> | <a href="../apidoc/packages.zh_TW.html">zh_TW</a> | <a href="../apidoc/packages.ja.html">ja</a> | <a href="../apidoc/packages.ko.html">ko</a> | <a href="../apidoc/packages.zh_CN.html">zh_CN</a> | <a href="../apidoc/packages.ru.html">ru</a> | <a href="../apidoc/packages.gl.html">gl</a> | <a href="../apidoc/packages.it.html">it</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -51,8 +54,19 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
+            GET /katello/api/packages
+          </a>
+          <br>
+          <small>List packages</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
             GET /katello/api/repositories/:repository_id/packages
-          </a><br>
+          </a>
+          <br>
           <small>List packages</small>
         </h2>
     </div>
@@ -76,6 +90,27 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>content_view_version_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>content view version identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>repository_id </strong><br>
       <small>
         optional
@@ -84,10 +119,10 @@
     </td>
     <td>
       
-<p>Repository id to list packages for</p>
+<p>repository identifier</p>
 
         <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: number.
 
 
     </td>
@@ -278,8 +313,19 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
+            GET /katello/api/packages/:id
+          </a>
+          <br>
+          <small>Show a package</small>
+        </h2>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
             GET /katello/api/repositories/:repository_id/packages/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a package</small>
         </h2>
     </div>
@@ -311,7 +357,7 @@
     </td>
     <td>
       
-<p>Repository id</p>
+<p>repository identifier</p>
 
         <br>
         Value: number.
@@ -326,13 +372,13 @@
     <td>
       <strong>id </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
     <td>
       
-<p>Package id</p>
+<p>a package identifier</p>
 
         <br>
         Value: String

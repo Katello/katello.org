@@ -29,19 +29,24 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>show</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/package_groups/show.en.html">en</a> | <a href="../../apidoc/package_groups/show.de.html">de</a> | <a href="../../apidoc/package_groups/show.pt_BR.html">pt_BR</a> | <a href="../../apidoc/package_groups/show.es.html">es</a> | <a href="../../apidoc/package_groups/show.sv_SE.html">sv_SE</a> | <a href="../../apidoc/package_groups/show.en_GB.html">en_GB</a> | <a href="../../apidoc/package_groups/show.fr.html">fr</a> | <a href="../../apidoc/package_groups/show.zh_TW.html">zh_TW</a> | <a href="../../apidoc/package_groups/show.ja.html">ja</a> | <a href="../../apidoc/package_groups/show.ko.html">ko</a> | <a href="../../apidoc/package_groups/show.zh_CN.html">zh_CN</a> | <a href="../../apidoc/package_groups/show.ru.html">ru</a> | <a href="../../apidoc/package_groups/show.gl.html">gl</a> | <a href="../../apidoc/package_groups/show.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      GET /katello/api/package_groups/:id<br>
+      GET /katello/api/package_groups/:id
+      <br>
       <small>Show a package group</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /katello/api/repositories/:repository_id/package_groups/:id<br>
+      GET /katello/api/repositories/:repository_id/package_groups/:id
+      <br>
       <small>Show a package group</small>
     </h1>
   </div>
@@ -67,7 +72,7 @@
     <td>
       <strong>repository_id </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -76,7 +81,7 @@
 <p>repository identifier</p>
 
         <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        Value: number.
 
 
     </td>
@@ -94,7 +99,7 @@
     </td>
     <td>
       
-<p>package group identifier</p>
+<p>a package group identifier</p>
 
         <br>
         Value: String

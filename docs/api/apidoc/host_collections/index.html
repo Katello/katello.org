@@ -29,32 +29,40 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/host_collections/index.en.html">en</a> | <a href="../../apidoc/host_collections/index.de.html">de</a> | <a href="../../apidoc/host_collections/index.pt_BR.html">pt_BR</a> | <a href="../../apidoc/host_collections/index.es.html">es</a> | <a href="../../apidoc/host_collections/index.sv_SE.html">sv_SE</a> | <a href="../../apidoc/host_collections/index.en_GB.html">en_GB</a> | <a href="../../apidoc/host_collections/index.fr.html">fr</a> | <a href="../../apidoc/host_collections/index.zh_TW.html">zh_TW</a> | <a href="../../apidoc/host_collections/index.ja.html">ja</a> | <a href="../../apidoc/host_collections/index.ko.html">ko</a> | <a href="../../apidoc/host_collections/index.zh_CN.html">zh_CN</a> | <a href="../../apidoc/host_collections/index.ru.html">ru</a> | <a href="../../apidoc/host_collections/index.gl.html">gl</a> | <a href="../../apidoc/host_collections/index.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      GET /katello/api/host_collections<br>
+      GET /katello/api/host_collections
+      <br>
       <small>List host collections</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /katello/api/organizations/:organization_id/host_collections<br>
-      <small></small>
+      GET /katello/api/organizations/:organization_id/host_collections
+      <br>
+      <small>List host collections within an organization</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /katello/api/activation_keys/:activation_key_id/host_collections<br>
-      <small></small>
+      GET /katello/api/activation_keys/:activation_key_id/host_collections
+      <br>
+      <small>List host collections in an activation key</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /katello/api/systems/:system_id/host_collections<br>
-      <small></small>
+      GET /katello/api/systems/:system_id/host_collections
+        <code>DEPRECATED</code>
+      <br>
+      <small>List host collections containing a content host</small>
     </h1>
   </div>
 
@@ -247,7 +255,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>

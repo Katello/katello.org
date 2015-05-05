@@ -29,19 +29,24 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/repositories/index.en.html">en</a> | <a href="../../apidoc/repositories/index.de.html">de</a> | <a href="../../apidoc/repositories/index.pt_BR.html">pt_BR</a> | <a href="../../apidoc/repositories/index.es.html">es</a> | <a href="../../apidoc/repositories/index.sv_SE.html">sv_SE</a> | <a href="../../apidoc/repositories/index.en_GB.html">en_GB</a> | <a href="../../apidoc/repositories/index.fr.html">fr</a> | <a href="../../apidoc/repositories/index.zh_TW.html">zh_TW</a> | <a href="../../apidoc/repositories/index.ja.html">ja</a> | <a href="../../apidoc/repositories/index.ko.html">ko</a> | <a href="../../apidoc/repositories/index.zh_CN.html">zh_CN</a> | <a href="../../apidoc/repositories/index.ru.html">ru</a> | <a href="../../apidoc/repositories/index.gl.html">gl</a> | <a href="../../apidoc/repositories/index.it.html">it</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      GET /katello/api/repositories<br>
+      GET /katello/api/repositories
+      <br>
       <small>List of enabled repositories</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /katello/api/content_views/:id/repositories<br>
+      GET /katello/api/content_views/:id/repositories
+      <br>
       <small>List of repositories for a content view</small>
     </h1>
   </div>
@@ -140,6 +145,48 @@
 
         <br>
         Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_version_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of a content view version to show repositories in</p>
+
+        <br>
+        Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>erratum_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of an erratum to find repositories that contain the erratum</p>
+
+        <br>
+        Value: String
 
 
     </td>

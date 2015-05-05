@@ -25,7 +25,10 @@
     System packages
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/system_packages.en.html">en</a> | <a href="../apidoc/system_packages.de.html">de</a> | <a href="../apidoc/system_packages.pt_BR.html">pt_BR</a> | <a href="../apidoc/system_packages.es.html">es</a> | <a href="../apidoc/system_packages.sv_SE.html">sv_SE</a> | <a href="../apidoc/system_packages.en_GB.html">en_GB</a> | <a href="../apidoc/system_packages.fr.html">fr</a> | <a href="../apidoc/system_packages.zh_TW.html">zh_TW</a> | <a href="../apidoc/system_packages.ja.html">ja</a> | <a href="../apidoc/system_packages.ko.html">ko</a> | <a href="../apidoc/system_packages.zh_CN.html">zh_CN</a> | <a href="../apidoc/system_packages.ru.html">ru</a> | <a href="../apidoc/system_packages.gl.html">gl</a> | <a href="../apidoc/system_packages.it.html">it</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -43,288 +46,6 @@
 
     <hr>
     <div class='pull-right small'>
-      <a href='../apidoc/system_packages/create.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-create'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            POST /api/systems/:system_id/packages
-          </a><br>
-          <small>Install packages remotely</small>
-        </h2>
-    </div>
-
-
-    <div id='description-create' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>system_id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>system identifier</p>
-
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>packages </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>List of package names</p>
-
-        <br>
-        Value: Array
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>groups </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>List of package group names</p>
-
-        <br>
-        Value: Array
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
-
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/system_packages/update.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-update'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            PUT /api/systems/:system_id/packages
-          </a><br>
-          <small>Update packages remotely</small>
-        </h2>
-    </div>
-
-
-    <div id='description-update' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>system_id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>system identifier</p>
-
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>packages </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>list of packages names</p>
-
-        <br>
-        Value: Array
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
-
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/system_packages/destroy.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-destroy'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            DELETE /api/systems/:system_id/packages
-          </a><br>
-          <small>Uninstall packages remotely</small>
-        </h2>
-    </div>
-
-
-    <div id='description-destroy' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>system_id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>system identifier</p>
-
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>packages </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>List of package names</p>
-
-        <br>
-        Value: Array
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>groups </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>List of package group names</p>
-
-        <br>
-        Value: Array
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
-
-    </div>
-    <hr>
-    <div class='pull-right small'>
       <a href='../apidoc/system_packages/install.html'> >>> </a>
     </div>
     <div>
@@ -333,8 +54,10 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            POST /api/systems/:system_id/packages/install
-          </a><br>
+            PUT /katello/api/systems/:system_id/packages/install
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Install packages remotely</small>
         </h2>
     </div>
@@ -366,7 +89,7 @@
     </td>
     <td>
       
-<p>system identifier</p>
+<p>UUID of the content-host</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
@@ -390,7 +113,7 @@
 <p>List of package names</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -411,7 +134,7 @@
 <p>List of package group names</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -434,8 +157,10 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            PUT /api/systems/:system_id/packages/upgrade
-          </a><br>
+            PUT /katello/api/systems/:system_id/packages/upgrade
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Update packages remotely</small>
         </h2>
     </div>
@@ -467,7 +192,7 @@
     </td>
     <td>
       
-<p>system identifier</p>
+<p>UUID of the content-host</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
@@ -482,7 +207,7 @@
     <td>
       <strong>packages </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -491,7 +216,7 @@
 <p>list of packages names</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -514,8 +239,10 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            PUT /api/systems/:system_id/packages/upgrade_all
-          </a><br>
+            PUT /katello/api/systems/:system_id/packages/upgrade_all
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Update packages remotely</small>
         </h2>
     </div>
@@ -547,7 +274,7 @@
     </td>
     <td>
       
-<p>system identifier</p>
+<p>UUID of the content-host</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
@@ -573,8 +300,10 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            POST /api/systems/:system_id/packages/remove
-          </a><br>
+            PUT /katello/api/systems/:system_id/packages/remove
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Uninstall packages remotely</small>
         </h2>
     </div>
@@ -606,7 +335,7 @@
     </td>
     <td>
       
-<p>system identifier</p>
+<p>UUID of the content-host</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
@@ -630,7 +359,7 @@
 <p>List of package names</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -651,7 +380,7 @@
 <p>List of package group names</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>

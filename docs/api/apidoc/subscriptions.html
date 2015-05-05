@@ -25,7 +25,10 @@
     Subscriptions
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/subscriptions.en.html">en</a> | <a href="../apidoc/subscriptions.de.html">de</a> | <a href="../apidoc/subscriptions.pt_BR.html">pt_BR</a> | <a href="../apidoc/subscriptions.es.html">es</a> | <a href="../apidoc/subscriptions.sv_SE.html">sv_SE</a> | <a href="../apidoc/subscriptions.en_GB.html">en_GB</a> | <a href="../apidoc/subscriptions.fr.html">fr</a> | <a href="../apidoc/subscriptions.zh_TW.html">zh_TW</a> | <a href="../apidoc/subscriptions.ja.html">ja</a> | <a href="../apidoc/subscriptions.ko.html">ko</a> | <a href="../apidoc/subscriptions.zh_CN.html">zh_CN</a> | <a href="../apidoc/subscriptions.ru.html">ru</a> | <a href="../apidoc/subscriptions.gl.html">gl</a> | <a href="../apidoc/subscriptions.it.html">it</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -55,7 +58,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/subscriptions
-          </a><br>
+          </a>
+          <br>
           <small>List organization subscriptions</small>
         </h2>
         <h2>
@@ -64,7 +68,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems/:system_id/subscriptions
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List a system's subscriptions</small>
         </h2>
         <h2>
@@ -73,7 +79,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/activation_keys/:activation_key_id/subscriptions
-          </a><br>
+          </a>
+          <br>
           <small>List an activation key's subscriptions</small>
         </h2>
     </div>
@@ -158,6 +165,174 @@
   </tr>
 
   
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <br>
+        Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <br>
+        Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. ‘name DESC’</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_results </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <br>
+        Value: boolean
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Hash version of ‘order’ param</p>
+
+        <br>
+        Value: Hash
+
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[by] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[order] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+
 
     </tbody>
   </table>
@@ -174,7 +349,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/subscriptions/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a subscription</small>
         </h2>
         <h2>
@@ -183,7 +359,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/subscriptions/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a subscription</small>
         </h2>
     </div>
@@ -263,7 +440,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/subscriptions/:id
-          </a><br>
+          </a>
+          <br>
           <small>Add a subscription to a resource</small>
         </h2>
         <h2>
@@ -272,7 +450,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/systems/:system_id/subscriptions
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Add a subscription to a system</small>
         </h2>
         <h2>
@@ -281,7 +461,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/activation_keys/:activation_key_id/subscriptions
-          </a><br>
+          </a>
+          <br>
           <small>Add a subscription to an activation key</small>
         </h2>
     </div>
@@ -466,7 +647,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/subscriptions/:id
-          </a><br>
+          </a>
+          <br>
           <small>Unattach a subscription</small>
         </h2>
         <h2>
@@ -475,7 +657,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/systems/:system_id/subscriptions/:id
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Unattach a subscription</small>
         </h2>
         <h2>
@@ -484,7 +668,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/activation_keys/:activation_key_id/subscriptions/:id
-          </a><br>
+          </a>
+          <br>
           <small>Unattach a subscription</small>
         </h2>
     </div>
@@ -627,7 +812,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/organizations/:organization_id/subscriptions/upload
-          </a><br>
+          </a>
+          <br>
           <small>Upload a subscription manifest</small>
         </h2>
         <h2>
@@ -636,7 +822,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/subscriptions/upload
-          </a><br>
+          </a>
+          <br>
           <small>Upload a subscription manifest</small>
         </h2>
     </div>
@@ -737,7 +924,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/organizations/:organization_id/subscriptions/refresh_manifest
-          </a><br>
+          </a>
+          <br>
           <small>Refresh previously imported manifest for Red Hat provider</small>
         </h2>
     </div>
@@ -796,7 +984,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/organizations/:organization_id/subscriptions/delete_manifest
-          </a><br>
+          </a>
+          <br>
           <small>Delete manifest from Red Hat provider</small>
         </h2>
     </div>
@@ -855,7 +1044,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/subscriptions/manifest_history
-          </a><br>
+          </a>
+          <br>
           <small>obtain manifest history for subscriptions</small>
         </h2>
     </div>
@@ -914,7 +1104,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems/:system_id/subscriptions/available
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List available subscriptions</small>
         </h2>
     </div>

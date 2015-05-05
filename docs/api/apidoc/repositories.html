@@ -25,7 +25,10 @@
     Repositories
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/repositories.en.html">en</a> | <a href="../apidoc/repositories.de.html">de</a> | <a href="../apidoc/repositories.pt_BR.html">pt_BR</a> | <a href="../apidoc/repositories.es.html">es</a> | <a href="../apidoc/repositories.sv_SE.html">sv_SE</a> | <a href="../apidoc/repositories.en_GB.html">en_GB</a> | <a href="../apidoc/repositories.fr.html">fr</a> | <a href="../apidoc/repositories.zh_TW.html">zh_TW</a> | <a href="../apidoc/repositories.ja.html">ja</a> | <a href="../apidoc/repositories.ko.html">ko</a> | <a href="../apidoc/repositories.zh_CN.html">zh_CN</a> | <a href="../apidoc/repositories.ru.html">ru</a> | <a href="../apidoc/repositories.gl.html">gl</a> | <a href="../apidoc/repositories.it.html">it</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -52,7 +55,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/repositories
-          </a><br>
+          </a>
+          <br>
           <small>List of enabled repositories</small>
         </h2>
         <h2>
@@ -61,7 +65,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/content_views/:id/repositories
-          </a><br>
+          </a>
+          <br>
           <small>List of repositories for a content view</small>
         </h2>
     </div>
@@ -160,6 +165,48 @@
 
         <br>
         Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_version_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of a content view version to show repositories in</p>
+
+        <br>
+        Value: number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>erratum_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of an erratum to find repositories that contain the erratum</p>
+
+        <br>
+        Value: String
 
 
     </td>
@@ -414,7 +461,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/repositories
-          </a><br>
+          </a>
+          <br>
           <small>Create a custom repository</small>
         </h2>
     </div>
@@ -499,7 +547,7 @@
     <td>
       <strong>url </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -562,13 +610,55 @@
     <td>
       <strong>content_type </strong><br>
       <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>type of repo (either ‘yum’, ‘puppet’ or ‘docker’)</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>checksum_type </strong><br>
+      <small>
         optional
         
       </small>
     </td>
     <td>
       
-<p>type of repo (either ‘yum’ or ‘puppet’, defaults to ‘yum’)</p>
+<p>checksum of the repository, currently ‘sha1’ &amp; ‘sha256’ are supported.‘</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>docker_upstream_name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>name of the upstream docker repository</p>
 
         <br>
         Value: String
@@ -595,7 +685,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/repositories/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a custom repository</small>
         </h2>
     </div>
@@ -654,7 +745,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/repositories/:id/sync
-          </a><br>
+          </a>
+          <br>
           <small>Sync a repository</small>
         </h2>
     </div>
@@ -713,7 +805,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/repositories/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update a custom repository</small>
         </h2>
     </div>
@@ -821,6 +914,27 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>checksum_type </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>checksum of the repository, currently ‘sha1’ &amp; ‘sha256’ are supported.‘</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>url </strong><br>
       <small>
         optional
@@ -830,6 +944,27 @@
     <td>
       
 <p>the feed url of the original repository</p>
+
+        <br>
+        Value: String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>docker_upstream_name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>name of the upstream docker repository</p>
 
         <br>
         Value: String
@@ -856,7 +991,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/repositories/:id
-          </a><br>
+          </a>
+          <br>
           <small>Destroy a custom repository</small>
         </h2>
     </div>
@@ -913,7 +1049,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/repositories/sync_complete
-          </a><br>
+          </a>
+          <br>
           <small></small>
         </h2>
     </div>
@@ -1041,24 +1178,55 @@
     </div>
     <hr>
     <div class='pull-right small'>
-      <a href='../apidoc/repositories/remove_packages.html'> >>> </a>
+      <a href='../apidoc/repositories/remove_content.html'> >>> </a>
     </div>
     <div>
         <h2>
-          <a href='#description-remove_packages'
+          <a href='#description-remove_content'
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            POST /katello/api/repositories/:id/remove_packages
-          </a><br>
+            PUT /katello/api/repositories/:id/remove_packages
+          </a>
+          <br>
+          <small></small>
+        </h2>
+        <h2>
+          <a href='#description-remove_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/remove_docker_images
+          </a>
+          <br>
+          <small></small>
+        </h2>
+        <h2>
+          <a href='#description-remove_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/remove_puppet_modules
+          </a>
+          <br>
+          <small></small>
+        </h2>
+        <h2>
+          <a href='#description-remove_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/remove_content
+          </a>
+          <br>
           <small></small>
         </h2>
     </div>
 
 
-    <div id='description-remove_packages' class='collapse accordion-body'>
+    <div id='description-remove_content' class='collapse accordion-body'>
       
-<p>Remove rpms from a repository</p>
+<p>Remove content from a repository</p>
 
 
 
@@ -1105,10 +1273,10 @@
     </td>
     <td>
       
-<p>Array of package uuids to remove</p>
+<p>Array of content uuids to remove</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -1132,7 +1300,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/repositories/:id/upload_content
-          </a><br>
+          </a>
+          <br>
           <small>Upload content into the repository</small>
         </h2>
     </div>
@@ -1212,7 +1381,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/repositories/:id/import_uploads
-          </a><br>
+          </a>
+          <br>
           <small>Import uploads into a repository</small>
         </h2>
     </div>
@@ -1268,7 +1438,7 @@
 <p>Array of upload ids to import</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>
@@ -1292,7 +1462,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/repositories/:id/gpg_key_content
-          </a><br>
+          </a>
+          <br>
           <small>Return the content of a repo gpg key, used directly by yum</small>
         </h2>
     </div>
