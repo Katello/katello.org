@@ -60,6 +60,23 @@ The installer with the --upgrade flag will run the right database migrations for
 # katello-installer --upgrade
 ```
 
+You will most likely see the following "error" during upgrade:
+
+```
+ /Stage[main]/Gutterball::Database/Postgresql::Server::Db[gutterball]/Postgresql::Server::Database[gutterball]/Exec[/usr/bin/createdb --port
+='5432' --owner='postgres' --template=template0  'gutterball']: Failed to call refresh: /usr/bin/createdb --port='5432' --owner='postgres' -
+-template=template0  'gutterball' returned 1 instead of one of [0]                                                                          
+ /Stage[main]/Gutterball::Database/Postgresql::Server::Db[gutterball]/Postgresql::Server::Database[gutterball]/Exec[/usr/bin/createdb --port
+='5432' --owner='postgres' --template=template0  'gutterball']: /usr/bin/createdb --port='5432' --owner='postgres' --template=template0  'gu|
+tterball' returned 1 instead of one of [0] 
+```
+
+This is not harmful to the installation and we recommend that you run the installer one more time through to ensure everything is properly configured:
+
+```
+# katello-installer --upgrade
+```
+
 **Congratulations! You have now successfully upgraded your Katello to {% if site.version %}{{ site.version }} For a rundown of what was added, please see [release notes](/docs/{{ site.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
 
 
