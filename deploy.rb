@@ -88,6 +88,7 @@ class Deployer
     end
 
     FileUtils.cp_r('_build/nightly/_site/.', "public/")
+    FileUtils.cp_r('_build/nightly/gpg/', "public/")
   end
 
   def build_versions(versions)
