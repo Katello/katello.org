@@ -41,6 +41,12 @@ In the simplest use case, a user may only want to use the Default Capsule. Large
 
 See [Capsule Installation](/docs/{{ site.version }}/installation/capsule.html)
 
+## Removal
+
+To stop all services and remove all Katello and Foreman related packages, run the following command as root on the capsule:
+
+  `capsule-remove`
+
 # Capsule Isolation
 
 The goal of Capsule Isolation is to provide a single endpoint for all of a client's communication, so that in remote network segments, you need only open Firewall ports to the Capsule itself. The following section details the communication clients need to have with a Capsule. The installation options mentioned are the default starting with Katello 2.2.
@@ -106,3 +112,5 @@ When provisioning a host using DHCP/PXE, you will need, at a minimum, the TFTP f
 If a TFTP proxy has the Templates feature as well, Foreman will automatically make the communication isolated. Your clients need to talk to the Capsule on port 67/udp and 68/udp for DHCP, 69/udp for TFTP, and 8000/tcp for Templates.
 
 Consult the installer's `--help` for the full range of provisioning options.
+
+
