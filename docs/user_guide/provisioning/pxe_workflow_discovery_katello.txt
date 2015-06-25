@@ -1,0 +1,69 @@
+# Use http://sequencediagram.org/ to generate image
+
+title PXE-based provisioning with Discovery and Katello plugins
+
+participant User
+participant "Provisioned Host" as Host
+participant "Foreman" as Foreman
+participant "Foreman Proxy" as Proxy
+participant TFTP
+participant DHCP
+participant DNS
+participant "Puppet master" as Puppet
+participant Pulp
+participant Candlepin
+
+linear
+autonumber
+
+== Host discovery ==
+
+User->Host:powers on
+Host->DHCP:requests a temporary IP address
+Host->TFTP:downloads discovery image/kernel
+Host->Proxy:sends facts
+Proxy->Foreman:forwards facts
+note over Host:awaits orders
+
+== Inception (can be automated via auto-provisioning) ==
+
+User->Foreman:clicks Provision button
+Foreman->Proxy:requests free IP address
+Proxy->DHCP:forwards free IP request
+Foreman->Proxy:creates TFTP record
+Proxy->TFTP:drops TFTP configuration file
+Proxy->Pulp:downloads Anaconda image/kernel into TFTP directory
+Foreman->Proxy:creates DHCP reservation
+Proxy->DHCP:forwards DHCP reservation
+Foreman->Proxy:creates DNS records
+Proxy->DNS:forwards DNS records
+Foreman->Proxy:sends reboot command
+Proxy->Host:forwards reboot command
+note over Host:reboots
+
+== Boot into Anaconda ==
+
+Host->DHCP:requests the reserved IP
+Host->TFTP:downloads Anaconda image/kernel
+Host->Proxy:request Kickstart
+Proxy->Foreman:forwards Kickstart request
+Host->Pulp:downloads packages from kickstart tree
+note over Host:installs OS
+Host->Candlepin:subscribes products (subscription-manager)
+Host->Puppet:signs puppet client certificate (puppet agent)
+Host->Pulp:sends package profile (rhsm yum plugin)
+Host->Pulp:sends repository report (katello agent)
+Host->Foreman:turns off build mode
+Foreman->Proxy:sends TFTP removal request
+Proxy->TFTP:removes TFTP configuration file
+note over Host:reboots
+
+== First boot ==
+
+Host->DHCP:requests the reserved IP
+Host->Puppet:sends initial facts
+Puppet->Foreman:forwards initial facts
+note over Host:performs initial configuration
+Host->Puppet:sends initial report
+Puppet->Foreman:forwards initial report
+note over Host:in operation
