@@ -33,7 +33,7 @@ sidebar: sidebars/documentation.html
  * katello-agent doesn't work when custom certs are used ([#10670](http://projects.theforeman.org/issues/10670), [2d7f81d6](http://github.com/katello/katello-agent/commit/2d7f81d679a595dc674b4a9c4e604b7e56c51262))
 
 ### Capsule
- * Unable to install custom packages via capsule due to GPG key failure ([#10616](http://projects.theforeman.org/issues/10616), [4a8be016](http://github.com/katello//commit/4a8be016b48e0d810eceb37303967d95440b4e18))
+ * Unable to install custom packages via capsule due to GPG key failure ([#10616](http://projects.theforeman.org/issues/10616), [4a8be016](http://github.com/katello/katello-installer/commit/4a8be016b48e0d810eceb37303967d95440b4e18))
  * capsule: synchronize command never times out/silently fails. ([#7162](http://projects.theforeman.org/issues/7162), [f778714b](http://github.com/katello/katello/commit/f778714b1e934857301ec977c31ec3e9075a3c4a))
 
 ### Katello Agent
@@ -53,7 +53,7 @@ sidebar: sidebars/documentation.html
 ### Other
  * Publish can fail with "No recipients found for RHEL View promotion summary" ([#10593](http://projects.theforeman.org/issues/10593), [47d352f5](http://github.com/katello/katello/commit/47d352f58ede63ec80ac78059b074f1b8c73c3b9))
  * Installation of custom certs causes httpd failure due to bad paths ([#10591](http://projects.theforeman.org/issues/10591))
- * TCP port for qdrouterd needs to be added to the docs ([#10472](http://projects.theforeman.org/issues/10472), [a6660b9b](http://github.com/katello//commit/a6660b9be189fcc0084dcae14f0a3676bffe7d81))
+ * TCP port for qdrouterd needs to be added to the docs ([#10472](http://projects.theforeman.org/issues/10472), [a6660b9b](http://github.com/katello/katello.org/commit/a6660b9be189fcc0084dcae14f0a3676bffe7d81))
 
 # Katello 2.2.1 (Maibock) Release Notes
 
