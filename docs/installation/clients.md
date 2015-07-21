@@ -11,7 +11,7 @@ Client machines can be added in one of two ways: manually or via a provisioned h
 
 ## Manual
 
-Install the appropriate Katello client release packages:
+Install the appropriate Katello client release packages.  For CentOS 6, you will also need to enable the COPR repository for subscription-manager.
 
 <p>
   Select your Operating System:
@@ -32,6 +32,7 @@ yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.versio
 
 <div id="el6" style="display:none;" markdown="1">
 ```bash
+wget https://copr.fedoraproject.org/coprs/dgoodwin/subscription-manager/repo/epel-6/dgoodwin-subscription-manager-epel-6.repo -O /etc/yum.repos.d/dgoodwin-subscription-manager-epel-6.repo
 yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/RHEL/6Server/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
