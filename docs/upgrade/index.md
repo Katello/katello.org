@@ -20,6 +20,8 @@ Ensure your operating system is fully up-to-date:
 # yum -y update
 ```
 
+**NOTE**: If kernel packages are updated here (e.g. upgrading el 6.6 to 6.7), you must reboot and ensure the new kernel and SELinux policy is loaded before upgrading Katello.
+
 ## Step 3 - Repositories
 
 Update the Foreman and Katello release packages:
