@@ -39,13 +39,13 @@ To create a new key,
 
 ![Creating a Host Collection](./activation_key_create.png)
 
-- *Name*: This required option has few restrictions on format. However, since this name is used to identify the activation key to command line tools such as *subscription-manager* including spaces and non-ascii characters will need special consideration in such uses.
+- *Name*: This required option has few restrictions on format. However, since this name is used to identify the activation key to command line tools, such as *subscription-manager*, including spaces and non-ascii characters will need special consideration in such uses.
 
-- *Content Host Limit*: This option will control how many Content Hosts may be registered using the key. An "unlimited" value will not place any limits on usage. Specifying a quantity will limit the number of registered content hosts. Registering with an activation key consumes one of the available limit quantity, while unregistering makes it available again. (ie. This quantity is not a usage counter but a limit of actively registered content hosts.)
+- *Content Host Limit*: This option will control how many Content Hosts may be registered using the key. An "unlimited" value will not place any limits on usage. Specifying a quantity will limit the number of registered content hosts. Registering with an activation key consumes one of the available limit quantity, while unregistering makes it available again. (i.e. this quantity is not a usage counter but a limit of actively registered content hosts)
 
-- *Description*: A free form description.
+- *Description*: A free form text field that can be used to store a description of the key for later reference or for pseudo-tagging that can be used to search.
 
-- *Environment* and *Content View*: Although optional, at least one activation key used during registration must specify a content view. Taken in order specified to *subscription-manager*, the last activation key with a content view takes precedence.
+- *Environment* and *Content View*: Although optional, at least one activation key used during registration must specify a content view. Activation keys are used in the order specified to *subscription-manager* meaning the last activation key with a content view takes precedence.
 
 The following example would use CV_B's content view:
 
