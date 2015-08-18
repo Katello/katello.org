@@ -39,7 +39,7 @@ To create a new key,
 
 ![Creating a Host Collection](./activation_key_create.png)
 
-- *Name*: This required option has few restrictions on format. However, since this name is used to identify the activation key to command line tools, such as *subscription-manager*, including spaces and non-ascii characters will need special consideration in such uses.
+- *Name*: This required option is used to identify the activation key to command line tools, such as *subscription-manager*.
 
 - *Content Host Limit*: This option will control how many Content Hosts may be registered using the key. An "unlimited" value will not place any limits on usage. Specifying a quantity will limit the number of registered content hosts. Registering with an activation key consumes one of the available limit quantity, while unregistering makes it available again. (i.e. this quantity is not a usage counter but a limit of actively registered content hosts)
 
