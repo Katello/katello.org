@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title><span class="translation_missing" title="translation missing: sv-SE.apipie.api_documentation">Api Documentation</span></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
@@ -18,7 +18,7 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Foreman v2</a>
+    <a href='../../apidoc.html'>Foreman v1</a>
     <span class='divider'>/</span>
   </li>
   <li>
@@ -29,33 +29,37 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/domains/create.sv_SE.html">sv_SE</a> | <a href="../../apidoc/domains/create.zh_CN.html">zh_CN</a> | <a href="../../apidoc/domains/create.gl.html">gl</a> | <a href="../../apidoc/domains/create.it.html">it</a> | <a href="../../apidoc/domains/create.pt_BR.html">pt_BR</a> | <a href="../../apidoc/domains/create.es.html">es</a> | <a href="../../apidoc/domains/create.ja.html">ja</a> | <a href="../../apidoc/domains/create.en_GB.html">en_GB</a> | <a href="../../apidoc/domains/create.ru.html">ru</a> | <a href="../../apidoc/domains/create.fr.html">fr</a> | <a href="../../apidoc/domains/create.en.html">en</a> | <a href="../../apidoc/domains/create.ko.html">ko</a> | <a href="../../apidoc/domains/create.de.html">de</a> | <a href="../../apidoc/domains/create.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      POST /api/domains<br>
-      <small>Create a domain.</small>
+      POST /api/domains
+      <br>
+      <small>»Create a domain.«</small>
     </h1>
   </div>
 
 <div>
 
-  
+  »
 <p>The <b>fullname</b> field is used for human readability in reports and other pages that refer to domains, and also available as an external node parameter</p>
+«
 
 
 
 
 
-
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -63,8 +67,8 @@
     <td>
       <strong>domain </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
       </small>
     </td>
     <td>
@@ -81,13 +85,13 @@
     <td>
       <strong>domain[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
     <td>
       
-<p>The full DNS Domain name</p>
+<p>»The full DNS Domain name«</p>
 
         <br>
         Value: String
@@ -102,13 +106,13 @@
     <td>
       <strong>domain[fullname] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
       
-<p>Full name describing the domain</p>
+<p>»Fullständigt namn som beskriver domänen«</p>
 
         <br>
         Value: String
@@ -123,13 +127,13 @@
     <td>
       <strong>domain[dns_id] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
       </small>
     </td>
     <td>
       
-<p>DNS Proxy to use within this domain</p>
+<p>»DNS Proxy to use within this domain«</p>
 
         <br>
         Value: number.
@@ -144,16 +148,16 @@
     <td>
       <strong>domain[domain_parameters_attributes] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
       
-<p>Array of parameters (name, value)</p>
+<p>»Array of parameters (name, value)«</p>
 
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>

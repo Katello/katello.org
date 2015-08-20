@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title><span class="translation_missing" title="translation missing: sv-SE.apipie.api_documentation">Api Documentation</span></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
@@ -18,7 +18,7 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Foreman v2</a>
+    <a href='../../apidoc.html'>Foreman v1</a>
     <span class='divider'>/</span>
   </li>
   <li>
@@ -29,31 +29,35 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/compute_resources/update.sv_SE.html">sv_SE</a> | <a href="../../apidoc/compute_resources/update.zh_CN.html">zh_CN</a> | <a href="../../apidoc/compute_resources/update.gl.html">gl</a> | <a href="../../apidoc/compute_resources/update.it.html">it</a> | <a href="../../apidoc/compute_resources/update.pt_BR.html">pt_BR</a> | <a href="../../apidoc/compute_resources/update.es.html">es</a> | <a href="../../apidoc/compute_resources/update.ja.html">ja</a> | <a href="../../apidoc/compute_resources/update.en_GB.html">en_GB</a> | <a href="../../apidoc/compute_resources/update.ru.html">ru</a> | <a href="../../apidoc/compute_resources/update.fr.html">fr</a> | <a href="../../apidoc/compute_resources/update.en.html">en</a> | <a href="../../apidoc/compute_resources/update.ko.html">ko</a> | <a href="../../apidoc/compute_resources/update.de.html">de</a> | <a href="../../apidoc/compute_resources/update.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      PUT /api/compute_resources/:id<br>
-      <small>Update a compute resource.</small>
+      PUT /api/compute_resources/:id
+      <br>
+      <small>»Update a compute resource.«</small>
     </h1>
   </div>
 
 <div>
 
-  
+  »«
 
 
 
 
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -61,7 +65,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -80,8 +84,8 @@
     <td>
       <strong>compute_resource </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
       </small>
     </td>
     <td>
@@ -98,8 +102,8 @@
     <td>
       <strong>compute_resource[name] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
@@ -117,13 +121,13 @@
     <td>
       <strong>compute_resource[provider] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
       
-<p>Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace, GCE</p>
+<p>»Providers include Libvirt, Ovirt, EC2, Vmware, Openstack, Rackspace, GCE«</p>
 
         <br>
         Value: String
@@ -138,13 +142,13 @@
     <td>
       <strong>compute_resource[url] </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
     <td>
       
-<p>URL for Libvirt, Ovirt, and Openstack</p>
+<p>»URL for Libvirt, oVirt, and OpenStack«</p>
 
         <br>
         Value: String
@@ -159,8 +163,8 @@
     <td>
       <strong>compute_resource[description] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
@@ -178,13 +182,13 @@
     <td>
       <strong>compute_resource[user] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
       
-<p>Username for Ovirt, EC2, Vmware, Openstack. Access Key for EC2.</p>
+<p>»Username for oVirt, EC2, VMware, OpenStack. Access Key for EC2.«</p>
 
         <br>
         Value: String
@@ -199,13 +203,13 @@
     <td>
       <strong>compute_resource[password] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
       
-<p>Password for Ovirt, EC2, Vmware, Openstack. Secret key for EC2</p>
+<p>»Password for oVirt, EC2, VMware, OpenStack. Secret key for EC2«</p>
 
         <br>
         Value: String
@@ -220,13 +224,13 @@
     <td>
       <strong>compute_resource[uuid] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
       
-<p>for Ovirt, Vmware Datacenter</p>
+<p>»for oVirt, VMware Datacenter«</p>
 
         <br>
         Value: String
@@ -241,13 +245,13 @@
     <td>
       <strong>compute_resource[region] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
       
-<p>for EC2 only</p>
+<p>»for EC2 only«</p>
 
         <br>
         Value: String
@@ -262,13 +266,13 @@
     <td>
       <strong>compute_resource[tenant] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
       
-<p>for Openstack only</p>
+<p>»for OpenStack only«</p>
 
         <br>
         Value: String
@@ -283,13 +287,13 @@
     <td>
       <strong>compute_resource[server] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
       
-<p>for Vmware</p>
+<p>»for VMware«</p>
 
         <br>
         Value: String
