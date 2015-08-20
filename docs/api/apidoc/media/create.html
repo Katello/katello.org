@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title><span class="translation_missing" title="translation missing: sv-SE.apipie.api_documentation">Api Documentation</span></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
@@ -18,7 +18,7 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Foreman v2</a>
+    <a href='../../apidoc.html'>Foreman v1</a>
     <span class='divider'>/</span>
   </li>
   <li>
@@ -29,31 +29,35 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/media/create.sv_SE.html">sv_SE</a> | <a href="../../apidoc/media/create.zh_CN.html">zh_CN</a> | <a href="../../apidoc/media/create.gl.html">gl</a> | <a href="../../apidoc/media/create.it.html">it</a> | <a href="../../apidoc/media/create.pt_BR.html">pt_BR</a> | <a href="../../apidoc/media/create.es.html">es</a> | <a href="../../apidoc/media/create.ja.html">ja</a> | <a href="../../apidoc/media/create.en_GB.html">en_GB</a> | <a href="../../apidoc/media/create.ru.html">ru</a> | <a href="../../apidoc/media/create.fr.html">fr</a> | <a href="../../apidoc/media/create.en.html">en</a> | <a href="../../apidoc/media/create.ko.html">ko</a> | <a href="../../apidoc/media/create.de.html">de</a> | <a href="../../apidoc/media/create.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      POST /api/media<br>
-      <small>Create a medium.</small>
+      POST /api/media
+      <br>
+      <small>»Create a medium.«</small>
     </h1>
   </div>
 
 <div>
 
-  
+  »«
 
 
 
 
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -61,8 +65,8 @@
     <td>
       <strong>medium </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
       </small>
     </td>
     <td>
@@ -79,13 +83,13 @@
     <td>
       <strong>medium[name] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
     <td>
       
-<p>Name of media</p>
+<p>»Name of media«</p>
 
         <br>
         Value: String
@@ -100,17 +104,17 @@
     <td>
       <strong>medium[path] </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
     <td>
       
-<p>The path to the medium, can be a URL or a valid NFS server (exclusive of the architecture).</p>
+<p>»The path to the medium, can be a URL or a valid NFS server (exclusive of the architecture).</p>
 
 <p>for example http://mirror.centos.org/centos/$version/os/$arch where $arch will be substituted for the host’s actual OS architecture and $version, $major and $minor will be substituted for the version of the operating system.</p>
 
-<p>Solaris and Debian media may also use $release.</p>
+<p>Solaris and Debian media may also use $release. «</p>
 
         <br>
         Value: String
@@ -125,13 +129,13 @@
     <td>
       <strong>medium[os_family] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
       
-<p>The family that the operating system belongs to.</p>
+<p>»The family that the operating system belongs to.</p>
 
 <p>Available families:</p>
 
@@ -142,6 +146,8 @@
 
 <li>Archlinux</li>
 
+<li>Coreos</li>
+
 <li>Debian</li>
 
 <li>Freebsd</li>
@@ -150,13 +156,15 @@
 
 <li>Junos</li>
 
+<li>NXOS</li>
+
 <li>Redhat</li>
 
 <li>Solaris</li>
 
 <li>Suse</li>
 
-<li>Windows</li>
+<li>Windows «</li>
 </ul>
 
         <br>
@@ -172,14 +180,14 @@
     <td>
       <strong>medium[operatingsystem_ids] </strong><br>
       <small>
-        optional
-        , nil allowed
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
       </small>
     </td>
     <td>
       
         <br>
-        Value: Array
+        Value: Must be an array of any type
 
 
     </td>

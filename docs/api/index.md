@@ -4,5 +4,5 @@ title: API
 sidebar: sidebars/documentation.html
 ---
 
-<iframe src="apidoc.html">
+<iframe src="apidoc/v2.en.html">
 </iframe>

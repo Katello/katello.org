@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>API documentation</title>
+  <title><span class="translation_missing" title="translation missing: sv-SE.apipie.api_documentation">Api Documentation</span></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
@@ -18,7 +18,7 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Foreman v2</a>
+    <a href='../../apidoc.html'>Foreman v1</a>
     <span class='divider'>/</span>
   </li>
   <li>
@@ -29,43 +29,49 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>import_puppetclasses</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/environments/import_puppetclasses.sv_SE.html">sv_SE</a> | <a href="../../apidoc/environments/import_puppetclasses.zh_CN.html">zh_CN</a> | <a href="../../apidoc/environments/import_puppetclasses.gl.html">gl</a> | <a href="../../apidoc/environments/import_puppetclasses.it.html">it</a> | <a href="../../apidoc/environments/import_puppetclasses.pt_BR.html">pt_BR</a> | <a href="../../apidoc/environments/import_puppetclasses.es.html">es</a> | <a href="../../apidoc/environments/import_puppetclasses.ja.html">ja</a> | <a href="../../apidoc/environments/import_puppetclasses.en_GB.html">en_GB</a> | <a href="../../apidoc/environments/import_puppetclasses.ru.html">ru</a> | <a href="../../apidoc/environments/import_puppetclasses.fr.html">fr</a> | <a href="../../apidoc/environments/import_puppetclasses.en.html">en</a> | <a href="../../apidoc/environments/import_puppetclasses.ko.html">ko</a> | <a href="../../apidoc/environments/import_puppetclasses.de.html">de</a> | <a href="../../apidoc/environments/import_puppetclasses.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      POST /api/smart_proxies/:id/import_puppetclasses<br>
-      <small>Import puppet classes from puppet proxy.</small>
+      POST /api/smart_proxies/:id/import_puppetclasses
+      <br>
+      <small>»Import puppet classes from puppet proxy.«</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      POST /api/smart_proxies/:smart_proxy_id/environments/:id/import_puppetclasses<br>
-      <small>Import puppet classes from puppet proxy for particular environment.</small>
+      POST /api/smart_proxies/:smart_proxy_id/environments/:id/import_puppetclasses
+      <br>
+      <small>»Import puppet classes from puppet proxy for an environment«</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      POST /api/environments/:environment_id/smart_proxies/:id/import_puppetclasses<br>
-      <small>Import puppet classes from puppet proxy for particular environment.</small>
+      POST /api/environments/:environment_id/smart_proxies/:id/import_puppetclasses
+      <br>
+      <small>»Import puppet classes from puppet proxy for an environment«</small>
     </h1>
   </div>
 
 <div>
 
-  
+  »«
 
 
 
 
 
-  <h2>Params</h2>
+  <h2><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h2>
   <table class='table'>
     <thead>
       <tr>
-        <th>Param name</th>
-        <th>Description</th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
       </tr>
     </thead>
     <tbody>
@@ -73,7 +79,7 @@
     <td>
       <strong>id </strong><br>
       <small>
-        required
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
         
       </small>
     </td>
@@ -92,7 +98,7 @@
     <td>
       <strong>smart_proxy_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -111,7 +117,7 @@
     <td>
       <strong>environment_id </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -130,7 +136,7 @@
     <td>
       <strong>dryrun </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
@@ -149,13 +155,13 @@
     <td>
       <strong>except </strong><br>
       <small>
-        optional
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
         
       </small>
     </td>
     <td>
       
-<p>Optional comma-deliminated string containing either ‘new,updated,obsolete’ used to limit the import_puppetclasses actions</p>
+<p>»Optional comma-delimited string containing either ‘new’, ‘updated’, or ‘obsolete’ that is used to limit the imported Puppet classes«</p>
 
         <br>
         Value: String
