@@ -25,7 +25,7 @@ guidelines set forth by JSLint.
 A number of Javascript libraries are used within Katello.  Please refer to each libraries documentation.
 
   - [jQuery](http://api.jquery.com/)
-  - [underscorejs](http://documentcloud.github.com/underscore/)
+  - [underscorejs](http://underscorejs.org/)
   - [AngularJS](https://angularjs.org/)
 
 ## Syntax Conventions
