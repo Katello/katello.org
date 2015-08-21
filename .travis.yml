@@ -2,6 +2,9 @@ install: gem install rake html-proofer
 language: ruby
 rvm:
 - 2.0
+before_script:
+- git config --global user.name "Travis Tester"
+- git config --global user.email "katello@example.com"
 script: 'rake test:travis'
 env:
   global:

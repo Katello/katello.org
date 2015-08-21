@@ -14,7 +14,9 @@ namespace :test do
       end
     end
 
-    HTML::Proofer.new("./deploy/public", :href_ignore => ['#'], :file_ignore => [/.*\/docs\/2.0.*/]).run
+    HTML::Proofer.new("./deploy/public", :href_ignore => ['#'],
+                                         :file_ignore => [/.*\/docs\/2.0.*/],
+                                         :parallel => {:in_processes => 4}).run
   end
 
   task :local do
