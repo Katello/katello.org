@@ -89,7 +89,7 @@ sidebar: sidebars/documentation.html
  * hammer: Activation key name update claims to run without error but did not really update the name ([#10669](http://projects.theforeman.org/issues/10669), [c78f11a0](http://github.com/katello/katello/commit/c78f11a0ebadda49780e43b5f8543eb74b6d3c64))
  * UI shows 3 entries of same product under CV --> Version -> yum_repositories ([#10640](http://projects.theforeman.org/issues/10640), [27b6d7cf](http://github.com/katello/katello/commit/27b6d7cf208272d10c313e1e85beaee803639568))
  * Incremental updates broken ([#10631](http://projects.theforeman.org/issues/10631), [863ed70a](http://github.com/katello/katello/commit/863ed70a984865a8792991150b37a83d4c4aab2c))
- * Need way to promote latest version of Content View to next environment via hammer ([#10623](http://projects.theforeman.org/issues/10623), [35cbd6fd](http://github.com/katello//commit/35cbd6fd566b7d13faaa7eb2dd0158a13128f10b))
+ * Need way to promote latest version of Content View to next environment via hammer ([#10623](http://projects.theforeman.org/issues/10623), [35cbd6fd](http://github.com/katello/katello-installer/commit/35cbd6fd566b7d13faaa7eb2dd0158a13128f10b))
  * Duplicated content listed as available for inclusion ([#10617](http://projects.theforeman.org/issues/10617), [38420e5e](http://github.com/katello/katello/commit/38420e5e1d330ddbbaf1ae4b8b5f1840bee7e394))
  * Deleted product repos has been listed under Operating system-> Installation Media to select. ([#10601](http://projects.theforeman.org/issues/10601), [acb2e52a](http://github.com/katello/katello/commit/acb2e52a38ee9fd4566c4a44d394d4b4331a9ee0))
  * Clicking on product hyperlinks in Errata -> Repositories page fails ([#10540](http://projects.theforeman.org/issues/10540), [20276b15](http://github.com/katello/katello/commit/20276b15b5ff555e0f26d27b85f9111b46324eec))
@@ -142,13 +142,13 @@ sidebar: sidebars/documentation.html
 
 ### Content Views
  * UI: Unable to add component content view to a composite view ([#11264](http://projects.theforeman.org/issues/11264), [344e8126](http://github.com/katello/katello/commit/344e81260807430a738bdbb5e89e63a8c41271d1))
- * I can't re-promote a content view if it's in the last environment of a path ([#10351](http://projects.theforeman.org/issues/10351), [5b2db62a](http://github.com/katello//commit/5b2db62a2a24e48eaa3b81b982ce066285c67e78), [0df00b98](http://github.com/katello/katello/commit/0df00b988138c3f8572af454ffa5a4d2cb1599df))
+ * I can't re-promote a content view if it's in the last environment of a path ([#10351](http://projects.theforeman.org/issues/10351), [5b2db62a](http://github.com/katello/katello-installer/commit/5b2db62a2a24e48eaa3b81b982ce066285c67e78), [0df00b98](http://github.com/katello/katello/commit/0df00b988138c3f8572af454ffa5a4d2cb1599df))
  * in order to specify package exactly in a content view filter, both release and version must be accepted ([#6599](http://projects.theforeman.org/issues/6599))
 
 ### Installer
  * Reindex needs to handle bad errata and package/packagegroups etc ([#11140](http://projects.theforeman.org/issues/11140), [7d353896](http://github.com/katello/katello/commit/7d3538960c882b1126d610b8548aecb4ab9b1b91))
  * katello-devel-installer seg faults on EL6 ([#10680](http://projects.theforeman.org/issues/10680), [eb0657b3](http://github.com/katello/katello-installer/commit/eb0657b3db97b3cccecaf2d1b5f56bdd06278d8e))
- * Make --capsule-templates option true by default ([#10675](http://projects.theforeman.org/issues/10675), [db730f33](http://github.com/katello//commit/db730f332ae13992e5fefc441485a35dc49e7bf6))
+ * Make --capsule-templates option true by default ([#10675](http://projects.theforeman.org/issues/10675), [db730f33](http://github.com/katello/katello-installer/commit/db730f332ae13992e5fefc441485a35dc49e7bf6))
  * Install will occasionally fail on virtual machines ([#10654](http://projects.theforeman.org/issues/10654))
  * katello-installer capsule module does not expose dhcp_option_domain dhcp parameter ([#10599](http://projects.theforeman.org/issues/10599))
  * katello-devel-installer complains about duplicate resource crane ([#10252](http://projects.theforeman.org/issues/10252), [b28d98a0](http://github.com/katello/katello-installer/commit/b28d98a0f17d3dbdcad5cd22bbf4b1019e957b51))
@@ -165,7 +165,7 @@ sidebar: sidebars/documentation.html
  * Katello installer segfaults on Ruby 1.8.7 ([#7064](http://projects.theforeman.org/issues/7064), [68819b4c](http://github.com/katello/katello-installer/commit/68819b4cf638d08b9048f9c636ef530e8c42f466))
 
 ### Upgrades
- * 2.3 Upgrade Fails with Unable to Reload Puppet ([#11139](http://projects.theforeman.org/issues/11139), [d4b15588](http://github.com/katello//commit/d4b15588253327b727698d4e0a7b81794fda09f3))
+ * 2.3 Upgrade Fails with Unable to Reload Puppet ([#11139](http://projects.theforeman.org/issues/11139), [d4b15588](http://github.com/katello/katello-installer/commit/d4b15588253327b727698d4e0a7b81794fda09f3))
  * Upgrades failing in nightly due to "undefined local variable or method `noop'" ([#10986](http://projects.theforeman.org/issues/10986), [9d839617](http://github.com/katello/katello-installer/commit/9d83961717287d6542770d208cc21414170e078f))
 
 ### Capsule
@@ -266,7 +266,7 @@ sidebar: sidebars/documentation.html
  * `katello-service [re]start` hangs indefinitely if pulp_celerybeat is started before mongod ([#11165](http://projects.theforeman.org/issues/11165), [c5707335](http://github.com/katello/katello/commit/c570733519c86047718869b34203d0b6bd7701da))
  * katello-service doesn't work on el6 ([#11129](http://projects.theforeman.org/issues/11129), [1727a4f2](http://github.com/katello/katello/commit/1727a4f2b6a627cddfc3201b2214f0011c3c58fd))
  * Cannot publish content view as non-admin user ([#11094](http://projects.theforeman.org/issues/11094), [2de120a2](http://github.com/katello/katello/commit/2de120a23ec338f0f03aa5e9bfbc7f9e55c33840))
- * Errors during upgrade do not get properly reported ([#11086](http://projects.theforeman.org/issues/11086), [28f2c8b8](http://github.com/katello//commit/28f2c8b80a3b00f8b8f078bdaf56e5c688669fd0))
+ * Errors during upgrade do not get properly reported ([#11086](http://projects.theforeman.org/issues/11086), [28f2c8b8](http://github.com/katello/katello-installer/commit/28f2c8b80a3b00f8b8f078bdaf56e5c688669fd0))
  * Fix confine Katello 2.3 to Foreman 1.9 and above ([#11070](http://projects.theforeman.org/issues/11070), [8611332b](http://github.com/katello/katello/commit/8611332b83e8273bdb21f47aaad9fef41a950043))
  * Nightly repo syncs often result in duplicate key error ([#11028](http://projects.theforeman.org/issues/11028), [6b2570c9](http://github.com/katello/katello/commit/6b2570c9ad25f74dcafcb7e17d40207a332be827))
  * Confine Katello 2.3 to Foreman 1.9 and above ([#10987](http://projects.theforeman.org/issues/10987), [4b614c88](http://github.com/katello/katello/commit/4b614c8817e3a7161616bf756db8d8aed379586a))
