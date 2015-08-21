@@ -27,23 +27,25 @@ It is necessary to backup configuration files and important data files. Being in
 
 ```
 tar --selinux -czvf config_files.tar.gz \
-/etc/katello-installer \
-/etc/foreman \
-/etc/elasticsearch \
-/etc/candlepin \
-/etc/pulp \
-/etc/pki/katello \
-/etc/pki/pulp \
-/etc/gofer \
-/etc/qpid \
-/etc/qpidc.conf \
-/etc/qpidd.conf \
-/etc/sysconfig/katello \
-/etc/sysconfig/foreman \
+/etc/katello-installer/ \
+/etc/candlepin/ \
+/etc/foreman/ \
+/etc/foreman-proxy/ \
+/etc/gutterball/ \
+/etc/hammer/ \
+/etc/pulp/ \
+/etc/puppet/ \
+/etc/qpid/ \
+/etc/qpid-dispatch/ \
+/etc/elasticsearch/ \
+/etc/tomcat6/ \
+/etc/pki/katello/ \
+/etc/pki/katello-certs-tools/ \
 /etc/sysconfig/elasticsearch \
-/root/ssl-build \
-/var/www/html/pub \
-/usr/share/katello/candlepin-cert.crt
+/etc/sysconfig/tomcat6 \
+/root/ssl-build/ \
+/var/lib/puppet/foreman_cache_data \
+/var/www/html/pub/
 
 tar --selinux -czvf elastic_data.tar.gz /var/lib/elasticsearch
 ```
@@ -147,7 +149,7 @@ If the original system is not avaiable it is necessary to reinstall the same ver
 
 ```
 yum -y install katello
-tar --selinux -xzvf config_files.tar.gz -C /tmp
+tar --selinux -xzvf config_files.tar.gz -C /
 katello-installer
 ```
 
@@ -166,7 +168,6 @@ Note: It is a good idea to make additional backup of configuration files before 
 System files restore must be done as root as well. Please double check you are extracting on the correct host. To restore all system files the following commands must be executed from the $BDIR directory:
 
 ```
-tar --selinux -xzvf config_files.tar.gz -C /
 tar --selinux -xzvf elastic_data.tar.gz -C /
 tar --selinux -xvf pulp_data.tar -C /
 ```
@@ -176,15 +177,10 @@ tar --selinux -xvf pulp_data.tar -C /
 First of all we need to drop existing database, if there is any. Make sure PostgreSQL is running and drop all databases we are going to restore.
 
 ```
+katello-service stop
 service postgresql start
 su postgres -c "dropdb foreman"
 su postgres -c "dropdb candlepin"
-```
-
-If you get an error "database xxx is being accessed by other users" during database drop step, make sure all processes are stopped by running:
-
-```
-katello-service stop
 ```
 
 To restore Katello and Candlepin PostgreSQL databases use the following commands.
