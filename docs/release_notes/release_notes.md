@@ -4,6 +4,33 @@ title: Release Notes
 sidebar: sidebars/documentation.html
 ---
 
+# 2.3.1 Berliner Weisse (2015-09-11)
+
+### Installer
+ * Isolated capsule/reverse proxy doesn't work when using custom certificates ([#11660](http://projects.theforeman.org/issues/11660))
+ * 'unable to get certificate CRL' Apache errors ([#10210](http://projects.theforeman.org/issues/10210), [1ccb322b](http://github.com/katello/katello-installer/commit/1ccb322b928ae8b70d5c5c30d46d160b37762dfc))
+
+### Web UI
+ * Inconsistency in wording on HTTP vs HTTPS enable flags in Repo screens ([#11627](http://projects.theforeman.org/issues/11627), [f74d548f](http://github.com/katello/katello/commit/f74d548fe1603910720216d2abe498b9057ea4ed))
+ * Error adding product to Sync Plan ([#11573](http://projects.theforeman.org/issues/11573), [2015abad](http://github.com/katello/katello/commit/2015abad9711d1924a8151523cbeeb27408f01c6))
+ * Possible to delete ContentViewVersion used by Composite Content View Components ([#11472](http://projects.theforeman.org/issues/11472), [478a4d3a](http://github.com/katello/katello/commit/478a4d3a2f03028c184cb2af4c90c9f0f85ae926))
+ * Product new page does not properly report errors ([#11336](http://projects.theforeman.org/issues/11336), [74ed3fba](http://github.com/katello/katello/commit/74ed3fba4f5e384bd9fdcf40726d3491ddd4eb2f))
+
+### Pulp
+ * Changing the URL of a repo doesn't seem to make a difference ([#11556](http://projects.theforeman.org/issues/11556), [355573a5](http://github.com/katello/katello/commit/355573a555383220942e9a516d0594fb0f38f759))
+
+### Roles and Permissions
+ * Cannot view content host errata with view_content_host permission ([#11470](http://projects.theforeman.org/issues/11470), [b8caed33](http://github.com/katello/katello/commit/b8caed331164398340f5e8974aea39b7930efedd))
+
+### Foreman Integration
+ * Parameter kt_env no longer available ([#11456](http://projects.theforeman.org/issues/11456), [aad23a9b](http://github.com/katello/katello/commit/aad23a9b92cafcd19f7c02ce442bef2d117e2730))
+
+### API
+ * Fetching product or repo list using sync plans with large number of tasks takes minutes ([#11447](http://projects.theforeman.org/issues/11447), [c320d524](http://github.com/katello/katello/commit/c320d524d7035a64a259f5bc58655dca82607740))
+
+### Other
+ * /pulp/isos not accessible via http ([#11326](http://projects.theforeman.org/issues/11326))
+
 # 2.3 Berliner Weisse (2015-08-20)
 
 ## Features
