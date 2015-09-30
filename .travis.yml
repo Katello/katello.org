@@ -1,7 +1,7 @@
 install: gem install rake html-proofer
 language: ruby
 rvm:
-- 2.0
+- 2.2
 script: 'rake test:travis'
 env:
   global:
