@@ -47,7 +47,95 @@ whenever you have to run tests. They can also speed up other boot times like run
 or Rails server.
 
 * [spring](https://github.com/rails/spring) - a basic one from the Rails team
-* [zeus](https://github.com/burke/zeus) - more features than spring.
+* [zeus](https://github.com/burke/zeus) - more features than spring (setup described below)
+
+### zeus setup
+
+First, simply install the gem.
+```
+gem install zeus
+```
+
+In order to be able to run katello tests, a pair of configuration files should be placed in the foreman directory.
+**custom_plan.rb**
+```
+require 'zeus/rails'
+
+class CustomPlan < Zeus::Rails
+  def test_environment
+    require 'minitest/unit'
+    MiniTest::Unit.class_variable_set("@@installed_at_exit", true)
+    $LOAD_PATH.unshift '../katello/test'
+    $LOAD_PATH.unshift '../katello/spec'
+    super
+  end
+end
+
+Zeus.plan = CustomPlan.new
+```
+**zeus.json**
+```
+{
+  "command": "ruby -rubygems -r./custom_plan -eZeus.go",
+
+  "plan": {
+    "boot": {
+      "default_bundle": {
+        "development_environment": {
+          "prerake": {"rake": []},
+          "runner": ["r"],
+          "console": ["c"],
+          "server": ["s"],
+          "dbconsole": []
+        },
+        "test_environment": {
+          "test_helper": {"test": ["testrb"]}
+        }
+      }
+    }
+  }
+}
+```
+
+Now start zeus from the foreman directory. The output will be colored to indicate the status of each aspect of the server. Wait for the "zeus test (alias: testrb)" to be green.
+```
+$ zeus start
+Starting Zeus server v0.15.4
+[ready] [crashed] [running] [connecting] [waiting]
+boot
+└── default_bundle
+    ├── development_environment
+    │   └── prerake
+    └── test_environment
+        └── test_helper
+
+Available Commands: [waiting] [crashed] [ready]
+zeus rake
+zeus runner (alias: r)
+zeus console (alias: c)
+zeus server (alias: s)
+zeus generate (alias: g)
+zeus destroy (alias: d)
+zeus dbconsole
+zeus test (alias: testrb)
+```
+
+Note: If running in an *sshfs* mounted foreman directory, zeus may fail to start with the message *"Unable to accept socket connection."* and *"It looks like Zeus is already running. If not, remove .zeus.sock and try again."* If this is the case, try setting the location of the socket zeus uses and starting again.
+```
+export ZEUSSOCK=/tmp/zeus.sock
+```
+
+Once the *zeus test* is ready (colored green), try running a test from the foreman directory.
+```
+$ zeus test ../katello/test/controllers/api/v2/systems_bulk_actions_controller_test.rb
+# Running tests:
+
+...................
+
+Finished tests in 12.184788s, 1.5593 tests/s, 5.9090 assertions/s.
+
+19 tests, 72 assertions, 0 failures, 0 errors, 0 skips
+```
 
 ### ktest
 
