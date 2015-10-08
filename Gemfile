@@ -7,4 +7,5 @@ group :test, :development do
   gem 'pygments.rb'
   gem 'rake'
   gem 'html-proofer'
+  gem 'parallel'
 end
