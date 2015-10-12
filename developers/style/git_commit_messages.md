@@ -7,8 +7,7 @@ sidebar: sidebars/developer_guide.html
 # Git Commit Messages
 
 For Katello, we ask that git commit messages are properly formatted and that they reference an issue
-in Redmine. If your change also involves a Bugzilla issue, you must include the Bugzilla number as
-well (see the [Bugzilla section](#bugzilla)).
+in Redmine.
 
 ### Format
 
@@ -33,15 +32,6 @@ The second type will actually close out the issue once the PR containing the com
 
 ```
 Fixes #123 - Fix content view publish bug
-```
-
-### Bugzilla
-
-If you issue also involves a Bugzilla bug, add the Bugzilla number prefixed by `BZ` to your commit's
-short message. For example:
-
-```
-Fixes #1234  - Fixes issue with foo bar BZ888342
 ```
 
 ## Example
