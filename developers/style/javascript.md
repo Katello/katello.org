@@ -48,14 +48,14 @@ if (condition) {
 All variable declarations should be placed at the top of a function and a single `var` statement
 with comma separated variables should follow.
 
-Correct
-```javascript
+Correct:
 
+```javascript
 var add = function (list) {
     var sum = 0,
         length = list.length,
         i;
-       
+
     for (i=0; i < length; i += 1) {
         sum += list[i];
     }
@@ -64,12 +64,12 @@ var add = function (list) {
 };
 ```
 
-Incorrect
-```javascript
+Incorrect:
 
+```javascript
 var add = function (list) {
     var sum = 0;
-       
+
     var length = list.length;
     for (var i=0; i < length; i += 1) {
         sum += list[i];
@@ -87,6 +87,7 @@ and less prone to unexpected behavior.
 ```javascript
 // Function Declaration: don't use this
 function add(a,b) {return a + b};
+
 // Function Expression: use this
 var add = function (a,b) {return a + b};
 ```
@@ -97,9 +98,9 @@ When iterating over an object the `hasOwnProperty()` function should be invoked 
 ensure errant properties attached to the object via the prototype chain do not cause unintended
 behavior.
 
-Correct
-```javascript
+Correct:
 
+```javascript
 var find_product = function (items) {
     var product,
         item;
@@ -116,9 +117,9 @@ var find_product = function (items) {
 };
 ```
 
-Incorrect
-```javascript
+Incorrect:
 
+```javascript
 var find_product = function (items) {
     var product,
         item;
@@ -139,7 +140,6 @@ The `for-in` loop should never be used to iterate over an array.  Instead, opt t
 traditional:
 
 ```javascript
-
 var i,
     length = list.length;
 
@@ -147,6 +147,7 @@ for (i=0; i < length; i+= 1) {
     list[i];
 }
 ```
+
 ### Object Attribute Access
 
 Javascript supports both the dot-operator `myobject.foo` and index-style `myobject["foo"]` object
@@ -171,6 +172,5 @@ It should be rare to have to manually manipulate the DOM but follow these guidel
 ## Checking Your Code
 
 We use [JSHint](http://www.jshint.com/) (a community driven fork of JSLint) to maintain the quality
-of the Javascript code in Katello. For more information about how to run JSHint, see the Linting
-section of our Bastion guide at
-https://github.com/Katello/katello/blob/master/engines/bastion/README.md#linting.
+of the Javascript code in Katello. For more information about how to run JSHint, see the [Linting
+section of our Bastion guide](/developers/bastion/index.html#linting).
