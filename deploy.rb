@@ -5,36 +5,40 @@ require 'fileutils'
 require 'open-uri'
 require 'json'
 require 'optparse'
+require 'yaml'
 
 options = {}
 
 OptionParser.new do |opts|
   opts.banner = "Usage: ./deploy.rb [options]"
   opts.on("--pr [PR]", "Build against a pull request") { |pr| options[:pr] = pr }
+  opts.on("--remote [REMOTE]", "Build using a different remote") { |remote| options[:remote] = remote }
   opts.parse!
 end
 
 class Deployer
 
-  attr_accessor :versions, :pr
+  attr_accessor :versions, :pr, :version_aliases
 
   BUILD_DIR = '_build'
   DEPLOY_DIR = 'public'
 
-  def initialize(pr = nil)
+  def initialize(pr = nil, remote = nil)
+    remote ||= 'origin'
     make_builddir
     make_deploymentdir
-    clone_version('nightly')
+    clone_version('nightly', remote)
 
     self.pr = pr_details(pr)
     puts "Testing PR #{self.pr[:id]} against branch #{self.pr[:target]}" unless self.pr.empty?
 
     self.versions = find_versions
+    self.version_aliases = find_version_aliases
     puts "Versions found: #{versions.to_s}"
-
-    clone_versions
+    puts "Version aliases found: #{version_aliases.inspect}"
+    clone_versions(remote)
     build_nightly
-    build_versions(@versions)
+    build_versions(@versions, remote)
   end
 
   def make_builddir
@@ -47,14 +51,24 @@ class Deployer
     make_dir(DEPLOY_DIR)
   end
 
-  def clone_versions
-    @versions.each { |version| clone_version(version) }
+  def clone_versions(remote)
+    @versions.each { |version| clone_version(version, remote) }
   end
 
-  def clone_version(version)
-    Dir.chdir(BUILD_DIR) do
-      syscall("git clone git://github.com/Katello/katello.org #{version}")
+  def clone_version(version, remote)
+    if remote == 'origin'
+      remote_url = 'git://github.com/Katello/katello.org' 
+    else
+      remote_url = syscall("git ls-remote --get-url #{remote}") 
     end
+    Dir.chdir(BUILD_DIR) do
+      syscall("git clone #{remote_url} #{version}")
+    end
+  end
+
+  def find_version_aliases
+    config = YAML.load_file(BUILD_DIR + '/nightly/_config.yml')
+    config['version_aliases'] || {}
   end
 
   def find_versions
@@ -79,8 +93,7 @@ class Deployer
 
     Dir.chdir(BUILD_DIR + '/nightly') do
       build_pr_branch('master')
-      set_config("versions: #{@versions}")
-
+      set_config('versions' =>  self.versions, 'version_aliases' => self.version_aliases)
       syscall("cat _config.build.yml")
 
       jekyll_build
@@ -91,15 +104,15 @@ class Deployer
     FileUtils.cp_r('_build/nightly/gpg/', "public/")
   end
 
-  def build_versions(versions)
-    versions.each { |version| build_version(version) }
+  def build_versions(versions, remote)
+    versions.each { |version| build_version(version, remote) }
   end
 
-  def build_version(version = 'nightly')
+  def build_version(version = 'nightly', remote)  
     puts "Building version #{version}"
     reset_nightly
 
-    branch = "remotes/origin/KATELLO-#{version}"
+    branch = "remotes/#{remote}/KATELLO-#{version}"
 
     FileUtils.rmdir('public/docs/' + version)
 
@@ -110,8 +123,7 @@ class Deployer
     build_pr_branch(branch.split('/').last)
 
     Dir.chdir(BUILD_DIR + '/nightly') do
-      set_config("version: #{version}")
-      set_config("versions: #{@versions}")
+      set_config('version' => version, 'versions' => self.versions, 'version_aliases' => self.version_aliases)
 
       syscall("rm -rf docs/")
       FileUtils.mkdir('docs/')
@@ -151,8 +163,11 @@ class Deployer
   end
 
   def set_config(values)
-    File.open('_config.build.yml', 'a') do |file|
-      file.puts(values)
+    @config ||= {}
+    @config = @config.merge(values)
+
+    File.open('_config.build.yml', 'w') do |file|
+      file.puts(values.to_yaml)
     end
   end
 
@@ -191,4 +206,4 @@ class Deployer
   end
 end
 
-Deployer.new(options[:pr])
+Deployer.new(options[:pr], options[:remote])
