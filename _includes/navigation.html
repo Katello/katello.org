@@ -12,7 +12,13 @@
         <ul class="dropdown-menu">
             {% for version in site.versions reversed %}
               <li>
-                <a href="/docs/{{ version }}/" {% if site.latest == version %}style="font-weight: bold;"{% endif %}>{{ version }}</a>
+                <a href="/docs/{{ version }}/" {% if site.latest == version %}style="font-weight: bold;"{% endif %}>
+                  {% if site.version_aliases[version] %}
+                    {{ site.version_aliases[version] }}
+                  {% else %}
+                    {{ version }}
+                  {% endif %}
+                </a>
               </li>
             {% endfor %}
           <li><a href="/docs/">Nightly</a></li>
