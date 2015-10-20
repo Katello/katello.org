@@ -5,10 +5,24 @@ sidebar: sidebars/documentation.html
 script: osmenu.js
 ---
 
+{% if site.version == null %}
+# Katello Nightly Installation
+{% else %}
 # Katello Installation
+{% endif %}
+
+{% if site.version == null %}
+  <div class="alert alert-danger">
+    These are the instructions for installing the unstable nightly release of katello!
+  </div>
+{% elsif site.version != site.latest %}
+  <div class="alert alert-danger">
+    These instructions are for installing Katello {{ site.version }}, but the latest stable is <a href="/docs/{{ site.latest }}/installation/index.html">{{ site.latest }}</a>.
+  </div>
+{% endif %}
 
 {% if site.versions %}
-For previous versions - {% for version in site.versions %}[{{ version }}](/docs/{{ version }}/installation/index.html) {% endfor %}
+For previous stable versions - {% for version in site.versions %}[{{ version }}](/docs/{{ version }}/installation/index.html) {% endfor %}
 {% endif %}
 
 For development installation instructions see - [development install](/docs/installation/development.html).
