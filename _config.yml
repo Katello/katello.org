@@ -4,6 +4,9 @@ markdown: KramdownPygments
 highlighter: pygments
 latest: 2.3
 
+version_aliases:
+  '2.4': 2.4-RC
+
 kramdown:
   auto_id: true
   input: GFM
