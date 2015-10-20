@@ -8,9 +8,9 @@ sidebar: sidebars/documentation.html
 
 ## Prepare Backup
 
-In the following sections we will be using /backup directory as our targed directory that will hold backup archives. Let's prepare it now.
+In the following sections we will be using `/backup` directory as our targed directory that will hold backup archives. Let's prepare it now.
 
-All the following commands are executed under root system account.
+All the following commands are executed under `root` system account.
 
 ```
 export BDIR=/backup
@@ -23,7 +23,7 @@ cd $BDIR
 
 ## Backup system files
 
-It is necessary to backup configuration files and important data files. Being in the $BDIR execute:
+It is necessary to backup configuration files and important data files. Being in the `$BDIR` execute:
 
 ```
 tar --selinux -czvf config_files.tar.gz \
@@ -48,11 +48,11 @@ tar --selinux -czvf config_files.tar.gz \
 tar --selinux -czvf elastic_data.tar.gz /var/lib/elasticsearch
 ```
 
-Please note some of these directories are created after katello-installer is executed for the first time.
+Please note some of these directories are created after `katello-installer` is executed for the first time.
 
 ## Repositories
 
-For backing up Pulp repositories we will not use compression program, because RPM files have usually low compression ration and depending on the instance size the pulp_data.tar archive can be quite big.
+For backing up Pulp repositories we will not use compression program, because RPM files have usually low compression ration and depending on the instance size the `pulp_data.tar` archive can be quite big.
 
 ### Option One: Online repositories backup
 
@@ -66,7 +66,7 @@ find /var/lib/pulp -printf '%T@\n' | md5sum
 
 Tip: Use rsync for speeding up file copying so checksums are likely to match.
 
-Option Two: Offline repositories backup
+### Option Two: Offline repositories backup
 
 The second option is to bring Pulp server down and do the backup, then to start it up. Please note yum clients and Katello won't be able to connect and all actions with repositories will fail.
 
@@ -79,7 +79,7 @@ katello-service start
 
 ## Backup PostgreSQL
 
-In this section we are going to backup Katello PostgreSQL database. pg_dump performs on-line database backups, therefore it is not necessary to stop PostgreSQL or Katello and this process does not block logged users, but it can take minutes to finish depending on size of databases.
+In this section we are going to backup Katello PostgreSQL database. `pg_dump` performs on-line database backups, therefore it is not necessary to stop PostgreSQL or Katello and this process does not block logged users, but it can take minutes to finish depending on size of databases.
 
 ```
 su postgres -c "pg_dump -Fc foreman > $BDIR/foreman.dump"
@@ -88,13 +88,13 @@ su postgres -c "pg_dump -Fc candlepin > $BDIR/candlepin.dump"
 
 ## Backup MongoDB
 
-To backup pulp database (MongoDB) on-line tool can be used while the database is running. In the $BDIR execute the following command:
+To backup pulp database (MongoDB) on-line tool can be used while the database is running. In the `$BDIR` execute the following command:
 
 ```
 mongodump --host localhost --out $BDIR/mongo_dump
 ```
 
-Please note the tool should create $BDIR/mongo_dump/pulp_database directory with a bunch of json files. You can optionally compress the data - the ratio should be quite good. For more information consult mongodump man page or visit http://www.mongodb.org/display/DOCS/Backups
+Please note the tool should create `$BDIR/mongo_dump/pulp_database` directory with a bunch of json files. You can optionally compress the data - the ratio should be quite good. For more information consult `mongodump` man page or visit http://www.mongodb.org/display/DOCS/Backups
 
 
 ### Optional: Offline Database Backup
@@ -113,7 +113,7 @@ ls $BDIR
 candlepin.dump
 config_files.tar.gz
 elastic_data.tar.gz
-katello.dump
+foreman.dump
 mongo_dump/
 pulp_data.tar
 ```
@@ -143,7 +143,7 @@ We are assuming restore is going to happen on the same server the instance from 
 katello-service stop
 ```
 
-If the original system is not avaiable it is necessary to reinstall the same version of Katello, restore the files, and then run katello-installer.  **The hostname must rename the same, otherwise you will need to regenerate all SSL certificates.**
+If the original system is not avaiable it is necessary to reinstall the same version of Katello, restore the files, and then run `katello-installer`.  **The hostname must rename the same, otherwise you will need to regenerate all SSL certificates.**
 
 ```
 yum -y install katello
@@ -181,7 +181,7 @@ su postgres -c "dropdb foreman"
 su postgres -c "dropdb candlepin"
 ```
 
-If you get an error "database xxx is being accessed by other users" during database drop step, make sure all processes are stopped by running:
+If you get an error `database xxx is being accessed by other users` during database drop step, make sure all processes are stopped by running:
 
 ```
 katello-service stop
@@ -210,13 +210,13 @@ To recover the MongoDB database, make sure the old data are deleted:
 echo 'db.dropDatabase();' | mongo pulp_database
 ```
 
-You will need to provide --username and --password when In the directory with backup archives execute the following command:
+You will need to provide `--username` and `--password` when In the directory with backup archives execute the following command:
 
 ```
 mongorestore --host localhost mongo_dump/pulp_database/
 ```
 
-For more information consult mongorestore man page or visit http://www.mongodb.org/display/DOCS/Backups
+For more information consult `mongorestore` man page or visit http://www.mongodb.org/display/DOCS/Backups
 
 ## Finish restore
 
@@ -226,4 +226,4 @@ Now it's the time to start all processes.
 katello-service start
 ```
 
-Check log files for errors, such as /var/log/foreman/production.log and /var/log/messages.
+Check log files for errors, such as `/var/log/foreman/production.log` and `/var/log/messages`.
