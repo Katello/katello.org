@@ -77,8 +77,8 @@ yum-config-manager --enable rhel-6-server-optional-rpms
 
 <div id="el6" markdown="1">
 ```bash
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
-yum -y localinstall http://yum.theforeman.org/nightly/el6/x86_64/foreman-release.rpm
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://yum.theforeman.org/{{ site.foreman_version }}/el6/x86_64/foreman-release.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
 yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 yum -y install foreman-release-scl
@@ -97,8 +97,8 @@ yum-config-manager --enable rhel-7-server-extras-rpms
 
 <div id="el7" style="display: none;" markdown="1">
 ```bash
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
-yum -y localinstall http://yum.theforeman.org/nightly/el7/x86_64/foreman-release.rpm
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://yum.theforeman.org/{{ site.foreman_verison }}/el7/x86_64/foreman-release.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum -y install foreman-release-scl
