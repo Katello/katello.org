@@ -58,7 +58,8 @@ gem install zeus
 
 In order to be able to run katello tests, a pair of configuration files should be placed in the foreman directory.
 **custom_plan.rb**
-```
+
+```ruby
 require 'zeus/rails'
 
 class CustomPlan < Zeus::Rails
@@ -73,8 +74,10 @@ end
 
 Zeus.plan = CustomPlan.new
 ```
+
 **zeus.json**
-```
+
+```json
 {
   "command": "ruby -rubygems -r./custom_plan -eZeus.go",
 
@@ -98,6 +101,7 @@ Zeus.plan = CustomPlan.new
 ```
 
 Now start zeus from the foreman directory. The output will be colored to indicate the status of each aspect of the server. Wait for the "zeus test (alias: testrb)" to be green.
+
 ```
 $ zeus start
 Starting Zeus server v0.15.4
@@ -121,11 +125,13 @@ zeus test (alias: testrb)
 ```
 
 Note: If running in an *sshfs* mounted foreman directory, zeus may fail to start with the message *"Unable to accept socket connection."* and *"It looks like Zeus is already running. If not, remove .zeus.sock and try again."* If this is the case, try setting the location of the socket zeus uses and starting again.
-```
+
+```bash
 export ZEUSSOCK=/tmp/zeus.sock
 ```
 
 Once the *zeus test* is ready (colored green), try running a test from the foreman directory.
+
 ```
 $ zeus test ../katello/test/controllers/api/v2/systems_bulk_actions_controller_test.rb
 # Running tests:
