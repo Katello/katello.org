@@ -57,9 +57,9 @@ class Deployer
 
   def clone_version(version, remote)
     if remote == 'origin'
-      remote_url = 'git://github.com/Katello/katello.org' 
+      remote_url = 'git://github.com/Katello/katello.org'
     else
-      remote_url = syscall("git ls-remote --get-url #{remote}") 
+      remote_url = syscall("git ls-remote --get-url #{remote}")
     end
     Dir.chdir(BUILD_DIR) do
       syscall("git clone #{remote_url} #{version}")
@@ -108,7 +108,7 @@ class Deployer
     versions.each { |version| build_version(version, remote) }
   end
 
-  def build_version(version = 'nightly', remote)  
+  def build_version(version = 'nightly', remote)
     puts "Building version #{version}"
     reset_nightly
 
@@ -128,6 +128,7 @@ class Deployer
       syscall("rm -rf docs/")
       FileUtils.mkdir('docs/')
       FileUtils.mkdir('docs/' + version)
+      syscall("cp -rf ../#{version}/_config.yml .")
       syscall("cp -rf ../#{version}/docs/* docs/#{version}")
       syscall("cp -rf ../#{version}/_includes/sidebars/documentation.html* _includes/sidebars/documentation.html")
 
