@@ -6,11 +6,11 @@ sidebar: sidebars/documentation.html
 
 # Katello Upgrade
 
-Katello supports upgrades from version 2.0.  For users transitioning from 1.4, please see - [Transition Guide](/docs/{{ site.version }}/installation/2.0-transition.html).
+Katello supports upgrades from version 2.0.  For users transitioning from 1.4, please see - [Transition Guide]({{ site.doc_url }}/installation/2.0-transition.html).
 
 ## Step 1 - Backup
 
-If Katello is running on a Virtual Machine, we reccomend to take a snapshot prior to upgrading. Otherwise, take a backup of the relevant databases by following the [instructions here](/docs/{{ site.version }}/user_guide/backup/).
+If Katello is running on a Virtual Machine, we reccomend to take a snapshot prior to upgrading. Otherwise, take a backup of the relevant databases by following the [instructions here]({{ site.doc_url }}/user_guide/backup/).
 
 ## Step 2 - Operating System
 
@@ -62,7 +62,7 @@ The installer with the --upgrade flag will run the right database migrations for
 # katello-installer --upgrade
 ```
 
-**Congratulations! You have now successfully upgraded your Katello to {% if site.version %}{{ site.version }} For a rundown of what was added, please see [release notes](/docs/{{ site.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
+**Congratulations! You have now successfully upgraded your Katello to {% if site.version %}{{ site.version }} For a rundown of what was added, please see [release notes]({{ site.doc_url }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
 
 
 If for any reason, the above steps failed, please review /var/log/katello-installer/katello-installer.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
