@@ -58,7 +58,7 @@ yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.versio
 
 ### Provisioned Clients
 
-If the katello-agent was setup during proviosioning from a locally synced repository then you will need to go through some [initial setup](/docs/{{ site.version }}/installation/clients.html) to add the {{ site.version }} client repositories to your Katello for each version needed. After you create the new repositories, they will then need to be added to the relevant content view(s) and the older versions removed. At this point, a new version of the content view can be published and promoted to the appropriate environments. Once the new package is available the clients can be updated following the next steps.
+If the katello-agent was setup during proviosioning from a locally synced repository then you will need to go through some [initial setup]({{ site.baseurl }}{{ site.doc_url }}/installation/clients.html) to add the {{ site.version }} client repositories to your Katello for each version needed. After you create the new repositories, they will then need to be added to the relevant content view(s) and the older versions removed. At this point, a new version of the content view can be published and promoted to the appropriate environments. Once the new package is available the clients can be updated following the next steps.
 
 ## Step 2: Update Packages
 

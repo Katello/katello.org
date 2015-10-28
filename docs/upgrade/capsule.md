@@ -26,14 +26,14 @@ Update the Foreman and Katello release packages:
 
 ```
   # yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
-  # yum update -y http://yum.theforeman.org/{{ site.foreman_version }}/el6/x86_64/foreman-release.rpm
+  # yum update -y http://yum.theforeman.org/{{ site.foreman_versions[site.version] }}/el6/x86_64/foreman-release.rpm
 ```
 
   * RHEL7 / CentOS 7:
 
 ```
   # yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
-  # yum update -y http://yum.theforeman.org/{{ site.foreman_version }}/el7/x86_64/foreman-release.rpm
+  # yum update -y http://yum.theforeman.org/{{ site.foreman_versions[site.version] }}/el7/x86_64/foreman-release.rpm
 ```
 
 ## Step 3 - Update Packages
@@ -74,7 +74,7 @@ The installer with the --upgrade flag will run the right database migrations for
                     --certs-update-all --regenerate --deploy
 ```
 
-**Congratulations! You have now successfully upgraded your Capsule to {% if site.version %}{{ site.version }} For a rundown of what was added, please see [release notes](/docs/{{ site.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
+**Congratulations! You have now successfully upgraded your Capsule to {% if site.version %}{{ site.version }} For a rundown of what was added, please see [release notes]({{ site.doc_url }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
 
 If for any reason, the above steps failed, please review /var/log/capsule-installer/capsule-installer.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
 
