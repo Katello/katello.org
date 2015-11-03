@@ -26,7 +26,7 @@ When starting out, contributors are added to our "Contributors" team. This allow
 
 ## Write Access
 
-In order to get write access to Katello repositories, contributors should demonstrate proficiency with git, Github, and also meet the following criteria.
+Various [teams](https://github.com/orgs/Katello/teams) exist within the Katello GitHub organization who are responsible for maintaining repos in their team's purview. These teams are in areas like Installer, UI, Core, Pulp, etc.  To be added to a team with commit access, contributors should demonstrate proficiency with git, GitHub, and also meet the following criteria within the scope of the team they wish to join:
 
 * One month since first pull request
 * Must have 3 or more merged pull requests
