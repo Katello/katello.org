@@ -112,7 +112,7 @@ class Deployer
     puts "Building version #{version}"
     reset_nightly
 
-    branch = "remotes/#{remote}/KATELLO-#{version}"
+    branch = "remotes/origin/KATELLO-#{version}"
 
     FileUtils.rmdir('public/docs/' + version)
 
