@@ -157,8 +157,7 @@ KATELLO_PATH=/path/to/your/katello/project
 if [[ -n $1 ]]
 then
   RAKE_PATH=`bundle show rake`
-  ruby -I"lib:test:${KATELLO_PATH}/test:${KATELLO_PATH}/spec" -I"${RAKE_PATH}/lib" \
-    "${RAKE_PATH}/lib/rake/rake_test_loader.rb" $@
+  ruby -I"lib:test:${KATELLO_PATH}/test:${KATELLO_PATH}/spec" -I"${RAKE_PATH}/lib" $@
 else
   bundle exec rake test:katello
 fi
