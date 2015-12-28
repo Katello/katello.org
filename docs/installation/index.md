@@ -103,6 +103,8 @@ yum -y localinstall http://yum.theforeman.org/releases/1.8/el7/x86_64/foreman-re
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum -y install foreman-release-scl
+yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
+yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
 ```
 </div>
 
