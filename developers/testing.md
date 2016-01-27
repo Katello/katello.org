@@ -65,6 +65,9 @@ require 'zeus/rails'
 class CustomPlan < Zeus::Rails
   def test_environment
     require 'minitest/unit'
+    require 'minitest-spec-rails'
+    require 'minitest-spec-rails/init/active_support'
+    require 'minitest-spec-rails/init/mini_shoulda'
     MiniTest::Unit.class_variable_set("@@installed_at_exit", true)
     $LOAD_PATH.unshift '../katello/test'
     $LOAD_PATH.unshift '../katello/spec'
