@@ -34,23 +34,15 @@ Then click save and then sync the Repository as you normally would. Katello will
 
 ## How to Upload Docker Images
 
-As an alternative to syncing content, Docker images can be uploaded directly into Katello either by the UI or the CLI. These images can either be added to Repositories which have been synced from an external source such as Docker Hub, or they can be uploaded into Repositories which have no external source. For the latter, you can create a Repository in Katello with no upstream name or registry URL. This is handy if you just want to create a repository from only Docker images you plan to upload.
+In versions of Katello prior to 3.0, Docker images could be uploaded directly via either the UI or CLI. However, Katello 3.0 only supports the Docker Registry v2 format, which is significantly different than the Docker Registry v1 format. The `docker save` command outputs a Docker image in v1 format, which cannot be uploaded directly to a v2 repository.
 
-In order to upload a Docker image, you'll first need to export it from Docker. To do this, you'll use the Docker `save` command.
-
-```
-docker save centos:latest > centos_latest.tar
-```
-
-This tar file can now be directly uploaded into Katello.
-
-To upload an image in the UI, simply visit the Repository details page for the Repository. On the page, there's a section "Upload Docker Image." In this section, click the file field and select your image(s) and click upload. You should get a response indicating whether the file upload has succeeded or failed.
-
-To upload images from the CLI, you must have [hammer and hammer-cli-katello installed and configured](../../cli/index.html). After hammer is properly setup and configured, the follow command can be used to upload your image:
+As a workaround, you can create a local Docker registry like so:
 
 ```
-$ hammer repository upload-content --path centos_latest.tar --id 6
+docker run -p 5030:5000 --name registry registry:2
 ```
+
+Note the ``:2`` above, which specifies a v2 registry. Push your changes to your newly created local registry then follow the instructions in the section above to sync this registry to Katello. This will ensure that your Docker content stays in Docker's v2 registry format.
 
 ## How to Publish and Promote Docker Content
 
