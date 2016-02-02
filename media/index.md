@@ -12,7 +12,7 @@ Managing the Content Lifecycle
 February 2, 2015
 Stephen Benjamin
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/44158666" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/skbenja1/cfgmgmtcamp-2015-managing-the-content-lifecycle-with-katello" title="CfgMgmtCamp 2015 - Managing the Content Lifecycle with Katello" target="_blank">CfgMgmtCamp 2015 - Managing the Content Lifecycle with Katello</a> </strong> from <strong><a href="//www.slideshare.net/skbenja1" target="_blank">Stephen Benjamin</a></strong> </div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/44158666" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a data-proofer-ignore href="//www.slideshare.net/skbenja1/cfgmgmtcamp-2015-managing-the-content-lifecycle-with-katello" title="CfgMgmtCamp 2015 - Managing the Content Lifecycle with Katello" target="_blank">CfgMgmtCamp 2015 - Managing the Content Lifecycle with Katello</a> </strong> from <strong><a href="//www.slideshare.net/skbenja1" data-proofer-ignore target="_blank">Stephen Benjamin</a></strong> </div>
 
 
 ## Triangle Linux Users Group
