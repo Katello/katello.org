@@ -27,7 +27,7 @@ It is necessary to backup configuration files and important data files. Being in
 
 ```
 tar --selinux -czvf config_files.tar.gz \
-/etc/katello-installer \
+/etc/foreman-installer \
 /etc/foreman \
 /etc/elasticsearch \
 /etc/candlepin \
@@ -48,7 +48,7 @@ tar --selinux -czvf config_files.tar.gz \
 tar --selinux -czvf elastic_data.tar.gz /var/lib/elasticsearch
 ```
 
-Please note some of these directories are created after `katello-installer` is executed for the first time.
+Please note some of these directories are created after `foreman-installer` is executed for the first time.
 
 ## Repositories
 
@@ -143,12 +143,12 @@ We are assuming restore is going to happen on the same server the instance from 
 katello-service stop
 ```
 
-If the original system is not avaiable it is necessary to reinstall the same version of Katello, restore the files, and then run `katello-installer`.  **The hostname must rename the same, otherwise you will need to regenerate all SSL certificates.**
+If the original system is not avaiable it is necessary to reinstall the same version of Katello, restore the files, and then run `foreman-installer --scenario katello`.  **The hostname must rename the same, otherwise you will need to regenerate all SSL certificates.**
 
 ```
 yum -y install katello
 tar --selinux -xzvf config_files.tar.gz -C /tmp
-katello-installer
+foreman-installer --scenario katello
 ```
 
 Please note the following process describes full Katello backup restore and it deletes all data that are still loaded. Make sure you are restoring the correct instance. All commands are executed as root in the directory with backup archives created in the Backup chapter above.
