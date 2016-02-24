@@ -127,10 +127,10 @@ After setting up the appropriate repositories, install Katello:
 yum -y install katello
 ```
 
-At this point the `katello-installer` should be available to setup the server. The installation may be customized, to see a list of options:
+At this point the `foreman-installer` should be available to setup the server. The installation may be customized, to see a list of options:
 
 ```bash
-katello-installer --help
+foreman-installer --scenario katello --help
 ```
 
 <div class="alert alert-info" markdown="1">
@@ -140,10 +140,10 @@ Prior to running the installer, the machine should be set up with a time service
 </div>
 
 
-These may be set as command line options or in the answer file (/etc/katello-installer/answers.katello-installer.yaml). Now run the options:
+These may be set as command line options or in the answer file (/etc/foreman-installer/scenarios.d/katello-answers.yaml). Now run the options:
 
 ```bash
-katello-installer <options>
+foreman-installer --scenario katello <options>
 ```
 
 ## Katello Deploy

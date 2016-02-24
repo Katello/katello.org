@@ -70,13 +70,14 @@ And copy them to your capsule:
 The installer with the --upgrade flag will run the right database migrations for all component services, as well as adjusting the configuration to reflect what's new in Katello {{ site.version }}
 
 ```
-# capsule-installer --upgrade --certs-tar ~/mycapsule.example.com-certs.tar\
+# foreman-installer --scenario capsule --upgrade\
+                    --certs-tar ~/mycapsule.example.com-certs.tar\
                     --certs-update-all --regenerate --deploy
 ```
 
 **Congratulations! You have now successfully upgraded your Capsule to {% if site.version %}{{ site.version }} For a rundown of what was added, please see [release notes](/docs/{{ site.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
 
-If for any reason, the above steps failed, please review /var/log/capsule-installer/capsule-installer.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
+If for any reason, the above steps failed, please review /var/log/foreman-installer/capsule.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
 
 ## Manual Steps
 

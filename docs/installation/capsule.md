@@ -47,26 +47,25 @@ Installing             Done                     [100%] [.....................]
 
   To finish the installation, follow these steps:
 
-  1. Ensure that the capsule-installer is available on the system.
-     The capsule-installer comes from the capsule-installer package and
-     should be acquired through the means that are appropriate to your deployment.
+  1. Ensure that the foreman-installer-katello package is installed on the system.
   2. Copy ~/mycapsule.example.com-certs.tar to the system mycapsule.example.com
-  3. Run the following commands on the Capsule (possibly with the customized
-     parameters, see capsule-installer --help and
+  3. Run the following commands on the capsule (possibly with the customized
+     parameters, see foreman-installer --scenario capsule --help and
      documentation for more info on setting up additional services):
 
-  rpm -Uvh http://katello-centos6-2.0.example.com/pub/katello-ca-consumer-latest.noarch.rpm
-  subscription-manager register --org "ACME_Corporation"
-  capsule-installer --parent-fqdn          "katello.example.com"\
-                    --register-in-foreman  "true"\
-                    --foreman-oauth-key    "EwZePUX7erQeYbuMqytLCd4jHndY5iH4"\
-                    --foreman-oauth-secret "K5TmVVsEmc29DCAscJEnupDmHcQQFdc4"\
-                    --pulp-oauth-secret    "7TwngPvBSkJELCAQ4fjEmmY9FUn2UGZJ"\
-                    --certs-tar            "~/mycapsule.example.com-certs.tar"\
-                    --puppet               "true"\
-                    --puppetca             "true"\
-                    --pulp                 "true"
-  The full log is at /var/log/katello-installer/capsule-certs-generate.log
+  yum -y localinstall http://katello.example.com/pub/katello-ca-consumer-latest.noarch.rpm
+  subscription-manager register --org "Default_Organization"
+  foreman-installer --scenario capsule\
+                    --parent-fqdn           "katello.example.com"\
+                    --register-in-foreman   "true"\
+                    --foreman-base-url      "https://katello.example.com"\
+                    --trusted-hosts         "katello.example.com"\
+                    --trusted-hosts         "mycapsule.example.com"\
+                    --oauth-consumer-key    "UVrAZfMaCfBiiWejoUVLYCZHT2xhzuFV"\
+                    --oauth-consumer-secret "ZhH8p7M577ttNU3WmUGWASag3JeXKgUX"\
+                    --pulp-oauth-secret     "TPk42MYZ42nAE3rZvyLBh7Lxob3nEUi8"\
+                    --certs-tar             "~/mycapsule.example.com-certs.tar"
+  The full log is at /var/log/capsule-certs-generate.log
 ```
 
 ### Install needed packages:
@@ -74,7 +73,7 @@ Installing             Done                     [100%] [.....................]
 The same yum repositories need to be configured on the Capsule server as the main Katello server. See the installation guide for the [list of required repositories](/docs/{{ site.version }}/installation/index.html#required-repositories).
 
 ```
-yum install -y capsule-installer
+yum install -y foreman-installer-katello
 ```
 
 ### Install Capsule
