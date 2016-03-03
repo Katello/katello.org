@@ -70,7 +70,7 @@ Subcommands:
  auth                          Foreman connection login/logout.
  capsule                       Manipulate capsule
 ...
-````
+```
 
 To view the subcommands or options for a particular Hammer command, simply run
 that command with the help option (`--help` or `-h`).
