@@ -174,7 +174,7 @@ hammer -u admin -p password  capsule content synchronize --name mycapsule.exampl
 
 to syncronize only a single Lifecycle Environment:
 
-````
+```
 hammer -u admin -p password  capsule content synchronize --name=mycapsule.example.com --environment=Production
 ```
 
