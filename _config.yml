@@ -5,6 +5,7 @@ highlighter: pygments
 latest: 2.4
 
 foreman_version: nightly
+version: nightly
 
 version_aliases:
 
