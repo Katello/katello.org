@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API 文檔</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.zh_TW.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/content_view_versions.zh_TW.html'>
+      Content view versions
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>incremental_update</li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/content_view_versions/incremental_update.ca.html">ca</a> | <a href="../../apidoc/content_view_versions/incremental_update.sv_SE.html">sv_SE</a> | <a href="../../apidoc/content_view_versions/incremental_update.zh_CN.html">zh_CN</a> | <a href="../../apidoc/content_view_versions/incremental_update.gl.html">gl</a> | <a href="../../apidoc/content_view_versions/incremental_update.it.html">it</a> | <a href="../../apidoc/content_view_versions/incremental_update.pt_BR.html">pt_BR</a> | <a href="../../apidoc/content_view_versions/incremental_update.es.html">es</a> | <a href="../../apidoc/content_view_versions/incremental_update.ja.html">ja</a> | <a href="../../apidoc/content_view_versions/incremental_update.en_GB.html">en_GB</a> | <a href="../../apidoc/content_view_versions/incremental_update.ru.html">ru</a> | <a href="../../apidoc/content_view_versions/incremental_update.fr.html">fr</a> | <a href="../../apidoc/content_view_versions/incremental_update.en.html">en</a> | <a href="../../apidoc/content_view_versions/incremental_update.ko.html">ko</a> | <a href="../../apidoc/content_view_versions/incremental_update.de.html">de</a> | <b><a href="../../apidoc/content_view_versions/incremental_update.zh_TW.html">zh_TW</a></b> ]
+</li>
+
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      POST /katello/api/content_view_versions/incremental_update
+      <br>
+      <small>在一或更多個內容視域版本上執行一項遞增更新</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+
+
+  <h2>參數</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_version_environments </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_view_version_environments[content_view_version_id] </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>欲對其進行遞增更新的內容視域版本之 ID。能包含複合式視域版本以及一或更多個欲更新的元件。</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_view_version_environments[environment_ids] </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>欲將指定內容視域版本推送至的環境清單（替換較舊的版本）。</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>新產生的內容視域版本的詳述</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>resolve_dependencies </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>如果設為 true，新增特定勘誤或套件時，任何所需的相依性元件也會被複製。</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>propagate_all_composites </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>如果設為 true，會使用任何指定的、已推送至生命週期環境的 content_view_version_id 來推送新的複合版本。</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>add_content </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>add_content[errata_ids] </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Errata uuids to copy into the new versions.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>add_content[package_ids] </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package uuids to copy into the new versions.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>add_content[puppet_module_ids] </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Puppet Modules to copy into the new versions.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>update_systems </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>產生累進更新後，將變更套用到指定的系統上。目前僅支援勘誤。</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>update_systems[included] </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>update_systems[included][search] </strong><br>
+      <small>
+        選填
+        , 允許空值
+      </small>
+    </td>
+    <td>
+      
+<p>搜尋用以進行動作之系統的字串</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>update_systems[included][ids] </strong><br>
+      <small>
+        選填
+        , 允許空值
+      </small>
+    </td>
+    <td>
+      
+<p>欲在其上執行動作的系統 ID 清單</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>update_systems[excluded] </strong><br>
+      <small>
+        選填
+        , 允許空值
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>update_systems[excluded][ids] </strong><br>
+      <small>
+        選填
+        , 允許空值
+      </small>
+    </td>
+    <td>
+      
+<p>欲排除並且不執行任何動作的系統 ID 清單</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>update_systems[update_all_systems] </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>更新所有可編輯和可套用的系統，而不只是使用了已選擇之內容視域版本和環境的系統</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Content view filters
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/content_view_filters.ca.html">ca</a> | <a href="../apidoc/content_view_filters.sv_SE.html">sv_SE</a> | <a href="../apidoc/content_view_filters.zh_CN.html">zh_CN</a> | <a href="../apidoc/content_view_filters.gl.html">gl</a> | <a href="../apidoc/content_view_filters.it.html">it</a> | <a href="../apidoc/content_view_filters.pt_BR.html">pt_BR</a> | <a href="../apidoc/content_view_filters.es.html">es</a> | <a href="../apidoc/content_view_filters.ja.html">ja</a> | <a href="../apidoc/content_view_filters.en_GB.html">en_GB</a> | <a href="../apidoc/content_view_filters.ru.html">ru</a> | <a href="../apidoc/content_view_filters.fr.html">fr</a> | <a href="../apidoc/content_view_filters.en.html">en</a> | <a href="../apidoc/content_view_filters.ko.html">ko</a> | <a href="../apidoc/content_view_filters.de.html">de</a> | <a href="../apidoc/content_view_filters.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -51,18 +57,20 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            GET /katello/api/content_views/:content_view_id/filters
-          </a><br>
-          <small>List filters</small>
+            get /katello/api/content_views/:content_view_id/filters
+          </a>
+          <br>
+          <small>list filters</small>
         </h2>
         <h2>
           <a href='#description-index'
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            GET /katello/api/content_view_filters
-          </a><br>
-          <small>List filters</small>
+            get /katello/api/content_view_filters
+          </a>
+          <br>
+          <small>list filters</small>
         </h2>
     </div>
 
@@ -85,6 +93,198 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. ‘name DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_results </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Hash version of ‘order’ param</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[by] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[order] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>content_view_id </strong><br>
       <small>
         required
@@ -95,9 +295,12 @@
       
 <p>content view identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -114,11 +317,14 @@
     </td>
     <td>
       
-<p>Filter content view filters by name</p>
+<p>filter content view filters by name</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -128,6 +334,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -140,18 +348,20 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            POST /katello/api/content_views/:content_view_id/filters
-          </a><br>
-          <small>Create a filter for a content view</small>
+            post /katello/api/content_views/:content_view_id/filters
+          </a>
+          <br>
+          <small>create a filter for a content view</small>
         </h2>
         <h2>
           <a href='#description-create'
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            POST /katello/api/content_view_filters
-          </a><br>
-          <small>Create a filter for a content view</small>
+            post /katello/api/content_view_filters
+          </a>
+          <br>
+          <small>create a filter for a content view</small>
         </h2>
     </div>
 
@@ -184,9 +394,12 @@
       
 <p>content view identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -205,9 +418,12 @@
       
 <p>name of the filter</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -226,9 +442,12 @@
       
 <p>type of filter (e.g. rpm, package_group, erratum)</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -245,11 +464,14 @@
     </td>
     <td>
       
-<p>Add all packages without Errata to the included/excluded list. (Package Filter only)</p>
+<p>add all packages without errata to the included/excluded list. (package filter only)</p>
 
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -268,9 +490,12 @@
       
 <p>specifies if content should be included or excluded, default: inclusion=false</p>
 
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -289,9 +514,36 @@
       
 <p>list of repository ids</p>
 
-        <br>
-        Value: Array
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>description of the filter</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -301,6 +553,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -313,18 +567,20 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            GET /katello/api/content_views/:content_view_id/filters/:id
-          </a><br>
-          <small>Show filter info</small>
+            get /katello/api/content_views/:content_view_id/filters/:id
+          </a>
+          <br>
+          <small>show filter info</small>
         </h2>
         <h2>
           <a href='#description-show'
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            GET /katello/api/content_view_filters/:id
-          </a><br>
-          <small>Show filter info</small>
+            get /katello/api/content_view_filters/:id
+          </a>
+          <br>
+          <small>show filter info</small>
         </h2>
     </div>
 
@@ -357,9 +613,12 @@
       
 <p>content view identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -378,9 +637,12 @@
       
 <p>filter identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -390,6 +652,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -402,18 +666,20 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            PUT /katello/api/content_views/:content_view_id/filters/:id
-          </a><br>
-          <small>Update a filter</small>
+            put /katello/api/content_views/:content_view_id/filters/:id
+          </a>
+          <br>
+          <small>update a filter</small>
         </h2>
         <h2>
           <a href='#description-update'
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            PUT /katello/api/content_view_filters/:id
-          </a><br>
-          <small>Update a filter</small>
+            put /katello/api/content_view_filters/:id
+          </a>
+          <br>
+          <small>update a filter</small>
         </h2>
     </div>
 
@@ -446,9 +712,12 @@
       
 <p>content view identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -467,9 +736,12 @@
       
 <p>filter identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -488,9 +760,12 @@
       
 <p>new name for the filter</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -507,11 +782,14 @@
     </td>
     <td>
       
-<p>Add all packages without Errata to the included/excluded list. (Package Filter only)</p>
+<p>add all packages without errata to the included/excluded list. (package filter only)</p>
 
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -530,9 +808,12 @@
       
 <p>specifies if content should be included or excluded, default: inclusion=false</p>
 
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -551,9 +832,12 @@
       
 <p>list of repository ids</p>
 
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -563,6 +847,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -575,18 +861,20 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            DELETE /katello/api/content_views/:content_view_id/filters/:id
-          </a><br>
-          <small>Delete a filter</small>
+            delete /katello/api/content_views/:content_view_id/filters/:id
+          </a>
+          <br>
+          <small>delete a filter</small>
         </h2>
         <h2>
           <a href='#description-destroy'
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            DELETE /katello/api/content_view_filters/:id
-          </a><br>
-          <small>Delete a filter</small>
+            delete /katello/api/content_view_filters/:id
+          </a>
+          <br>
+          <small>delete a filter</small>
         </h2>
     </div>
 
@@ -619,98 +907,12 @@
       
 <p>content view identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>filter identifier</p>
-
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
-
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/content_view_filters/available_errata.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-available_errata'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/content_views/:content_view_id/filters/:id/available_errata
-          </a><br>
-          <small>Get errata that are available to be added to the filter</small>
-        </h2>
-        <h2>
-          <a href='#description-available_errata'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/content_view_filters/:id/available_errata
-          </a><br>
-          <small>Get errata that are available to be added to the filter</small>
-        </h2>
-    </div>
-
-
-    <div id='description-available_errata' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>content_view_id </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>content view identifier</p>
-
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -729,72 +931,12 @@
       
 <p>filter identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>types </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Errata types array [‘security’, ‘bugfix’, ‘enhancement’]</p>
-
-        <br>
-        Value: Array
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>start_date </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Start date that Errata was issued on to filter by</p>
-
-        <br>
-        Value: DateTime
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>end_date </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>End date that Errata was issued on to filter by</p>
-
-        <br>
-        Value: DateTime
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -805,98 +947,12 @@
     </tbody>
   </table>
 
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/content_view_filters/available_package_groups.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-available_package_groups'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/content_views/:content_view_id/filters/:id/available_package_groups
-          </a><br>
-          <small>Get package groups that are available to be added to the filter</small>
-        </h2>
-        <h2>
-          <a href='#description-available_package_groups'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/content_view_filters/:id/available_package_groups
-          </a><br>
-          <small>Get package groups that are available to be added to the filter</small>
-        </h2>
-    </div>
 
-
-    <div id='description-available_package_groups' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>content_view_id </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>content view identifier</p>
-
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>filter identifier</p>
-
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
 
     </div>
 </div>
 
+  
 
         
       </div>
@@ -904,7 +960,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

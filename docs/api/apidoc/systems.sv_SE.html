@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><span class="translation_missing" title="translation missing: sv-SE.apipie.api_documentation">Api Documentation</span></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.sv_SE.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Systems
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/systems.ca.html">ca</a> | <b><a href="../apidoc/systems.sv_SE.html">sv_SE</a></b> | <a href="../apidoc/systems.zh_CN.html">zh_CN</a> | <a href="../apidoc/systems.gl.html">gl</a> | <a href="../apidoc/systems.it.html">it</a> | <a href="../apidoc/systems.pt_BR.html">pt_BR</a> | <a href="../apidoc/systems.es.html">es</a> | <a href="../apidoc/systems.ja.html">ja</a> | <a href="../apidoc/systems.en_GB.html">en_GB</a> | <a href="../apidoc/systems.ru.html">ru</a> | <a href="../apidoc/systems.fr.html">fr</a> | <a href="../apidoc/systems.en.html">en</a> | <a href="../apidoc/systems.ko.html">ko</a> | <a href="../apidoc/systems.de.html">de</a> | <a href="../apidoc/systems.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Systems
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/systems/index.sv_SE.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/systems
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>List content hosts</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/systems/post_index
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>List content hosts when you have a query string parameter that will cause a 414.</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/systems
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>List content hosts in an organization</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/environments/:environment_id/systems
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>List content hosts in environment</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter content host by name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>pool_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter content host by subscribed pool</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>uuid </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter content host by uuid</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Specify the organization</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter by environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter by content view</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. ‘name DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_results </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Hash version of ‘order’ param</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[by] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[order] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/systems/create.sv_SE.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/systems
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Register a content host</small>
+        </h2>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/environments/:environment_id/systems
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Register a content host in environment</small>
+        </h2>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/host_collections/:host_collection_id/systems
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Register a content host in environment</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Description of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Physical location of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>facts </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Key-value hash of content host-specific facts</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>facts[fact] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
+      </small>
+    </td>
+    <td>
+      
+<p>Any number of facts about this content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>type </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Type of the content host, it should always be ‘system’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>guest_ids </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>IDs of the virtual guests running on this content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>installed_products </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
+      </small>
+    </td>
+    <td>
+      
+<p>List of products installed on the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>release_ver </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Release version of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>service_level </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
+      </small>
+    </td>
+    <td>
+      
+<p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>last_checkin </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Last check-in time of this content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Specify the organization</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Specify the environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Specify the content view</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_collection_ids </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Specify the host collections as an array</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/systems/update.sv_SE.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/systems/:id
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Update content host information</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>release_ver </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Release version of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>service_level </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        , &lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: sv-SE.apipie.nil_allowed&quot;&gt;Nil Allowed&lt;/span&gt;
+      </small>
+    </td>
+    <td>
+      
+<p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Specify the environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Specify the content view</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_collection_ids </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Specify the host collections as an array</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/systems/show.sv_SE.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/systems/:id
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Show a content host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/systems/destroy.sv_SE.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/systems/:id
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Unregister a content host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/systems/releases.sv_SE.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-releases'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/systems/:id/releases
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>Show releases available for the content host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-releases' class='collapse accordion-body'>
+      
+<p>A hint for choosing the right value for the releaseVer param</p>
+
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/systems/content_override.sv_SE.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-content_override'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/systems/:id/content_override
+          </a>
+          <br>
+          <small>Set content overrides for the content host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-content_override' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_override </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Content override parameters</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_override[content_label] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Label of the content</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_override[value] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Override to 0/1, or ‘default’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>0</code>, <code>1</code>, <code>default</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/systems/product_content.sv_SE.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-product_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/systems/:id/product_content
+          </a>
+          <br>
+          <small>Get content overrides for the content host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-product_content' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: sv-SE.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: sv-SE.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: sv-SE.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

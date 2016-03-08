@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -29,44 +30,53 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/parameters/update.ca.html">ca</a> | <a href="../../apidoc/parameters/update.sv_SE.html">sv_SE</a> | <a href="../../apidoc/parameters/update.zh_CN.html">zh_CN</a> | <a href="../../apidoc/parameters/update.gl.html">gl</a> | <a href="../../apidoc/parameters/update.it.html">it</a> | <a href="../../apidoc/parameters/update.pt_BR.html">pt_BR</a> | <a href="../../apidoc/parameters/update.es.html">es</a> | <a href="../../apidoc/parameters/update.ja.html">ja</a> | <a href="../../apidoc/parameters/update.en_GB.html">en_GB</a> | <a href="../../apidoc/parameters/update.ru.html">ru</a> | <a href="../../apidoc/parameters/update.fr.html">fr</a> | <a href="../../apidoc/parameters/update.en.html">en</a> | <a href="../../apidoc/parameters/update.ko.html">ko</a> | <a href="../../apidoc/parameters/update.de.html">de</a> | <a href="../../apidoc/parameters/update.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      PUT /api/hosts/:host_id/parameters/:id<br>
-      <small>Update a nested parameter for host</small>
+      PUT /api/hosts/:host_id/parameters/:id
+      <br>
+      <small>Update a nested parameter for a host</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      PUT /api/hostgroups/:hostgroup_id/parameters/:id<br>
-      <small>Update a nested parameter for hostgroup</small>
+      PUT /api/hostgroups/:hostgroup_id/parameters/:id
+      <br>
+      <small>Update a nested parameter for a host group</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      PUT /api/domains/:domain_id/parameters/:id<br>
-      <small>Update a nested parameter for domain</small>
+      PUT /api/domains/:domain_id/parameters/:id
+      <br>
+      <small>Update a nested parameter for a domain</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      PUT /api/operatingsystems/:operatingsystem_id/parameters/:id<br>
-      <small>Update a nested parameter for operating system</small>
+      PUT /api/operatingsystems/:operatingsystem_id/parameters/:id
+      <br>
+      <small>Update a nested parameter for an operating system</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      PUT /api/locations/:location_id/parameters/:id<br>
-      <small>Update a nested parameter for location</small>
+      PUT /api/locations/:location_id/parameters/:id
+      <br>
+      <small>Update a nested parameter for a location</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      PUT /api/organizations/:organization_id/parameters/:id<br>
-      <small>Update a nested parameter for organization</small>
+      PUT /api/organizations/:organization_id/parameters/:id
+      <br>
+      <small>Update a nested parameter for an organization</small>
     </h1>
   </div>
 
@@ -97,11 +107,14 @@
     </td>
     <td>
       
-<p>id of host</p>
+<p>ID of host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -118,11 +131,14 @@
     </td>
     <td>
       
-<p>id of hostgroup</p>
+<p>ID of host group</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -139,11 +155,14 @@
     </td>
     <td>
       
-<p>id of domain</p>
+<p>ID of domain</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -160,11 +179,14 @@
     </td>
     <td>
       
-<p>id of operating system</p>
+<p>ID of operating system</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -181,11 +203,14 @@
     </td>
     <td>
       
-<p>id of location</p>
+<p>ID of location</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -202,11 +227,14 @@
     </td>
     <td>
       
-<p>id of organization</p>
+<p>ID of organization</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -223,11 +251,14 @@
     </td>
     <td>
       
-<p>id of parameter</p>
+<p>ID of parameter</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -238,15 +269,18 @@
     <td>
       <strong>parameter </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -262,9 +296,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -281,9 +318,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -295,8 +335,11 @@
     </tbody>
   </table>
 
+
+
 </div>
 
+  
 
         
       </div>
@@ -304,7 +347,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>

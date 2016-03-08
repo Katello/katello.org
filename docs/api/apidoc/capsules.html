@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Capsules
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/capsules.ca.html">ca</a> | <a href="../apidoc/capsules.sv_SE.html">sv_SE</a> | <a href="../apidoc/capsules.zh_CN.html">zh_CN</a> | <a href="../apidoc/capsules.gl.html">gl</a> | <a href="../apidoc/capsules.it.html">it</a> | <a href="../apidoc/capsules.pt_BR.html">pt_BR</a> | <a href="../apidoc/capsules.es.html">es</a> | <a href="../apidoc/capsules.ja.html">ja</a> | <a href="../apidoc/capsules.en_GB.html">en_GB</a> | <a href="../apidoc/capsules.ru.html">ru</a> | <a href="../apidoc/capsules.fr.html">fr</a> | <a href="../apidoc/capsules.en.html">en</a> | <a href="../apidoc/capsules.ko.html">ko</a> | <a href="../apidoc/capsules.de.html">de</a> | <a href="../apidoc/capsules.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -52,7 +58,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/capsules
-          </a><br>
+          </a>
+          <br>
           <small>List all capsules</small>
         </h2>
     </div>
@@ -86,9 +93,12 @@
       
 <p>Search string</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -107,9 +117,12 @@
       
 <p>Page number, starting at 1</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -128,9 +141,12 @@
       
 <p>Number of results per page to return</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -149,9 +165,12 @@
       
 <p>Sort field and order, eg. ‘name DESC’</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -170,9 +189,12 @@
       
 <p>Whether or not to show all results</p>
 
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -191,9 +213,12 @@
       
 <p>Hash version of ‘order’ param</p>
 
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -211,9 +236,12 @@
       
 <p>Field to sort the results on</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -232,9 +260,12 @@
       
 <p>How to order the sorted results (e.g. ASC for ascending)</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -245,6 +276,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -258,7 +291,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/capsules/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show the capsule details</small>
         </h2>
     </div>
@@ -292,9 +326,12 @@
       
 <p>Id of the capsule</p>
 
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -305,9 +342,12 @@
     </tbody>
   </table>
 
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -315,7 +355,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

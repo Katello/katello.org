@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API документация</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.ru.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Repository sets
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/repository_sets.ca.html">ca</a> | <a href="../apidoc/repository_sets.sv_SE.html">sv_SE</a> | <a href="../apidoc/repository_sets.zh_CN.html">zh_CN</a> | <a href="../apidoc/repository_sets.gl.html">gl</a> | <a href="../apidoc/repository_sets.it.html">it</a> | <a href="../apidoc/repository_sets.pt_BR.html">pt_BR</a> | <a href="../apidoc/repository_sets.es.html">es</a> | <a href="../apidoc/repository_sets.ja.html">ja</a> | <a href="../apidoc/repository_sets.en_GB.html">en_GB</a> | <b><a href="../apidoc/repository_sets.ru.html">ru</a></b> | <a href="../apidoc/repository_sets.fr.html">fr</a> | <a href="../apidoc/repository_sets.en.html">en</a> | <a href="../apidoc/repository_sets.ko.html">ko</a> | <a href="../apidoc/repository_sets.de.html">de</a> | <a href="../apidoc/repository_sets.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Repository sets
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repository_sets/index.ru.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/products/:product_id/repository_sets
+          </a>
+          <br>
+          <small>Показать наборы репозиториев для продукта</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Параметры</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Имя параметра</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        обязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Идентификатор продукта для получения комплекта репозиториев</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        необязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Имя искомого набора репозиториев</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repository_sets/show.ru.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/products/:product_id/repository_sets/:id
+          </a>
+          <br>
+          <small>Получить информацию о наборе репозиториев</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Параметры</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Имя параметра</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        обязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Идентификатор набора репозиториев</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        обязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Идентификатор продукта для получения комплекта репозиториев</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repository_sets/available_repositories.ru.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-available_repositories'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/products/:product_id/repository_sets/:id/available_repositories
+          </a>
+          <br>
+          <small>Получить список доступных репозиториев для этого набора</small>
+        </h2>
+    </div>
+
+
+    <div id='description-available_repositories' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Параметры</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Имя параметра</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        обязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Идентификатор набора репозиториев</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        обязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Идентификатор продукта для получения комплекта репозиториев</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repository_sets/enable.ru.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-enable'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/products/:product_id/repository_sets/:id/enable
+          </a>
+          <br>
+          <small>Включить репозиторий из набора</small>
+        </h2>
+    </div>
+
+
+    <div id='description-enable' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Параметры</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Имя параметра</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        обязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Идентификатор набора репозиториев для активации</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        обязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Идентификатор продукта с набором репозиториев</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>basearch </strong><br>
+      <small>
+        необязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Включить $basearch</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>releasever </strong><br>
+      <small>
+        необязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Включить $releasever</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repository_sets/disable.ru.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-disable'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/products/:product_id/repository_sets/:id/disable
+          </a>
+          <br>
+          <small>Исключить репозиторий из набора</small>
+        </h2>
+    </div>
+
+
+    <div id='description-disable' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Параметры</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Имя параметра</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        обязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Идентификатор набора репозиториев для активации</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        обязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Идентификатор продукта с набором репозиториев</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>basearch </strong><br>
+      <small>
+        необязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Исключить $basearch</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>releasever </strong><br>
+      <small>
+        необязательно
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Выключить $releasever</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

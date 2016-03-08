@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Host collections
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/host_collections.ca.html">ca</a> | <a href="../apidoc/host_collections.sv_SE.html">sv_SE</a> | <a href="../apidoc/host_collections.zh_CN.html">zh_CN</a> | <a href="../apidoc/host_collections.gl.html">gl</a> | <a href="../apidoc/host_collections.it.html">it</a> | <a href="../apidoc/host_collections.pt_BR.html">pt_BR</a> | <a href="../apidoc/host_collections.es.html">es</a> | <a href="../apidoc/host_collections.ja.html">ja</a> | <a href="../apidoc/host_collections.en_GB.html">en_GB</a> | <a href="../apidoc/host_collections.ru.html">ru</a> | <a href="../apidoc/host_collections.fr.html">fr</a> | <a href="../apidoc/host_collections.en.html">en</a> | <a href="../apidoc/host_collections.ko.html">ko</a> | <a href="../apidoc/host_collections.de.html">de</a> | <a href="../apidoc/host_collections.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -52,7 +58,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/host_collections/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a host collection</small>
         </h2>
     </div>
@@ -86,9 +93,12 @@
       
 <p>Id of the host collection</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -98,6 +108,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -111,7 +123,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/host_collections
-          </a><br>
+          </a>
+          <br>
           <small>List host collections</small>
         </h2>
         <h2>
@@ -120,8 +133,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/host_collections
-          </a><br>
-          <small></small>
+          </a>
+          <br>
+          <small>List host collections within an organization</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -129,17 +143,19 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/activation_keys/:activation_key_id/host_collections
-          </a><br>
-          <small></small>
+          </a>
+          <br>
+          <small>List host collections in an activation key</small>
         </h2>
         <h2>
           <a href='#description-index'
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            GET /katello/api/systems/:system_id/host_collections
-          </a><br>
-          <small></small>
+            GET /katello/api/hosts/:host_id/host_collections
+          </a>
+          <br>
+          <small>List host collections containing a content host</small>
         </h2>
     </div>
 
@@ -172,9 +188,12 @@
       
 <p>Search string</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -193,9 +212,12 @@
       
 <p>Page number, starting at 1</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -214,9 +236,12 @@
       
 <p>Number of results per page to return</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -235,9 +260,12 @@
       
 <p>Sort field and order, eg. ‘name DESC’</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -256,9 +284,12 @@
       
 <p>Whether or not to show all results</p>
 
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -277,9 +308,12 @@
       
 <p>Hash version of ‘order’ param</p>
 
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -297,9 +331,12 @@
       
 <p>Field to sort the results on</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -318,9 +355,12 @@
       
 <p>How to order the sorted results (e.g. ASC for ascending)</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -332,7 +372,7 @@
     <td>
       <strong>organization_id </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -340,9 +380,12 @@
       
 <p>organization identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -361,9 +404,12 @@
       
 <p>host collection name to filter by</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -382,9 +428,12 @@
       
 <p>activation key identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -393,7 +442,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>system_id </strong><br>
+      <strong>host_id </strong><br>
       <small>
         optional
         
@@ -401,11 +450,38 @@
     </td>
     <td>
       
-<p>system identifier</p>
+<p>Filter products by host id</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>available_for </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Interpret specified object to return only Host Collections that can be associated with specified object. The value ‘host’ is supported.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -415,6 +491,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -428,7 +506,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/host_collections
-          </a><br>
+          </a>
+          <br>
           <small>Create a host collection</small>
         </h2>
         <h2>
@@ -437,7 +516,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/organizations/:organization_id/host_collections
-          </a><br>
+          </a>
+          <br>
           <small>Create a host collection</small>
         </h2>
     </div>
@@ -471,30 +551,12 @@
       
 <p>organization identifier</p>
 
-        <br>
-        Value: number.
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>system_uuids </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>List of system uuids to replace the content hosts in host collection</p>
-
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -513,30 +575,12 @@
       
 <p>Host Collection name</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>system_ids </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>List of system uuids to be in the host collection</p>
-
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -553,30 +597,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>max_content_hosts </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Maximum number of content hosts in the host collection</p>
-
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -585,7 +611,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>unlimited_content_hosts </strong><br>
+      <strong>host_ids </strong><br>
       <small>
         optional
         
@@ -593,11 +619,62 @@
     </td>
     <td>
       
-<p>Whether or not the host collection may have unlimited content hosts</p>
+<p>List of host ids to replace the hosts in host collection</p>
 
-        <br>
-        Value: boolean
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>max_hosts </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Maximum number of hosts in the host collection</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>unlimited_hosts </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not the host collection may have unlimited hosts</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -607,6 +684,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -620,7 +699,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/host_collections/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update a host collection</small>
         </h2>
     </div>
@@ -654,30 +734,12 @@
       
 <p>Id of the host collection</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>system_uuids </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>List of system uuids to be in the host collection</p>
-
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -688,7 +750,7 @@
     <td>
       <strong>name </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>
@@ -696,30 +758,12 @@
       
 <p>Host Collection name</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>system_ids </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>List of system uuids to be in the host collection</p>
-
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -736,30 +780,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>max_content_hosts </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Maximum number of content hosts in the host collection</p>
-
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -768,7 +794,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>unlimited_content_hosts </strong><br>
+      <strong>host_ids </strong><br>
       <small>
         optional
         
@@ -776,11 +802,62 @@
     </td>
     <td>
       
-<p>Whether or not the host collection may have unlimited content hosts</p>
+<p>List of host ids to replace the hosts in host collection</p>
 
-        <br>
-        Value: boolean
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>max_hosts </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Maximum number of hosts in the host collection</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>unlimited_hosts </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not the host collection may have unlimited hosts</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -791,25 +868,28 @@
     </tbody>
   </table>
 
+
+
     </div>
     <hr>
     <div class='pull-right small'>
-      <a href='../apidoc/host_collections/systems.html'> >>> </a>
+      <a href='../apidoc/host_collections/add_hosts.html'> >>> </a>
     </div>
     <div>
         <h2>
-          <a href='#description-systems'
+          <a href='#description-add_hosts'
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            GET /katello/api/host_collections/:id/systems
-          </a><br>
-          <small>List content hosts in the host collection</small>
+            PUT /katello/api/host_collections/:id/add_hosts
+          </a>
+          <br>
+          <small>Add host to the host collection</small>
         </h2>
     </div>
 
 
-    <div id='description-systems' class='collapse accordion-body'>
+    <div id='description-add_hosts' class='collapse accordion-body'>
       
 
 
@@ -837,9 +917,36 @@
       
 <p>Id of the host collection</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_ids </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of host ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -850,25 +957,28 @@
     </tbody>
   </table>
 
+
+
     </div>
     <hr>
     <div class='pull-right small'>
-      <a href='../apidoc/host_collections/add_systems.html'> >>> </a>
+      <a href='../apidoc/host_collections/remove_hosts.html'> >>> </a>
     </div>
     <div>
         <h2>
-          <a href='#description-add_systems'
+          <a href='#description-remove_hosts'
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            PUT /katello/api/host_collections/:id/add_systems
-          </a><br>
-          <small>Add systems to the host collection</small>
+            PUT /katello/api/host_collections/:id/remove_hosts
+          </a>
+          <br>
+          <small>Remove hosts from the host collection</small>
         </h2>
     </div>
 
 
-    <div id='description-add_systems' class='collapse accordion-body'>
+    <div id='description-remove_hosts' class='collapse accordion-body'>
       
 
 
@@ -896,9 +1006,12 @@
       
 <p>Id of the host collection</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -907,7 +1020,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>system_ids </strong><br>
+      <strong>host_ids </strong><br>
       <small>
         optional
         
@@ -915,11 +1028,14 @@
     </td>
     <td>
       
-<p>Array of system ids</p>
+<p>Array of host ids</p>
 
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -930,85 +1046,7 @@
     </tbody>
   </table>
 
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/host_collections/remove_systems.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-remove_systems'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            PUT /katello/api/host_collections/:id/remove_systems
-          </a><br>
-          <small>Remove systems from the host collection</small>
-        </h2>
-    </div>
 
-
-    <div id='description-remove_systems' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Id of the host collection</p>
-
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>system_ids </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Array of system ids</p>
-
-        <br>
-        Value: Array
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
 
     </div>
     <hr>
@@ -1022,7 +1060,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/host_collections/:id
-          </a><br>
+          </a>
+          <br>
           <small>Destroy a host collection</small>
         </h2>
     </div>
@@ -1056,9 +1095,12 @@
       
 <p>Id of the host collection</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -1068,6 +1110,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -1081,7 +1125,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/host_collections/:id/copy
-          </a><br>
+          </a>
+          <br>
           <small>Make copy of a host collection</small>
         </h2>
     </div>
@@ -1115,9 +1160,12 @@
       
 <p>ID of the host collection</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -1136,9 +1184,12 @@
       
 <p>New host collection name</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1149,9 +1200,12 @@
     </tbody>
   </table>
 
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -1159,7 +1213,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

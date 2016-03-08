@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Documentação da API</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.pt_BR.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Organizations
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/organizations.ca.html">ca</a> | <a href="../apidoc/organizations.sv_SE.html">sv_SE</a> | <a href="../apidoc/organizations.zh_CN.html">zh_CN</a> | <a href="../apidoc/organizations.gl.html">gl</a> | <a href="../apidoc/organizations.it.html">it</a> | <b><a href="../apidoc/organizations.pt_BR.html">pt_BR</a></b> | <a href="../apidoc/organizations.es.html">es</a> | <a href="../apidoc/organizations.ja.html">ja</a> | <a href="../apidoc/organizations.en_GB.html">en_GB</a> | <a href="../apidoc/organizations.ru.html">ru</a> | <a href="../apidoc/organizations.fr.html">fr</a> | <a href="../apidoc/organizations.en.html">en</a> | <a href="../apidoc/organizations.ko.html">ko</a> | <a href="../apidoc/organizations.de.html">de</a> | <a href="../apidoc/organizations.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Organizations
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/index.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations
+          </a>
+          <br>
+          <small>Listar todas as organizações</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parâmentros</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nome parâmetro</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Buscar faixa</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Número de página, iniciando em 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Número de resultados por página para retornar</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Classificar campo e ordem, ex. ‘name DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_results </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Se deve ou não exibir todos os resultados</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Versão Hash de param de “ordem”</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[by] </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Campo para classificar os resultados</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[order] </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Como encomendar os resultados classificados (por exemplo ASC para ascendente)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/show.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:id
+          </a>
+          <br>
+          <small>Exibir organização</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parâmentros</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nome parâmetro</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        requerido
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID da organização</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/create.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/organizations
+          </a>
+          <br>
+          <small>Criar organização</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parâmentros</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nome parâmetro</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        requerido
+        
+      </small>
+    </td>
+    <td>
+      
+<p>nome</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>label </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>rótulo único</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>descrição</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization </strong><br>
+      <small>
+        requerido
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[name] </strong><br>
+      <small>
+        requerido
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[description] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[user_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>IDs dos Usuários</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[smart_proxy_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>IDs do proxy inteligente</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[compute_resource_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>IDs de recursos computacionais</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[media_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Media IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[config_template_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Provisioning template IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[ptable_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Partition template IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[provisioning_template_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Provisioning template IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[domain_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Domain IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[realm_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Realm IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[hostgroup_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Host group IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[environment_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Environment IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[subnet_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Subnet IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[label] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/update.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/organizations/:id
+          </a>
+          <br>
+          <small>Atualizar organização</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parâmentros</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nome parâmetro</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        requerido
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID da organização</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>redhat_repository_url </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Red Hat CDN URL</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization </strong><br>
+      <small>
+        requerido
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[name] </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[description] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[user_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>IDs dos Usuários</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[smart_proxy_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>IDs do proxy inteligente</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[compute_resource_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>IDs de recursos computacionais</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[media_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Media IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[config_template_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Provisioning template IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[ptable_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Partition template IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[provisioning_template_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Provisioning template IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[domain_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Domain IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[realm_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Realm IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[hostgroup_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Host group IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[environment_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Environment IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[subnet_ids] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Subnet IDs</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>organization[parent_id] </strong><br>
+      <small>
+        opcional
+        , nulo permitido
+      </small>
+    </td>
+    <td>
+      
+<p>Parent ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/destroy.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/organizations/:id
+          </a>
+          <br>
+          <small>Remover uma organização</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parâmentros</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nome parâmetro</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        requerido
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID da organização</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/repo_discover.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-repo_discover'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/organizations/:id/repo_discover
+          </a>
+          <br>
+          <small>Descobrir Repositórios </small>
+        </h2>
+    </div>
+
+
+    <div id='description-repo_discover' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parâmentros</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nome parâmetro</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        requerido
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID da organização</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>url </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>url base onde realizar a descoberta do repo</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/cancel_repo_discover.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-cancel_repo_discover'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/organizations/:label/cancel_repo_discover
+          </a>
+          <br>
+          <small>Cancelar descoberta de repositório </small>
+        </h2>
+    </div>
+
+
+    <div id='description-cancel_repo_discover' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parâmentros</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nome parâmetro</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>label </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Etiqueta de Organização</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>url </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>url base onde realizar a descoberta do repo</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/download_debug_certificate.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-download_debug_certificate'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:label/download_debug_certificate
+          </a>
+          <br>
+          <small>Baixar um certificado de depuração </small>
+        </h2>
+    </div>
+
+
+    <div id='description-download_debug_certificate' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parâmentros</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nome parâmetro</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>label </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Etiqueta de Organização</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/autoattach_subscriptions.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-autoattach_subscriptions'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/organizations/:id/autoattach_subscriptions
+          </a>
+          <br>
+          <small>Anexar assinaturas disponíveis automaticamente à todos os sistemas dentro de uma organização. Operação assíncrona.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-autoattach_subscriptions' class='collapse accordion-body'>
+      
+
+
+
+
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/organizations/redhat_provider.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-redhat_provider'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:id/redhat_provider
+          </a>
+          <br>
+          <small>Listar todos: resource_id</small>
+        </h2>
+    </div>
+
+
+    <div id='description-redhat_provider' class='collapse accordion-body'>
+      
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

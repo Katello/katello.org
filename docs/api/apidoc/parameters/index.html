@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -29,44 +30,53 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/parameters/index.ca.html">ca</a> | <a href="../../apidoc/parameters/index.sv_SE.html">sv_SE</a> | <a href="../../apidoc/parameters/index.zh_CN.html">zh_CN</a> | <a href="../../apidoc/parameters/index.gl.html">gl</a> | <a href="../../apidoc/parameters/index.it.html">it</a> | <a href="../../apidoc/parameters/index.pt_BR.html">pt_BR</a> | <a href="../../apidoc/parameters/index.es.html">es</a> | <a href="../../apidoc/parameters/index.ja.html">ja</a> | <a href="../../apidoc/parameters/index.en_GB.html">en_GB</a> | <a href="../../apidoc/parameters/index.ru.html">ru</a> | <a href="../../apidoc/parameters/index.fr.html">fr</a> | <a href="../../apidoc/parameters/index.en.html">en</a> | <a href="../../apidoc/parameters/index.ko.html">ko</a> | <a href="../../apidoc/parameters/index.de.html">de</a> | <a href="../../apidoc/parameters/index.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      GET /api/hosts/:host_id/parameters<br>
-      <small>List all parameters for host</small>
+      GET /api/hosts/:host_id/parameters
+      <br>
+      <small>List all parameters for a host</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /api/hostgroups/:hostgroup_id/parameters<br>
-      <small>List all parameters for hostgroup</small>
+      GET /api/hostgroups/:hostgroup_id/parameters
+      <br>
+      <small>List all parameters for a host group</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /api/domains/:domain_id/parameters<br>
-      <small>List all parameters for domain</small>
+      GET /api/domains/:domain_id/parameters
+      <br>
+      <small>List all parameters for a domain</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /api/operatingsystems/:operatingsystem_id/parameters<br>
-      <small>List all parameters for operating system</small>
+      GET /api/operatingsystems/:operatingsystem_id/parameters
+      <br>
+      <small>List all parameters for an operating system</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /api/locations/:location_id/parameters<br>
-      <small>List all parameters for location</small>
+      GET /api/locations/:location_id/parameters
+      <br>
+      <small>List all parameters for a location</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /api/organizations/:organization_id/parameters<br>
-      <small>List all parameters for organization</small>
+      GET /api/organizations/:organization_id/parameters
+      <br>
+      <small>List all parameters for an organization</small>
     </h1>
   </div>
 
@@ -97,11 +107,14 @@
     </td>
     <td>
       
-<p>id of host</p>
+<p>ID of host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -118,11 +131,14 @@
     </td>
     <td>
       
-<p>id of hostgroup</p>
+<p>ID of host group</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -139,11 +155,14 @@
     </td>
     <td>
       
-<p>id of domain</p>
+<p>ID of domain</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -160,11 +179,14 @@
     </td>
     <td>
       
-<p>id of operating system</p>
+<p>ID of operating system</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -181,11 +203,14 @@
     </td>
     <td>
       
-<p>id of location</p>
+<p>ID of location</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -202,11 +227,62 @@
     </td>
     <td>
       
-<p>id of organization</p>
+<p>ID of organization</p>
 
-        <br>
-        Value: String
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>sort results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -225,9 +301,12 @@
       
 <p>paginate results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -246,9 +325,12 @@
       
 <p>number of entries per request</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -259,8 +341,11 @@
     </tbody>
   </table>
 
+
+
 </div>
 
+  
 
         
       </div>
@@ -268,7 +353,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>

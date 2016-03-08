@@ -1,0 +1,5473 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Documentación de la API</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li class='active'><a href='./apidoc.es.html'>Foreman v2</a></li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="./apidoc.ca.html">ca</a> | <a href="./apidoc.sv_SE.html">sv_SE</a> | <a href="./apidoc.zh_CN.html">zh_CN</a> | <a href="./apidoc.gl.html">gl</a> | <a href="./apidoc.it.html">it</a> | <a href="./apidoc.pt_BR.html">pt_BR</a> | <b><a href="./apidoc.es.html">es</a></b> | <a href="./apidoc.ja.html">ja</a> | <a href="./apidoc.en_GB.html">en_GB</a> | <a href="./apidoc.ru.html">ru</a> | <a href="./apidoc.fr.html">fr</a> | <a href="./apidoc.en.html">en</a> | <a href="./apidoc.ko.html">ko</a> | <a href="./apidoc.de.html">de</a> | <a href="./apidoc.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div>
+<p>Foreman API v2 is currently the default API version.</p>
+</div>
+
+<h1 class='page-header'>Recursos</h1>
+
+  <h2>
+    <a href='./apidoc/activation_keys.es.html'>
+      Activation keys
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/index.es.html'>GET /katello/api/activation_keys</a>
+            </td>
+            <td width='60%'>Mostrar llaves de activación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/index.es.html'>GET /katello/api/environments/:environment_id/activation_keys</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/index.es.html'>GET /katello/api/organizations/:organization_id/activation_keys</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/create.es.html'>POST /katello/api/activation_keys</a>
+            </td>
+            <td width='60%'>Crear una llave de activación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/update.es.html'>PUT /katello/api/activation_keys/:id</a>
+            </td>
+            <td width='60%'>Actualizar una llave de activación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/destroy.es.html'>DELETE /katello/api/activation_keys/:id</a>
+            </td>
+            <td width='60%'>Destruir una llave de activación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/show.es.html'>GET /katello/api/activation_keys/:id</a>
+            </td>
+            <td width='60%'>Mostrar una llave de activación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/copy.es.html'>POST /katello/api/activation_keys/:id/copy</a>
+            </td>
+            <td width='60%'>Copiar llave de activación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/available_host_collections.es.html'>GET /katello/api/activation_keys/:id/host_collections/available</a>
+            </td>
+            <td width='60%'>Mostrar recopilaciones de hosts al que el sistema no pertenece</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/available_releases.es.html'>GET /katello/api/activation_keys/:id/releases</a>
+            </td>
+            <td width='60%'>Mostrar versiones de lanzamiento disponibles para una llave de activación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/product_content.es.html'>GET /katello/api/activation_keys/:id/product_content</a>
+            </td>
+            <td width='60%'>Mostrar un contenido disponible para una llave de activación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/add_host_collections.es.html'>POST /katello/api/activation_keys/:id/host_collections</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/remove_host_collections.es.html'>PUT /katello/api/activation_keys/:id/host_collections</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/add_subscriptions.es.html'>PUT /katello/api/activation_keys/:id/add_subscriptions</a>
+            </td>
+            <td width='60%'>Vincular una suscripción</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/remove_subscriptions.es.html'>PUT /katello/api/activation_keys/:id/remove_subscriptions</a>
+            </td>
+            <td width='60%'>Desvincular una suscripción</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/content_override.es.html'>PUT /katello/api/activation_keys/:id/content_override</a>
+            </td>
+            <td width='60%'>Sobrescribir contenido para activation_key</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/subscriptions.es.html'>GET /katello/api/activation_keys/:id/subscriptions</a>
+            </td>
+            <td width='60%'>Mostrar las suscripciones de una llave de activación</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/architectures.es.html'>
+      Architectures
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/index.es.html'>GET /api/architectures</a>
+            </td>
+            <td width='60%'>Enumera todas las arquitecturas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/index.es.html'>GET /api/operatingsystems/:operatingsystem_id/architectures</a>
+            </td>
+            <td width='60%'>Enumerar las arquitecturas por sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/show.es.html'>GET /api/architectures/:id</a>
+            </td>
+            <td width='60%'>Mostrar una arquitectura</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/create.es.html'>POST /api/architectures</a>
+            </td>
+            <td width='60%'>Crear una arquitectura</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/update.es.html'>PUT /api/architectures/:id</a>
+            </td>
+            <td width='60%'>Actualizar una arquitectura</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/destroy.es.html'>DELETE /api/architectures/:id</a>
+            </td>
+            <td width='60%'>Borrar una arquitectura</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/audits.es.html'>
+      Audits
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/audits/index.es.html'>GET /api/audits</a>
+            </td>
+            <td width='60%'>Enumera todas las auditorías</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/audits/index.es.html'>GET /api/hosts/:host_id/audits</a>
+            </td>
+            <td width='60%'>Enumera todas las auditorías de un host determinado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/audits/show.es.html'>GET /api/audits/:id</a>
+            </td>
+            <td width='60%'>Mostrar un registro de auditoría</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/auth_source_ldaps.es.html'>
+      Auth source ldaps
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/index.es.html'>GET /api/auth_source_ldaps</a>
+            </td>
+            <td width='60%'>Enumera todas las fuentes de autenticación LDAP</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/show.es.html'>GET /api/auth_source_ldaps/:id</a>
+            </td>
+            <td width='60%'>Mostrar una fuente de autenticación LDAP</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/create.es.html'>POST /api/auth_source_ldaps</a>
+            </td>
+            <td width='60%'>Crear una fuente de autenticación LDAP</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/update.es.html'>PUT /api/auth_source_ldaps/:id</a>
+            </td>
+            <td width='60%'>Actualizar una fuente de autenticación LDAP</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/test.es.html'>PUT /api/auth_source_ldaps/:id/test</a>
+            </td>
+            <td width='60%'>Test LDAP connection</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/destroy.es.html'>DELETE /api/auth_source_ldaps/:id</a>
+            </td>
+            <td width='60%'>Borrar una fuente de autenticación LDAP</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/autosign.es.html'>
+      Autosign
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/autosign/index.es.html'>GET /api/smart_proxies/smart_proxy_id/autosign</a>
+            </td>
+            <td width='60%'>Enumera todas las entradas autofirmadas</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/bookmarks.es.html'>
+      Bookmarks
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/bookmarks/index.es.html'>GET /api/bookmarks</a>
+            </td>
+            <td width='60%'>Enumerar todos los marcadores</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/bookmarks/show.es.html'>GET /api/bookmarks/:id</a>
+            </td>
+            <td width='60%'>Mostrar un marcador</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/bookmarks/create.es.html'>POST /api/bookmarks</a>
+            </td>
+            <td width='60%'>Crear un marcador</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/bookmarks/update.es.html'>PUT /api/bookmarks/:id</a>
+            </td>
+            <td width='60%'>Actualizar un marcador</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/bookmarks/destroy.es.html'>DELETE /api/bookmarks/:id</a>
+            </td>
+            <td width='60%'>Borrar un marcador</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/capsule_content.es.html'>
+      Capsule content
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/lifecycle_environments.es.html'>GET /katello/api/capsules/:id/content/lifecycle_environments</a>
+            </td>
+            <td width='60%'>List the lifecycle environments attached to the capsule</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/available_lifecycle_environments.es.html'>GET /katello/api/capsules/:id/content/available_lifecycle_environments</a>
+            </td>
+            <td width='60%'>List the lifecycle environments not attached to the capsule</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/add_lifecycle_environment.es.html'>POST /katello/api/capsules/:id/content/lifecycle_environments</a>
+            </td>
+            <td width='60%'>Add lifecycle environments to the capsule</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/remove_lifecycle_environment.es.html'>DELETE /katello/api/capsules/:id/content/lifecycle_environments/:environment_id</a>
+            </td>
+            <td width='60%'>Remove lifecycle environments from the capsule</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/sync.es.html'>POST /katello/api/capsules/:id/content/sync</a>
+            </td>
+            <td width='60%'>Synchronize the content to the capsule</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/sync_status.es.html'>GET /katello/api/capsules/:id/content/sync</a>
+            </td>
+            <td width='60%'>Get current capsule synchronization status</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/cancel_sync.es.html'>DELETE /katello/api/capsules/:id/content/sync</a>
+            </td>
+            <td width='60%'>Cancel running capsule synchronization.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/capsules.es.html'>
+      Capsules
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/capsules/index.es.html'>GET /katello/api/capsules</a>
+            </td>
+            <td width='60%'>List all capsules</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsules/show.es.html'>GET /katello/api/capsules/:id</a>
+            </td>
+            <td width='60%'>Show the capsule details</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/common_parameters.es.html'>
+      Common parameters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/common_parameters/index.es.html'>GET /api/common_parameters</a>
+            </td>
+            <td width='60%'>Enumera todos los parámetros globales.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/common_parameters/show.es.html'>GET /api/common_parameters/:id</a>
+            </td>
+            <td width='60%'>Mostrar un parametro global</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/common_parameters/create.es.html'>POST /api/common_parameters</a>
+            </td>
+            <td width='60%'>Crear un parámetro global</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/common_parameters/update.es.html'>PUT /api/common_parameters/:id</a>
+            </td>
+            <td width='60%'>Actualizar un parámetro global</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/common_parameters/destroy.es.html'>DELETE /api/common_parameters/:id</a>
+            </td>
+            <td width='60%'>Borrar un parámetro global</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/compute_attributes.es.html'>
+      Compute attributes
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/create.es.html'>POST /api/compute_resources/:compute_resource_id/compute_profiles/:compute_profile_id/compute_attributes</a>
+            </td>
+            <td width='60%'>Crerar un conjunto de atributos de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/create.es.html'>POST /api/compute_profiles/:compute_profile_id/compute_resources/:compute_resource_id/compute_attributes</a>
+            </td>
+            <td width='60%'>Crerar un conjunto de atributos de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/create.es.html'>POST /api/compute_resources/:compute_resource_id/compute_attributes</a>
+            </td>
+            <td width='60%'>Crerar un conjunto de atributos de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/create.es.html'>POST /api/compute_profiles/:compute_profile_id/compute_attributes</a>
+            </td>
+            <td width='60%'>Crerar un conjunto de atributos de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/create.es.html'>POST /api/compute_attributes</a>
+            </td>
+            <td width='60%'>Crerar un conjunto de atributos de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/update.es.html'>PUT /api/compute_resources/:compute_resource_id/compute_profiles/:compute_profile_id/compute_attributes/:id</a>
+            </td>
+            <td width='60%'>Actualizar un conjunto de atributos de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/update.es.html'>PUT /api/compute_profiles/:compute_profile_id/compute_resources/:compute_resource_id/compute_attributes/:id</a>
+            </td>
+            <td width='60%'>Actualizar un conjunto de atributos de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/update.es.html'>PUT /api/compute_resources/:compute_resource_id/compute_attributes/:id</a>
+            </td>
+            <td width='60%'>Actualizar un conjunto de atributos de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/update.es.html'>PUT /api/compute_profiles/:compute_profile_id/compute_attributes/:id</a>
+            </td>
+            <td width='60%'>Actualizar un conjunto de atributos de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/update.es.html'>PUT /api/compute_attributes/:id</a>
+            </td>
+            <td width='60%'>Actualizar un conjunto de atributos de computación</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/compute_profiles.es.html'>
+      Compute profiles
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_profiles/index.es.html'>GET /api/compute_profiles</a>
+            </td>
+            <td width='60%'>Enumera los perfiles de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_profiles/show.es.html'>GET /api/compute_profiles/:id</a>
+            </td>
+            <td width='60%'>Mostrar un perfil de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_profiles/create.es.html'>POST /api/compute_profiles</a>
+            </td>
+            <td width='60%'>Crear un perfil de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_profiles/update.es.html'>PUT /api/compute_profiles/:id</a>
+            </td>
+            <td width='60%'>Actualizar un perfil de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_profiles/destroy.es.html'>DELETE /api/compute_profiles/:id</a>
+            </td>
+            <td width='60%'>Borrar un perfil de computación</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/compute_resources.es.html'>
+      Compute resources
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/index.es.html'>GET /api/compute_resources</a>
+            </td>
+            <td width='60%'>Enumera todos los recursos de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/show.es.html'>GET /api/compute_resources/:id</a>
+            </td>
+            <td width='60%'>Mostrar un recurso de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/create.es.html'>POST /api/compute_resources</a>
+            </td>
+            <td width='60%'>Crear un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/update.es.html'>PUT /api/compute_resources/:id</a>
+            </td>
+            <td width='60%'>Actualizar un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/destroy.es.html'>DELETE /api/compute_resources/:id</a>
+            </td>
+            <td width='60%'>Borrar un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_images.es.html'>GET /api/compute_resources/:id/available_images</a>
+            </td>
+            <td width='60%'>Enumera todas las imágenes disponibles para un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_clusters.es.html'>GET /api/compute_resources/:id/available_clusters</a>
+            </td>
+            <td width='60%'>Enumera todos los clusters disponibles para un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_flavors.es.html'>GET /api/compute_resources/:id/available_flavors</a>
+            </td>
+            <td width='60%'>List available flavors for a compute resource</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_folders.es.html'>GET /api/compute_resources/:id/available_folders</a>
+            </td>
+            <td width='60%'>Enumerar carpetas disponibles de un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_zones.es.html'>GET /api/compute_resources/:id/available_zones</a>
+            </td>
+            <td width='60%'>List available zone for a compute resource</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_networks.es.html'>GET /api/compute_resources/:id/available_networks</a>
+            </td>
+            <td width='60%'>Enumera todas las redes disponibles para un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_networks.es.html'>GET /api/compute_resources/:id/available_clusters/:cluster_id/available_networks</a>
+            </td>
+            <td width='60%'>Enumera todas las redes para un cluster de recursos de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_resource_pools.es.html'>GET /api/compute_resources/:id/available_clusters/:cluster_id/available_resource_pools</a>
+            </td>
+            <td width='60%'>Enumerar los pools de recursos de un cluster de recursos de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_storage_domains.es.html'>GET /api/compute_resources/:id/available_storage_domains</a>
+            </td>
+            <td width='60%'>Enumera los dominios de almacenamiento de un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_storage_domains.es.html'>GET /api/compute_resources/:id/available_storage_domains/:storage_domain</a>
+            </td>
+            <td width='60%'>Enumerar atributos de un dominio de almacenamiento determinado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_storage_pods.es.html'>GET /api/compute_resources/:id/available_storage_pods</a>
+            </td>
+            <td width='60%'>List storage pods for a compute resource</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_storage_pods.es.html'>GET /api/compute_resources/:id/available_storage_pods/:storage_pod</a>
+            </td>
+            <td width='60%'>List attributes for a given storage pod</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_security_groups.es.html'>GET /api/compute_resources/:id/available_security_groups</a>
+            </td>
+            <td width='60%'>List available security groups for a compute resource</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/associate.es.html'>PUT /api/compute_resources/:id/associate</a>
+            </td>
+            <td width='60%'>Asociar MV a hosts</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/config_groups.es.html'>
+      Config groups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/config_groups/index.es.html'>GET /api/config_groups</a>
+            </td>
+            <td width='60%'>Lista de grupos de computación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_groups/show.es.html'>GET /api/config_groups/:id</a>
+            </td>
+            <td width='60%'>Mostrar un grupo de configuración</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_groups/create.es.html'>POST /api/config_groups</a>
+            </td>
+            <td width='60%'>Crear un grupo de configuración</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_groups/update.es.html'>PUT /api/config_groups/:id</a>
+            </td>
+            <td width='60%'>Actualizar un grupo de configuración</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_groups/destroy.es.html'>DELETE /api/config_groups/:id</a>
+            </td>
+            <td width='60%'>Borrar un grupo de configuración</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/config_reports.es.html'>
+      Config reports
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/config_reports/index.es.html'>GET /api/config_reports</a>
+            </td>
+            <td width='60%'>Enumera todos los informes</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_reports/show.es.html'>GET /api/config_reports/:id</a>
+            </td>
+            <td width='60%'>Mostrar un informe</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_reports/create.es.html'>POST /api/config_reports</a>
+            </td>
+            <td width='60%'>Crear un informe</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_reports/destroy.es.html'>DELETE /api/config_reports/:id</a>
+            </td>
+            <td width='60%'>Borrar un informe</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_reports/last.es.html'>GET /api/hosts/:host_id/config_reports/last</a>
+            </td>
+            <td width='60%'>Mostrar ultimo reporte de un host</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/config_templates.es.html'>
+      Config templates
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/index.es.html'>GET /api/config_templates</a>
+            </td>
+            <td width='60%'>Lista de plantillas de provisión</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/index.es.html'>GET /api/operatingsystems/:operatingsystem_id/config_templates</a>
+            </td>
+            <td width='60%'>Enumerar plantillas de provisión por sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/index.es.html'>GET /api/locations/:location_id/config_templates</a>
+            </td>
+            <td width='60%'>Enumerar plantillas de provisión por ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/index.es.html'>GET /api/organizations/:organization_id/config_templates</a>
+            </td>
+            <td width='60%'>Enumerar las plantillas de provisión por organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/show.es.html'>GET /api/config_templates/:id</a>
+            </td>
+            <td width='60%'>Mostrar detalles de la plantilla de provisión</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/create.es.html'>POST /api/config_templates</a>
+            </td>
+            <td width='60%'>Crear una plantilla de provisión</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/update.es.html'>PUT /api/config_templates/:id</a>
+            </td>
+            <td width='60%'>Actualizar una plantilla de provisión</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/revision.es.html'>GET /api/config_templates/revision</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/destroy.es.html'>DELETE /api/config_templates/:id</a>
+            </td>
+            <td width='60%'>Borrar una plantilla de provisión</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/build_pxe_default.es.html'>POST /api/config_templates/build_pxe_default</a>
+            </td>
+            <td width='60%'>Actualizar el menu PXE por defecto en todos los servidores TFTP configurados</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/clone.es.html'>POST /api/config_templates/:id/clone</a>
+            </td>
+            <td width='60%'>Clonar un template de provisión</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/containers.es.html'>
+      Containers
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/index.es.html'>GET /docker/api/v2/containers</a>
+            </td>
+            <td width='60%'>Listar todos los contenedores</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/index.es.html'>GET /docker/api/v2/compute_resources/:compute_resource_id/containers</a>
+            </td>
+            <td width='60%'>Listar todas los contenedores en un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/show.es.html'>GET /docker/api/v2/containers/:id</a>
+            </td>
+            <td width='60%'>Mostrar un contenedor</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/show.es.html'>GET /docker/api/v2/compute_resources/:compute_resource_id/containers/:id</a>
+            </td>
+            <td width='60%'>Mostrar un contenedor en un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/create.es.html'>POST /docker/api/v2/containers</a>
+            </td>
+            <td width='60%'>Crear un contenedor</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/create.es.html'>POST /docker/api/v2/compute_resources/:compute_resource_id/containers</a>
+            </td>
+            <td width='60%'>Crear un contenedor en un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/destroy.es.html'>DELETE /docker/api/v2/containers/:id</a>
+            </td>
+            <td width='60%'>Borrar un contenedor</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/destroy.es.html'>DELETE /docker/api/v2/compute_resources/:compute_resource_id/containers/:id</a>
+            </td>
+            <td width='60%'>Borrar un contenedor en un  recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/logs.es.html'>GET /docker/api/v2/containers/:id/logs</a>
+            </td>
+            <td width='60%'>Mostrar registros de contenedor</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/logs.es.html'>GET /docker/api/v2/compute_resources/:compute_resource_id/containers/:id/logs</a>
+            </td>
+            <td width='60%'>Mostrar registros de un contenedor en un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/power.es.html'>PUT /docker/api/v2/containers/:id/power</a>
+            </td>
+            <td width='60%'>Ejecutar operacion de encendido en un contenedor</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/power.es.html'>PUT /docker/api/v2/compute_resources/:compute_resource_id/containers/:id/power</a>
+            </td>
+            <td width='60%'>Ejecutar la operación de encendido en un contenedor en un recurso de cómputo </td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_reports.es.html'>
+      Content reports
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_reports/system_status.es.html'>GET /katello/api/content_reports/system_status</a>
+            </td>
+            <td width='60%'>Show the latest subscription status for a list of content hosts that have reported their subscription status during a specified time period. Running this report with minimal parameters will return all status records for all reported content hosts.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_reports/system_trend.es.html'>GET /katello/api/content_reports/system_trend</a>
+            </td>
+            <td width='60%'>Show a listing of all subscription status snapshots from content hosts which have reported their subscription status in the specified time period.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_reports/status_trend.es.html'>GET /katello/api/content_reports/status_trend</a>
+            </td>
+            <td width='60%'>Show the per-day counts of content-hosts, grouped by subscription status, optionally limited to a date range.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_uploads.es.html'>
+      Content uploads
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_uploads/create.es.html'>POST /katello/api/repositories/:repository_id/content_uploads</a>
+            </td>
+            <td width='60%'>Crear una solicitud de carga</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_uploads/update.es.html'>PUT /katello/api/repositories/:repository_id/content_uploads/:id</a>
+            </td>
+            <td width='60%'>Cargar un fragmento del contenido del archivo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_uploads/destroy.es.html'>DELETE /katello/api/repositories/:repository_id/content_uploads/:id</a>
+            </td>
+            <td width='60%'>Borrar una solicitud de carga</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_view_filter_rules.es.html'>
+      Content view filter rules
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filter_rules/index.es.html'>GET /katello/api/content_view_filters/:content_view_filter_id/rules</a>
+            </td>
+            <td width='60%'>Mostrar reglas de filtro</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filter_rules/create.es.html'>POST /katello/api/content_view_filters/:content_view_filter_id/rules</a>
+            </td>
+            <td width='60%'>Crear una regla de filtro. Los parámetros incluidos se deben basar en el tipo de filtro.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filter_rules/show.es.html'>GET /katello/api/content_view_filters/:content_view_filter_id/rules/:id</a>
+            </td>
+            <td width='60%'>Mostrar información de regla de filtro</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filter_rules/update.es.html'>PUT /katello/api/content_view_filters/:content_view_filter_id/rules/:id</a>
+            </td>
+            <td width='60%'>Actualizar una regla de filtro. Los parámetros incluidos se deben basar en el tipo de filtro.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filter_rules/destroy.es.html'>DELETE /katello/api/content_view_filters/:content_view_filter_id/rules/:id</a>
+            </td>
+            <td width='60%'>Borrar una regla de filtro</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_view_filters.es.html'>
+      Content view filters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/index.es.html'>get /katello/api/content_views/:content_view_id/filters</a>
+            </td>
+            <td width='60%'>list filters</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/index.es.html'>get /katello/api/content_view_filters</a>
+            </td>
+            <td width='60%'>list filters</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/create.es.html'>post /katello/api/content_views/:content_view_id/filters</a>
+            </td>
+            <td width='60%'>create a filter for a content view</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/create.es.html'>post /katello/api/content_view_filters</a>
+            </td>
+            <td width='60%'>create a filter for a content view</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/show.es.html'>get /katello/api/content_views/:content_view_id/filters/:id</a>
+            </td>
+            <td width='60%'>show filter info</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/show.es.html'>get /katello/api/content_view_filters/:id</a>
+            </td>
+            <td width='60%'>show filter info</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/update.es.html'>put /katello/api/content_views/:content_view_id/filters/:id</a>
+            </td>
+            <td width='60%'>update a filter</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/update.es.html'>put /katello/api/content_view_filters/:id</a>
+            </td>
+            <td width='60%'>update a filter</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/destroy.es.html'>delete /katello/api/content_views/:content_view_id/filters/:id</a>
+            </td>
+            <td width='60%'>delete a filter</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/destroy.es.html'>delete /katello/api/content_view_filters/:id</a>
+            </td>
+            <td width='60%'>delete a filter</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_view_histories.es.html'>
+      Content view histories
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_histories/index.es.html'>GET /katello/api/content_views/:id/history</a>
+            </td>
+            <td width='60%'>Mostrar el historial de una vista de contenido</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_view_puppet_modules.es.html'>
+      Content view puppet modules
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_puppet_modules/index.es.html'>GET /katello/api/content_views/:content_view_id/content_view_puppet_modules</a>
+            </td>
+            <td width='60%'>Mostrar módulos puppet de la vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_puppet_modules/create.es.html'>POST /katello/api/content_views/:content_view_id/content_view_puppet_modules</a>
+            </td>
+            <td width='60%'>Añadir un módulo Puppet a la vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_puppet_modules/show.es.html'>GET /katello/api/content_views/:content_view_id/content_view_puppet_modules/:id</a>
+            </td>
+            <td width='60%'>Mostrar un módulo puppet de la vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_puppet_modules/update.es.html'>PUT /katello/api/content_views/:content_view_id/content_view_puppet_modules/:id</a>
+            </td>
+            <td width='60%'>Actualizar un módulo Puppet asociado a la vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_puppet_modules/destroy.es.html'>DELETE /katello/api/content_views/:content_view_id/content_view_puppet_modules/:id</a>
+            </td>
+            <td width='60%'>Eliminar un módulo puppet de la vista de contenido</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_view_versions.es.html'>
+      Content view versions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/index.es.html'>GET /katello/api/content_view_versions</a>
+            </td>
+            <td width='60%'>Mostrar versiones de la vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/index.es.html'>GET /katello/api/content_views/:content_view_id/content_view_versions</a>
+            </td>
+            <td width='60%'>Mostrar versiones de la vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/show.es.html'>GET /katello/api/content_view_versions/:id</a>
+            </td>
+            <td width='60%'>Mostrar la versión de la vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/promote.es.html'>POST /katello/api/content_view_versions/:id/promote</a>
+            </td>
+            <td width='60%'>Promover una versión de la vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/export.es.html'>POST /katello/api/content_view_versions/:id/export</a>
+            </td>
+            <td width='60%'>Export a content view version</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/destroy.es.html'>DELETE /katello/api/content_view_versions/:id</a>
+            </td>
+            <td width='60%'>Eliminar versión de vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/incremental_update.es.html'>POST /katello/api/content_view_versions/incremental_update</a>
+            </td>
+            <td width='60%'>Realizar una actualización incremental en uno o más versiones de vista de contenido</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_views.es.html'>
+      Content views
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/index.es.html'>GET /katello/api/organizations/:organization_id/content_views</a>
+            </td>
+            <td width='60%'>Mostrar vistas de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/index.es.html'>GET /katello/api/content_views</a>
+            </td>
+            <td width='60%'>Mostrar vistas de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/create.es.html'>POST /katello/api/organizations/:organization_id/content_views</a>
+            </td>
+            <td width='60%'>Crear una vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/create.es.html'>POST /katello/api/content_views</a>
+            </td>
+            <td width='60%'>Crear una vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/update.es.html'>PUT /katello/api/content_views/:id</a>
+            </td>
+            <td width='60%'>Actualizar una vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/publish.es.html'>POST /katello/api/content_views/:id/publish</a>
+            </td>
+            <td width='60%'>Publicar una vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/show.es.html'>GET /katello/api/content_views/:id</a>
+            </td>
+            <td width='60%'>Mostrar una vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/available_puppet_modules.es.html'>GET /katello/api/content_views/:id/available_puppet_modules</a>
+            </td>
+            <td width='60%'>Obtener módulos puppet disponibles para añadirlos a la vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/available_puppet_module_names.es.html'>GET /katello/api/content_views/:id/available_puppet_module_names</a>
+            </td>
+            <td width='60%'>Obtener nombres de módulos puppet disponibles para añadirlos a la vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/remove_from_environment.es.html'>DELETE /katello/api/content_views/:id/environments/:environment_id</a>
+            </td>
+            <td width='60%'>Eliminar una vista de contenido de un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/remove.es.html'>PUT /katello/api/content_views/:id/remove</a>
+            </td>
+            <td width='60%'>Eliminar versiones y/o entornos de una vista de contenido y volver a asignar sistemas y llaves</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/destroy.es.html'>DELETE /katello/api/content_views/:id</a>
+            </td>
+            <td width='60%'>Borrar una vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/copy.es.html'>POST /katello/api/content_views/:id/copy</a>
+            </td>
+            <td width='60%'>Hacer una copia de una vista de contenido</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/dashboard.es.html'>
+      Dashboard
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/dashboard/index.es.html'>GET /api/dashboard</a>
+            </td>
+            <td width='60%'>Detalles del cuadro de mando</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/docker_manifests.es.html'>
+      Docker manifests
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/index.es.html'>GET /katello/api/docker_manifests</a>
+            </td>
+            <td width='60%'>List docker_manifests</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/index.es.html'>GET /katello/api/content_views/:content_view_id/filters/:filter_id/docker_manifests</a>
+            </td>
+            <td width='60%'>List docker_manifests</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/index.es.html'>GET /katello/api/content_view_filters/:content_view_filter_id/docker_manifests</a>
+            </td>
+            <td width='60%'>List docker_manifests</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/index.es.html'>GET /katello/api/repositories/:repository_id/docker_manifests</a>
+            </td>
+            <td width='60%'>List docker_manifests</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/show.es.html'>GET /katello/api/docker_manifests/:id</a>
+            </td>
+            <td width='60%'>Show a docker manifest</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/show.es.html'>GET /katello/api/repositories/:repository_id/docker_manifests/:id</a>
+            </td>
+            <td width='60%'>Show a docker manifest</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/compare.es.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>List docker_manifests</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/docker_tags.es.html'>
+      Docker tags
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/index.es.html'>GET /katello/api/docker_tags</a>
+            </td>
+            <td width='60%'>List docker_tags</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/index.es.html'>GET /katello/api/content_views/:content_view_id/filters/:filter_id/docker_tags</a>
+            </td>
+            <td width='60%'>List docker_tags</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/index.es.html'>GET /katello/api/content_view_filters/:content_view_filter_id/docker_tags</a>
+            </td>
+            <td width='60%'>List docker_tags</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/index.es.html'>GET /katello/api/repositories/:repository_id/docker_tags</a>
+            </td>
+            <td width='60%'>List docker_tags</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/show.es.html'>GET /katello/api/docker_tags/:id</a>
+            </td>
+            <td width='60%'>Show a docker tag</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/show.es.html'>GET /katello/api/repositories/:repository_id/docker_tags/:id</a>
+            </td>
+            <td width='60%'>Show a docker tag</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/compare.es.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>List docker_tags</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/domains.es.html'>
+      Domains
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/index.es.html'>GET /api/domains</a>
+            </td>
+            <td width='60%'>Lista de dominios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/index.es.html'>GET /api/subnets/:subnet_id/domains</a>
+            </td>
+            <td width='60%'>Enumerar dominios por subred</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/index.es.html'>GET /api/locations/:location_id/domains</a>
+            </td>
+            <td width='60%'>Enumerar dominios por ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/index.es.html'>GET /api/organizations/:organization_id/domains</a>
+            </td>
+            <td width='60%'>Enumerar dominios por organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/show.es.html'>GET /api/domains/:id</a>
+            </td>
+            <td width='60%'>Mostrar un dominio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/create.es.html'>POST /api/domains</a>
+            </td>
+            <td width='60%'>Crear un dominio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/update.es.html'>PUT /api/domains/:id</a>
+            </td>
+            <td width='60%'>Actualizar un dominio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/destroy.es.html'>DELETE /api/domains/:id</a>
+            </td>
+            <td width='60%'>Borrar un dominio</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/environments.es.html'>
+      Environments
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/import_puppetclasses.es.html'>POST /api/smart_proxies/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Importar clases puppet desde el proxy puppet.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/import_puppetclasses.es.html'>POST /api/smart_proxies/:smart_proxy_id/environments/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Importar clases puppet desde el proxy puppet de un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/import_puppetclasses.es.html'>POST /api/environments/:environment_id/smart_proxies/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Importar clases puppet desde el proxy puppet de un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/index.es.html'>GET /api/environments</a>
+            </td>
+            <td width='60%'>Enumera todos los entornos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/index.es.html'>GET /api/puppetclasses/:puppetclass_id/environments</a>
+            </td>
+            <td width='60%'>Enumerar entornmos para una clase Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/index.es.html'>GET /api/locations/:location_id/environments</a>
+            </td>
+            <td width='60%'>Enumerar entornos por ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/index.es.html'>GET /api/organizations/:organization_id/environments</a>
+            </td>
+            <td width='60%'>Enumerar entornos por organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/show.es.html'>GET /api/environments/:id</a>
+            </td>
+            <td width='60%'>Mostrar un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/create.es.html'>POST /api/environments</a>
+            </td>
+            <td width='60%'>Crear un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/update.es.html'>PUT /api/environments/:id</a>
+            </td>
+            <td width='60%'>Actualizar un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/destroy.es.html'>DELETE /api/environments/:id</a>
+            </td>
+            <td width='60%'>Borrar un entorno</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/errata.es.html'>
+      Errata
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/errata/index.es.html'>GET /katello/api/errata</a>
+            </td>
+            <td width='60%'>Mostrar erratas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/errata/show.es.html'>GET /katello/api/errata/:id</a>
+            </td>
+            <td width='60%'>Show an erratum</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/errata/show.es.html'>GET /katello/api/repositories/:repository_id/errata/:id</a>
+            </td>
+            <td width='60%'>Show an erratum</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/errata/compare.es.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>Mostrar erratas</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/external_usergroups.es.html'>
+      External usergroups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/index.es.html'>GET /api/usergroups/:usergroup_id/external_usergroups</a>
+            </td>
+            <td width='60%'>Lista de los grupos de usuarios externos para el grupo de usuarios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/index.es.html'>GET /api/auth_source_ldaps/:auth_source_ldap_id/external_usergroups</a>
+            </td>
+            <td width='60%'>Enumerar los grupos de usuarios externos para la fuente de autenticación LDAP</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/show.es.html'>GET /api/usergroups/:usergroup_id/external_usergroups/:id</a>
+            </td>
+            <td width='60%'>Mostrar un grupo de usuarios externo para un grupo de usuarios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/show.es.html'>GET /api/auth_source_ldaps/:auth_source_ldap_id/external_usergroups/:id</a>
+            </td>
+            <td width='60%'>Mostrar un grupo de usuarios externo por fuente de autenticación LDAP</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/create.es.html'>POST /api/usergroups/:usergroup_id/external_usergroups</a>
+            </td>
+            <td width='60%'>Crear un grupo de usuarios externos vinculado a un grupo de usuarios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/update.es.html'>PUT /api/usergroups/:usergroup_id/external_usergroups/:id</a>
+            </td>
+            <td width='60%'>Actualizar grupo de usuarios externos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/refresh.es.html'>PUT /api/usergroups/:usergroup_id/external_usergroups/:id/refresh</a>
+            </td>
+            <td width='60%'>Actualizar los grupos de usuarios externos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/destroy.es.html'>DELETE /api/usergroups/:usergroup_id/external_usergroups/:id</a>
+            </td>
+            <td width='60%'>Borrar un grupo de usuarios externo</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/fact_values.es.html'>
+      Fact values
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/fact_values/index.es.html'>GET /api/fact_values</a>
+            </td>
+            <td width='60%'>Enumera todos los valores de los detalles</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/fact_values/index.es.html'>GET /api/hosts/:host_id/facts</a>
+            </td>
+            <td width='60%'>Enumera todos los valores de los detalles de un host determinado</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/filters.es.html'>
+      Filters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/filters/index.es.html'>GET /api/filters</a>
+            </td>
+            <td width='60%'>Enumera todos los filtros</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/filters/show.es.html'>GET /api/filters/:id</a>
+            </td>
+            <td width='60%'>Mostrar un filtro</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/filters/create.es.html'>POST /api/filters</a>
+            </td>
+            <td width='60%'>Crear un filtro</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/filters/update.es.html'>PUT /api/filters/:id</a>
+            </td>
+            <td width='60%'>Actualizar un filtro</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/filters/destroy.es.html'>DELETE /api/filters/:id</a>
+            </td>
+            <td width='60%'>Borrar un filtro</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/foreman_tasks.es.html'>
+      Foreman tasks
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/summary.es.html'>GET /foreman_tasks/api/tasks/summary</a>
+            </td>
+            <td width='60%'>Show task summary</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/show.es.html'>GET /foreman_tasks/api/tasks/:id</a>
+            </td>
+            <td width='60%'>Show task details</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/bulk_search.es.html'>POST /foreman_tasks/api/tasks/bulk_search</a>
+            </td>
+            <td width='60%'>List dynflow tasks for uuids</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/bulk_resume.es.html'>POST /foreman_tasks/api/tasks/bulk_resume</a>
+            </td>
+            <td width='60%'>Resume all paused error tasks</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/index.es.html'>GET /foreman_tasks/api/tasks</a>
+            </td>
+            <td width='60%'>List tasks</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/callback.es.html'>POST /foreman_tasks/api/tasks/callback</a>
+            </td>
+            <td width='60%'>Send data to the task from external executor (such as smart_proxy_dynflow)</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/gpg_keys.es.html'>
+      Gpg keys
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/index.es.html'>GET /katello/api/gpg_keys</a>
+            </td>
+            <td width='60%'>Mostrar llaves GPG</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/create.es.html'>POST /katello/api/gpg_keys</a>
+            </td>
+            <td width='60%'>Crear una llave GPG</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/show.es.html'>GET /katello/api/gpg_keys/:id</a>
+            </td>
+            <td width='60%'>Mostrar una llave GPG</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/update.es.html'>PUT /katello/api/gpg_keys/:id</a>
+            </td>
+            <td width='60%'>Actualizar un repositorio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/destroy.es.html'>DELETE /katello/api/gpg_keys/:id</a>
+            </td>
+            <td width='60%'>Destruir una llave GPG</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/content.es.html'>POST /katello/api/gpg_keys/:id/content</a>
+            </td>
+            <td width='60%'>Cargar contenido de llave GPG</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/home.es.html'>
+      Home
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/home/index.es.html'>GET /api</a>
+            </td>
+            <td width='60%'>Mostrar enlaces disponibles del API</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/home/status.es.html'>GET /api/status</a>
+            </td>
+            <td width='60%'>Mostrar estado</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/host_classes.es.html'>
+      Host classes
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/host_classes/index.es.html'>GET /api/hosts/:host_id/puppetclass_ids</a>
+            </td>
+            <td width='60%'>Enumera todos los ID de clases Puppet del host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_classes/create.es.html'>POST /api/hosts/:host_id/puppetclass_ids</a>
+            </td>
+            <td width='60%'>Añadir una clase Puppet al host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_classes/destroy.es.html'>DELETE /api/hosts/:host_id/puppetclass_ids/:id</a>
+            </td>
+            <td width='60%'>Eliminar clase de Puppet de host</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/host_collections.es.html'>
+      Host collections
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/show.es.html'>GET /katello/api/host_collections/:id</a>
+            </td>
+            <td width='60%'>Mostrar una recopilación de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/index.es.html'>GET /katello/api/host_collections</a>
+            </td>
+            <td width='60%'>Mostrar recopilaciones de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/index.es.html'>GET /katello/api/organizations/:organization_id/host_collections</a>
+            </td>
+            <td width='60%'>Lista de colecciones de hosts dentro de una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/index.es.html'>GET /katello/api/activation_keys/:activation_key_id/host_collections</a>
+            </td>
+            <td width='60%'>Lista de colecciones de hosts en una llave de activación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/index.es.html'>GET /katello/api/hosts/:host_id/host_collections</a>
+            </td>
+            <td width='60%'>Lista de colecciones de hosts que contienen un host de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/create.es.html'>POST /katello/api/host_collections</a>
+            </td>
+            <td width='60%'>Crear una recopilación de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/create.es.html'>POST /katello/api/organizations/:organization_id/host_collections</a>
+            </td>
+            <td width='60%'>Crear una recopilación de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/update.es.html'>PUT /katello/api/host_collections/:id</a>
+            </td>
+            <td width='60%'>Actualizar una recopilación de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/add_hosts.es.html'>PUT /katello/api/host_collections/:id/add_hosts</a>
+            </td>
+            <td width='60%'>Add host to the host collection</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/remove_hosts.es.html'>PUT /katello/api/host_collections/:id/remove_hosts</a>
+            </td>
+            <td width='60%'>Remove hosts from the host collection</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/destroy.es.html'>DELETE /katello/api/host_collections/:id</a>
+            </td>
+            <td width='60%'>Destruir una recopilación de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/copy.es.html'>POST /katello/api/host_collections/:id/copy</a>
+            </td>
+            <td width='60%'>Hacer una copia de una recopilación de hosts</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/host_errata.es.html'>
+      Host errata
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/host_errata/index.es.html'>GET /api/hosts/:host_id/errata</a>
+            </td>
+            <td width='60%'>Mostrar erratas disponibles para el host de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_errata/apply.es.html'>PUT /api/hosts/:host_id/errata/apply</a>
+            </td>
+            <td width='60%'>Programar erratas para la instalación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_errata/show.es.html'>GET /api/hosts/:host_id/errata/:id</a>
+            </td>
+            <td width='60%'>Retrieve a single errata for a host</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/host_packages.es.html'>
+      Host packages
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/host_packages/index.es.html'>GET /api/hosts/:host_id/packages</a>
+            </td>
+            <td width='60%'>List packages installed on the host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_packages/install.es.html'>PUT /api/hosts/:host_id/packages/install</a>
+            </td>
+            <td width='60%'>Instalar paquetes de forma remota</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_packages/upgrade.es.html'>PUT /api/hosts/:host_id/packages/upgrade</a>
+            </td>
+            <td width='60%'>Actualizar paquetes de forma remota</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_packages/upgrade_all.es.html'>PUT /api/hosts/:host_id/packages/upgrade_all</a>
+            </td>
+            <td width='60%'>Actualizar paquetes de forma remota</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_packages/remove.es.html'>PUT /api/hosts/:host_id/packages/remove</a>
+            </td>
+            <td width='60%'>Desinstalar paquetes de forma remota</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/host_subscriptions.es.html'>
+      Host subscriptions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/host_subscriptions/index.es.html'>GET /api/hosts/:host_id/subscriptions</a>
+            </td>
+            <td width='60%'>List a host&#39;s subscriptions</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_subscriptions/auto_attach.es.html'>PUT /api/hosts/:host_id/subscriptions/auto_attach</a>
+            </td>
+            <td width='60%'>Trigger an auto-attach of subscriptions</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_subscriptions/events.es.html'>GET /api/hosts/:host_id/subscriptions/events</a>
+            </td>
+            <td width='60%'>List subscription events for the host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_subscriptions/remove_subscriptions.es.html'>PUT /api/hosts/:host_id/subscriptions/remove_subscriptions</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_subscriptions/add_subscriptions.es.html'>PUT /api/hosts/:host_id/subscriptions/add_subscriptions</a>
+            </td>
+            <td width='60%'>Add a subscription to a host</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/hostgroup_classes.es.html'>
+      Hostgroup classes
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroup_classes/index.es.html'>GET /api/hostgroups/:hostgroup_id/puppetclass_ids</a>
+            </td>
+            <td width='60%'>Enumera todos los ID de clases Puppet del grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroup_classes/create.es.html'>POST /api/hostgroups/:hostgroup_id/puppetclass_ids</a>
+            </td>
+            <td width='60%'>Añadir una clase Puppet al grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroup_classes/destroy.es.html'>DELETE /api/hostgroups/:hostgroup_id/puppetclass_ids/:id</a>
+            </td>
+            <td width='60%'>Eliminar clase de Puppet de grupo de hosts</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/hostgroups.es.html'>
+      Hostgroups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/index.es.html'>GET /api/hostgroups</a>
+            </td>
+            <td width='60%'>Enumera todos los grupos de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/index.es.html'>GET /api/puppetclasses/:puppetclass_id/hostgroups</a>
+            </td>
+            <td width='60%'>Enumerar los grupos de hosts para una clase Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/index.es.html'>GET /api/locations/:location_id/hostgroups</a>
+            </td>
+            <td width='60%'>Enumerar los grupos de hosts por ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/index.es.html'>GET /api/organizations/:organization_id/hostgroups</a>
+            </td>
+            <td width='60%'>Enumerarlos los grupos de hosts por organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/show.es.html'>GET /api/hostgroups/:id</a>
+            </td>
+            <td width='60%'>Mostrar un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/create.es.html'>POST /api/hostgroups</a>
+            </td>
+            <td width='60%'>Crear un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/update.es.html'>PUT /api/hostgroups/:id</a>
+            </td>
+            <td width='60%'>Actualizar un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/destroy.es.html'>DELETE /api/hostgroups/:id</a>
+            </td>
+            <td width='60%'>Borrar un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/clone.es.html'>POST /api/hostgroups/:id/clone</a>
+            </td>
+            <td width='60%'>Clonar un grupo de hosts</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/hosts.es.html'>
+      Hosts
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/index.es.html'>GET /api/hosts</a>
+            </td>
+            <td width='60%'>Enumera todos los hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/index.es.html'>GET /api/hostgroups/:hostgroup_id/hosts</a>
+            </td>
+            <td width='60%'>Enumerar los hosts para un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/index.es.html'>GET /api/locations/:location_id/hosts</a>
+            </td>
+            <td width='60%'>Enumerar hosts por ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/index.es.html'>GET /api/organizations/:organization_id/hosts</a>
+            </td>
+            <td width='60%'>Enumerar hosts por organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/index.es.html'>GET /api/environments/:environment_id/hosts</a>
+            </td>
+            <td width='60%'>Enumerar hosts por entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/show.es.html'>GET /api/hosts/:id</a>
+            </td>
+            <td width='60%'>Mostrar un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/create.es.html'>POST /api/hosts</a>
+            </td>
+            <td width='60%'>Crear un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/update.es.html'>PUT /api/hosts/:id</a>
+            </td>
+            <td width='60%'>Actualizar un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/destroy.es.html'>DELETE /api/hosts/:id</a>
+            </td>
+            <td width='60%'>Borrar un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/status.es.html'>GET /api/hosts/:id/status</a>
+            </td>
+            <td width='60%'>Get configuration status of host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/get_status.es.html'>GET /api/hosts/:id/status/:type</a>
+            </td>
+            <td width='60%'>Estado del host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/vm_compute_attributes.es.html'>GET /api/hosts/:id/vm_compute_attributes</a>
+            </td>
+            <td width='60%'>Conseguir atributos de vm del host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/puppetrun.es.html'>PUT /api/hosts/:id/puppetrun</a>
+            </td>
+            <td width='60%'>Forzar una ejecución del agente Puppet en el host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/disassociate.es.html'>PUT /api/hosts/:id/disassociate</a>
+            </td>
+            <td width='60%'>Desasociar el host de una MV</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/power.es.html'>PUT /api/hosts/:id/power</a>
+            </td>
+            <td width='60%'>Correr operacion de encendido en host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/boot.es.html'>PUT /api/hosts/:id/boot</a>
+            </td>
+            <td width='60%'>Iniciar el host desde el dispositivo especificado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/facts.es.html'>POST /api/hosts/facts</a>
+            </td>
+            <td width='60%'>Subir detalles para un host, creando el host si es necesario</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/rebuild_config.es.html'>PUT /api/hosts/:id/rebuild_config</a>
+            </td>
+            <td width='60%'>Rebuild orchestration config</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/template.es.html'>GET /api/hosts/:id/template/:kind</a>
+            </td>
+            <td width='60%'>Preview rendered provisioning template content</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/host_collections.es.html'>PUT /api/hosts/:host_id/host_collections</a>
+            </td>
+            <td width='60%'>Alter a hosts host collections</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/hosts_bulk_actions.es.html'>
+      Hosts bulk actions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/bulk_add_host_collections.es.html'>PUT /katello/api/hosts/bulk/add_host_collections</a>
+            </td>
+            <td width='60%'>Add one or more host collections to one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/bulk_remove_host_collections.es.html'>PUT /katello/api/hosts/bulk/remove_host_collections</a>
+            </td>
+            <td width='60%'>Remove one or more host collections from one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/installable_errata.es.html'>POST /katello/api/hosts/bulk/applicable_errata</a>
+            </td>
+            <td width='60%'>Recuperar erratas correspondientes de un sistema.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/install_content.es.html'>PUT /katello/api/hosts/bulk/install_content</a>
+            </td>
+            <td width='60%'>Install content on one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/update_content.es.html'>PUT /katello/api/hosts/bulk/update_content</a>
+            </td>
+            <td width='60%'>Update content on one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/remove_content.es.html'>PUT /katello/api/hosts/bulk/remove_content</a>
+            </td>
+            <td width='60%'>Remove content on one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/destroy_hosts.es.html'>PUT /katello/api/hosts/bulk/destroy</a>
+            </td>
+            <td width='60%'>Destroy one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/environment_content_view.es.html'>PUT /katello/api/hosts/bulk/environment_content_view</a>
+            </td>
+            <td width='60%'>Asignar el entorno y la vista de contenido a uno o más sistemas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/available_incremental_updates.es.html'>POST /katello/api/hosts/bulk/available_incremental_updates</a>
+            </td>
+            <td width='60%'>Given a set of hosts and errata, lists the content view versions and environments that need updating.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/images.es.html'>
+      Images
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/images/index.es.html'>GET /api/compute_resources/:compute_resource_id/images</a>
+            </td>
+            <td width='60%'>Enumera todas las imágenes de un recurso de cómputo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/index.es.html'>GET /api/operatingsystems/:operatingsystem_id/images</a>
+            </td>
+            <td width='60%'>Enumerar las imágenes para el sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/index.es.html'>GET /api/architectures/:architecture_id/images</a>
+            </td>
+            <td width='60%'>Enumerar las imágenes de la arquitectura</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/show.es.html'>GET /api/compute_resources/:compute_resource_id/images/:id</a>
+            </td>
+            <td width='60%'>Mostrar una imagen</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/show.es.html'>GET /api/operatingsystems/:operatingsystem_id/images/:id</a>
+            </td>
+            <td width='60%'>Mostrar una imagen</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/show.es.html'>GET /api/architectures/:architecture_id/images/:id</a>
+            </td>
+            <td width='60%'>Mostrar una imagen</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/create.es.html'>POST /api/compute_resources/:compute_resource_id/images</a>
+            </td>
+            <td width='60%'>Crear una imagen</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/update.es.html'>PUT /api/compute_resources/:compute_resource_id/images/:id</a>
+            </td>
+            <td width='60%'>Actualizar una imagen</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/destroy.es.html'>DELETE /api/compute_resources/:compute_resource_id/images/:id</a>
+            </td>
+            <td width='60%'>Borrar una imagen</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/interfaces.es.html'>
+      Interfaces
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/index.es.html'>GET /api/hosts/:host_id/interfaces</a>
+            </td>
+            <td width='60%'>Enumera todos los interfaces de un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/index.es.html'>GET /api/domains/:domain_id/interfaces</a>
+            </td>
+            <td width='60%'>Enumerar los interfaces por dominio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/index.es.html'>GET /api/subnets/:subnet_id/interfaces</a>
+            </td>
+            <td width='60%'>Enumerar  las interfaces por subred</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/show.es.html'>GET /api/hosts/:host_id/interfaces/:id</a>
+            </td>
+            <td width='60%'>Mostrar una interfaz del host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/create.es.html'>POST /api/hosts/:host_id/interfaces</a>
+            </td>
+            <td width='60%'>Crear un interfaz a un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/update.es.html'>PUT /api/hosts/:host_id/interfaces/:id</a>
+            </td>
+            <td width='60%'>Actualizar un interfaz de un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/destroy.es.html'>DELETE /api/hosts/:host_id/interfaces/:id</a>
+            </td>
+            <td width='60%'>Borrar un interfaz de un host</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/lifecycle_environments.es.html'>
+      Lifecycle environments
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/index.es.html'>GET /katello/api/environments</a>
+            </td>
+            <td width='60%'>Mostrar entornos en una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/index.es.html'>GET /katello/api/organizations/:organization_id/environments</a>
+            </td>
+            <td width='60%'>Mostrar entornos en una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/show.es.html'>GET /katello/api/environments/:id</a>
+            </td>
+            <td width='60%'>Mostrar un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/show.es.html'>GET /katello/api/organizations/:organization_id/environments/:environment_id</a>
+            </td>
+            <td width='60%'>Mostrar un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/create.es.html'>POST /katello/api/environments</a>
+            </td>
+            <td width='60%'>Crear un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/create.es.html'>POST /katello/api/organizations/:organization_id/environments</a>
+            </td>
+            <td width='60%'>Crear un entorno en una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/update.es.html'>PUT /katello/api/environments/:id</a>
+            </td>
+            <td width='60%'>Actualizar un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/update.es.html'>PUT /katello/api/organizations/:organization_id/environments/:id</a>
+            </td>
+            <td width='60%'>Actualizar un entorno en una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/destroy.es.html'>DELETE /katello/api/environments/:id</a>
+            </td>
+            <td width='60%'>Destruir un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/destroy.es.html'>DELETE /katello/api/organizations/:organization_id/environments/:id</a>
+            </td>
+            <td width='60%'>Destruir un entorno en una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/paths.es.html'>GET /katello/api/organizations/:organization_id/environments/paths</a>
+            </td>
+            <td width='60%'>Mostrar rutas de entornos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/repositories.es.html'>GET /katello/api/organizations/:organization_id/environments/:id/repositories</a>
+            </td>
+            <td width='60%'>List repositories available in the environment</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/locations.es.html'>
+      Locations
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/locations/index.es.html'>GET /api/locations</a>
+            </td>
+            <td width='60%'>List all locations</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/locations/show.es.html'>GET /api/locations/:id</a>
+            </td>
+            <td width='60%'>Show a location</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/locations/create.es.html'>POST /api/locations</a>
+            </td>
+            <td width='60%'>Create a location</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/locations/update.es.html'>PUT /api/locations/:id</a>
+            </td>
+            <td width='60%'>Update a location</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/locations/destroy.es.html'>DELETE /api/locations/:id</a>
+            </td>
+            <td width='60%'>Delete a location</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/mail_notifications.es.html'>
+      Mail notifications
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/mail_notifications/index.es.html'>GET /api/mail_notifications</a>
+            </td>
+            <td width='60%'>Lista de notificaciones de email</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/mail_notifications/show.es.html'>GET /api/mail_notifications/:id</a>
+            </td>
+            <td width='60%'>Mostrar una notificación de email</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/media.es.html'>
+      Media
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/media/index.es.html'>GET /api/media</a>
+            </td>
+            <td width='60%'>Enumera todos los medios de instalación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/index.es.html'>GET /api/operatingsystems/:operatingsystem_id/media</a>
+            </td>
+            <td width='60%'>Enumerar los medios para un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/index.es.html'>GET /api/locations/:location_id/media</a>
+            </td>
+            <td width='60%'>Enumerar los medios por ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/index.es.html'>GET /api/organizations/:organization_id/media</a>
+            </td>
+            <td width='60%'>Enumerar los medios por organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/show.es.html'>GET /api/media/:id</a>
+            </td>
+            <td width='60%'>Mostrar un medio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/create.es.html'>POST /api/media</a>
+            </td>
+            <td width='60%'>Crear un medio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/update.es.html'>PUT /api/media/:id</a>
+            </td>
+            <td width='60%'>Actualizar un medio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/destroy.es.html'>DELETE /api/media/:id</a>
+            </td>
+            <td width='60%'>Borrar un medio</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/models.es.html'>
+      Models
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/models/index.es.html'>GET /api/models</a>
+            </td>
+            <td width='60%'>Enumera todos los modelos de hardware</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/models/show.es.html'>GET /api/models/:id</a>
+            </td>
+            <td width='60%'>Mostrar un modelo de hardware</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/models/create.es.html'>POST /api/models</a>
+            </td>
+            <td width='60%'>Crear un modelo de hardware</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/models/update.es.html'>PUT /api/models/:id</a>
+            </td>
+            <td width='60%'>Actualizar un modelo de hardware</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/models/destroy.es.html'>DELETE /api/models/:id</a>
+            </td>
+            <td width='60%'>Borrar un modelo de hardware</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/operatingsystems.es.html'>
+      Operating systems
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.es.html'>GET /api/operatingsystems</a>
+            </td>
+            <td width='60%'>Enumera todos los sistemas operativos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.es.html'>GET /api/architectures/:architecture_id/operatingsystems</a>
+            </td>
+            <td width='60%'>Enumerar los sistemas operativos por arquitectura anidada</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.es.html'>GET /api/media/:medium_id/operatingsystems</a>
+            </td>
+            <td width='60%'>Enumerar los  sistemas operativos por medios anidados</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.es.html'>GET /api/ptables/:ptable_id/operatingsystems</a>
+            </td>
+            <td width='60%'>Enumerar los sistemas operativos por tablas de particiones anidadas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.es.html'>GET /api/config_templates/:config_template_id/operatingsystems</a>
+            </td>
+            <td width='60%'>Enumerar los sistemas operativos por plantilla de provisión anidada</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.es.html'>GET /api/provisioning_templates/:provisioning_template_id/operatingsystems</a>
+            </td>
+            <td width='60%'>Enumerar los sistemas operativos por plantilla de provisión anidada</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/show.es.html'>GET /api/operatingsystems/:id</a>
+            </td>
+            <td width='60%'>Mostrar un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/create.es.html'>POST /api/operatingsystems</a>
+            </td>
+            <td width='60%'>Crear un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/update.es.html'>PUT /api/operatingsystems/:id</a>
+            </td>
+            <td width='60%'>Actualizar un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/destroy.es.html'>DELETE /api/operatingsystems/:id</a>
+            </td>
+            <td width='60%'>Borrar un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/bootfiles.es.html'>GET /api/operatingsystems/:id/bootfiles</a>
+            </td>
+            <td width='60%'>Enumerar ficheros de arranque para un sistema operativo</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/organizations.es.html'>
+      Organizations
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/index.es.html'>GET /katello/api/organizations</a>
+            </td>
+            <td width='60%'>Mostrar todas las organizaciones</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/show.es.html'>GET /katello/api/organizations/:id</a>
+            </td>
+            <td width='60%'>Mostrar organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/create.es.html'>POST /katello/api/organizations</a>
+            </td>
+            <td width='60%'>Crear organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/update.es.html'>PUT /katello/api/organizations/:id</a>
+            </td>
+            <td width='60%'>Actualizar organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/destroy.es.html'>DELETE /katello/api/organizations/:id</a>
+            </td>
+            <td width='60%'>Borrar una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/repo_discover.es.html'>PUT /katello/api/organizations/:id/repo_discover</a>
+            </td>
+            <td width='60%'>Detectar repositorios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/cancel_repo_discover.es.html'>PUT /katello/api/organizations/:label/cancel_repo_discover</a>
+            </td>
+            <td width='60%'>Cancelar detección de repositorio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/download_debug_certificate.es.html'>GET /katello/api/organizations/:label/download_debug_certificate</a>
+            </td>
+            <td width='60%'>Descargar un certificado de depuración</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/autoattach_subscriptions.es.html'>POST /katello/api/organizations/:id/autoattach_subscriptions</a>
+            </td>
+            <td width='60%'>Vincular automáticamente las suscripciones disponibles a todos los sistemas de una organización. Operación asíncrona.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/redhat_provider.es.html'>GET /katello/api/organizations/:id/redhat_provider</a>
+            </td>
+            <td width='60%'>Enumerar todo :resource_id</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/os_default_templates.es.html'>
+      Os default templates
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/index.es.html'>GET /api/operatingsystems/:operatingsystem_id/os_default_templates</a>
+            </td>
+            <td width='60%'>Enumera las combinaciones de plantillas por defecto para un sistema operativos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/index.es.html'>GET /api/config_templates/:config_template_id/os_default_templates</a>
+            </td>
+            <td width='60%'>Enumerar sistemas operativos donde esta plantilla está establecida por defecto</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/index.es.html'>GET /api/provisioning_templates/:provisioning_template_id/os_default_templates</a>
+            </td>
+            <td width='60%'>Enumerar sistemas operativos donde esta plantilla está establecida por defecto</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/show.es.html'>GET /api/operatingsystems/:operatingsystem_id/os_default_templates/:id</a>
+            </td>
+            <td width='60%'>Mostrar una combinación de plantilla por defecto para un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/create.es.html'>POST /api/operatingsystems/:operatingsystem_id/os_default_templates</a>
+            </td>
+            <td width='60%'>Crear una combinación de plantilla por defecto para un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/update.es.html'>PUT /api/operatingsystems/:operatingsystem_id/os_default_templates/:id</a>
+            </td>
+            <td width='60%'>Actualizar una combinación de plantilla por defecto para un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/destroy.es.html'>DELETE /api/operatingsystems/:operatingsystem_id/os_default_templates/:id</a>
+            </td>
+            <td width='60%'>Borrar una combinación de plantilla por defecto para un sistema operativo</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/override_values.es.html'>
+      Override values
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/index.es.html'>GET /api/smart_variables/:smart_variable_id/override_values</a>
+            </td>
+            <td width='60%'>Lista de valores preponderantes para una variable inteligente específica</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/index.es.html'>GET /api/smart_class_parameters/:smart_class_parameter_id/override_values</a>
+            </td>
+            <td width='60%'>Lista de valores preponderantes para un parámetro específico de clase inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/show.es.html'>GET /api/smart_variables/:smart_variable_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Mostrar un valor preponderante para una variable inteligente específica</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/show.es.html'>GET /api/smart_class_parameters/:smart_class_parameter_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Mostrar un valor preponderante para un parámetro específico de clase inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/create.es.html'>POST /api/smart_variables/:smart_variable_id/override_values</a>
+            </td>
+            <td width='60%'>Crear un valor preponderante para una variable inteligente específica</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/create.es.html'>POST /api/smart_class_parameters/:smart_class_parameter_id/override_values</a>
+            </td>
+            <td width='60%'>Crear un valor preponderante para un parámetro específico de clase inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/update.es.html'>PUT /api/smart_variables/:smart_variable_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Actualizar un valor preponderante para una variable inteligente específica</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/update.es.html'>PUT /api/smart_class_parameters/:smart_class_parameter_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Actualizarr un valor preponderante para un parámetro específico de clase inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/destroy.es.html'>DELETE /api/smart_variables/:smart_variable_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Borrar un valor preponderante para una variable inteligente específica</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/destroy.es.html'>DELETE /api/smart_class_parameters/:smart_class_parameter_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Borrar un valor preponderante para un parámetro de clase inteligente específico</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/package_groups.es.html'>
+      Package groups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/index.es.html'>GET /katello/api/package_groups</a>
+            </td>
+            <td width='60%'>List package_groups</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/index.es.html'>GET /katello/api/content_views/:content_view_id/filters/:filter_id/package_groups</a>
+            </td>
+            <td width='60%'>List package_groups</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/index.es.html'>GET /katello/api/content_view_filters/:content_view_filter_id/package_groups</a>
+            </td>
+            <td width='60%'>List package_groups</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/index.es.html'>GET /katello/api/repositories/:repository_id/package_groups</a>
+            </td>
+            <td width='60%'>List package_groups</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/show.es.html'>GET /katello/api/package_groups/:id</a>
+            </td>
+            <td width='60%'>Show a package group</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/show.es.html'>GET /katello/api/repositories/:repository_id/package_groups/:id</a>
+            </td>
+            <td width='60%'>Show a package group</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/compare.es.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>List package_groups</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/packages.es.html'>
+      Packages
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/index.es.html'>GET /katello/api/packages</a>
+            </td>
+            <td width='60%'>List packages</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/index.es.html'>GET /katello/api/content_views/:content_view_id/filters/:filter_id/packages</a>
+            </td>
+            <td width='60%'>List packages</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/index.es.html'>GET /katello/api/content_view_filters/:content_view_filter_id/packages</a>
+            </td>
+            <td width='60%'>List packages</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/index.es.html'>GET /katello/api/repositories/:repository_id/packages</a>
+            </td>
+            <td width='60%'>List packages</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/show.es.html'>GET /katello/api/packages/:id</a>
+            </td>
+            <td width='60%'>Show a package</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/show.es.html'>GET /katello/api/repositories/:repository_id/packages/:id</a>
+            </td>
+            <td width='60%'>Show a package</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/compare.es.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>List packages</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/parameters.es.html'>
+      Parameters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.es.html'>GET /api/hosts/:host_id/parameters</a>
+            </td>
+            <td width='60%'>Enumera todos los parámetros de un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.es.html'>GET /api/hostgroups/:hostgroup_id/parameters</a>
+            </td>
+            <td width='60%'>Enumera todos los parámetros de un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.es.html'>GET /api/domains/:domain_id/parameters</a>
+            </td>
+            <td width='60%'>Enumera todos los parámetros de un dominio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.es.html'>GET /api/operatingsystems/:operatingsystem_id/parameters</a>
+            </td>
+            <td width='60%'>Enumera todos los parámetros de un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.es.html'>GET /api/locations/:location_id/parameters</a>
+            </td>
+            <td width='60%'>Enumera todos los parámetros de una ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.es.html'>GET /api/organizations/:organization_id/parameters</a>
+            </td>
+            <td width='60%'>Enumera todos los parámetros de una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.es.html'>GET /api/hosts/:host_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Mostrar un parámetro anidado para un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.es.html'>GET /api/hostgroups/:hostgroup_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Mostrar un parámetro anidado para un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.es.html'>GET /api/domains/:domain_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Mostrar un parámetro anidado para un dominio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.es.html'>GET /api/operatingsystems/:operatingsystem_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Mostrar un parámetro anidado para un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.es.html'>GET /api/locations/:location_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Mostrar un parámetro anidado para una ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.es.html'>GET /api/organizations/:organization_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Mostrar un parámetro anidado para una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.es.html'>POST /api/hosts/:host_id/parameters</a>
+            </td>
+            <td width='60%'>Crear un parámetro anidado para un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.es.html'>POST /api/hostgroups/:hostgroup_id/parameters</a>
+            </td>
+            <td width='60%'>Crear un parámetro anidado para un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.es.html'>POST /api/domains/:domain_id/parameters</a>
+            </td>
+            <td width='60%'>Crear un parámetro anidado para un dominio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.es.html'>POST /api/operatingsystems/:operatingsystem_id/parameters</a>
+            </td>
+            <td width='60%'>Crear un parámetro anidado para un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.es.html'>POST /api/locations/:location_id/parameters</a>
+            </td>
+            <td width='60%'>Crear un parámetro anidado para una ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.es.html'>POST /api/organizations/:organization_id/parameters</a>
+            </td>
+            <td width='60%'>Crear un parámetro anidado para una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.es.html'>PUT /api/hosts/:host_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Actualizar un parámetro anidado para un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.es.html'>PUT /api/hostgroups/:hostgroup_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Actualizar un parámetro anidado para un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.es.html'>PUT /api/domains/:domain_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Actualizar un parámetro anidado para un dominio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.es.html'>PUT /api/operatingsystems/:operatingsystem_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Actualizar un parámetro anidado para un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.es.html'>PUT /api/locations/:location_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Actualizar un parámetro anidado para una ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.es.html'>PUT /api/organizations/:organization_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Actualizar un parámetro anidado para una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.es.html'>DELETE /api/hosts/:host_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Borrar un parámetro anidado para un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.es.html'>DELETE /api/hostgroups/:hostgroup_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Borrar un parámetro anidado para un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.es.html'>DELETE /api/domains/:domain_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Borrar un parámetro anidado para un dominio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.es.html'>DELETE /api/operatingsystems/:operatingsystem_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Borrar un parámetro anidado para un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.es.html'>DELETE /api/locations/:location_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Borrar un parámetro anidado para una ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.es.html'>DELETE /api/organizations/:organization_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Borrar un parámetro anidado para una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.es.html'>DELETE /api/hosts/:host_id/parameters</a>
+            </td>
+            <td width='60%'>Borrar todos los parámetros anidados para un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.es.html'>DELETE /api/hostgroups/:hostgroup_id/parameters</a>
+            </td>
+            <td width='60%'>Borrar todos los parámetros anidados para un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.es.html'>DELETE /api/domains/:domain_id/parameters</a>
+            </td>
+            <td width='60%'>Borrar todos los parámetros anidados para un dominio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.es.html'>DELETE /api/operatingsystems/:operatingsystem_id/parameters</a>
+            </td>
+            <td width='60%'>Borrar todos los parámetros anidados para un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.es.html'>DELETE /api/locations/:location_id/parameters</a>
+            </td>
+            <td width='60%'>Borrar todos los parámetros anidados para una ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.es.html'>DELETE /api/organizations/:organization_id/parameters</a>
+            </td>
+            <td width='60%'>Borrar todos los parámetros anidados para una organización</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/permissions.es.html'>
+      Permissions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/permissions/index.es.html'>GET /api/permissions</a>
+            </td>
+            <td width='60%'>Enumera todos los permisos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/permissions/show.es.html'>GET /api/permissions/:id</a>
+            </td>
+            <td width='60%'>Mostrar un permiso</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/permissions/resource_types.es.html'>GET /api/permissions/resource_types</a>
+            </td>
+            <td width='60%'>Enumera todos los tipos de recursos disponibles.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/ping.es.html'>
+      Ping
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/ping/index.es.html'>GET /katello/api/ping</a>
+            </td>
+            <td width='60%'>Muestra el estado del sistema y sus subcomponentes</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ping/server_status.es.html'>GET /katello/api/status</a>
+            </td>
+            <td width='60%'>Muestra información de versión</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/plugins.es.html'>
+      Plugins
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/plugins/index.es.html'>GET /api/plugins</a>
+            </td>
+            <td width='60%'>Enumera los plugins intalados</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/products.es.html'>
+      Products
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.es.html'>GET /katello/api/products</a>
+            </td>
+            <td width='60%'>Mostrar productos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.es.html'>GET /katello/api/subscriptions/:subscription_id/products</a>
+            </td>
+            <td width='60%'>Lista de productos de suscripción en una suscripción</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.es.html'>GET /katello/api/activation_keys/:activation_key_id/products</a>
+            </td>
+            <td width='60%'>Lista de productos de suscripción en una llave de activación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.es.html'>GET /katello/api/organizations/:organization_id/products</a>
+            </td>
+            <td width='60%'>Lista de productos de una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.es.html'>GET /katello/api/sync_plans/:sync_plan_id/products</a>
+            </td>
+            <td width='60%'>List of Products for sync plan</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.es.html'>GET /katello/api/organizations/:organization_id/sync_plans/:sync_plan_id/products</a>
+            </td>
+            <td width='60%'>List of Products for sync plan</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/create.es.html'>POST /katello/api/products</a>
+            </td>
+            <td width='60%'>Crear un producto</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/show.es.html'>GET /katello/api/products/:id</a>
+            </td>
+            <td width='60%'>Mostrar un producto</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/update.es.html'>PUT /katello/api/products/:id</a>
+            </td>
+            <td width='60%'>Actualiza un producto</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/destroy.es.html'>DELETE /katello/api/products/:id</a>
+            </td>
+            <td width='60%'>Destruir un producto</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/sync.es.html'>POST /katello/api/products/:id/sync</a>
+            </td>
+            <td width='60%'>Sync all repositories for a product</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/products_bulk_actions.es.html'>
+      Products bulk actions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/products_bulk_actions/destroy_products.es.html'>PUT /katello/api/products/bulk/destroy</a>
+            </td>
+            <td width='60%'>Destruir uno o más productos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products_bulk_actions/sync_products.es.html'>PUT /katello/api/products/bulk/sync</a>
+            </td>
+            <td width='60%'>Sincronizar uno o más productos</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products_bulk_actions/update_sync_plans.es.html'>PUT /katello/api/products/bulk/sync_plan</a>
+            </td>
+            <td width='60%'>Sincronizar uno o más productos</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/provisioning_templates.es.html'>
+      Provisioning templates
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/index.es.html'>GET /api/provisioning_templates</a>
+            </td>
+            <td width='60%'>Lista de plantillas de provisión</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/index.es.html'>GET /api/operatingsystems/:operatingsystem_id/provisioning_templates</a>
+            </td>
+            <td width='60%'>Enumerar plantillas de provisión por sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/index.es.html'>GET /api/locations/:location_id/provisioning_templates</a>
+            </td>
+            <td width='60%'>Enumerar plantillas de provisión por ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/index.es.html'>GET /api/organizations/:organization_id/provisioning_templates</a>
+            </td>
+            <td width='60%'>Enumerar las plantillas de provisión por organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/show.es.html'>GET /api/provisioning_templates/:id</a>
+            </td>
+            <td width='60%'>Mostrar detalles de la plantilla de provisión</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/create.es.html'>POST /api/provisioning_templates</a>
+            </td>
+            <td width='60%'>Crear una plantilla de provisión</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/update.es.html'>PUT /api/provisioning_templates/:id</a>
+            </td>
+            <td width='60%'>Actualizar una plantilla de provisión</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/revision.es.html'>GET /api/provisioning_templates/revision</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/destroy.es.html'>DELETE /api/provisioning_templates/:id</a>
+            </td>
+            <td width='60%'>Borrar una plantilla de provisión</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/build_pxe_default.es.html'>POST /api/provisioning_templates/build_pxe_default</a>
+            </td>
+            <td width='60%'>Actualizar el menu PXE por defecto en todos los servidores TFTP configurados</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/clone.es.html'>POST /api/provisioning_templates/:id/clone</a>
+            </td>
+            <td width='60%'>Clonar un template de provisión</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/ptables.es.html'>
+      Ptables
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/index.es.html'>GET /api/ptables</a>
+            </td>
+            <td width='60%'>Enumera todas las tablas de particiones</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/index.es.html'>GET /api/operatingsystems/:operatingsystem_id/ptables</a>
+            </td>
+            <td width='60%'>Enumerar las tablas de particiones para un sistema operativo</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/index.es.html'>GET /api/locations/:location_id/ptables</a>
+            </td>
+            <td width='60%'>Enumerar todas las tablas de particiones según ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/index.es.html'>GET /api/organizations/:organization_id/ptables</a>
+            </td>
+            <td width='60%'>Enumerar todas las tablas de particiones según organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/show.es.html'>GET /api/ptables/:id</a>
+            </td>
+            <td width='60%'>Mostrar una tabla de particiones</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/create.es.html'>POST /api/ptables</a>
+            </td>
+            <td width='60%'>Crear una tabla de particiones</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/revision.es.html'>GET /api/ptables/revision</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/update.es.html'>PUT /api/ptables/:id</a>
+            </td>
+            <td width='60%'>Actualizar una tabla de particiones</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/destroy.es.html'>DELETE /api/ptables/:id</a>
+            </td>
+            <td width='60%'>Borrar una tabla de particiones</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/clone.es.html'>POST /api/ptables/:id/clone</a>
+            </td>
+            <td width='60%'>Clonar una plantilla</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/puppet_modules.es.html'>
+      Puppet modules
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/index.es.html'>GET /katello/api/puppet_modules</a>
+            </td>
+            <td width='60%'>List puppet_modules</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/index.es.html'>GET /katello/api/content_views/:content_view_id/filters/:filter_id/puppet_modules</a>
+            </td>
+            <td width='60%'>List puppet_modules</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/index.es.html'>GET /katello/api/content_view_filters/:content_view_filter_id/puppet_modules</a>
+            </td>
+            <td width='60%'>List puppet_modules</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/index.es.html'>GET /katello/api/repositories/:repository_id/puppet_modules</a>
+            </td>
+            <td width='60%'>List puppet_modules</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/show.es.html'>GET /katello/api/puppet_modules/:id</a>
+            </td>
+            <td width='60%'>Show a puppet module</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/show.es.html'>GET /katello/api/repositories/:repository_id/puppet_modules/:id</a>
+            </td>
+            <td width='60%'>Show a puppet module</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/compare.es.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>List puppet_modules</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/puppetclasses.es.html'>
+      Puppetclasses
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/index.es.html'>GET /api/puppetclasses</a>
+            </td>
+            <td width='60%'>Enumera todas las clases Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/index.es.html'>GET /api/hosts/:host_id/puppetclasses</a>
+            </td>
+            <td width='60%'>Enumera todas las clases Puppet de un host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/index.es.html'>GET /api/hostgroups/:hostgroup_id/puppetclasses</a>
+            </td>
+            <td width='60%'>Enumera todas las clases Puppet de un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/index.es.html'>GET /api/environments/:environment_id/puppetclasses</a>
+            </td>
+            <td width='60%'>Enumera todas las clases Puppet de un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/show.es.html'>GET /api/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Mostrar una clase de Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/show.es.html'>GET /api/hosts/:host_id/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Mostrar una clase de Puppet para un Host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/show.es.html'>GET /api/hostgroups/:hostgroup_id/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Mostrar una clase de Puppet para un grupo de hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/show.es.html'>GET /api/environments/:environment_id/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Mostrar una clase de Puppet para un Entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/create.es.html'>POST /api/puppetclasses</a>
+            </td>
+            <td width='60%'>Crear una clase Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/update.es.html'>PUT /api/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Actualizar una clase Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/destroy.es.html'>DELETE /api/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Borrar una clase Puppet</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/realms.es.html'>
+      Realms
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/realms/index.es.html'>GET /api/realms</a>
+            </td>
+            <td width='60%'>Lista de sectores</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/realms/show.es.html'>GET /api/realms/:id</a>
+            </td>
+            <td width='60%'>Mostrar un sector</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/realms/create.es.html'>POST /api/realms</a>
+            </td>
+            <td width='60%'>Crear un sector</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/realms/update.es.html'>PUT /api/realms/:id</a>
+            </td>
+            <td width='60%'>Actualizar un sector</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/realms/destroy.es.html'>DELETE /api/realms/:id</a>
+            </td>
+            <td width='60%'>Borrar un sector</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/recurring_logics.es.html'>
+      Recurring logics
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/recurring_logics/index.es.html'>GET /foreman_tasks/api/recurring_logics</a>
+            </td>
+            <td width='60%'>List recurring logics</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/recurring_logics/show.es.html'>GET /foreman_tasks/api/recurring_logics/:id</a>
+            </td>
+            <td width='60%'>Show recurring logic details</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/recurring_logics/cancel.es.html'>POST /foreman_tasks/api/recurring_logics/:id/cancel</a>
+            </td>
+            <td width='60%'>Cancel recurring logic</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/registries.es.html'>
+      Registries
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/registries/index.es.html'>GET /docker/api/v2/registries</a>
+            </td>
+            <td width='60%'>List all docker registries</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/registries/show.es.html'>GET /docker/api/v2/registries/:id</a>
+            </td>
+            <td width='60%'>Show a docker registry</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/registries/create.es.html'>POST /docker/api/v2/registries</a>
+            </td>
+            <td width='60%'>Create a docker registry</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/registries/update.es.html'>PUT /docker/api/v2/registries/:id</a>
+            </td>
+            <td width='60%'>Update a docker registry</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/registries/destroy.es.html'>DELETE /docker/api/v2/registries/:id</a>
+            </td>
+            <td width='60%'>Delete a docker registry</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/reports.es.html'>
+      Reports
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/reports/index.es.html'>GET /api/reports</a>
+            </td>
+            <td width='60%'>Enumera todos los informes</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/reports/show.es.html'>GET /api/reports/:id</a>
+            </td>
+            <td width='60%'>Mostrar un informe</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/reports/create.es.html'>POST /api/reports</a>
+            </td>
+            <td width='60%'>Crear un informe</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/reports/destroy.es.html'>DELETE /api/reports/:id</a>
+            </td>
+            <td width='60%'>Borrar un informe</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/reports/last.es.html'>GET /api/hosts/:host_id/reports/last</a>
+            </td>
+            <td width='60%'>Mostrar ultimo reporte de un host</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/repositories.es.html'>
+      Repositories
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/index.es.html'>GET /katello/api/repositories</a>
+            </td>
+            <td width='60%'>Lista de repositorios habilitados</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/index.es.html'>GET /katello/api/content_views/:id/repositories</a>
+            </td>
+            <td width='60%'>Lista de repositorios para una vista de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/create.es.html'>POST /katello/api/repositories</a>
+            </td>
+            <td width='60%'>Crear un repositorio personalizado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/repository_types.es.html'>GET /katello/api/repositories/repository_types</a>
+            </td>
+            <td width='60%'>Show the available repository types</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/show.es.html'>GET /katello/api/repositories/:id</a>
+            </td>
+            <td width='60%'>Mostrar un repositorio personalizado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/sync.es.html'>POST /katello/api/repositories/:id/sync</a>
+            </td>
+            <td width='60%'>Sincronizar un repositorio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/export.es.html'>POST /katello/api/repositories/:id/export</a>
+            </td>
+            <td width='60%'>Export a repository</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/update.es.html'>PUT /katello/api/repositories/:id</a>
+            </td>
+            <td width='60%'>Actualizar un repositorio personalizado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/destroy.es.html'>DELETE /katello/api/repositories/:id</a>
+            </td>
+            <td width='60%'>Destruir un repositorio personalizado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/sync_complete.es.html'>POST /katello/api/repositories/sync_complete</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/remove_content.es.html'>PUT /katello/api/repositories/:id/remove_packages</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/remove_content.es.html'>PUT /katello/api/repositories/:id/remove_docker_manifests</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/remove_content.es.html'>PUT /katello/api/repositories/:id/remove_puppet_modules</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/remove_content.es.html'>PUT /katello/api/repositories/:id/remove_content</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/upload_content.es.html'>POST /katello/api/repositories/:id/upload_content</a>
+            </td>
+            <td width='60%'>Cargar contenido en el repositorio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/import_uploads.es.html'>PUT /katello/api/repositories/:id/import_uploads</a>
+            </td>
+            <td width='60%'>Importar cargas a un repositorio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/gpg_key_content.es.html'>GET /katello/api/repositories/:id/gpg_key_content</a>
+            </td>
+            <td width='60%'>Devolver el contenido de una llave GPG de repositorio, que utiliza directamente Yum</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/repositories_bulk_actions.es.html'>
+      Repositories bulk actions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories_bulk_actions/destroy_repositories.es.html'>PUT /katello/api/repositories/bulk/destroy</a>
+            </td>
+            <td width='60%'>Destruir uno o más repositorios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories_bulk_actions/sync_repositories.es.html'>POST /katello/api/repositories/bulk/sync</a>
+            </td>
+            <td width='60%'>Sincronizar repositorio</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/repository_sets.es.html'>
+      Repository sets
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/repository_sets/index.es.html'>GET /katello/api/products/:product_id/repository_sets</a>
+            </td>
+            <td width='60%'>Mostrar los conjuntos de repositorios de un producto.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repository_sets/show.es.html'>GET /katello/api/products/:product_id/repository_sets/:id</a>
+            </td>
+            <td width='60%'>Obtener información sobre un conjunto de repositorios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repository_sets/available_repositories.es.html'>GET /katello/api/products/:product_id/repository_sets/:id/available_repositories</a>
+            </td>
+            <td width='60%'>Obtener lista de repositorios disponibles para el conjunto de repositorios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repository_sets/enable.es.html'>PUT /katello/api/products/:product_id/repository_sets/:id/enable</a>
+            </td>
+            <td width='60%'>Habilitar un repositorio del conjunto</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repository_sets/disable.es.html'>PUT /katello/api/products/:product_id/repository_sets/:id/disable</a>
+            </td>
+            <td width='60%'>Inhabilitar un repositorio del conjunto</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/roles.es.html'>
+      Roles
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/roles/index.es.html'>GET /api/roles</a>
+            </td>
+            <td width='60%'>Enumera todos los roles</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/roles/show.es.html'>GET /api/roles/:id</a>
+            </td>
+            <td width='60%'>Mostrar un rol</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/roles/create.es.html'>POST /api/roles</a>
+            </td>
+            <td width='60%'>Crear un rol</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/roles/update.es.html'>PUT /api/roles/:id</a>
+            </td>
+            <td width='60%'>Actualizar un rol</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/roles/destroy.es.html'>DELETE /api/roles/:id</a>
+            </td>
+            <td width='60%'>Borrar un rol</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/settings.es.html'>
+      Settings
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/settings/index.es.html'>GET /api/settings</a>
+            </td>
+            <td width='60%'>Enumera todas las configuraciones</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/settings/show.es.html'>GET /api/settings/:id</a>
+            </td>
+            <td width='60%'>Mostrar una preferencia</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/settings/update.es.html'>PUT /api/settings/:id</a>
+            </td>
+            <td width='60%'>Actualizar una preferencia</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/smart_class_parameters.es.html'>
+      Smart class parameters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.es.html'>GET /api/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Enumera todos los parámetros de clase inteligentes</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.es.html'>GET /api/hosts/:host_id/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Lista de parámetros de clase inteligentes para un host determinado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.es.html'>GET /api/hostgroups/:hostgroup_id/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Lista de parámetros de clase inteligentes para un grupo de hosts determinado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.es.html'>GET /api/puppetclasses/:puppetclass_id/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Lista de parámetros de clase inteligentes para una clase Puppet específica</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.es.html'>GET /api/environments/:environment_id/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Lista de parámetros de clase inteligentes para un entorno determinado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.es.html'>GET /api/environments/:environment_id/puppetclasses/:puppetclass_id/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Lista de parámetros de clase inteligentes para una combinación determinada entorno/clase Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/show.es.html'>GET /api/smart_class_parameters/:id</a>
+            </td>
+            <td width='60%'>Mostrar un parametro de clase inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/update.es.html'>PUT /api/smart_class_parameters/:id</a>
+            </td>
+            <td width='60%'>Actualizar un parametro de clase inteligente</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/smart_proxies.es.html'>
+      Smart proxies
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/import_puppetclasses.es.html'>POST /api/smart_proxies/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Importar clases puppet desde el proxy puppet.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/import_puppetclasses.es.html'>POST /api/smart_proxies/:smart_proxy_id/environments/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Importar clases puppet desde el proxy puppet de un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/import_puppetclasses.es.html'>POST /api/environments/:environment_id/smart_proxies/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Importar clases puppet desde el proxy puppet de un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/index.es.html'>GET /api/smart_proxies</a>
+            </td>
+            <td width='60%'>Enumera todos los proxies inteligentes</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/show.es.html'>GET /api/smart_proxies/:id</a>
+            </td>
+            <td width='60%'>Mostrar un proxy inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/create.es.html'>POST /api/smart_proxies</a>
+            </td>
+            <td width='60%'>Crear un proxy inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/update.es.html'>PUT /api/smart_proxies/:id</a>
+            </td>
+            <td width='60%'>Actualizar un proxy inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/destroy.es.html'>DELETE /api/smart_proxies/:id</a>
+            </td>
+            <td width='60%'>Borrar un proxy inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/refresh.es.html'>PUT /api/smart_proxies/:id/refresh</a>
+            </td>
+            <td width='60%'>Refresca las funcionalidades del Proxy inteligente</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/smart_variables.es.html'>
+      Smart variables
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/index.es.html'>GET /api/smart_variables</a>
+            </td>
+            <td width='60%'>Enumera todas las variables inteligentes</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/index.es.html'>GET /api/hosts/:host_id/smart_variables</a>
+            </td>
+            <td width='60%'>Lista de parámetros de clase inteligentes para un host determinado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/index.es.html'>GET /api/hostgroups/:hostgroup_id/smart_variables</a>
+            </td>
+            <td width='60%'>Lista de parámetros de clase inteligentes para un grupo de hosts determinado</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/index.es.html'>GET /api/puppetclasses/:puppetclass_id/smart_variables</a>
+            </td>
+            <td width='60%'>Lista de parámetros de clase inteligentes para una clase Puppet determinada</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/show.es.html'>GET /api/smart_variables/:id</a>
+            </td>
+            <td width='60%'>Mostrar una variable inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/create.es.html'>POST /api/smart_variables</a>
+            </td>
+            <td width='60%'>Crear una variable inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/update.es.html'>PUT /api/smart_variables/:id</a>
+            </td>
+            <td width='60%'>Actualizar una variable inteligente</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/destroy.es.html'>DELETE /api/smart_variables/:id</a>
+            </td>
+            <td width='60%'>Borrar una variable inteligente</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/statistics.es.html'>
+      Statistics
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/statistics/index.es.html'>GET /api/statistics</a>
+            </td>
+            <td width='60%'>Estadísticas</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/subnets.es.html'>
+      Subnets
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/index.es.html'>GET /api/subnets</a>
+            </td>
+            <td width='60%'>Lista de subredes</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/index.es.html'>GET /api/domains/:domain_id/subnets</a>
+            </td>
+            <td width='60%'>Enumerar subredes para un dominio</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/index.es.html'>GET /api/locations/:location_id/subnets</a>
+            </td>
+            <td width='60%'>Enumerar subredes por localización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/index.es.html'>GET /api/organizations/:organization_id/subnets</a>
+            </td>
+            <td width='60%'>Enumerar subredes por organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/show.es.html'>GET /api/subnets/:id</a>
+            </td>
+            <td width='60%'>Mostrar una subred</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/create.es.html'>POST /api/subnets</a>
+            </td>
+            <td width='60%'>Crear una subred</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/update.es.html'>PUT /api/subnets/:id</a>
+            </td>
+            <td width='60%'>Actualizar una subred</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/destroy.es.html'>DELETE /api/subnets/:id</a>
+            </td>
+            <td width='60%'>Borrar una subred</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/subscriptions.es.html'>
+      Subscriptions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/index.es.html'>GET /katello/api/organizations/:organization_id/subscriptions</a>
+            </td>
+            <td width='60%'>Mostrar suscripciones de la organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/index.es.html'>GET /katello/api/subscriptions</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/show.es.html'>GET /katello/api/organizations/:organization_id/subscriptions/:id</a>
+            </td>
+            <td width='60%'>Mostrar una suscripción</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/show.es.html'>GET /katello/api/subscriptions/:id</a>
+            </td>
+            <td width='60%'>Mostrar una suscripción</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/create.es.html'>POST /katello/api/activation_keys/:activation_key_id/subscriptions</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Añadir una suscripción a una llave de activación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/destroy.es.html'>DELETE /katello/api/activation_keys/:activation_key_id/subscriptions/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Desvincular una suscripción</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/upload.es.html'>POST /katello/api/organizations/:organization_id/subscriptions/upload</a>
+            </td>
+            <td width='60%'>Cargar un manifiesto de suscripción</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/upload.es.html'>POST /katello/api/subscriptions/upload</a>
+            </td>
+            <td width='60%'>Cargar un manifiesto de suscripción</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/refresh_manifest.es.html'>PUT /katello/api/organizations/:organization_id/subscriptions/refresh_manifest</a>
+            </td>
+            <td width='60%'>Actualizar el manifiesto importado anteriormente para el proveedor de Red Hat</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/delete_manifest.es.html'>POST /katello/api/organizations/:organization_id/subscriptions/delete_manifest</a>
+            </td>
+            <td width='60%'>Borrar manifiesto de proveedor de Red Hat</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/manifest_history.es.html'>GET /katello/api/organizations/:organization_id/subscriptions/manifest_history</a>
+            </td>
+            <td width='60%'>obtener historial de manifiestos para las suscripciones</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/sync.es.html'>
+      Sync
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/sync/index.es.html'>GET /katello/api/organizations/:organization_id/products/:product_id/sync</a>
+            </td>
+            <td width='60%'>Obtener estado de sincronización de repositorio para un producto concreto</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync/index.es.html'>GET /katello/api/repositories/:repository_id/sync</a>
+            </td>
+            <td width='60%'>Obtener estado de sincronización para un repositorio concreto</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/sync_plans.es.html'>
+      Sync plans
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/index.es.html'>GET /katello/api/sync_plans</a>
+            </td>
+            <td width='60%'>Mostrar planes de sincronización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/index.es.html'>GET /katello/api/organizations/:organization_id/sync_plans</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/show.es.html'>GET /katello/api/organizations/:organization_id/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Mostrar un plan de sincronización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/show.es.html'>GET /katello/api/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Mostrar un plan de sincronización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/create.es.html'>POST /katello/api/organizations/:organization_id/sync_plans</a>
+            </td>
+            <td width='60%'>Crear un plan de sincronización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/update.es.html'>PUT /katello/api/organizations/:organization_id/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Actualizar un plan de sincronización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/update.es.html'>PUT /katello/api/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Actualizar un plan de sincronización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/destroy.es.html'>DELETE /katello/api/organizations/:organization_id/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Destruir un plan de sincronización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/destroy.es.html'>DELETE /katello/api/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Destruir un plan de sincronización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/add_products.es.html'>PUT /katello/api/organizations/:organization_id/sync_plans/:id/add_products</a>
+            </td>
+            <td width='60%'>Añadir productos al plan de sincronización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/remove_products.es.html'>PUT /katello/api/organizations/:organization_id/sync_plans/:id/remove_products</a>
+            </td>
+            <td width='60%'>Eliminar productos del plan de sincronización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/sync.es.html'>PUT /katello/api/sync_plans/:id/sync</a>
+            </td>
+            <td width='60%'>Initiate a sync of the products attached to the sync plan</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/sync.es.html'>PUT /katello/api/organizations/:organization_id/sync_plans/:id/sync</a>
+            </td>
+            <td width='60%'>Initiate a sync of the products attached to the sync plan</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/systems.es.html'>
+      Systems
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/index.es.html'>GET /katello/api/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Mostrar hosts de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/index.es.html'>POST /katello/api/systems/post_index</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Listar hosts de contenido cuando tenga un parámetro de cadena que cause un  414</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/index.es.html'>GET /katello/api/organizations/:organization_id/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Mostrar hosts de contenido en una organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/index.es.html'>GET /katello/api/environments/:environment_id/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Mostrar hosts de contenido en un entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/create.es.html'>POST /katello/api/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Registrar un host de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/create.es.html'>POST /katello/api/environments/:environment_id/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Registrar un host de contenido en el entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/create.es.html'>POST /katello/api/host_collections/:host_collection_id/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Registrar un host de contenido en el entorno</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/update.es.html'>PUT /katello/api/systems/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Actualizar información de host de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/show.es.html'>GET /katello/api/systems/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Mostrar un host de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/destroy.es.html'>DELETE /katello/api/systems/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Anular el registro de un host de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/releases.es.html'>GET /katello/api/systems/:id/releases</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Mostrar versiones disponibles para el host de contenido</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/content_override.es.html'>PUT /katello/api/systems/:id/content_override</a>
+            </td>
+            <td width='60%'>Set content overrides for the content host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/product_content.es.html'>GET /katello/api/systems/:id/product_content</a>
+            </td>
+            <td width='60%'>Get content overrides for the content host</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/tasks.es.html'>
+      Tasks
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/tasks/index.es.html'>GET /api/orchestration/:id/tasks</a>
+            </td>
+            <td width='60%'>Enumera todas las tareas para un evento de orquestación determinado</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/template_combinations.es.html'>
+      Template combinations
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/index.es.html'>GET /api/config_templates/:config_template_id/template_combinations</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Enumera combinaciones de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/index.es.html'>GET /api/provisioning_templates/:provisioning_template_id/template_combinations</a>
+            </td>
+            <td width='60%'>Enumera combinaciones de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/index.es.html'>GET /api/hostgroups/:hostgroup_id/template_combinations</a>
+            </td>
+            <td width='60%'>Enumera combinaciones de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/index.es.html'>GET /api/environments/:environment_id/template_combinations</a>
+            </td>
+            <td width='60%'>Enumera combinaciones de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/create.es.html'>POST /api/config_templates/:config_template_id/template_combinations</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Añadird una combinación de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/create.es.html'>POST /api/provisioning_templates/:provisioning_template_id/template_combinations</a>
+            </td>
+            <td width='60%'>Añadird una combinación de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/create.es.html'>POST /api/hostgroups/:hostgroup_id/template_combinations</a>
+            </td>
+            <td width='60%'>Añadird una combinación de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/create.es.html'>POST /api/environments/:environment_id/template_combinations</a>
+            </td>
+            <td width='60%'>Añadird una combinación de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/show.es.html'>GET /api/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Mostrar combinación de plantilla</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/show.es.html'>GET /api/config_templates/:config_template_id/template_combinations/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Mostrar combinación de plantilla</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/show.es.html'>GET /api/provisioning_templates/:provisioning_template_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Mostrar combinación de plantilla</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/show.es.html'>GET /api/hostgroups/:hostgroup_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Mostrar combinación de plantilla</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/show.es.html'>GET /api/environments/:environment_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Mostrar combinación de plantilla</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/update.es.html'>PUT /api/provisioning_templates/:provisioning_template_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Actualizar combinación de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/update.es.html'>PUT /api/config_templates/:config_template_id/template_combinations/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Actualizar combinación de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/update.es.html'>PUT /api/hostgroups/:hostgroup_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Actualizar combinación de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/update.es.html'>PUT /api/environments/:environment_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Actualizar combinación de plantillas</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/destroy.es.html'>DELETE /api/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Borrar una combinación de plantillas</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/template_kinds.es.html'>
+      Template kinds
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/template_kinds/index.es.html'>GET /api/template_kinds</a>
+            </td>
+            <td width='60%'>Enumera todas las clases de plantillas</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/uebercerts.es.html'>
+      Uebercerts
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/uebercerts/show.es.html'>GET /katello/api/organizations/:organization_id/uebercert</a>
+            </td>
+            <td width='60%'>Mostrar un certificado ueber de una organización</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/usergroups.es.html'>
+      Usergroups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/usergroups/index.es.html'>GET /api/usergroups</a>
+            </td>
+            <td width='60%'>Enumera todos los grupos de usuarios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/usergroups/show.es.html'>GET /api/usergroups/:id</a>
+            </td>
+            <td width='60%'>Mostrar un grupo de usuarios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/usergroups/create.es.html'>POST /api/usergroups</a>
+            </td>
+            <td width='60%'>Crear un grupo de usuarios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/usergroups/update.es.html'>PUT /api/usergroups/:id</a>
+            </td>
+            <td width='60%'>Actualizar un grupo de usuarios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/usergroups/destroy.es.html'>DELETE /api/usergroups/:id</a>
+            </td>
+            <td width='60%'>Borrar un grupo de usuarios</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/users.es.html'>
+      Users
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Recurso</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.es.html'>GET /api/users</a>
+            </td>
+            <td width='60%'>Enumera todos los usuarios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.es.html'>GET /api/auth_source_ldaps/:auth_source_ldap_id/users</a>
+            </td>
+            <td width='60%'>Enumerar los usuarios por fuente de autenticación LDAP</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.es.html'>GET /api/usergroups/:usergroup_id/users</a>
+            </td>
+            <td width='60%'>Enumerar Usuarios por grupo de usuarios</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.es.html'>GET /api/roles/:role_id/users</a>
+            </td>
+            <td width='60%'>Enumerar usuarios por rol</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.es.html'>GET /api/locations/:location_id/users</a>
+            </td>
+            <td width='60%'>Enumerar usuarios por ubicación</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.es.html'>GET /api/organizations/:organization_id/users</a>
+            </td>
+            <td width='60%'>Enumerar usuarios por organización</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/show.es.html'>GET /api/users/:id</a>
+            </td>
+            <td width='60%'>Mostrar un usuario</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/create.es.html'>POST /api/users</a>
+            </td>
+            <td width='60%'>Crear un usuario</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/update.es.html'>PUT /api/users/:id</a>
+            </td>
+            <td width='60%'>Actualizar un usuario</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/destroy.es.html'>DELETE /api/users/:id</a>
+            </td>
+            <td width='60%'>Borrar un usuario</td>
+          </tr>
+    </tbody>
+  </table>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='./apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

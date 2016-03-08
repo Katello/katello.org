@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -29,14 +30,18 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>destroy</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/hostgroup_classes/destroy.ca.html">ca</a> | <a href="../../apidoc/hostgroup_classes/destroy.sv_SE.html">sv_SE</a> | <a href="../../apidoc/hostgroup_classes/destroy.zh_CN.html">zh_CN</a> | <a href="../../apidoc/hostgroup_classes/destroy.gl.html">gl</a> | <a href="../../apidoc/hostgroup_classes/destroy.it.html">it</a> | <a href="../../apidoc/hostgroup_classes/destroy.pt_BR.html">pt_BR</a> | <a href="../../apidoc/hostgroup_classes/destroy.es.html">es</a> | <a href="../../apidoc/hostgroup_classes/destroy.ja.html">ja</a> | <a href="../../apidoc/hostgroup_classes/destroy.en_GB.html">en_GB</a> | <a href="../../apidoc/hostgroup_classes/destroy.ru.html">ru</a> | <a href="../../apidoc/hostgroup_classes/destroy.fr.html">fr</a> | <a href="../../apidoc/hostgroup_classes/destroy.en.html">en</a> | <a href="../../apidoc/hostgroup_classes/destroy.ko.html">ko</a> | <a href="../../apidoc/hostgroup_classes/destroy.de.html">de</a> | <a href="../../apidoc/hostgroup_classes/destroy.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      DELETE /api/hostgroups/:hostgroup_id/puppetclass_ids/:id<br>
-      <small>Remove a puppetclass from hostgroup</small>
+      DELETE /api/hostgroups/:hostgroup_id/puppetclass_ids/:id
+      <br>
+      <small>Remove a Puppet class from host group</small>
     </h1>
   </div>
 
@@ -67,11 +72,14 @@
     </td>
     <td>
       
-<p>id of hostgroup</p>
+<p>ID of host group</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -88,11 +96,14 @@
     </td>
     <td>
       
-<p>id of puppetclass</p>
+<p>ID of Puppet class</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -103,8 +114,11 @@
     </tbody>
   </table>
 
+
+
 </div>
 
+  
 
         
       </div>
@@ -112,7 +126,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>

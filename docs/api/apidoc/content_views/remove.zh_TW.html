@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API 文檔</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.zh_TW.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/content_views.zh_TW.html'>
+      Content views
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>remove</li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/content_views/remove.ca.html">ca</a> | <a href="../../apidoc/content_views/remove.sv_SE.html">sv_SE</a> | <a href="../../apidoc/content_views/remove.zh_CN.html">zh_CN</a> | <a href="../../apidoc/content_views/remove.gl.html">gl</a> | <a href="../../apidoc/content_views/remove.it.html">it</a> | <a href="../../apidoc/content_views/remove.pt_BR.html">pt_BR</a> | <a href="../../apidoc/content_views/remove.es.html">es</a> | <a href="../../apidoc/content_views/remove.ja.html">ja</a> | <a href="../../apidoc/content_views/remove.en_GB.html">en_GB</a> | <a href="../../apidoc/content_views/remove.ru.html">ru</a> | <a href="../../apidoc/content_views/remove.fr.html">fr</a> | <a href="../../apidoc/content_views/remove.en.html">en</a> | <a href="../../apidoc/content_views/remove.ko.html">ko</a> | <a href="../../apidoc/content_views/remove.de.html">de</a> | <b><a href="../../apidoc/content_views/remove.zh_TW.html">zh_TW</a></b> ]
+</li>
+
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      PUT /katello/api/content_views/:id/remove
+      <br>
+      <small>從內容視域中移除版本且（或）環境，並重新指定系統與金鑰</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+
+
+  <h2>參數</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>內容視域的數字識別子</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_ids </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要移除之環境的數字識別子</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_version_ids </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要刪除的內容視域版本識別子</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>system_content_view_id </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要重新指定無主系統的目標內容視域</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>system_environment_id </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要重新指定無主系統的目標環境</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>key_content_view_id </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要重新指定無主啟動金鑰的目標內容視域</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>key_environment_id </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要重新指定無主啟動金鑰的目標環境</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

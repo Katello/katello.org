@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API 文檔</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.zh_TW.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Content view puppet modules
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/content_view_puppet_modules.ca.html">ca</a> | <a href="../apidoc/content_view_puppet_modules.sv_SE.html">sv_SE</a> | <a href="../apidoc/content_view_puppet_modules.zh_CN.html">zh_CN</a> | <a href="../apidoc/content_view_puppet_modules.gl.html">gl</a> | <a href="../apidoc/content_view_puppet_modules.it.html">it</a> | <a href="../apidoc/content_view_puppet_modules.pt_BR.html">pt_BR</a> | <a href="../apidoc/content_view_puppet_modules.es.html">es</a> | <a href="../apidoc/content_view_puppet_modules.ja.html">ja</a> | <a href="../apidoc/content_view_puppet_modules.en_GB.html">en_GB</a> | <a href="../apidoc/content_view_puppet_modules.ru.html">ru</a> | <a href="../apidoc/content_view_puppet_modules.fr.html">fr</a> | <a href="../apidoc/content_view_puppet_modules.en.html">en</a> | <a href="../apidoc/content_view_puppet_modules.ko.html">ko</a> | <a href="../apidoc/content_view_puppet_modules.de.html">de</a> | <b><a href="../apidoc/content_view_puppet_modules.zh_TW.html">zh_TW</a></b> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Content view puppet modules
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/content_view_puppet_modules/index.zh_TW.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/content_views/:content_view_id/content_view_puppet_modules
+          </a>
+          <br>
+          <small>列出內容視域的 puppet 模組</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>參數</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>內容視域識別子</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>puppet 模組名稱</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>author </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>puppet 模組的作者</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>uuid </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>欲相聯的 puppet 模組之 UUID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>搜尋字串</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>頁數，從 1 開始</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>每頁要傳回的結果數量</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>排序欄位與次序，例如「name DESC」</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_results </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>是否顯示所有結果</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>「order」參數的雜湊版本</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[by] </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>用來排序結果的欄位</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[order] </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>如何排序結果的順序（比方說 ASC 從下到上）</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/content_view_puppet_modules/create.zh_TW.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/content_views/:content_view_id/content_view_puppet_modules
+          </a>
+          <br>
+          <small>新增 puppet 模組至內容視域</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>參數</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>內容視域識別子</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>puppet 模組名稱</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>author </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>puppet 模組的作者</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>the id of the puppet module to associate</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>uuid </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>欲相聯的 puppet 模組之 UUID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/content_view_puppet_modules/show.zh_TW.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/content_views/:content_view_id/content_view_puppet_modules/:id
+          </a>
+          <br>
+          <small>顯示內容視域的 puppet 模組</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>參數</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>內容視域的數字識別子</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>puppet 模組 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/content_view_puppet_modules/update.zh_TW.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/content_views/:content_view_id/content_view_puppet_modules/:id
+          </a>
+          <br>
+          <small>更新與內容視域相聯的 puppet 模組</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>參數</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>內容視域識別子</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>puppet 模組 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>puppet 模組名稱</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>author </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>puppet 模組的作者</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>uuid </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>欲相聯的 puppet 模組之 UUID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/content_view_puppet_modules/destroy.zh_TW.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/content_views/:content_view_id/content_view_puppet_modules/:id
+          </a>
+          <br>
+          <small>從內容視域移除 puppet 模組</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>參數</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>內容視域識別子</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>puppet 模組 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

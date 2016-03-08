@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API 文档</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.zh_CN.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Repositories
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/repositories.ca.html">ca</a> | <a href="../apidoc/repositories.sv_SE.html">sv_SE</a> | <b><a href="../apidoc/repositories.zh_CN.html">zh_CN</a></b> | <a href="../apidoc/repositories.gl.html">gl</a> | <a href="../apidoc/repositories.it.html">it</a> | <a href="../apidoc/repositories.pt_BR.html">pt_BR</a> | <a href="../apidoc/repositories.es.html">es</a> | <a href="../apidoc/repositories.ja.html">ja</a> | <a href="../apidoc/repositories.en_GB.html">en_GB</a> | <a href="../apidoc/repositories.ru.html">ru</a> | <a href="../apidoc/repositories.fr.html">fr</a> | <a href="../apidoc/repositories.en.html">en</a> | <a href="../apidoc/repositories.ko.html">ko</a> | <a href="../apidoc/repositories.de.html">de</a> | <a href="../apidoc/repositories.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Repositories
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/index.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/repositories
+          </a>
+          <br>
+          <small>已启用库列表</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/content_views/:id/repositories
+          </a>
+          <br>
+          <small>内容视图的库列表</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>显示所包含的库的机构 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>显示所包含库的产品 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>显示所包含库的环境 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>显示库所在内容视图的 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_version_id </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>显示所包含库的内容视图版本 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>erratum_id </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of an erratum to find repositories that contain the erratum</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>rpm_id </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of a package to find repositories that contain the rpm</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>library </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>在 Library 及默认内容视图中显示库</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_type </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>仅限于这次的库</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>库名称</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>available_for </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>interpret specified object to return only Repositories that can be associated with specified object. Only ‘content_view’ is supported.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>搜索字符串</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>页号，从 1 开始</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>每页中显示的返回结果数</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>排序字段及顺序，例如：‘name DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_results </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>无论如何显示所有结果</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>‘order’ 参数的哈希版本</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[by] </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>结果排序字段</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[order] </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>如何对分类结果进行排序（例如：ASC 代表升序）</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/create.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories
+          </a>
+          <br>
+          <small>创建定制库</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>label </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>所生成库属于</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>url </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>库源 url</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>gpg_key_id </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要为新库分配的 gpg 密钥 id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>unprotected </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>如果可通过 HTTP 发布则为 true</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_type </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>type of repo (either ‘yum’, ‘puppet’, ‘docker’, or ‘ostree’)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>checksum_type </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>库的 checksum，目前支持 ‘sha1’ &amp; ‘sha256’。</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>docker_upstream_name </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>upstream docker 库名称</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>download_policy </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>download policy for yum repos (either ‘immediate’, ‘on_demand’, or ‘background’)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>immediate</code>, <code>on_demand</code>, <code>background</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ostree_branches </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>list of ostree branch refs associated to an rpm ostree repository</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>mirror_on_sync </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>true if this repository when synced has to be mirrored from the source and stale rpms removed.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/repository_types.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-repository_types'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/repositories/repository_types
+          </a>
+          <br>
+          <small>Show the available repository types</small>
+        </h2>
+    </div>
+
+
+    <div id='description-repository_types' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>creatable </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>When set to ‘True’ repository types that are creatable will be returned</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/show.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/repositories/:id
+          </a>
+          <br>
+          <small>显示定制库</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>库 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/sync.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-sync'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories/:id/sync
+          </a>
+          <br>
+          <small>同步库</small>
+        </h2>
+    </div>
+
+
+    <div id='description-sync' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>库 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>source_url </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>temporarily override feed URL for sync</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>incremental </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>perform an incremental import</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/export.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-export'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories/:id/export
+          </a>
+          <br>
+          <small>Export a repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-export' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Repository identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>export_to_iso </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Export to ISO format</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>iso_mb_size </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>maximum size of each ISO in MB</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>since </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Optional date of last export (ex: 2010-01-01T12:00:00Z)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Date in the form of YYYY-MM-DD.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/update.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id
+          </a>
+          <br>
+          <small>更新定制库</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>库的新名称</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>库 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>gpg_key_id </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>将要分配给这个库的 gpg 密钥 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>unprotected </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>如果可通过 HTTP 发布则为 true</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>checksum_type </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>库的 checksum，目前支持 ‘sha1’ &amp; ‘sha256’。</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>url </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>原始库的 feed url</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>docker_upstream_name </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>upstream docker 库名称</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>download_policy </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>download policy for yum repos (either ‘immediate’, ‘on_demand’, or ‘background’)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>immediate</code>, <code>on_demand</code>, <code>background</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ostree_branches </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>list of ostree branch refs associated to an rpm ostree repository</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>mirror_on_sync </strong><br>
+      <small>
+        选填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>true if this repository when synced has to be mirrored from the source and stale rpms removed.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/destroy.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/repositories/:id
+          </a>
+          <br>
+          <small>消除定制库</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/sync_complete.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-sync_complete'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories/sync_complete
+          </a>
+          <br>
+          <small></small>
+        </h2>
+    </div>
+
+
+    <div id='description-sync_complete' class='collapse accordion-body'>
+      
+<p>URL for post sync notification from pulp</p>
+
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>token </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>共享的秘密 token</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>payload </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>payload[repo_id] </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>call_report </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>call_report[task_id] </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/remove_content.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-remove_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/remove_packages
+          </a>
+          <br>
+          <small></small>
+        </h2>
+        <h2>
+          <a href='#description-remove_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/remove_docker_manifests
+          </a>
+          <br>
+          <small></small>
+        </h2>
+        <h2>
+          <a href='#description-remove_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/remove_puppet_modules
+          </a>
+          <br>
+          <small></small>
+        </h2>
+        <h2>
+          <a href='#description-remove_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/remove_content
+          </a>
+          <br>
+          <small></small>
+        </h2>
+    </div>
+
+
+    <div id='description-remove_content' class='collapse accordion-body'>
+      
+<p>Remove content from a repository</p>
+
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>库 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ids </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of content ids to remove</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/upload_content.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-upload_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories/:id/upload_content
+          </a>
+          <br>
+          <small>将内容上传到库中</small>
+        </h2>
+    </div>
+
+
+    <div id='description-upload_content' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>库 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要上传的内容文件。可以是单一文件，也可以是文件数组。</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>File</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/import_uploads.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-import_uploads'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/import_uploads
+          </a>
+          <br>
+          <small>将上传导入库</small>
+        </h2>
+    </div>
+
+
+    <div id='description-import_uploads' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>库 id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>upload_ids </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要导入的上传 id 阵列</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/gpg_key_content.zh_CN.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-gpg_key_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/repositories/:id/gpg_key_content
+          </a>
+          <br>
+          <small>返回由 yum 直接使用的库 gpg 密钥内容</small>
+        </h2>
+    </div>
+
+
+    <div id='description-gpg_key_content' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>参数</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>参数名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

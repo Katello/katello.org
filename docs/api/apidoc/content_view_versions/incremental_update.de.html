@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API-Dokumentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.de.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/content_view_versions.de.html'>
+      Content view versions
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>incremental_update</li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/content_view_versions/incremental_update.ca.html">ca</a> | <a href="../../apidoc/content_view_versions/incremental_update.sv_SE.html">sv_SE</a> | <a href="../../apidoc/content_view_versions/incremental_update.zh_CN.html">zh_CN</a> | <a href="../../apidoc/content_view_versions/incremental_update.gl.html">gl</a> | <a href="../../apidoc/content_view_versions/incremental_update.it.html">it</a> | <a href="../../apidoc/content_view_versions/incremental_update.pt_BR.html">pt_BR</a> | <a href="../../apidoc/content_view_versions/incremental_update.es.html">es</a> | <a href="../../apidoc/content_view_versions/incremental_update.ja.html">ja</a> | <a href="../../apidoc/content_view_versions/incremental_update.en_GB.html">en_GB</a> | <a href="../../apidoc/content_view_versions/incremental_update.ru.html">ru</a> | <a href="../../apidoc/content_view_versions/incremental_update.fr.html">fr</a> | <a href="../../apidoc/content_view_versions/incremental_update.en.html">en</a> | <a href="../../apidoc/content_view_versions/incremental_update.ko.html">ko</a> | <b><a href="../../apidoc/content_view_versions/incremental_update.de.html">de</a></b> | <a href="../../apidoc/content_view_versions/incremental_update.zh_TW.html">zh_TW</a> ]
+</li>
+
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      POST /katello/api/content_view_versions/incremental_update
+      <br>
+      <small>Inkrementelle Aktualisierung auf einer oder mehreren Inhaltsansichtsversionen durchführen</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+
+
+  <h2>Parameter</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_version_environments </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_view_version_environments[content_view_version_id] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>IDs der Inhaltsansichtsversionen, auf denen eine inkrementelle Aktualisierung durchgeführt werden soll. Kann Verbünde sowie eine oder mehrere Komponenten enthalten.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_view_version_environments[environment_ids] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Die Liste der Umgebungen, an welche die angegebene Inhaltsansichtsversion übertragen werden soll (ersetzt ältere Version).</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Die Beschreibung der neu generierten Inhaltsansichtsversionen</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>resolve_dependencies </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Falls “true”, werden beim Hinzufügen der angegebenen Errata oder Pakete auch jegliche erforderlichen Abhängigkeiten kopiert.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>propagate_all_composites </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Falls “true”, wird eine neue Verbundversion veröffentlicht unter Verwendung jeglicher angegebener content_view_version_id, die in eine Lebenszyklusumgebung übertragen wurde.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>add_content </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>add_content[errata_ids] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Errata uuids to copy into the new versions.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>add_content[package_ids] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package uuids to copy into the new versions.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>add_content[puppet_module_ids] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Puppet Modules to copy into the new versions.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>update_systems </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Nach Erstellen der inkrementellen Aktualisierung die Änderungen auf die angegebenen Systeme anwenden. Derzeit werden nur Errata unterstützt.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>update_systems[included] </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>update_systems[included][search] </strong><br>
+      <small>
+        optional
+        , nil erlaubt
+      </small>
+    </td>
+    <td>
+      
+<p>Suchbegriff für Systeme, auf denen eine Aktion ausgeführt werden soll</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>update_systems[included][ids] </strong><br>
+      <small>
+        optional
+        , nil erlaubt
+      </small>
+    </td>
+    <td>
+      
+<p>Liste mit System-IDs, auf denen eine Aktion ausgeführt werden soll</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>update_systems[excluded] </strong><br>
+      <small>
+        optional
+        , nil erlaubt
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(245,245,245);'>
+    <td>
+      <strong>update_systems[excluded][ids] </strong><br>
+      <small>
+        optional
+        , nil erlaubt
+      </small>
+    </td>
+    <td>
+      
+<p>Liste mit System-IDs, die ausgeschlossen werden sollen von einer Aktion</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>update_systems[update_all_systems] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Alle änderbaren und relevanten Systeme aktualisieren, nicht nur jene, die die ausgewählten Inhaltsansichtsversionen und Umgebungen verwenden</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

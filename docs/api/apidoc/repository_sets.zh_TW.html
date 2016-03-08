@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API 文檔</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.zh_TW.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Repository sets
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/repository_sets.ca.html">ca</a> | <a href="../apidoc/repository_sets.sv_SE.html">sv_SE</a> | <a href="../apidoc/repository_sets.zh_CN.html">zh_CN</a> | <a href="../apidoc/repository_sets.gl.html">gl</a> | <a href="../apidoc/repository_sets.it.html">it</a> | <a href="../apidoc/repository_sets.pt_BR.html">pt_BR</a> | <a href="../apidoc/repository_sets.es.html">es</a> | <a href="../apidoc/repository_sets.ja.html">ja</a> | <a href="../apidoc/repository_sets.en_GB.html">en_GB</a> | <a href="../apidoc/repository_sets.ru.html">ru</a> | <a href="../apidoc/repository_sets.fr.html">fr</a> | <a href="../apidoc/repository_sets.en.html">en</a> | <a href="../apidoc/repository_sets.ko.html">ko</a> | <a href="../apidoc/repository_sets.de.html">de</a> | <b><a href="../apidoc/repository_sets.zh_TW.html">zh_TW</a></b> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Repository sets
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repository_sets/index.zh_TW.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/products/:product_id/repository_sets
+          </a>
+          <br>
+          <small>列出產品的軟體庫集。</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>參數</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>欲由其列出軟體庫集的產品之 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要搜尋的軟體庫組之名稱</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repository_sets/show.zh_TW.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/products/:product_id/repository_sets/:id
+          </a>
+          <br>
+          <small>取得有關於軟體庫集的資訊</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>參數</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>軟體庫集的 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>欲由其列出軟體庫集的產品之 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repository_sets/available_repositories.zh_TW.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-available_repositories'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/products/:product_id/repository_sets/:id/available_repositories
+          </a>
+          <br>
+          <small>取得一列軟體庫集可使用的軟體庫</small>
+        </h2>
+    </div>
+
+
+    <div id='description-available_repositories' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>參數</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>軟體庫集的 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>欲由其列出軟體庫集的產品之 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repository_sets/enable.zh_TW.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-enable'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/products/:product_id/repository_sets/:id/enable
+          </a>
+          <br>
+          <small>啟用一個軟體庫</small>
+        </h2>
+    </div>
+
+
+    <div id='description-enable' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>參數</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>設為啟用的軟體庫集之 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>包含了軟體庫集的產品之 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>basearch </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>啟用 Basearch</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>releasever </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要啟用的發行版本</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repository_sets/disable.zh_TW.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-disable'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/products/:product_id/repository_sets/:id/disable
+          </a>
+          <br>
+          <small>停用軟體庫</small>
+        </h2>
+    </div>
+
+
+    <div id='description-disable' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>參數</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>參數名字</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>設為啟用的軟體庫集之 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        必填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>包含了軟體庫集的產品之 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>basearch </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>停用 Basearch</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>releasever </strong><br>
+      <small>
+        選填
+        
+      </small>
+    </td>
+    <td>
+      
+<p>要停用的發行版本</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

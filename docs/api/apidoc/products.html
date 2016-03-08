@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Products
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/products.ca.html">ca</a> | <a href="../apidoc/products.sv_SE.html">sv_SE</a> | <a href="../apidoc/products.zh_CN.html">zh_CN</a> | <a href="../apidoc/products.gl.html">gl</a> | <a href="../apidoc/products.it.html">it</a> | <a href="../apidoc/products.pt_BR.html">pt_BR</a> | <a href="../apidoc/products.es.html">es</a> | <a href="../apidoc/products.ja.html">ja</a> | <a href="../apidoc/products.en_GB.html">en_GB</a> | <a href="../apidoc/products.ru.html">ru</a> | <a href="../apidoc/products.fr.html">fr</a> | <a href="../apidoc/products.en.html">en</a> | <a href="../apidoc/products.ko.html">ko</a> | <a href="../apidoc/products.de.html">de</a> | <a href="../apidoc/products.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -52,7 +58,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/products
-          </a><br>
+          </a>
+          <br>
           <small>List products</small>
         </h2>
         <h2>
@@ -61,7 +68,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/subscriptions/:subscription_id/products
-          </a><br>
+          </a>
+          <br>
           <small>List of subscription products in a subscription</small>
         </h2>
         <h2>
@@ -70,7 +78,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/activation_keys/:activation_key_id/products
-          </a><br>
+          </a>
+          <br>
           <small>List of subscription products in an activation key</small>
         </h2>
         <h2>
@@ -79,8 +88,29 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/products
-          </a><br>
+          </a>
+          <br>
           <small>List of products in an organization</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/sync_plans/:sync_plan_id/products
+          </a>
+          <br>
+          <small>List of Products for sync plan</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/sync_plans/:sync_plan_id/products
+          </a>
+          <br>
+          <small>List of Products for sync plan</small>
         </h2>
     </div>
 
@@ -113,9 +143,12 @@
       
 <p>Filter products by organization</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -134,9 +167,12 @@
       
 <p>Filter products by subscription</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -155,9 +191,12 @@
       
 <p>Filter products by name</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -176,9 +215,12 @@
       
 <p>Filter products by enabled or disabled</p>
 
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -197,9 +239,84 @@
       
 <p>Filter products by custom</p>
 
-        <br>
-        Value: boolean
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>include_available_content </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether to include available content attribute in results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sync_plan_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter products by sync plan id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>available_for </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Interpret specified object to return only Products that can be associated with specified object. Only ‘sync_plan’ is supported.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -218,9 +335,12 @@
       
 <p>Search string</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -239,9 +359,12 @@
       
 <p>Page number, starting at 1</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -260,9 +383,12 @@
       
 <p>Number of results per page to return</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -281,9 +407,12 @@
       
 <p>Sort field and order, eg. ‘name DESC’</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -302,9 +431,12 @@
       
 <p>Whether or not to show all results</p>
 
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -323,9 +455,12 @@
       
 <p>Hash version of ‘order’ param</p>
 
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -343,9 +478,12 @@
       
 <p>Field to sort the results on</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -364,9 +502,12 @@
       
 <p>How to order the sorted results (e.g. ASC for ascending)</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -377,6 +518,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -390,7 +533,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/products
-          </a><br>
+          </a>
+          <br>
           <small>Create a product</small>
         </h2>
     </div>
@@ -424,9 +568,12 @@
       
 <p>ID of the organization</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -445,9 +592,12 @@
       
 <p>Product description</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -466,9 +616,12 @@
       
 <p>Identifier of the GPG key</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -487,9 +640,12 @@
       
 <p>Plan numeric identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -508,9 +664,12 @@
       
 <p>Product name</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -527,9 +686,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -539,6 +701,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -552,7 +716,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/products/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a product</small>
         </h2>
     </div>
@@ -586,9 +751,12 @@
       
 <p>product numeric identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -598,6 +766,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -611,7 +781,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/products/:id
-          </a><br>
+          </a>
+          <br>
           <small>Updates a product</small>
         </h2>
     </div>
@@ -645,9 +816,12 @@
       
 <p>product numeric identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -666,9 +840,12 @@
       
 <p>Product description</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -687,9 +864,12 @@
       
 <p>Identifier of the GPG key</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -708,9 +888,12 @@
       
 <p>Plan numeric identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -729,9 +912,12 @@
       
 <p>Product name</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -741,6 +927,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -754,7 +942,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/products/:id
-          </a><br>
+          </a>
+          <br>
           <small>Destroy a product</small>
         </h2>
     </div>
@@ -788,9 +977,12 @@
       
 <p>product numeric identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -800,6 +992,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -813,8 +1007,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/products/:id/sync
-          </a><br>
-          <small>Sync a repository</small>
+          </a>
+          <br>
+          <small>Sync all repositories for a product</small>
         </h2>
     </div>
 
@@ -847,9 +1042,12 @@
       
 <p>product ID</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -860,9 +1058,12 @@
     </tbody>
   </table>
 
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -870,7 +1071,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

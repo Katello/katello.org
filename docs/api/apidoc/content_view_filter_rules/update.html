@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -29,13 +30,17 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/content_view_filter_rules/update.ca.html">ca</a> | <a href="../../apidoc/content_view_filter_rules/update.sv_SE.html">sv_SE</a> | <a href="../../apidoc/content_view_filter_rules/update.zh_CN.html">zh_CN</a> | <a href="../../apidoc/content_view_filter_rules/update.gl.html">gl</a> | <a href="../../apidoc/content_view_filter_rules/update.it.html">it</a> | <a href="../../apidoc/content_view_filter_rules/update.pt_BR.html">pt_BR</a> | <a href="../../apidoc/content_view_filter_rules/update.es.html">es</a> | <a href="../../apidoc/content_view_filter_rules/update.ja.html">ja</a> | <a href="../../apidoc/content_view_filter_rules/update.en_GB.html">en_GB</a> | <a href="../../apidoc/content_view_filter_rules/update.ru.html">ru</a> | <a href="../../apidoc/content_view_filter_rules/update.fr.html">fr</a> | <a href="../../apidoc/content_view_filter_rules/update.en.html">en</a> | <a href="../../apidoc/content_view_filter_rules/update.ko.html">ko</a> | <a href="../../apidoc/content_view_filter_rules/update.de.html">de</a> | <a href="../../apidoc/content_view_filter_rules/update.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      PUT /katello/api/content_view_filters/:content_view_filter_id/rules/:id<br>
+      PUT /katello/api/content_view_filters/:content_view_filter_id/rules/:id
+      <br>
       <small>Update a filter rule. The parameters included should be based upon the filter type.</small>
     </h1>
   </div>
@@ -69,9 +74,12 @@
       
 <p>filter identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -90,9 +98,12 @@
       
 <p>rule identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -111,9 +122,12 @@
       
 <p>package or package group: name</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -132,9 +146,12 @@
       
 <p>package: version</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -153,9 +170,12 @@
       
 <p>package: minimum version</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -174,9 +194,12 @@
       
 <p>package: maximum version</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -195,9 +218,12 @@
       
 <p>erratum: id</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -216,9 +242,12 @@
       
 <p>erratum: start date (YYYY-MM-DD)</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -237,9 +266,12 @@
       
 <p>erratum: end date (YYYY-MM-DD)</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -258,9 +290,12 @@
       
 <p>erratum: types (enhancement, bugfix, security)</p>
 
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -271,8 +306,11 @@
     </tbody>
   </table>
 
+
+
 </div>
 
+  
 
         
       </div>
@@ -280,7 +318,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>

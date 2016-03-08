@@ -1,0 +1,5473 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API документация</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li class='active'><a href='./apidoc.ru.html'>Foreman v2</a></li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="./apidoc.ca.html">ca</a> | <a href="./apidoc.sv_SE.html">sv_SE</a> | <a href="./apidoc.zh_CN.html">zh_CN</a> | <a href="./apidoc.gl.html">gl</a> | <a href="./apidoc.it.html">it</a> | <a href="./apidoc.pt_BR.html">pt_BR</a> | <a href="./apidoc.es.html">es</a> | <a href="./apidoc.ja.html">ja</a> | <a href="./apidoc.en_GB.html">en_GB</a> | <b><a href="./apidoc.ru.html">ru</a></b> | <a href="./apidoc.fr.html">fr</a> | <a href="./apidoc.en.html">en</a> | <a href="./apidoc.ko.html">ko</a> | <a href="./apidoc.de.html">de</a> | <a href="./apidoc.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div>
+<p>Foreman API v2 is currently the default API version.</p>
+</div>
+
+<h1 class='page-header'>Ресурсы</h1>
+
+  <h2>
+    <a href='./apidoc/activation_keys.ru.html'>
+      Activation keys
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/index.ru.html'>GET /katello/api/activation_keys</a>
+            </td>
+            <td width='60%'>Показать ключи активации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/index.ru.html'>GET /katello/api/environments/:environment_id/activation_keys</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/index.ru.html'>GET /katello/api/organizations/:organization_id/activation_keys</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/create.ru.html'>POST /katello/api/activation_keys</a>
+            </td>
+            <td width='60%'>Создать ключ активации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/update.ru.html'>PUT /katello/api/activation_keys/:id</a>
+            </td>
+            <td width='60%'>Обновить ключ активации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/destroy.ru.html'>DELETE /katello/api/activation_keys/:id</a>
+            </td>
+            <td width='60%'>Удалить ключ активации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/show.ru.html'>GET /katello/api/activation_keys/:id</a>
+            </td>
+            <td width='60%'>Показать ключ активации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/copy.ru.html'>POST /katello/api/activation_keys/:id/copy</a>
+            </td>
+            <td width='60%'>Копировать ключ активации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/available_host_collections.ru.html'>GET /katello/api/activation_keys/:id/host_collections/available</a>
+            </td>
+            <td width='60%'>Показать коллекции, в которые эта система не входит</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/available_releases.ru.html'>GET /katello/api/activation_keys/:id/releases</a>
+            </td>
+            <td width='60%'>Показать версии для ключа активации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/product_content.ru.html'>GET /katello/api/activation_keys/:id/product_content</a>
+            </td>
+            <td width='60%'>Показать доступное содержимое для ключа активации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/add_host_collections.ru.html'>POST /katello/api/activation_keys/:id/host_collections</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/remove_host_collections.ru.html'>PUT /katello/api/activation_keys/:id/host_collections</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/add_subscriptions.ru.html'>PUT /katello/api/activation_keys/:id/add_subscriptions</a>
+            </td>
+            <td width='60%'>Назначить подписку</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/remove_subscriptions.ru.html'>PUT /katello/api/activation_keys/:id/remove_subscriptions</a>
+            </td>
+            <td width='60%'>Отключить подписку</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/content_override.ru.html'>PUT /katello/api/activation_keys/:id/content_override</a>
+            </td>
+            <td width='60%'>Переопределить содержимое для activation_key</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/activation_keys/subscriptions.ru.html'>GET /katello/api/activation_keys/:id/subscriptions</a>
+            </td>
+            <td width='60%'>Показать подписки ключа активации</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/architectures.ru.html'>
+      Architectures
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/index.ru.html'>GET /api/architectures</a>
+            </td>
+            <td width='60%'>Список всех архитектур</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/index.ru.html'>GET /api/operatingsystems/:operatingsystem_id/architectures</a>
+            </td>
+            <td width='60%'>Список всех архитектур операционных систем</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/show.ru.html'>GET /api/architectures/:id</a>
+            </td>
+            <td width='60%'>Показать в архитектурах</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/create.ru.html'>POST /api/architectures</a>
+            </td>
+            <td width='60%'>Создать архитектуру</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/update.ru.html'>PUT /api/architectures/:id</a>
+            </td>
+            <td width='60%'>Изменить архитектуру</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/architectures/destroy.ru.html'>DELETE /api/architectures/:id</a>
+            </td>
+            <td width='60%'>Удалить архитектуру</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/audits.ru.html'>
+      Audits
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/audits/index.ru.html'>GET /api/audits</a>
+            </td>
+            <td width='60%'>Список всех проверок</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/audits/index.ru.html'>GET /api/hosts/:host_id/audits</a>
+            </td>
+            <td width='60%'>Список всех проверок для данного узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/audits/show.ru.html'>GET /api/audits/:id</a>
+            </td>
+            <td width='60%'>Показать проверку</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/auth_source_ldaps.ru.html'>
+      Auth source ldaps
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/index.ru.html'>GET /api/auth_source_ldaps</a>
+            </td>
+            <td width='60%'>Список всех источников LDAP-авторизации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/show.ru.html'>GET /api/auth_source_ldaps/:id</a>
+            </td>
+            <td width='60%'>Показать источник LDAP-авторизации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/create.ru.html'>POST /api/auth_source_ldaps</a>
+            </td>
+            <td width='60%'>Создать источник LDAP-авторизации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/update.ru.html'>PUT /api/auth_source_ldaps/:id</a>
+            </td>
+            <td width='60%'>Изменить источник LDAP-авторизации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/test.ru.html'>PUT /api/auth_source_ldaps/:id/test</a>
+            </td>
+            <td width='60%'>Test LDAP connection</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/auth_source_ldaps/destroy.ru.html'>DELETE /api/auth_source_ldaps/:id</a>
+            </td>
+            <td width='60%'>Удалить источник LDAP-авторизации</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/autosign.ru.html'>
+      Autosign
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/autosign/index.ru.html'>GET /api/smart_proxies/smart_proxy_id/autosign</a>
+            </td>
+            <td width='60%'>Список всех записей автоматического входа</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/bookmarks.ru.html'>
+      Bookmarks
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/bookmarks/index.ru.html'>GET /api/bookmarks</a>
+            </td>
+            <td width='60%'>Список всех закладок</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/bookmarks/show.ru.html'>GET /api/bookmarks/:id</a>
+            </td>
+            <td width='60%'>Показать закладку</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/bookmarks/create.ru.html'>POST /api/bookmarks</a>
+            </td>
+            <td width='60%'>Создать закладку</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/bookmarks/update.ru.html'>PUT /api/bookmarks/:id</a>
+            </td>
+            <td width='60%'>Изменить закладку</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/bookmarks/destroy.ru.html'>DELETE /api/bookmarks/:id</a>
+            </td>
+            <td width='60%'>Удалить закладку</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/capsule_content.ru.html'>
+      Capsule content
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/lifecycle_environments.ru.html'>GET /katello/api/capsules/:id/content/lifecycle_environments</a>
+            </td>
+            <td width='60%'>List the lifecycle environments attached to the capsule</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/available_lifecycle_environments.ru.html'>GET /katello/api/capsules/:id/content/available_lifecycle_environments</a>
+            </td>
+            <td width='60%'>List the lifecycle environments not attached to the capsule</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/add_lifecycle_environment.ru.html'>POST /katello/api/capsules/:id/content/lifecycle_environments</a>
+            </td>
+            <td width='60%'>Add lifecycle environments to the capsule</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/remove_lifecycle_environment.ru.html'>DELETE /katello/api/capsules/:id/content/lifecycle_environments/:environment_id</a>
+            </td>
+            <td width='60%'>Remove lifecycle environments from the capsule</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/sync.ru.html'>POST /katello/api/capsules/:id/content/sync</a>
+            </td>
+            <td width='60%'>Synchronize the content to the capsule</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/sync_status.ru.html'>GET /katello/api/capsules/:id/content/sync</a>
+            </td>
+            <td width='60%'>Get current capsule synchronization status</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsule_content/cancel_sync.ru.html'>DELETE /katello/api/capsules/:id/content/sync</a>
+            </td>
+            <td width='60%'>Cancel running capsule synchronization.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/capsules.ru.html'>
+      Capsules
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/capsules/index.ru.html'>GET /katello/api/capsules</a>
+            </td>
+            <td width='60%'>List all capsules</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/capsules/show.ru.html'>GET /katello/api/capsules/:id</a>
+            </td>
+            <td width='60%'>Show the capsule details</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/common_parameters.ru.html'>
+      Common parameters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/common_parameters/index.ru.html'>GET /api/common_parameters</a>
+            </td>
+            <td width='60%'>Список всех глобальных параметров</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/common_parameters/show.ru.html'>GET /api/common_parameters/:id</a>
+            </td>
+            <td width='60%'>Показать глобальный параметр</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/common_parameters/create.ru.html'>POST /api/common_parameters</a>
+            </td>
+            <td width='60%'>Создать глобальный параметр</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/common_parameters/update.ru.html'>PUT /api/common_parameters/:id</a>
+            </td>
+            <td width='60%'>Изменить глобальный параметр</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/common_parameters/destroy.ru.html'>DELETE /api/common_parameters/:id</a>
+            </td>
+            <td width='60%'>Удалить глобальный параметр</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/compute_attributes.ru.html'>
+      Compute attributes
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/create.ru.html'>POST /api/compute_resources/:compute_resource_id/compute_profiles/:compute_profile_id/compute_attributes</a>
+            </td>
+            <td width='60%'>Создать набор вычислительных атрибутов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/create.ru.html'>POST /api/compute_profiles/:compute_profile_id/compute_resources/:compute_resource_id/compute_attributes</a>
+            </td>
+            <td width='60%'>Создать набор вычислительных атрибутов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/create.ru.html'>POST /api/compute_resources/:compute_resource_id/compute_attributes</a>
+            </td>
+            <td width='60%'>Создать набор вычислительных атрибутов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/create.ru.html'>POST /api/compute_profiles/:compute_profile_id/compute_attributes</a>
+            </td>
+            <td width='60%'>Создать набор вычислительных атрибутов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/create.ru.html'>POST /api/compute_attributes</a>
+            </td>
+            <td width='60%'>Создать набор вычислительных атрибутов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/update.ru.html'>PUT /api/compute_resources/:compute_resource_id/compute_profiles/:compute_profile_id/compute_attributes/:id</a>
+            </td>
+            <td width='60%'>Изменить набор вычислительных атрибутов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/update.ru.html'>PUT /api/compute_profiles/:compute_profile_id/compute_resources/:compute_resource_id/compute_attributes/:id</a>
+            </td>
+            <td width='60%'>Изменить набор вычислительных атрибутов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/update.ru.html'>PUT /api/compute_resources/:compute_resource_id/compute_attributes/:id</a>
+            </td>
+            <td width='60%'>Изменить набор вычислительных атрибутов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/update.ru.html'>PUT /api/compute_profiles/:compute_profile_id/compute_attributes/:id</a>
+            </td>
+            <td width='60%'>Изменить набор вычислительных атрибутов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_attributes/update.ru.html'>PUT /api/compute_attributes/:id</a>
+            </td>
+            <td width='60%'>Изменить набор вычислительных атрибутов</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/compute_profiles.ru.html'>
+      Compute profiles
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_profiles/index.ru.html'>GET /api/compute_profiles</a>
+            </td>
+            <td width='60%'>Список вычислительных профилей</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_profiles/show.ru.html'>GET /api/compute_profiles/:id</a>
+            </td>
+            <td width='60%'>Показать вычислительный профиль</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_profiles/create.ru.html'>POST /api/compute_profiles</a>
+            </td>
+            <td width='60%'>Создать вычислительный профиль</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_profiles/update.ru.html'>PUT /api/compute_profiles/:id</a>
+            </td>
+            <td width='60%'>Изменить вычислительный профиль</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_profiles/destroy.ru.html'>DELETE /api/compute_profiles/:id</a>
+            </td>
+            <td width='60%'>Удалить вычислительный профиль</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/compute_resources.ru.html'>
+      Compute resources
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/index.ru.html'>GET /api/compute_resources</a>
+            </td>
+            <td width='60%'>Список всех вычислительных ресурсов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/show.ru.html'>GET /api/compute_resources/:id</a>
+            </td>
+            <td width='60%'>Показать вычислительный ресурс</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/create.ru.html'>POST /api/compute_resources</a>
+            </td>
+            <td width='60%'>Создать вычислительный ресурс</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/update.ru.html'>PUT /api/compute_resources/:id</a>
+            </td>
+            <td width='60%'>Изменить вычислительный ресурс</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/destroy.ru.html'>DELETE /api/compute_resources/:id</a>
+            </td>
+            <td width='60%'>Удалить вычислительный ресурс</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_images.ru.html'>GET /api/compute_resources/:id/available_images</a>
+            </td>
+            <td width='60%'>Список доступных образов для вычислительного ресурса</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_clusters.ru.html'>GET /api/compute_resources/:id/available_clusters</a>
+            </td>
+            <td width='60%'>Список доступных кластеров для вычислительного ресурса</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_flavors.ru.html'>GET /api/compute_resources/:id/available_flavors</a>
+            </td>
+            <td width='60%'>List available flavors for a compute resource</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_folders.ru.html'>GET /api/compute_resources/:id/available_folders</a>
+            </td>
+            <td width='60%'>Список доступных папок для вычислительного ресурса</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_zones.ru.html'>GET /api/compute_resources/:id/available_zones</a>
+            </td>
+            <td width='60%'>List available zone for a compute resource</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_networks.ru.html'>GET /api/compute_resources/:id/available_networks</a>
+            </td>
+            <td width='60%'>Список доступных сетей для вычислительного ресурса</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_networks.ru.html'>GET /api/compute_resources/:id/available_clusters/:cluster_id/available_networks</a>
+            </td>
+            <td width='60%'>Список доступных сетей для кластера вычислительных ресурсов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_resource_pools.ru.html'>GET /api/compute_resources/:id/available_clusters/:cluster_id/available_resource_pools</a>
+            </td>
+            <td width='60%'>Список ресурсных пулов для кластера вычислительных ресурсов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_storage_domains.ru.html'>GET /api/compute_resources/:id/available_storage_domains</a>
+            </td>
+            <td width='60%'>Список областей хранилища для вычислительного ресурса</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_storage_domains.ru.html'>GET /api/compute_resources/:id/available_storage_domains/:storage_domain</a>
+            </td>
+            <td width='60%'>Список атрибутов для данной области хранилища</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_storage_pods.ru.html'>GET /api/compute_resources/:id/available_storage_pods</a>
+            </td>
+            <td width='60%'>List storage pods for a compute resource</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_storage_pods.ru.html'>GET /api/compute_resources/:id/available_storage_pods/:storage_pod</a>
+            </td>
+            <td width='60%'>List attributes for a given storage pod</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/available_security_groups.ru.html'>GET /api/compute_resources/:id/available_security_groups</a>
+            </td>
+            <td width='60%'>List available security groups for a compute resource</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/compute_resources/associate.ru.html'>PUT /api/compute_resources/:id/associate</a>
+            </td>
+            <td width='60%'>Связать ВМ с узлами</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/config_groups.ru.html'>
+      Config groups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/config_groups/index.ru.html'>GET /api/config_groups</a>
+            </td>
+            <td width='60%'>Список групп настроек</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_groups/show.ru.html'>GET /api/config_groups/:id</a>
+            </td>
+            <td width='60%'>Показать группу настроек</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_groups/create.ru.html'>POST /api/config_groups</a>
+            </td>
+            <td width='60%'>Создать группу настроек</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_groups/update.ru.html'>PUT /api/config_groups/:id</a>
+            </td>
+            <td width='60%'>Изменить группу настроек</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_groups/destroy.ru.html'>DELETE /api/config_groups/:id</a>
+            </td>
+            <td width='60%'>Удалить группу настроек</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/config_reports.ru.html'>
+      Config reports
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/config_reports/index.ru.html'>GET /api/config_reports</a>
+            </td>
+            <td width='60%'>Список всех отчетов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_reports/show.ru.html'>GET /api/config_reports/:id</a>
+            </td>
+            <td width='60%'>Показать отчет</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_reports/create.ru.html'>POST /api/config_reports</a>
+            </td>
+            <td width='60%'>Создать отчет</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_reports/destroy.ru.html'>DELETE /api/config_reports/:id</a>
+            </td>
+            <td width='60%'>Удалить отчет</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_reports/last.ru.html'>GET /api/hosts/:host_id/config_reports/last</a>
+            </td>
+            <td width='60%'>Показать последний отчет узла</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/config_templates.ru.html'>
+      Config templates
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/index.ru.html'>GET /api/config_templates</a>
+            </td>
+            <td width='60%'>Список шаблонов подготовки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/index.ru.html'>GET /api/operatingsystems/:operatingsystem_id/config_templates</a>
+            </td>
+            <td width='60%'>Список шаблонов подготовки по операционным системам </td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/index.ru.html'>GET /api/locations/:location_id/config_templates</a>
+            </td>
+            <td width='60%'>Список шаблонов подготовки по местоположениям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/index.ru.html'>GET /api/organizations/:organization_id/config_templates</a>
+            </td>
+            <td width='60%'>Список шаблонов подготовки по организациям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/show.ru.html'>GET /api/config_templates/:id</a>
+            </td>
+            <td width='60%'>Показать шаблон подготовки подробно</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/create.ru.html'>POST /api/config_templates</a>
+            </td>
+            <td width='60%'>Создать шаблон подготовки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/update.ru.html'>PUT /api/config_templates/:id</a>
+            </td>
+            <td width='60%'>Изменить шаблон подготовки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/revision.ru.html'>GET /api/config_templates/revision</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/destroy.ru.html'>DELETE /api/config_templates/:id</a>
+            </td>
+            <td width='60%'>Удалить шаблон подготовки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/build_pxe_default.ru.html'>POST /api/config_templates/build_pxe_default</a>
+            </td>
+            <td width='60%'>Изменить PXE меню по умолчанию для всех настроенных TFTP сереверов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/config_templates/clone.ru.html'>POST /api/config_templates/:id/clone</a>
+            </td>
+            <td width='60%'>Клонировать шаблон подготовки</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/containers.ru.html'>
+      Containers
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/index.ru.html'>GET /docker/api/v2/containers</a>
+            </td>
+            <td width='60%'>Показать все контейнеры</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/index.ru.html'>GET /docker/api/v2/compute_resources/:compute_resource_id/containers</a>
+            </td>
+            <td width='60%'>Список всех контейнеров вычислительного ресурса</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/show.ru.html'>GET /docker/api/v2/containers/:id</a>
+            </td>
+            <td width='60%'>Показать контейнер</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/show.ru.html'>GET /docker/api/v2/compute_resources/:compute_resource_id/containers/:id</a>
+            </td>
+            <td width='60%'>Показать контейнер на вычислительном ресурсе</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/create.ru.html'>POST /docker/api/v2/containers</a>
+            </td>
+            <td width='60%'>Создать контейнер</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/create.ru.html'>POST /docker/api/v2/compute_resources/:compute_resource_id/containers</a>
+            </td>
+            <td width='60%'>Создать контейнер на вычислительном ресурсе</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/destroy.ru.html'>DELETE /docker/api/v2/containers/:id</a>
+            </td>
+            <td width='60%'>Удалить контейнер</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/destroy.ru.html'>DELETE /docker/api/v2/compute_resources/:compute_resource_id/containers/:id</a>
+            </td>
+            <td width='60%'>Удалить контейнер с вычислительного ресурса</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/logs.ru.html'>GET /docker/api/v2/containers/:id/logs</a>
+            </td>
+            <td width='60%'>Показать журналы контейнера</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/logs.ru.html'>GET /docker/api/v2/compute_resources/:compute_resource_id/containers/:id/logs</a>
+            </td>
+            <td width='60%'>Показать журналы из контейнера вычислительного ресурса</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/power.ru.html'>PUT /docker/api/v2/containers/:id/power</a>
+            </td>
+            <td width='60%'>Выполнить операцию управления питанием для контейнера</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/containers/power.ru.html'>PUT /docker/api/v2/compute_resources/:compute_resource_id/containers/:id/power</a>
+            </td>
+            <td width='60%'>Выполнить операцию управления питанием для контейнера в вычислительном ресурсе</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_reports.ru.html'>
+      Content reports
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_reports/system_status.ru.html'>GET /katello/api/content_reports/system_status</a>
+            </td>
+            <td width='60%'>Show the latest subscription status for a list of content hosts that have reported their subscription status during a specified time period. Running this report with minimal parameters will return all status records for all reported content hosts.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_reports/system_trend.ru.html'>GET /katello/api/content_reports/system_trend</a>
+            </td>
+            <td width='60%'>Show a listing of all subscription status snapshots from content hosts which have reported their subscription status in the specified time period.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_reports/status_trend.ru.html'>GET /katello/api/content_reports/status_trend</a>
+            </td>
+            <td width='60%'>Show the per-day counts of content-hosts, grouped by subscription status, optionally limited to a date range.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_uploads.ru.html'>
+      Content uploads
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_uploads/create.ru.html'>POST /katello/api/repositories/:repository_id/content_uploads</a>
+            </td>
+            <td width='60%'>Создать запрос передачи</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_uploads/update.ru.html'>PUT /katello/api/repositories/:repository_id/content_uploads/:id</a>
+            </td>
+            <td width='60%'>Обновить содержимое файла частично</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_uploads/destroy.ru.html'>DELETE /katello/api/repositories/:repository_id/content_uploads/:id</a>
+            </td>
+            <td width='60%'>Удалить запрос передачи</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_view_filter_rules.ru.html'>
+      Content view filter rules
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filter_rules/index.ru.html'>GET /katello/api/content_view_filters/:content_view_filter_id/rules</a>
+            </td>
+            <td width='60%'>Показать правила фильтрации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filter_rules/create.ru.html'>POST /katello/api/content_view_filters/:content_view_filter_id/rules</a>
+            </td>
+            <td width='60%'>Создать правило фильтрации. Список параметров зависит от типа фильтра.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filter_rules/show.ru.html'>GET /katello/api/content_view_filters/:content_view_filter_id/rules/:id</a>
+            </td>
+            <td width='60%'>Показать информацию о правиле фильтрации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filter_rules/update.ru.html'>PUT /katello/api/content_view_filters/:content_view_filter_id/rules/:id</a>
+            </td>
+            <td width='60%'>Обновить правило фильтрации. Список параметров зависит от типа фильтра.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filter_rules/destroy.ru.html'>DELETE /katello/api/content_view_filters/:content_view_filter_id/rules/:id</a>
+            </td>
+            <td width='60%'>Удалить правило фильтрации</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_view_filters.ru.html'>
+      Content view filters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/index.ru.html'>get /katello/api/content_views/:content_view_id/filters</a>
+            </td>
+            <td width='60%'>list filters</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/index.ru.html'>get /katello/api/content_view_filters</a>
+            </td>
+            <td width='60%'>list filters</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/create.ru.html'>post /katello/api/content_views/:content_view_id/filters</a>
+            </td>
+            <td width='60%'>create a filter for a content view</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/create.ru.html'>post /katello/api/content_view_filters</a>
+            </td>
+            <td width='60%'>create a filter for a content view</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/show.ru.html'>get /katello/api/content_views/:content_view_id/filters/:id</a>
+            </td>
+            <td width='60%'>show filter info</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/show.ru.html'>get /katello/api/content_view_filters/:id</a>
+            </td>
+            <td width='60%'>show filter info</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/update.ru.html'>put /katello/api/content_views/:content_view_id/filters/:id</a>
+            </td>
+            <td width='60%'>update a filter</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/update.ru.html'>put /katello/api/content_view_filters/:id</a>
+            </td>
+            <td width='60%'>update a filter</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/destroy.ru.html'>delete /katello/api/content_views/:content_view_id/filters/:id</a>
+            </td>
+            <td width='60%'>delete a filter</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_filters/destroy.ru.html'>delete /katello/api/content_view_filters/:id</a>
+            </td>
+            <td width='60%'>delete a filter</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_view_histories.ru.html'>
+      Content view histories
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_histories/index.ru.html'>GET /katello/api/content_views/:id/history</a>
+            </td>
+            <td width='60%'>Показать журнал представления</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_view_puppet_modules.ru.html'>
+      Content view puppet modules
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_puppet_modules/index.ru.html'>GET /katello/api/content_views/:content_view_id/content_view_puppet_modules</a>
+            </td>
+            <td width='60%'>Показать модули Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_puppet_modules/create.ru.html'>POST /katello/api/content_views/:content_view_id/content_view_puppet_modules</a>
+            </td>
+            <td width='60%'>Добавить модуль Puppet в представление</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_puppet_modules/show.ru.html'>GET /katello/api/content_views/:content_view_id/content_view_puppet_modules/:id</a>
+            </td>
+            <td width='60%'>Показать модуль Puppet представления</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_puppet_modules/update.ru.html'>PUT /katello/api/content_views/:content_view_id/content_view_puppet_modules/:id</a>
+            </td>
+            <td width='60%'>Обновить модуль Puppet для этого представления</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_puppet_modules/destroy.ru.html'>DELETE /katello/api/content_views/:content_view_id/content_view_puppet_modules/:id</a>
+            </td>
+            <td width='60%'>Удалить модуль Puppet из представления</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_view_versions.ru.html'>
+      Content view versions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/index.ru.html'>GET /katello/api/content_view_versions</a>
+            </td>
+            <td width='60%'>Показать версии представления</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/index.ru.html'>GET /katello/api/content_views/:content_view_id/content_view_versions</a>
+            </td>
+            <td width='60%'>Показать версии представления</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/show.ru.html'>GET /katello/api/content_view_versions/:id</a>
+            </td>
+            <td width='60%'>Показать версию представления</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/promote.ru.html'>POST /katello/api/content_view_versions/:id/promote</a>
+            </td>
+            <td width='60%'>Продвинуть версию представления</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/export.ru.html'>POST /katello/api/content_view_versions/:id/export</a>
+            </td>
+            <td width='60%'>Export a content view version</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/destroy.ru.html'>DELETE /katello/api/content_view_versions/:id</a>
+            </td>
+            <td width='60%'>Удалить версию представления</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_view_versions/incremental_update.ru.html'>POST /katello/api/content_view_versions/incremental_update</a>
+            </td>
+            <td width='60%'>Выполнить инкрементное обновление версий представления</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/content_views.ru.html'>
+      Content views
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/index.ru.html'>GET /katello/api/organizations/:organization_id/content_views</a>
+            </td>
+            <td width='60%'>Показать представления</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/index.ru.html'>GET /katello/api/content_views</a>
+            </td>
+            <td width='60%'>Показать представления</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/create.ru.html'>POST /katello/api/organizations/:organization_id/content_views</a>
+            </td>
+            <td width='60%'>Создать представление</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/create.ru.html'>POST /katello/api/content_views</a>
+            </td>
+            <td width='60%'>Создать представление</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/update.ru.html'>PUT /katello/api/content_views/:id</a>
+            </td>
+            <td width='60%'>Обновить представление</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/publish.ru.html'>POST /katello/api/content_views/:id/publish</a>
+            </td>
+            <td width='60%'>Опубликовать представление</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/show.ru.html'>GET /katello/api/content_views/:id</a>
+            </td>
+            <td width='60%'>Показать представление</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/available_puppet_modules.ru.html'>GET /katello/api/content_views/:id/available_puppet_modules</a>
+            </td>
+            <td width='60%'>Получить модули Puppet для добавления в представление</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/available_puppet_module_names.ru.html'>GET /katello/api/content_views/:id/available_puppet_module_names</a>
+            </td>
+            <td width='60%'>Получить имена модулей Puppet для добавления в представление</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/remove_from_environment.ru.html'>DELETE /katello/api/content_views/:id/environments/:environment_id</a>
+            </td>
+            <td width='60%'>Удалить представление из окружения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/remove.ru.html'>PUT /katello/api/content_views/:id/remove</a>
+            </td>
+            <td width='60%'>Удалить версии и окружения из представления и переназначить системы и ключи</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/destroy.ru.html'>DELETE /katello/api/content_views/:id</a>
+            </td>
+            <td width='60%'>Удалить представление</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/content_views/copy.ru.html'>POST /katello/api/content_views/:id/copy</a>
+            </td>
+            <td width='60%'>Создать копию представления</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/dashboard.ru.html'>
+      Dashboard
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/dashboard/index.ru.html'>GET /api/dashboard</a>
+            </td>
+            <td width='60%'>Получить подробный обзор</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/docker_manifests.ru.html'>
+      Docker manifests
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/index.ru.html'>GET /katello/api/docker_manifests</a>
+            </td>
+            <td width='60%'>List docker_manifests</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/index.ru.html'>GET /katello/api/content_views/:content_view_id/filters/:filter_id/docker_manifests</a>
+            </td>
+            <td width='60%'>List docker_manifests</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/index.ru.html'>GET /katello/api/content_view_filters/:content_view_filter_id/docker_manifests</a>
+            </td>
+            <td width='60%'>List docker_manifests</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/index.ru.html'>GET /katello/api/repositories/:repository_id/docker_manifests</a>
+            </td>
+            <td width='60%'>List docker_manifests</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/show.ru.html'>GET /katello/api/docker_manifests/:id</a>
+            </td>
+            <td width='60%'>Show a docker manifest</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/show.ru.html'>GET /katello/api/repositories/:repository_id/docker_manifests/:id</a>
+            </td>
+            <td width='60%'>Show a docker manifest</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_manifests/compare.ru.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>List docker_manifests</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/docker_tags.ru.html'>
+      Docker tags
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/index.ru.html'>GET /katello/api/docker_tags</a>
+            </td>
+            <td width='60%'>List docker_tags</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/index.ru.html'>GET /katello/api/content_views/:content_view_id/filters/:filter_id/docker_tags</a>
+            </td>
+            <td width='60%'>List docker_tags</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/index.ru.html'>GET /katello/api/content_view_filters/:content_view_filter_id/docker_tags</a>
+            </td>
+            <td width='60%'>List docker_tags</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/index.ru.html'>GET /katello/api/repositories/:repository_id/docker_tags</a>
+            </td>
+            <td width='60%'>List docker_tags</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/show.ru.html'>GET /katello/api/docker_tags/:id</a>
+            </td>
+            <td width='60%'>Show a docker tag</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/show.ru.html'>GET /katello/api/repositories/:repository_id/docker_tags/:id</a>
+            </td>
+            <td width='60%'>Show a docker tag</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/docker_tags/compare.ru.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>List docker_tags</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/domains.ru.html'>
+      Domains
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/index.ru.html'>GET /api/domains</a>
+            </td>
+            <td width='60%'>Список доменов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/index.ru.html'>GET /api/subnets/:subnet_id/domains</a>
+            </td>
+            <td width='60%'>Список доменов по подсетям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/index.ru.html'>GET /api/locations/:location_id/domains</a>
+            </td>
+            <td width='60%'>Список доменов по местоположениям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/index.ru.html'>GET /api/organizations/:organization_id/domains</a>
+            </td>
+            <td width='60%'>Список доменов по организациям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/show.ru.html'>GET /api/domains/:id</a>
+            </td>
+            <td width='60%'>Показать домен</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/create.ru.html'>POST /api/domains</a>
+            </td>
+            <td width='60%'>Создать домен</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/update.ru.html'>PUT /api/domains/:id</a>
+            </td>
+            <td width='60%'>Изменить домен</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/domains/destroy.ru.html'>DELETE /api/domains/:id</a>
+            </td>
+            <td width='60%'>Удалить домен</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/environments.ru.html'>
+      Environments
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/import_puppetclasses.ru.html'>POST /api/smart_proxies/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Импорт классов puppet из прокси puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/import_puppetclasses.ru.html'>POST /api/smart_proxies/:smart_proxy_id/environments/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Импорт классов puppet из прокси puppet для окружения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/import_puppetclasses.ru.html'>POST /api/environments/:environment_id/smart_proxies/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Импорт классов puppet из прокси puppet для окружения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/index.ru.html'>GET /api/environments</a>
+            </td>
+            <td width='60%'>Список окружений</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/index.ru.html'>GET /api/puppetclasses/:puppetclass_id/environments</a>
+            </td>
+            <td width='60%'>Список окружений для классов Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/index.ru.html'>GET /api/locations/:location_id/environments</a>
+            </td>
+            <td width='60%'>Список окружений по местоположениям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/index.ru.html'>GET /api/organizations/:organization_id/environments</a>
+            </td>
+            <td width='60%'>Список окружений по организациям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/show.ru.html'>GET /api/environments/:id</a>
+            </td>
+            <td width='60%'>Показать окружение</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/create.ru.html'>POST /api/environments</a>
+            </td>
+            <td width='60%'>Создать окружение</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/update.ru.html'>PUT /api/environments/:id</a>
+            </td>
+            <td width='60%'>Изменить окружение</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/environments/destroy.ru.html'>DELETE /api/environments/:id</a>
+            </td>
+            <td width='60%'>Удалить окружение</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/errata.ru.html'>
+      Errata
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/errata/index.ru.html'>GET /katello/api/errata</a>
+            </td>
+            <td width='60%'>Показать исправления</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/errata/show.ru.html'>GET /katello/api/errata/:id</a>
+            </td>
+            <td width='60%'>Show an erratum</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/errata/show.ru.html'>GET /katello/api/repositories/:repository_id/errata/:id</a>
+            </td>
+            <td width='60%'>Show an erratum</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/errata/compare.ru.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>Показать исправления</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/external_usergroups.ru.html'>
+      External usergroups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/index.ru.html'>GET /api/usergroups/:usergroup_id/external_usergroups</a>
+            </td>
+            <td width='60%'>Список всех внешних групп для группы пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/index.ru.html'>GET /api/auth_source_ldaps/:auth_source_ldap_id/external_usergroups</a>
+            </td>
+            <td width='60%'>Список всех внешних групп для источника LDAP авторизации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/show.ru.html'>GET /api/usergroups/:usergroup_id/external_usergroups/:id</a>
+            </td>
+            <td width='60%'>Показать внешнюю группу пользователя для группы пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/show.ru.html'>GET /api/auth_source_ldaps/:auth_source_ldap_id/external_usergroups/:id</a>
+            </td>
+            <td width='60%'>Показать внешнюю группу пользователя для источника LDAP авторизации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/create.ru.html'>POST /api/usergroups/:usergroup_id/external_usergroups</a>
+            </td>
+            <td width='60%'>Создать внешнюю группу пользователя связанную с группой пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/update.ru.html'>PUT /api/usergroups/:usergroup_id/external_usergroups/:id</a>
+            </td>
+            <td width='60%'>Изменить внешнюю группу пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/refresh.ru.html'>PUT /api/usergroups/:usergroup_id/external_usergroups/:id/refresh</a>
+            </td>
+            <td width='60%'>Обновить внешнюю группу пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/external_usergroups/destroy.ru.html'>DELETE /api/usergroups/:usergroup_id/external_usergroups/:id</a>
+            </td>
+            <td width='60%'>Удалить внешнюю группу пользователя</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/fact_values.ru.html'>
+      Fact values
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/fact_values/index.ru.html'>GET /api/fact_values</a>
+            </td>
+            <td width='60%'>Список всех фактических значений</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/fact_values/index.ru.html'>GET /api/hosts/:host_id/facts</a>
+            </td>
+            <td width='60%'>Список всех фактических значений для данного узла</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/filters.ru.html'>
+      Filters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/filters/index.ru.html'>GET /api/filters</a>
+            </td>
+            <td width='60%'>Список всех фильтров</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/filters/show.ru.html'>GET /api/filters/:id</a>
+            </td>
+            <td width='60%'>Показать фильтр</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/filters/create.ru.html'>POST /api/filters</a>
+            </td>
+            <td width='60%'>Создать фильтр</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/filters/update.ru.html'>PUT /api/filters/:id</a>
+            </td>
+            <td width='60%'>Изменить фильтр</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/filters/destroy.ru.html'>DELETE /api/filters/:id</a>
+            </td>
+            <td width='60%'>Удалить фильтр</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/foreman_tasks.ru.html'>
+      Foreman tasks
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/summary.ru.html'>GET /foreman_tasks/api/tasks/summary</a>
+            </td>
+            <td width='60%'>Show task summary</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/show.ru.html'>GET /foreman_tasks/api/tasks/:id</a>
+            </td>
+            <td width='60%'>Show task details</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/bulk_search.ru.html'>POST /foreman_tasks/api/tasks/bulk_search</a>
+            </td>
+            <td width='60%'>List dynflow tasks for uuids</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/bulk_resume.ru.html'>POST /foreman_tasks/api/tasks/bulk_resume</a>
+            </td>
+            <td width='60%'>Resume all paused error tasks</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/index.ru.html'>GET /foreman_tasks/api/tasks</a>
+            </td>
+            <td width='60%'>List tasks</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/foreman_tasks/callback.ru.html'>POST /foreman_tasks/api/tasks/callback</a>
+            </td>
+            <td width='60%'>Send data to the task from external executor (such as smart_proxy_dynflow)</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/gpg_keys.ru.html'>
+      Gpg keys
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/index.ru.html'>GET /katello/api/gpg_keys</a>
+            </td>
+            <td width='60%'>Показать ключи GPG</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/create.ru.html'>POST /katello/api/gpg_keys</a>
+            </td>
+            <td width='60%'>Создать ключ GPG</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/show.ru.html'>GET /katello/api/gpg_keys/:id</a>
+            </td>
+            <td width='60%'>Показать ключ GPG</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/update.ru.html'>PUT /katello/api/gpg_keys/:id</a>
+            </td>
+            <td width='60%'>Обновить репозиторий</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/destroy.ru.html'>DELETE /katello/api/gpg_keys/:id</a>
+            </td>
+            <td width='60%'>Удалить ключ GPG</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/gpg_keys/content.ru.html'>POST /katello/api/gpg_keys/:id/content</a>
+            </td>
+            <td width='60%'>Отправить содержимое ключа gpg</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/home.ru.html'>
+      Home
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/home/index.ru.html'>GET /api</a>
+            </td>
+            <td width='60%'>Показать ссылки доступных API</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/home/status.ru.html'>GET /api/status</a>
+            </td>
+            <td width='60%'>Показать состояние</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/host_classes.ru.html'>
+      Host classes
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/host_classes/index.ru.html'>GET /api/hosts/:host_id/puppetclass_ids</a>
+            </td>
+            <td width='60%'>Список всех кодов классов Puppet для узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_classes/create.ru.html'>POST /api/hosts/:host_id/puppetclass_ids</a>
+            </td>
+            <td width='60%'>Добавить класс Puppet к узлу</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_classes/destroy.ru.html'>DELETE /api/hosts/:host_id/puppetclass_ids/:id</a>
+            </td>
+            <td width='60%'>Удалить класс Puppet из узла</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/host_collections.ru.html'>
+      Host collections
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/show.ru.html'>GET /katello/api/host_collections/:id</a>
+            </td>
+            <td width='60%'>Показать коллекцию узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/index.ru.html'>GET /katello/api/host_collections</a>
+            </td>
+            <td width='60%'>Показать коллекции узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/index.ru.html'>GET /katello/api/organizations/:organization_id/host_collections</a>
+            </td>
+            <td width='60%'>Показать коллекции в организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/index.ru.html'>GET /katello/api/activation_keys/:activation_key_id/host_collections</a>
+            </td>
+            <td width='60%'>Показать коллекции для ключа активации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/index.ru.html'>GET /katello/api/hosts/:host_id/host_collections</a>
+            </td>
+            <td width='60%'>Показать коллекции, в которые входит узел</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/create.ru.html'>POST /katello/api/host_collections</a>
+            </td>
+            <td width='60%'>Создать коллекцию</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/create.ru.html'>POST /katello/api/organizations/:organization_id/host_collections</a>
+            </td>
+            <td width='60%'>Создать коллекцию</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/update.ru.html'>PUT /katello/api/host_collections/:id</a>
+            </td>
+            <td width='60%'>Обновить коллекцию узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/add_hosts.ru.html'>PUT /katello/api/host_collections/:id/add_hosts</a>
+            </td>
+            <td width='60%'>Add host to the host collection</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/remove_hosts.ru.html'>PUT /katello/api/host_collections/:id/remove_hosts</a>
+            </td>
+            <td width='60%'>Remove hosts from the host collection</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/destroy.ru.html'>DELETE /katello/api/host_collections/:id</a>
+            </td>
+            <td width='60%'>Удалить коллекцию</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_collections/copy.ru.html'>POST /katello/api/host_collections/:id/copy</a>
+            </td>
+            <td width='60%'>Создать копию коллекции</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/host_errata.ru.html'>
+      Host errata
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/host_errata/index.ru.html'>GET /api/hosts/:host_id/errata</a>
+            </td>
+            <td width='60%'>Показать исправления для узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_errata/apply.ru.html'>PUT /api/hosts/:host_id/errata/apply</a>
+            </td>
+            <td width='60%'>Назначить установку исправлений</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_errata/show.ru.html'>GET /api/hosts/:host_id/errata/:id</a>
+            </td>
+            <td width='60%'>Retrieve a single errata for a host</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/host_packages.ru.html'>
+      Host packages
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/host_packages/index.ru.html'>GET /api/hosts/:host_id/packages</a>
+            </td>
+            <td width='60%'>List packages installed on the host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_packages/install.ru.html'>PUT /api/hosts/:host_id/packages/install</a>
+            </td>
+            <td width='60%'>Установить пакеты удаленно</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_packages/upgrade.ru.html'>PUT /api/hosts/:host_id/packages/upgrade</a>
+            </td>
+            <td width='60%'>Обновить пакеты удаленно</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_packages/upgrade_all.ru.html'>PUT /api/hosts/:host_id/packages/upgrade_all</a>
+            </td>
+            <td width='60%'>Обновить пакеты удаленно</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_packages/remove.ru.html'>PUT /api/hosts/:host_id/packages/remove</a>
+            </td>
+            <td width='60%'>Удалить пакеты удаленно</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/host_subscriptions.ru.html'>
+      Host subscriptions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/host_subscriptions/index.ru.html'>GET /api/hosts/:host_id/subscriptions</a>
+            </td>
+            <td width='60%'>List a host&#39;s subscriptions</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_subscriptions/auto_attach.ru.html'>PUT /api/hosts/:host_id/subscriptions/auto_attach</a>
+            </td>
+            <td width='60%'>Trigger an auto-attach of subscriptions</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_subscriptions/events.ru.html'>GET /api/hosts/:host_id/subscriptions/events</a>
+            </td>
+            <td width='60%'>List subscription events for the host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_subscriptions/remove_subscriptions.ru.html'>PUT /api/hosts/:host_id/subscriptions/remove_subscriptions</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/host_subscriptions/add_subscriptions.ru.html'>PUT /api/hosts/:host_id/subscriptions/add_subscriptions</a>
+            </td>
+            <td width='60%'>Add a subscription to a host</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/hostgroup_classes.ru.html'>
+      Hostgroup classes
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroup_classes/index.ru.html'>GET /api/hostgroups/:hostgroup_id/puppetclass_ids</a>
+            </td>
+            <td width='60%'>Список всех кодов классов Puppet для группы узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroup_classes/create.ru.html'>POST /api/hostgroups/:hostgroup_id/puppetclass_ids</a>
+            </td>
+            <td width='60%'>Добавить класс Puppet к группе узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroup_classes/destroy.ru.html'>DELETE /api/hostgroups/:hostgroup_id/puppetclass_ids/:id</a>
+            </td>
+            <td width='60%'>Удалить класс Puppet из группы узлов</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/hostgroups.ru.html'>
+      Hostgroups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/index.ru.html'>GET /api/hostgroups</a>
+            </td>
+            <td width='60%'>Список всех групп узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/index.ru.html'>GET /api/puppetclasses/:puppetclass_id/hostgroups</a>
+            </td>
+            <td width='60%'>Список всех групп для класса Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/index.ru.html'>GET /api/locations/:location_id/hostgroups</a>
+            </td>
+            <td width='60%'>Список всех групп по местоположениям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/index.ru.html'>GET /api/organizations/:organization_id/hostgroups</a>
+            </td>
+            <td width='60%'>Список всех групп по организациям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/show.ru.html'>GET /api/hostgroups/:id</a>
+            </td>
+            <td width='60%'>Показать группу узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/create.ru.html'>POST /api/hostgroups</a>
+            </td>
+            <td width='60%'>Создать группу узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/update.ru.html'>PUT /api/hostgroups/:id</a>
+            </td>
+            <td width='60%'>Изменить группу узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/destroy.ru.html'>DELETE /api/hostgroups/:id</a>
+            </td>
+            <td width='60%'>Удалить группу узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hostgroups/clone.ru.html'>POST /api/hostgroups/:id/clone</a>
+            </td>
+            <td width='60%'>Клонировать группу узлов</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/hosts.ru.html'>
+      Hosts
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/index.ru.html'>GET /api/hosts</a>
+            </td>
+            <td width='60%'>Список всех узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/index.ru.html'>GET /api/hostgroups/:hostgroup_id/hosts</a>
+            </td>
+            <td width='60%'>Список всех узлов в группе узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/index.ru.html'>GET /api/locations/:location_id/hosts</a>
+            </td>
+            <td width='60%'>Список узлов по местоположениям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/index.ru.html'>GET /api/organizations/:organization_id/hosts</a>
+            </td>
+            <td width='60%'>Список узлов по организациям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/index.ru.html'>GET /api/environments/:environment_id/hosts</a>
+            </td>
+            <td width='60%'>Список узлов по окружениям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/show.ru.html'>GET /api/hosts/:id</a>
+            </td>
+            <td width='60%'>Показать узел</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/create.ru.html'>POST /api/hosts</a>
+            </td>
+            <td width='60%'>Создать узел</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/update.ru.html'>PUT /api/hosts/:id</a>
+            </td>
+            <td width='60%'>Изменить узел</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/destroy.ru.html'>DELETE /api/hosts/:id</a>
+            </td>
+            <td width='60%'>Удалить узел</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/status.ru.html'>GET /api/hosts/:id/status</a>
+            </td>
+            <td width='60%'>Получить состояние конфигурации хоста</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/get_status.ru.html'>GET /api/hosts/:id/status/:type</a>
+            </td>
+            <td width='60%'>Получить состояние узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/vm_compute_attributes.ru.html'>GET /api/hosts/:id/vm_compute_attributes</a>
+            </td>
+            <td width='60%'>Получить атрибуты ВМ узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/puppetrun.ru.html'>PUT /api/hosts/:id/puppetrun</a>
+            </td>
+            <td width='60%'>Насильно запустить агента Puppet на узле</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/disassociate.ru.html'>PUT /api/hosts/:id/disassociate</a>
+            </td>
+            <td width='60%'>Отвязать узел от ВМ</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/power.ru.html'>PUT /api/hosts/:id/power</a>
+            </td>
+            <td width='60%'>Запустить операцию по управлению питанием на узле</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/boot.ru.html'>PUT /api/hosts/:id/boot</a>
+            </td>
+            <td width='60%'>Загрузить узел с определенного устройства</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/facts.ru.html'>POST /api/hosts/facts</a>
+            </td>
+            <td width='60%'>Загрузить факты узла, требуемые для создания узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/rebuild_config.ru.html'>PUT /api/hosts/:id/rebuild_config</a>
+            </td>
+            <td width='60%'>Rebuild orchestration config</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/template.ru.html'>GET /api/hosts/:id/template/:kind</a>
+            </td>
+            <td width='60%'>Preview rendered provisioning template content</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts/host_collections.ru.html'>PUT /api/hosts/:host_id/host_collections</a>
+            </td>
+            <td width='60%'>Alter a hosts host collections</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/hosts_bulk_actions.ru.html'>
+      Hosts bulk actions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/bulk_add_host_collections.ru.html'>PUT /katello/api/hosts/bulk/add_host_collections</a>
+            </td>
+            <td width='60%'>Add one or more host collections to one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/bulk_remove_host_collections.ru.html'>PUT /katello/api/hosts/bulk/remove_host_collections</a>
+            </td>
+            <td width='60%'>Remove one or more host collections from one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/installable_errata.ru.html'>POST /katello/api/hosts/bulk/applicable_errata</a>
+            </td>
+            <td width='60%'>Получить список доступных исправлений для системы.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/install_content.ru.html'>PUT /katello/api/hosts/bulk/install_content</a>
+            </td>
+            <td width='60%'>Install content on one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/update_content.ru.html'>PUT /katello/api/hosts/bulk/update_content</a>
+            </td>
+            <td width='60%'>Update content on one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/remove_content.ru.html'>PUT /katello/api/hosts/bulk/remove_content</a>
+            </td>
+            <td width='60%'>Remove content on one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/destroy_hosts.ru.html'>PUT /katello/api/hosts/bulk/destroy</a>
+            </td>
+            <td width='60%'>Destroy one or more hosts</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/environment_content_view.ru.html'>PUT /katello/api/hosts/bulk/environment_content_view</a>
+            </td>
+            <td width='60%'>Добавить окружение и представление для систем</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/hosts_bulk_actions/available_incremental_updates.ru.html'>POST /katello/api/hosts/bulk/available_incremental_updates</a>
+            </td>
+            <td width='60%'>Given a set of hosts and errata, lists the content view versions and environments that need updating.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/images.ru.html'>
+      Images
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/images/index.ru.html'>GET /api/compute_resources/:compute_resource_id/images</a>
+            </td>
+            <td width='60%'>Список всех образов для вычислительного ресурса</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/index.ru.html'>GET /api/operatingsystems/:operatingsystem_id/images</a>
+            </td>
+            <td width='60%'>Список всех образов для операционных систем</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/index.ru.html'>GET /api/architectures/:architecture_id/images</a>
+            </td>
+            <td width='60%'>Список всех образов для архитектур</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/show.ru.html'>GET /api/compute_resources/:compute_resource_id/images/:id</a>
+            </td>
+            <td width='60%'>Показать образ</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/show.ru.html'>GET /api/operatingsystems/:operatingsystem_id/images/:id</a>
+            </td>
+            <td width='60%'>Показать образ</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/show.ru.html'>GET /api/architectures/:architecture_id/images/:id</a>
+            </td>
+            <td width='60%'>Показать образ</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/create.ru.html'>POST /api/compute_resources/:compute_resource_id/images</a>
+            </td>
+            <td width='60%'>Создать образ</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/update.ru.html'>PUT /api/compute_resources/:compute_resource_id/images/:id</a>
+            </td>
+            <td width='60%'>Изменить образ</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/images/destroy.ru.html'>DELETE /api/compute_resources/:compute_resource_id/images/:id</a>
+            </td>
+            <td width='60%'>Удалить образ</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/interfaces.ru.html'>
+      Interfaces
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/index.ru.html'>GET /api/hosts/:host_id/interfaces</a>
+            </td>
+            <td width='60%'>Список всех интерфейсов узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/index.ru.html'>GET /api/domains/:domain_id/interfaces</a>
+            </td>
+            <td width='60%'>Список всех интерфейсов для домена</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/index.ru.html'>GET /api/subnets/:subnet_id/interfaces</a>
+            </td>
+            <td width='60%'>Список всех интерфейсов для подсети</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/show.ru.html'>GET /api/hosts/:host_id/interfaces/:id</a>
+            </td>
+            <td width='60%'>Показать интерфейс узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/create.ru.html'>POST /api/hosts/:host_id/interfaces</a>
+            </td>
+            <td width='60%'>Создать интерфейс на узле</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/update.ru.html'>PUT /api/hosts/:host_id/interfaces/:id</a>
+            </td>
+            <td width='60%'>Изменить интерфейс узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/interfaces/destroy.ru.html'>DELETE /api/hosts/:host_id/interfaces/:id</a>
+            </td>
+            <td width='60%'>Удалить интерфейс узла</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/lifecycle_environments.ru.html'>
+      Lifecycle environments
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/index.ru.html'>GET /katello/api/environments</a>
+            </td>
+            <td width='60%'>Показать окружения в организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/index.ru.html'>GET /katello/api/organizations/:organization_id/environments</a>
+            </td>
+            <td width='60%'>Показать окружения в организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/show.ru.html'>GET /katello/api/environments/:id</a>
+            </td>
+            <td width='60%'>Показать окружение</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/show.ru.html'>GET /katello/api/organizations/:organization_id/environments/:environment_id</a>
+            </td>
+            <td width='60%'>Показать окружение</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/create.ru.html'>POST /katello/api/environments</a>
+            </td>
+            <td width='60%'>Создать окружение</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/create.ru.html'>POST /katello/api/organizations/:organization_id/environments</a>
+            </td>
+            <td width='60%'>Создать окружение в организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/update.ru.html'>PUT /katello/api/environments/:id</a>
+            </td>
+            <td width='60%'>Изменить окружение</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/update.ru.html'>PUT /katello/api/organizations/:organization_id/environments/:id</a>
+            </td>
+            <td width='60%'>Обновить окружение в организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/destroy.ru.html'>DELETE /katello/api/environments/:id</a>
+            </td>
+            <td width='60%'>Удалить окружение</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/destroy.ru.html'>DELETE /katello/api/organizations/:organization_id/environments/:id</a>
+            </td>
+            <td width='60%'>Удалить окружение из организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/paths.ru.html'>GET /katello/api/organizations/:organization_id/environments/paths</a>
+            </td>
+            <td width='60%'>Показать диаграммы окружений</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/lifecycle_environments/repositories.ru.html'>GET /katello/api/organizations/:organization_id/environments/:id/repositories</a>
+            </td>
+            <td width='60%'>List repositories available in the environment</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/locations.ru.html'>
+      Locations
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/locations/index.ru.html'>GET /api/locations</a>
+            </td>
+            <td width='60%'>List all locations</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/locations/show.ru.html'>GET /api/locations/:id</a>
+            </td>
+            <td width='60%'>Show a location</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/locations/create.ru.html'>POST /api/locations</a>
+            </td>
+            <td width='60%'>Create a location</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/locations/update.ru.html'>PUT /api/locations/:id</a>
+            </td>
+            <td width='60%'>Update a location</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/locations/destroy.ru.html'>DELETE /api/locations/:id</a>
+            </td>
+            <td width='60%'>Delete a location</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/mail_notifications.ru.html'>
+      Mail notifications
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/mail_notifications/index.ru.html'>GET /api/mail_notifications</a>
+            </td>
+            <td width='60%'>Список всех почтовых уведомлений</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/mail_notifications/show.ru.html'>GET /api/mail_notifications/:id</a>
+            </td>
+            <td width='60%'>Показать почтовое уведомление</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/media.ru.html'>
+      Media
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/media/index.ru.html'>GET /api/media</a>
+            </td>
+            <td width='60%'>Список всех установочных носителей</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/index.ru.html'>GET /api/operatingsystems/:operatingsystem_id/media</a>
+            </td>
+            <td width='60%'>Список всех носителей операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/index.ru.html'>GET /api/locations/:location_id/media</a>
+            </td>
+            <td width='60%'>Список всех носителей по местоположению</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/index.ru.html'>GET /api/organizations/:organization_id/media</a>
+            </td>
+            <td width='60%'>Список всех носителей по организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/show.ru.html'>GET /api/media/:id</a>
+            </td>
+            <td width='60%'>Показать носитель</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/create.ru.html'>POST /api/media</a>
+            </td>
+            <td width='60%'>Создать носитель</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/update.ru.html'>PUT /api/media/:id</a>
+            </td>
+            <td width='60%'>Изменить носитель</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/media/destroy.ru.html'>DELETE /api/media/:id</a>
+            </td>
+            <td width='60%'>Удалить носитель</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/models.ru.html'>
+      Models
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/models/index.ru.html'>GET /api/models</a>
+            </td>
+            <td width='60%'>Список всего оборудования</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/models/show.ru.html'>GET /api/models/:id</a>
+            </td>
+            <td width='60%'>Показать оборудование</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/models/create.ru.html'>POST /api/models</a>
+            </td>
+            <td width='60%'>Создать оборудование</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/models/update.ru.html'>PUT /api/models/:id</a>
+            </td>
+            <td width='60%'>Изменить оборудование</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/models/destroy.ru.html'>DELETE /api/models/:id</a>
+            </td>
+            <td width='60%'>Удалить оборудование</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/operatingsystems.ru.html'>
+      Operating systems
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.ru.html'>GET /api/operatingsystems</a>
+            </td>
+            <td width='60%'>Список всех операционных систем</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.ru.html'>GET /api/architectures/:architecture_id/operatingsystems</a>
+            </td>
+            <td width='60%'>Список всех операционных систем для вложенной архитектуры</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.ru.html'>GET /api/media/:medium_id/operatingsystems</a>
+            </td>
+            <td width='60%'>Список всех операционных систем для вложенного носителя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.ru.html'>GET /api/ptables/:ptable_id/operatingsystems</a>
+            </td>
+            <td width='60%'>Список всех операционных систем для вложенной таблицы разделов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.ru.html'>GET /api/config_templates/:config_template_id/operatingsystems</a>
+            </td>
+            <td width='60%'>Список всех операционных систем для вложенного шаблона подготовки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/index.ru.html'>GET /api/provisioning_templates/:provisioning_template_id/operatingsystems</a>
+            </td>
+            <td width='60%'>Список всех операционных систем для вложенного шаблона подготовки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/show.ru.html'>GET /api/operatingsystems/:id</a>
+            </td>
+            <td width='60%'>Показать операционную систему</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/create.ru.html'>POST /api/operatingsystems</a>
+            </td>
+            <td width='60%'>Создать операционную систему</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/update.ru.html'>PUT /api/operatingsystems/:id</a>
+            </td>
+            <td width='60%'>Изменить операционную систему</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/destroy.ru.html'>DELETE /api/operatingsystems/:id</a>
+            </td>
+            <td width='60%'>Удалить операционную систему</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/operatingsystems/bootfiles.ru.html'>GET /api/operatingsystems/:id/bootfiles</a>
+            </td>
+            <td width='60%'>Список загрузочных файлов операционной системы</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/organizations.ru.html'>
+      Organizations
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/index.ru.html'>GET /katello/api/organizations</a>
+            </td>
+            <td width='60%'>Показать все организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/show.ru.html'>GET /katello/api/organizations/:id</a>
+            </td>
+            <td width='60%'>Показать организацию</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/create.ru.html'>POST /katello/api/organizations</a>
+            </td>
+            <td width='60%'>Создать организацию</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/update.ru.html'>PUT /katello/api/organizations/:id</a>
+            </td>
+            <td width='60%'>Обновить организацию</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/destroy.ru.html'>DELETE /katello/api/organizations/:id</a>
+            </td>
+            <td width='60%'>Удалить организацию</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/repo_discover.ru.html'>PUT /katello/api/organizations/:id/repo_discover</a>
+            </td>
+            <td width='60%'>Поиск репозиториев</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/cancel_repo_discover.ru.html'>PUT /katello/api/organizations/:label/cancel_repo_discover</a>
+            </td>
+            <td width='60%'>Отменить поиск репозиториев</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/download_debug_certificate.ru.html'>GET /katello/api/organizations/:label/download_debug_certificate</a>
+            </td>
+            <td width='60%'>Загрузить сертификат отладки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/autoattach_subscriptions.ru.html'>POST /katello/api/organizations/:id/autoattach_subscriptions</a>
+            </td>
+            <td width='60%'>Автоподбор подписок для всех систем в организации (асинхронная операция).</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/organizations/redhat_provider.ru.html'>GET /katello/api/organizations/:id/redhat_provider</a>
+            </td>
+            <td width='60%'>Список всех :resource_id</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/os_default_templates.ru.html'>
+      Os default templates
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/index.ru.html'>GET /api/operatingsystems/:operatingsystem_id/os_default_templates</a>
+            </td>
+            <td width='60%'>Список комбинаций шаблонов по умолчанию для операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/index.ru.html'>GET /api/config_templates/:config_template_id/os_default_templates</a>
+            </td>
+            <td width='60%'>Список операционных систем, для которых данных шаблон установлен как по умолчанию</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/index.ru.html'>GET /api/provisioning_templates/:provisioning_template_id/os_default_templates</a>
+            </td>
+            <td width='60%'>Список операционных систем, для которых данных шаблон установлен как по умолчанию</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/show.ru.html'>GET /api/operatingsystems/:operatingsystem_id/os_default_templates/:id</a>
+            </td>
+            <td width='60%'>Показать комбинацию шаблонов по умолчанию для операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/create.ru.html'>POST /api/operatingsystems/:operatingsystem_id/os_default_templates</a>
+            </td>
+            <td width='60%'>Создать комбинацию шаблонов по умолчанию для операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/update.ru.html'>PUT /api/operatingsystems/:operatingsystem_id/os_default_templates/:id</a>
+            </td>
+            <td width='60%'>Изменить комбинацию шаблонов по умолчанию для операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/os_default_templates/destroy.ru.html'>DELETE /api/operatingsystems/:operatingsystem_id/os_default_templates/:id</a>
+            </td>
+            <td width='60%'>Удалить комбинацию шаблонов по умолчанию для операционной системы</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/override_values.ru.html'>
+      Override values
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/index.ru.html'>GET /api/smart_variables/:smart_variable_id/override_values</a>
+            </td>
+            <td width='60%'>Список заменяемых значений для определенной промежуточной переменной</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/index.ru.html'>GET /api/smart_class_parameters/:smart_class_parameter_id/override_values</a>
+            </td>
+            <td width='60%'>Список заменяемых значений для определенного промежуточного класса параметров</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/show.ru.html'>GET /api/smart_variables/:smart_variable_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Показать заменяемое значение для определенной промежуточной переменной</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/show.ru.html'>GET /api/smart_class_parameters/:smart_class_parameter_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Показать заменяемое значение для определенного промежуточного класса параметров</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/create.ru.html'>POST /api/smart_variables/:smart_variable_id/override_values</a>
+            </td>
+            <td width='60%'>Создать заменяемое значение для определенной промежуточной переменной</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/create.ru.html'>POST /api/smart_class_parameters/:smart_class_parameter_id/override_values</a>
+            </td>
+            <td width='60%'>Создать заменяемое значение для определенного промежуточного класса параметров</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/update.ru.html'>PUT /api/smart_variables/:smart_variable_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Изменить заменяемое значение для определенной промежуточной переменной</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/update.ru.html'>PUT /api/smart_class_parameters/:smart_class_parameter_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Изменить заменяемое значение для определенного промежуточного класса параметров</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/destroy.ru.html'>DELETE /api/smart_variables/:smart_variable_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Удалить заменяемое значение для определенной промежуточной переменной</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/override_values/destroy.ru.html'>DELETE /api/smart_class_parameters/:smart_class_parameter_id/override_values/:id</a>
+            </td>
+            <td width='60%'>Удалить заменяемое значение для определенного промежуточного класса параметров</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/package_groups.ru.html'>
+      Package groups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/index.ru.html'>GET /katello/api/package_groups</a>
+            </td>
+            <td width='60%'>List package_groups</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/index.ru.html'>GET /katello/api/content_views/:content_view_id/filters/:filter_id/package_groups</a>
+            </td>
+            <td width='60%'>List package_groups</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/index.ru.html'>GET /katello/api/content_view_filters/:content_view_filter_id/package_groups</a>
+            </td>
+            <td width='60%'>List package_groups</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/index.ru.html'>GET /katello/api/repositories/:repository_id/package_groups</a>
+            </td>
+            <td width='60%'>List package_groups</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/show.ru.html'>GET /katello/api/package_groups/:id</a>
+            </td>
+            <td width='60%'>Show a package group</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/show.ru.html'>GET /katello/api/repositories/:repository_id/package_groups/:id</a>
+            </td>
+            <td width='60%'>Show a package group</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package_groups/compare.ru.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>List package_groups</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/packages.ru.html'>
+      Packages
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/index.ru.html'>GET /katello/api/packages</a>
+            </td>
+            <td width='60%'>List packages</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/index.ru.html'>GET /katello/api/content_views/:content_view_id/filters/:filter_id/packages</a>
+            </td>
+            <td width='60%'>List packages</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/index.ru.html'>GET /katello/api/content_view_filters/:content_view_filter_id/packages</a>
+            </td>
+            <td width='60%'>List packages</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/index.ru.html'>GET /katello/api/repositories/:repository_id/packages</a>
+            </td>
+            <td width='60%'>List packages</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/show.ru.html'>GET /katello/api/packages/:id</a>
+            </td>
+            <td width='60%'>Show a package</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/show.ru.html'>GET /katello/api/repositories/:repository_id/packages/:id</a>
+            </td>
+            <td width='60%'>Show a package</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/packages/compare.ru.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>List packages</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/parameters.ru.html'>
+      Parameters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.ru.html'>GET /api/hosts/:host_id/parameters</a>
+            </td>
+            <td width='60%'>Список всех параметров узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.ru.html'>GET /api/hostgroups/:hostgroup_id/parameters</a>
+            </td>
+            <td width='60%'>Список всех параметров группы узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.ru.html'>GET /api/domains/:domain_id/parameters</a>
+            </td>
+            <td width='60%'>Список всех параметров домена</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.ru.html'>GET /api/operatingsystems/:operatingsystem_id/parameters</a>
+            </td>
+            <td width='60%'>Список всех параметров операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.ru.html'>GET /api/locations/:location_id/parameters</a>
+            </td>
+            <td width='60%'>Список всех параметров для местоположения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/index.ru.html'>GET /api/organizations/:organization_id/parameters</a>
+            </td>
+            <td width='60%'>Список всех параметров для организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.ru.html'>GET /api/hosts/:host_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Показать вложенный параметр узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.ru.html'>GET /api/hostgroups/:hostgroup_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Показать вложенный параметр группы узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.ru.html'>GET /api/domains/:domain_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Показать вложенный параметр домена</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.ru.html'>GET /api/operatingsystems/:operatingsystem_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Показать вложенный параметр операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.ru.html'>GET /api/locations/:location_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Показать вложенный параметр местоположения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/show.ru.html'>GET /api/organizations/:organization_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Показать вложенный параметр организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.ru.html'>POST /api/hosts/:host_id/parameters</a>
+            </td>
+            <td width='60%'>Создать вложенный параметр для узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.ru.html'>POST /api/hostgroups/:hostgroup_id/parameters</a>
+            </td>
+            <td width='60%'>Создать вложенный параметр для группы узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.ru.html'>POST /api/domains/:domain_id/parameters</a>
+            </td>
+            <td width='60%'>Создать вложенный параметр для домена</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.ru.html'>POST /api/operatingsystems/:operatingsystem_id/parameters</a>
+            </td>
+            <td width='60%'>Создать вложенный параметр для операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.ru.html'>POST /api/locations/:location_id/parameters</a>
+            </td>
+            <td width='60%'>Создать вложенный параметр для местоположения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/create.ru.html'>POST /api/organizations/:organization_id/parameters</a>
+            </td>
+            <td width='60%'>Создать вложенный параметр для организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.ru.html'>PUT /api/hosts/:host_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Изменить вложенный параметр для узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.ru.html'>PUT /api/hostgroups/:hostgroup_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Изменить вложенный параметр для группы узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.ru.html'>PUT /api/domains/:domain_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Изменить вложенный параметр для домена</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.ru.html'>PUT /api/operatingsystems/:operatingsystem_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Изменить вложенный параметр для операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.ru.html'>PUT /api/locations/:location_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Изменить вложенный параметр для местоположения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/update.ru.html'>PUT /api/organizations/:organization_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Изменить вложенный параметр для организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.ru.html'>DELETE /api/hosts/:host_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Удалить вложенный параметр для узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.ru.html'>DELETE /api/hostgroups/:hostgroup_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Удалить вложенный параметр для группы узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.ru.html'>DELETE /api/domains/:domain_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Удалить вложенный параметр для домена</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.ru.html'>DELETE /api/operatingsystems/:operatingsystem_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Удалить вложенный параметр для операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.ru.html'>DELETE /api/locations/:location_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Удалить вложенный параметр для местоположения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/destroy.ru.html'>DELETE /api/organizations/:organization_id/parameters/:id</a>
+            </td>
+            <td width='60%'>Удалить вложенный параметр для организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.ru.html'>DELETE /api/hosts/:host_id/parameters</a>
+            </td>
+            <td width='60%'>Удалить все вложенные параметры для узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.ru.html'>DELETE /api/hostgroups/:hostgroup_id/parameters</a>
+            </td>
+            <td width='60%'>Удалить все вложенные параметры для группы узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.ru.html'>DELETE /api/domains/:domain_id/parameters</a>
+            </td>
+            <td width='60%'>Удалить все вложенные параметры для домена</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.ru.html'>DELETE /api/operatingsystems/:operatingsystem_id/parameters</a>
+            </td>
+            <td width='60%'>Удалить все вложенные параметры для операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.ru.html'>DELETE /api/locations/:location_id/parameters</a>
+            </td>
+            <td width='60%'>Удалить все вложенные параметры для местоположения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/parameters/reset.ru.html'>DELETE /api/organizations/:organization_id/parameters</a>
+            </td>
+            <td width='60%'>Удалить все вложенные параметры для организации</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/permissions.ru.html'>
+      Permissions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/permissions/index.ru.html'>GET /api/permissions</a>
+            </td>
+            <td width='60%'>Список всех разрешений</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/permissions/show.ru.html'>GET /api/permissions/:id</a>
+            </td>
+            <td width='60%'>Показать разрешение</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/permissions/resource_types.ru.html'>GET /api/permissions/resource_types</a>
+            </td>
+            <td width='60%'>Список доступных типов ресурсов.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/ping.ru.html'>
+      Ping
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/ping/index.ru.html'>GET /katello/api/ping</a>
+            </td>
+            <td width='60%'>Показывает статус системы и ее компонентов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ping/server_status.ru.html'>GET /katello/api/status</a>
+            </td>
+            <td width='60%'>Показывает версию</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/plugins.ru.html'>
+      Plugins
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/plugins/index.ru.html'>GET /api/plugins</a>
+            </td>
+            <td width='60%'>Список установленных расширений</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/products.ru.html'>
+      Products
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.ru.html'>GET /katello/api/products</a>
+            </td>
+            <td width='60%'>Показать продукты</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.ru.html'>GET /katello/api/subscriptions/:subscription_id/products</a>
+            </td>
+            <td width='60%'>Список продуктов подписки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.ru.html'>GET /katello/api/activation_keys/:activation_key_id/products</a>
+            </td>
+            <td width='60%'>Список продуктов подписки для ключа активации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.ru.html'>GET /katello/api/organizations/:organization_id/products</a>
+            </td>
+            <td width='60%'>Список продуктов в организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.ru.html'>GET /katello/api/sync_plans/:sync_plan_id/products</a>
+            </td>
+            <td width='60%'>List of Products for sync plan</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/index.ru.html'>GET /katello/api/organizations/:organization_id/sync_plans/:sync_plan_id/products</a>
+            </td>
+            <td width='60%'>List of Products for sync plan</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/create.ru.html'>POST /katello/api/products</a>
+            </td>
+            <td width='60%'>Создать продукт</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/show.ru.html'>GET /katello/api/products/:id</a>
+            </td>
+            <td width='60%'>Показать продукт</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/update.ru.html'>PUT /katello/api/products/:id</a>
+            </td>
+            <td width='60%'>Обновляет продукт</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/destroy.ru.html'>DELETE /katello/api/products/:id</a>
+            </td>
+            <td width='60%'>Удалить продукт</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products/sync.ru.html'>POST /katello/api/products/:id/sync</a>
+            </td>
+            <td width='60%'>Sync all repositories for a product</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/products_bulk_actions.ru.html'>
+      Products bulk actions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/products_bulk_actions/destroy_products.ru.html'>PUT /katello/api/products/bulk/destroy</a>
+            </td>
+            <td width='60%'>Удалить продукты</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products_bulk_actions/sync_products.ru.html'>PUT /katello/api/products/bulk/sync</a>
+            </td>
+            <td width='60%'>Синхронизировать продукты</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/products_bulk_actions/update_sync_plans.ru.html'>PUT /katello/api/products/bulk/sync_plan</a>
+            </td>
+            <td width='60%'>Синхронизировать продукты</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/provisioning_templates.ru.html'>
+      Provisioning templates
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/index.ru.html'>GET /api/provisioning_templates</a>
+            </td>
+            <td width='60%'>Список шаблонов подготовки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/index.ru.html'>GET /api/operatingsystems/:operatingsystem_id/provisioning_templates</a>
+            </td>
+            <td width='60%'>Список шаблонов подготовки по операционным системам </td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/index.ru.html'>GET /api/locations/:location_id/provisioning_templates</a>
+            </td>
+            <td width='60%'>Список шаблонов подготовки по местоположениям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/index.ru.html'>GET /api/organizations/:organization_id/provisioning_templates</a>
+            </td>
+            <td width='60%'>Список шаблонов подготовки по организациям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/show.ru.html'>GET /api/provisioning_templates/:id</a>
+            </td>
+            <td width='60%'>Показать шаблон подготовки подробно</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/create.ru.html'>POST /api/provisioning_templates</a>
+            </td>
+            <td width='60%'>Создать шаблон подготовки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/update.ru.html'>PUT /api/provisioning_templates/:id</a>
+            </td>
+            <td width='60%'>Изменить шаблон подготовки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/revision.ru.html'>GET /api/provisioning_templates/revision</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/destroy.ru.html'>DELETE /api/provisioning_templates/:id</a>
+            </td>
+            <td width='60%'>Удалить шаблон подготовки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/build_pxe_default.ru.html'>POST /api/provisioning_templates/build_pxe_default</a>
+            </td>
+            <td width='60%'>Изменить PXE меню по умолчанию для всех настроенных TFTP сереверов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/provisioning_templates/clone.ru.html'>POST /api/provisioning_templates/:id/clone</a>
+            </td>
+            <td width='60%'>Клонировать шаблон подготовки</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/ptables.ru.html'>
+      Ptables
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/index.ru.html'>GET /api/ptables</a>
+            </td>
+            <td width='60%'>Список всех таблиц разделов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/index.ru.html'>GET /api/operatingsystems/:operatingsystem_id/ptables</a>
+            </td>
+            <td width='60%'>Список всех таблиц разделов для операционной системы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/index.ru.html'>GET /api/locations/:location_id/ptables</a>
+            </td>
+            <td width='60%'>Список всех таблиц разделов по местоположениям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/index.ru.html'>GET /api/organizations/:organization_id/ptables</a>
+            </td>
+            <td width='60%'>Список всех таблиц разделов по организациям</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/show.ru.html'>GET /api/ptables/:id</a>
+            </td>
+            <td width='60%'>Показать таблицу разделов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/create.ru.html'>POST /api/ptables</a>
+            </td>
+            <td width='60%'>Создать таблицу разделов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/revision.ru.html'>GET /api/ptables/revision</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/update.ru.html'>PUT /api/ptables/:id</a>
+            </td>
+            <td width='60%'>Изменить таблицу разделов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/destroy.ru.html'>DELETE /api/ptables/:id</a>
+            </td>
+            <td width='60%'>Удалить таблицу разделов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/ptables/clone.ru.html'>POST /api/ptables/:id/clone</a>
+            </td>
+            <td width='60%'>Клонировать шаблон</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/puppet_modules.ru.html'>
+      Puppet modules
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/index.ru.html'>GET /katello/api/puppet_modules</a>
+            </td>
+            <td width='60%'>List puppet_modules</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/index.ru.html'>GET /katello/api/content_views/:content_view_id/filters/:filter_id/puppet_modules</a>
+            </td>
+            <td width='60%'>List puppet_modules</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/index.ru.html'>GET /katello/api/content_view_filters/:content_view_filter_id/puppet_modules</a>
+            </td>
+            <td width='60%'>List puppet_modules</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/index.ru.html'>GET /katello/api/repositories/:repository_id/puppet_modules</a>
+            </td>
+            <td width='60%'>List puppet_modules</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/show.ru.html'>GET /katello/api/puppet_modules/:id</a>
+            </td>
+            <td width='60%'>Show a puppet module</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/show.ru.html'>GET /katello/api/repositories/:repository_id/puppet_modules/:id</a>
+            </td>
+            <td width='60%'>Show a puppet module</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppet_modules/compare.ru.html'>GET /katello/api/compare</a>
+            </td>
+            <td width='60%'>List puppet_modules</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/puppetclasses.ru.html'>
+      Puppetclasses
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/index.ru.html'>GET /api/puppetclasses</a>
+            </td>
+            <td width='60%'>Список всех классов Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/index.ru.html'>GET /api/hosts/:host_id/puppetclasses</a>
+            </td>
+            <td width='60%'>Список всех классов Puppet узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/index.ru.html'>GET /api/hostgroups/:hostgroup_id/puppetclasses</a>
+            </td>
+            <td width='60%'>Список всех классов Puppet группы узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/index.ru.html'>GET /api/environments/:environment_id/puppetclasses</a>
+            </td>
+            <td width='60%'>Список всех классов Puppet окружения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/show.ru.html'>GET /api/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Показать класс Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/show.ru.html'>GET /api/hosts/:host_id/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Показать класс Puppet узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/show.ru.html'>GET /api/hostgroups/:hostgroup_id/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Показать класс Puppet группы узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/show.ru.html'>GET /api/environments/:environment_id/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Показать класс Puppet окружения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/create.ru.html'>POST /api/puppetclasses</a>
+            </td>
+            <td width='60%'>Создать класс Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/update.ru.html'>PUT /api/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Изменить класс Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/puppetclasses/destroy.ru.html'>DELETE /api/puppetclasses/:id</a>
+            </td>
+            <td width='60%'>Удалить класс Puppet</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/realms.ru.html'>
+      Realms
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/realms/index.ru.html'>GET /api/realms</a>
+            </td>
+            <td width='60%'>Список областей</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/realms/show.ru.html'>GET /api/realms/:id</a>
+            </td>
+            <td width='60%'>Показать область</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/realms/create.ru.html'>POST /api/realms</a>
+            </td>
+            <td width='60%'>Создать область</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/realms/update.ru.html'>PUT /api/realms/:id</a>
+            </td>
+            <td width='60%'>Изменить область</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/realms/destroy.ru.html'>DELETE /api/realms/:id</a>
+            </td>
+            <td width='60%'>Удалить область</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/recurring_logics.ru.html'>
+      Recurring logics
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/recurring_logics/index.ru.html'>GET /foreman_tasks/api/recurring_logics</a>
+            </td>
+            <td width='60%'>List recurring logics</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/recurring_logics/show.ru.html'>GET /foreman_tasks/api/recurring_logics/:id</a>
+            </td>
+            <td width='60%'>Show recurring logic details</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/recurring_logics/cancel.ru.html'>POST /foreman_tasks/api/recurring_logics/:id/cancel</a>
+            </td>
+            <td width='60%'>Cancel recurring logic</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/registries.ru.html'>
+      Registries
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/registries/index.ru.html'>GET /docker/api/v2/registries</a>
+            </td>
+            <td width='60%'>List all docker registries</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/registries/show.ru.html'>GET /docker/api/v2/registries/:id</a>
+            </td>
+            <td width='60%'>Show a docker registry</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/registries/create.ru.html'>POST /docker/api/v2/registries</a>
+            </td>
+            <td width='60%'>Create a docker registry</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/registries/update.ru.html'>PUT /docker/api/v2/registries/:id</a>
+            </td>
+            <td width='60%'>Update a docker registry</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/registries/destroy.ru.html'>DELETE /docker/api/v2/registries/:id</a>
+            </td>
+            <td width='60%'>Delete a docker registry</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/reports.ru.html'>
+      Reports
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/reports/index.ru.html'>GET /api/reports</a>
+            </td>
+            <td width='60%'>Список всех отчетов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/reports/show.ru.html'>GET /api/reports/:id</a>
+            </td>
+            <td width='60%'>Показать отчет</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/reports/create.ru.html'>POST /api/reports</a>
+            </td>
+            <td width='60%'>Создать отчет</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/reports/destroy.ru.html'>DELETE /api/reports/:id</a>
+            </td>
+            <td width='60%'>Удалить отчет</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/reports/last.ru.html'>GET /api/hosts/:host_id/reports/last</a>
+            </td>
+            <td width='60%'>Показать последний отчет узла</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/repositories.ru.html'>
+      Repositories
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/index.ru.html'>GET /katello/api/repositories</a>
+            </td>
+            <td width='60%'>Список активных репозиториев</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/index.ru.html'>GET /katello/api/content_views/:id/repositories</a>
+            </td>
+            <td width='60%'>Список репозиториев для представления</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/create.ru.html'>POST /katello/api/repositories</a>
+            </td>
+            <td width='60%'>Создать дополнительный репозиторий</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/repository_types.ru.html'>GET /katello/api/repositories/repository_types</a>
+            </td>
+            <td width='60%'>Show the available repository types</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/show.ru.html'>GET /katello/api/repositories/:id</a>
+            </td>
+            <td width='60%'>Показать дополнительный репозиторий</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/sync.ru.html'>POST /katello/api/repositories/:id/sync</a>
+            </td>
+            <td width='60%'>Синхронизация репозитория</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/export.ru.html'>POST /katello/api/repositories/:id/export</a>
+            </td>
+            <td width='60%'>Export a repository</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/update.ru.html'>PUT /katello/api/repositories/:id</a>
+            </td>
+            <td width='60%'>Обновить дополнительный репозиторий</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/destroy.ru.html'>DELETE /katello/api/repositories/:id</a>
+            </td>
+            <td width='60%'>Удалить репозиторий</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/sync_complete.ru.html'>POST /katello/api/repositories/sync_complete</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/remove_content.ru.html'>PUT /katello/api/repositories/:id/remove_packages</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/remove_content.ru.html'>PUT /katello/api/repositories/:id/remove_docker_manifests</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/remove_content.ru.html'>PUT /katello/api/repositories/:id/remove_puppet_modules</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/remove_content.ru.html'>PUT /katello/api/repositories/:id/remove_content</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/upload_content.ru.html'>POST /katello/api/repositories/:id/upload_content</a>
+            </td>
+            <td width='60%'>Добавить содержимое в репозиторий</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/import_uploads.ru.html'>PUT /katello/api/repositories/:id/import_uploads</a>
+            </td>
+            <td width='60%'>Импорт новых компонентов из репозитория</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories/gpg_key_content.ru.html'>GET /katello/api/repositories/:id/gpg_key_content</a>
+            </td>
+            <td width='60%'>Вернуть содержимое ключа GPG, используемого в yum</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/repositories_bulk_actions.ru.html'>
+      Repositories bulk actions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories_bulk_actions/destroy_repositories.ru.html'>PUT /katello/api/repositories/bulk/destroy</a>
+            </td>
+            <td width='60%'>Удалить репозитории</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repositories_bulk_actions/sync_repositories.ru.html'>POST /katello/api/repositories/bulk/sync</a>
+            </td>
+            <td width='60%'>Синхронизировать репозиторий</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/repository_sets.ru.html'>
+      Repository sets
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/repository_sets/index.ru.html'>GET /katello/api/products/:product_id/repository_sets</a>
+            </td>
+            <td width='60%'>Показать наборы репозиториев для продукта</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repository_sets/show.ru.html'>GET /katello/api/products/:product_id/repository_sets/:id</a>
+            </td>
+            <td width='60%'>Получить информацию о наборе репозиториев</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repository_sets/available_repositories.ru.html'>GET /katello/api/products/:product_id/repository_sets/:id/available_repositories</a>
+            </td>
+            <td width='60%'>Получить список доступных репозиториев для этого набора</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repository_sets/enable.ru.html'>PUT /katello/api/products/:product_id/repository_sets/:id/enable</a>
+            </td>
+            <td width='60%'>Включить репозиторий из набора</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/repository_sets/disable.ru.html'>PUT /katello/api/products/:product_id/repository_sets/:id/disable</a>
+            </td>
+            <td width='60%'>Исключить репозиторий из набора</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/roles.ru.html'>
+      Roles
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/roles/index.ru.html'>GET /api/roles</a>
+            </td>
+            <td width='60%'>Список всех ролей</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/roles/show.ru.html'>GET /api/roles/:id</a>
+            </td>
+            <td width='60%'>Показать роль</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/roles/create.ru.html'>POST /api/roles</a>
+            </td>
+            <td width='60%'>Создать роль</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/roles/update.ru.html'>PUT /api/roles/:id</a>
+            </td>
+            <td width='60%'>Изменить роль</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/roles/destroy.ru.html'>DELETE /api/roles/:id</a>
+            </td>
+            <td width='60%'>Удалить роль</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/settings.ru.html'>
+      Settings
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/settings/index.ru.html'>GET /api/settings</a>
+            </td>
+            <td width='60%'>Список всех настроек</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/settings/show.ru.html'>GET /api/settings/:id</a>
+            </td>
+            <td width='60%'>Показать настройки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/settings/update.ru.html'>PUT /api/settings/:id</a>
+            </td>
+            <td width='60%'>Изменить настройки</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/smart_class_parameters.ru.html'>
+      Smart class parameters
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.ru.html'>GET /api/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Список всех переопределяемых классов параметров</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.ru.html'>GET /api/hosts/:host_id/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Список всех переопределяемых классов параметров для определенного узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.ru.html'>GET /api/hostgroups/:hostgroup_id/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Список всех переопределяемых классов параметров для определенной группы узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.ru.html'>GET /api/puppetclasses/:puppetclass_id/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Список всех переопределяемых классов параметров для определенного класса Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.ru.html'>GET /api/environments/:environment_id/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Список всех переопределяемых классов параметров для определенного окружения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/index.ru.html'>GET /api/environments/:environment_id/puppetclasses/:puppetclass_id/smart_class_parameters</a>
+            </td>
+            <td width='60%'>Список всех переопределяемых классов параметров для определенной комбинации окружение/класс Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/show.ru.html'>GET /api/smart_class_parameters/:id</a>
+            </td>
+            <td width='60%'>Создать переопределяемый класс параметров</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_class_parameters/update.ru.html'>PUT /api/smart_class_parameters/:id</a>
+            </td>
+            <td width='60%'>Изменить переопределяемый класс параметров</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/smart_proxies.ru.html'>
+      Smart proxies
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/import_puppetclasses.ru.html'>POST /api/smart_proxies/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Импорт классов puppet из прокси puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/import_puppetclasses.ru.html'>POST /api/smart_proxies/:smart_proxy_id/environments/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Импорт классов puppet из прокси puppet для окружения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/import_puppetclasses.ru.html'>POST /api/environments/:environment_id/smart_proxies/:id/import_puppetclasses</a>
+            </td>
+            <td width='60%'>Импорт классов puppet из прокси puppet для окружения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/index.ru.html'>GET /api/smart_proxies</a>
+            </td>
+            <td width='60%'>Список всех капсулей</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/show.ru.html'>GET /api/smart_proxies/:id</a>
+            </td>
+            <td width='60%'>Показать капсуль</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/create.ru.html'>POST /api/smart_proxies</a>
+            </td>
+            <td width='60%'>Создать капсуль</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/update.ru.html'>PUT /api/smart_proxies/:id</a>
+            </td>
+            <td width='60%'>Изменить капсуль</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/destroy.ru.html'>DELETE /api/smart_proxies/:id</a>
+            </td>
+            <td width='60%'>Удалить капсуль</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_proxies/refresh.ru.html'>PUT /api/smart_proxies/:id/refresh</a>
+            </td>
+            <td width='60%'>Обновить возможности капсуля</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/smart_variables.ru.html'>
+      Smart variables
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/index.ru.html'>GET /api/smart_variables</a>
+            </td>
+            <td width='60%'>Список всех переопределяемых переменных</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/index.ru.html'>GET /api/hosts/:host_id/smart_variables</a>
+            </td>
+            <td width='60%'>Список всех переопределяемых переменных для определенного узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/index.ru.html'>GET /api/hostgroups/:hostgroup_id/smart_variables</a>
+            </td>
+            <td width='60%'>Список всех переопределяемых переменных для определенной группы узлов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/index.ru.html'>GET /api/puppetclasses/:puppetclass_id/smart_variables</a>
+            </td>
+            <td width='60%'>Список всех переопределяемых переменных для определенного класса Puppet</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/show.ru.html'>GET /api/smart_variables/:id</a>
+            </td>
+            <td width='60%'>Показать переопределяемую переменную</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/create.ru.html'>POST /api/smart_variables</a>
+            </td>
+            <td width='60%'>Создать переопределяемую переменную</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/update.ru.html'>PUT /api/smart_variables/:id</a>
+            </td>
+            <td width='60%'>Изменить переопределяемую переменную</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/smart_variables/destroy.ru.html'>DELETE /api/smart_variables/:id</a>
+            </td>
+            <td width='60%'>Удалить переопределяемую переменную</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/statistics.ru.html'>
+      Statistics
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/statistics/index.ru.html'>GET /api/statistics</a>
+            </td>
+            <td width='60%'>Получить статистику</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/subnets.ru.html'>
+      Subnets
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/index.ru.html'>GET /api/subnets</a>
+            </td>
+            <td width='60%'>Список подсетей</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/index.ru.html'>GET /api/domains/:domain_id/subnets</a>
+            </td>
+            <td width='60%'>Список подсетей домена</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/index.ru.html'>GET /api/locations/:location_id/subnets</a>
+            </td>
+            <td width='60%'>Список подсетей местоположения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/index.ru.html'>GET /api/organizations/:organization_id/subnets</a>
+            </td>
+            <td width='60%'>Список подсетей организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/show.ru.html'>GET /api/subnets/:id</a>
+            </td>
+            <td width='60%'>Показать подсеть</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/create.ru.html'>POST /api/subnets</a>
+            </td>
+            <td width='60%'>Создать подсеть</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/update.ru.html'>PUT /api/subnets/:id</a>
+            </td>
+            <td width='60%'>Изменить подсеть</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subnets/destroy.ru.html'>DELETE /api/subnets/:id</a>
+            </td>
+            <td width='60%'>Удалить подсеть</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/subscriptions.ru.html'>
+      Subscriptions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/index.ru.html'>GET /katello/api/organizations/:organization_id/subscriptions</a>
+            </td>
+            <td width='60%'>Показать подписки организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/index.ru.html'>GET /katello/api/subscriptions</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/show.ru.html'>GET /katello/api/organizations/:organization_id/subscriptions/:id</a>
+            </td>
+            <td width='60%'>Показать подписку</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/show.ru.html'>GET /katello/api/subscriptions/:id</a>
+            </td>
+            <td width='60%'>Показать подписку</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/create.ru.html'>POST /katello/api/activation_keys/:activation_key_id/subscriptions</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Добавить подписку для ключа активации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/destroy.ru.html'>DELETE /katello/api/activation_keys/:activation_key_id/subscriptions/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Отключить подписку</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/upload.ru.html'>POST /katello/api/organizations/:organization_id/subscriptions/upload</a>
+            </td>
+            <td width='60%'>Отправить манифест подписки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/upload.ru.html'>POST /katello/api/subscriptions/upload</a>
+            </td>
+            <td width='60%'>Отправить манифест подписки</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/refresh_manifest.ru.html'>PUT /katello/api/organizations/:organization_id/subscriptions/refresh_manifest</a>
+            </td>
+            <td width='60%'>Обновить ранее импортированный манифест провайдера Red Hat</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/delete_manifest.ru.html'>POST /katello/api/organizations/:organization_id/subscriptions/delete_manifest</a>
+            </td>
+            <td width='60%'>Удалить манифест провайдера Red Hat</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/subscriptions/manifest_history.ru.html'>GET /katello/api/organizations/:organization_id/subscriptions/manifest_history</a>
+            </td>
+            <td width='60%'>получить события манифеста подписок</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/sync.ru.html'>
+      Sync
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/sync/index.ru.html'>GET /katello/api/organizations/:organization_id/products/:product_id/sync</a>
+            </td>
+            <td width='60%'>Получить статус синхронизации репозиториев для продукта</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync/index.ru.html'>GET /katello/api/repositories/:repository_id/sync</a>
+            </td>
+            <td width='60%'>Получить статус синхронизации для выбранного репозитория</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/sync_plans.ru.html'>
+      Sync plans
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/index.ru.html'>GET /katello/api/sync_plans</a>
+            </td>
+            <td width='60%'>Показать планы синхронизации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/index.ru.html'>GET /katello/api/organizations/:organization_id/sync_plans</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/show.ru.html'>GET /katello/api/organizations/:organization_id/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Показать план синхронизации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/show.ru.html'>GET /katello/api/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Показать план синхронизации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/create.ru.html'>POST /katello/api/organizations/:organization_id/sync_plans</a>
+            </td>
+            <td width='60%'>Создать план</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/update.ru.html'>PUT /katello/api/organizations/:organization_id/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Обновить план</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/update.ru.html'>PUT /katello/api/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Обновить план</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/destroy.ru.html'>DELETE /katello/api/organizations/:organization_id/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Удалить план</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/destroy.ru.html'>DELETE /katello/api/sync_plans/:id</a>
+            </td>
+            <td width='60%'>Удалить план</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/add_products.ru.html'>PUT /katello/api/organizations/:organization_id/sync_plans/:id/add_products</a>
+            </td>
+            <td width='60%'>Добавить продукты в план синхронизации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/remove_products.ru.html'>PUT /katello/api/organizations/:organization_id/sync_plans/:id/remove_products</a>
+            </td>
+            <td width='60%'>Удалить продукты из плана</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/sync.ru.html'>PUT /katello/api/sync_plans/:id/sync</a>
+            </td>
+            <td width='60%'>Initiate a sync of the products attached to the sync plan</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/sync_plans/sync.ru.html'>PUT /katello/api/organizations/:organization_id/sync_plans/:id/sync</a>
+            </td>
+            <td width='60%'>Initiate a sync of the products attached to the sync plan</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/systems.ru.html'>
+      Systems
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/index.ru.html'>GET /katello/api/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Показать узлы</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/index.ru.html'>POST /katello/api/systems/post_index</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Показать узлы содержимого, если параметр запроса вызывает ошибку 414.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/index.ru.html'>GET /katello/api/organizations/:organization_id/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Показать узлы в организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/index.ru.html'>GET /katello/api/environments/:environment_id/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Показать узлы в окружении</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/create.ru.html'>POST /katello/api/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Зарегистрировать узел содержимого</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/create.ru.html'>POST /katello/api/environments/:environment_id/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Зарегистрировать узел содержимого в окружении</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/create.ru.html'>POST /katello/api/host_collections/:host_collection_id/systems</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Зарегистрировать узел содержимого в окружении</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/update.ru.html'>PUT /katello/api/systems/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Обновить данные узла содержимого</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/show.ru.html'>GET /katello/api/systems/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Показать узел содержимого</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/destroy.ru.html'>DELETE /katello/api/systems/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Отменить регистрацию узла</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/releases.ru.html'>GET /katello/api/systems/:id/releases</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Показать версии для узла содержимого</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/content_override.ru.html'>PUT /katello/api/systems/:id/content_override</a>
+            </td>
+            <td width='60%'>Set content overrides for the content host</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/systems/product_content.ru.html'>GET /katello/api/systems/:id/product_content</a>
+            </td>
+            <td width='60%'>Get content overrides for the content host</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/tasks.ru.html'>
+      Tasks
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/tasks/index.ru.html'>GET /api/orchestration/:id/tasks</a>
+            </td>
+            <td width='60%'>Список всех заданий для данного инструментального события</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/template_combinations.ru.html'>
+      Template combinations
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/index.ru.html'>GET /api/config_templates/:config_template_id/template_combinations</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Список комбинаций шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/index.ru.html'>GET /api/provisioning_templates/:provisioning_template_id/template_combinations</a>
+            </td>
+            <td width='60%'>Список комбинаций шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/index.ru.html'>GET /api/hostgroups/:hostgroup_id/template_combinations</a>
+            </td>
+            <td width='60%'>Список комбинаций шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/index.ru.html'>GET /api/environments/:environment_id/template_combinations</a>
+            </td>
+            <td width='60%'>Список комбинаций шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/create.ru.html'>POST /api/config_templates/:config_template_id/template_combinations</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Добавить комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/create.ru.html'>POST /api/provisioning_templates/:provisioning_template_id/template_combinations</a>
+            </td>
+            <td width='60%'>Добавить комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/create.ru.html'>POST /api/hostgroups/:hostgroup_id/template_combinations</a>
+            </td>
+            <td width='60%'>Добавить комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/create.ru.html'>POST /api/environments/:environment_id/template_combinations</a>
+            </td>
+            <td width='60%'>Добавить комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/show.ru.html'>GET /api/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Показать комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/show.ru.html'>GET /api/config_templates/:config_template_id/template_combinations/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Показать комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/show.ru.html'>GET /api/provisioning_templates/:provisioning_template_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Показать комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/show.ru.html'>GET /api/hostgroups/:hostgroup_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Показать комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/show.ru.html'>GET /api/environments/:environment_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Показать комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/update.ru.html'>PUT /api/provisioning_templates/:provisioning_template_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Обновить комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/update.ru.html'>PUT /api/config_templates/:config_template_id/template_combinations/:id</a>
+                <code>DEPRECATED</code>
+            </td>
+            <td width='60%'>Обновить комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/update.ru.html'>PUT /api/hostgroups/:hostgroup_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Обновить комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/update.ru.html'>PUT /api/environments/:environment_id/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Обновить комбинацию шаблонов</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/template_combinations/destroy.ru.html'>DELETE /api/template_combinations/:id</a>
+            </td>
+            <td width='60%'>Удалить комбинацию шаблонов</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/template_kinds.ru.html'>
+      Template kinds
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/template_kinds/index.ru.html'>GET /api/template_kinds</a>
+            </td>
+            <td width='60%'>Список всех видов шаблонов</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/uebercerts.ru.html'>
+      Uebercerts
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/uebercerts/show.ru.html'>GET /katello/api/organizations/:organization_id/uebercert</a>
+            </td>
+            <td width='60%'>Показать сертификат ueber организации</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/usergroups.ru.html'>
+      Usergroups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/usergroups/index.ru.html'>GET /api/usergroups</a>
+            </td>
+            <td width='60%'>Список всех групп пользователей</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/usergroups/show.ru.html'>GET /api/usergroups/:id</a>
+            </td>
+            <td width='60%'>Показать группу пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/usergroups/create.ru.html'>POST /api/usergroups</a>
+            </td>
+            <td width='60%'>Создать группу пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/usergroups/update.ru.html'>PUT /api/usergroups/:id</a>
+            </td>
+            <td width='60%'>Изменить группу пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/usergroups/destroy.ru.html'>DELETE /api/usergroups/:id</a>
+            </td>
+            <td width='60%'>Удалить группу пользователя</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/users.ru.html'>
+      Users
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Ресурс</th>
+        <th>Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.ru.html'>GET /api/users</a>
+            </td>
+            <td width='60%'>Список всех пользователей</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.ru.html'>GET /api/auth_source_ldaps/:auth_source_ldap_id/users</a>
+            </td>
+            <td width='60%'>Список всех пользователей из источника LDAP авторизации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.ru.html'>GET /api/usergroups/:usergroup_id/users</a>
+            </td>
+            <td width='60%'>Список всех пользователей группы пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.ru.html'>GET /api/roles/:role_id/users</a>
+            </td>
+            <td width='60%'>Список всех пользователей роли</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.ru.html'>GET /api/locations/:location_id/users</a>
+            </td>
+            <td width='60%'>Список всех пользователей местоположения</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/index.ru.html'>GET /api/organizations/:organization_id/users</a>
+            </td>
+            <td width='60%'>Список всех пользователей организации</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/show.ru.html'>GET /api/users/:id</a>
+            </td>
+            <td width='60%'>Показать пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/create.ru.html'>POST /api/users</a>
+            </td>
+            <td width='60%'>Создать пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/update.ru.html'>PUT /api/users/:id</a>
+            </td>
+            <td width='60%'>Изменить пользователя</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/destroy.ru.html'>DELETE /api/users/:id</a>
+            </td>
+            <td width='60%'>Удалить пользователя</td>
+          </tr>
+    </tbody>
+  </table>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='./apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
