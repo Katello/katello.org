@@ -83,6 +83,12 @@ The database password is stored in /var/lib/puppet/foreman_cache_data/candlepin_
 # sudo -u apache pulp-manage-db
 ```
 
+There are some packages that are no longer needed by pulp and optionally can be removed.
+
+```
+# yum remove -y pulp-nodes-common pulp-nodes-parent
+```
+
 **Foreman**
 
 ```

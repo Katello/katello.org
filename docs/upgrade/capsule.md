@@ -87,3 +87,9 @@ If for any reason, the above steps failed, please review /var/log/foreman-instal
 # sudo -u apache pulp-manage-db
 ```
 
+There are some packages that are no longer needed by pulp and optionally can be removed.
+
+```
+# yum remove -y pulp-nodes-common pulp-nodes-child
+```
+
