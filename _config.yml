@@ -7,7 +7,7 @@ latest: 2.4
 foreman_version: nightly
 
 version_aliases:
-
+  '3.0':  3.0-RC
 kramdown:
   auto_id: true
   input: GFM
