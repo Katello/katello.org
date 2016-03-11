@@ -4,6 +4,32 @@ title: Release Notes
 sidebar: sidebars/documentation.html
 ---
 
+# 2.4.1 Gose (2016-03-11)
+
+## Bug Fixes 
+
+### Dashboard
+ * Dashboard gives undefined method `label' for nil:NilClass ([#13823](http://projects.theforeman.org/issues/13823), [dc50145a](http://github.com/katello//commit/dc50145ae2d74847fc6a0563963a50ee7cde2e4d))
+
+### Pulp
+ * Task pending on waiting for Pulp to start the task ([#13799](http://projects.theforeman.org/issues/13799))
+ * Unable to apply updates/erratas ([#12427](http://projects.theforeman.org/issues/12427))
+
+### Capsule
+ * Capsule content sync hangs at 75% (100% of the time) ([#13532](http://projects.theforeman.org/issues/13532))
+ * Generate Capsule Metadata and Sync fails - Host did not respond within 20 seconds. Is katello-agent installed and goferd running on the Host ([#11971](http://projects.theforeman.org/issues/11971))
+
+### API
+ * incremental update with puppet fails with error 'undefined method `id_search'  ([#13253](http://projects.theforeman.org/issues/13253), [4192beda](http://github.com/katello//commit/4192beda1ccadd4ba52cbc524732ba68c9be7299))
+ * System product content does not show redhat content ([#13010](http://projects.theforeman.org/issues/13010), [2d7c3558](http://github.com/katello//commit/2d7c35580d5fcfad5e0b95114ab62f34494d7dca))
+
+### Activation Key
+ * Can't delete activation key ([#12984](http://projects.theforeman.org/issues/12984), [de57a7b7](http://github.com/katello//commit/de57a7b79357cc5974f13d0f922e103805940661))
+
+### Other
+ * After upgrade to foreman 1.10 my smart proxy is no anymore sync and is only sending resetting dropped connection ([#13286](http://projects.theforeman.org/issues/13286))
+
+
 # 2.4 Gose (2015-12-23)
 
 ## Features 
