@@ -6,6 +6,6 @@ group :test, :development do
   gem 'kramdown'
   gem 'pygments.rb'
   gem 'rake'
-  gem 'html-proofer'
+  gem 'html-proofer', '~> 2.6.4'
   gem 'parallel'
 end
