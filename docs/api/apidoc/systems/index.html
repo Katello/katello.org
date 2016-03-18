@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -29,32 +30,43 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/systems/index.ca.html">ca</a> | <a href="../../apidoc/systems/index.sv_SE.html">sv_SE</a> | <a href="../../apidoc/systems/index.zh_CN.html">zh_CN</a> | <a href="../../apidoc/systems/index.gl.html">gl</a> | <a href="../../apidoc/systems/index.it.html">it</a> | <a href="../../apidoc/systems/index.pt_BR.html">pt_BR</a> | <a href="../../apidoc/systems/index.es.html">es</a> | <a href="../../apidoc/systems/index.ja.html">ja</a> | <a href="../../apidoc/systems/index.en_GB.html">en_GB</a> | <a href="../../apidoc/systems/index.ru.html">ru</a> | <a href="../../apidoc/systems/index.fr.html">fr</a> | <a href="../../apidoc/systems/index.en.html">en</a> | <a href="../../apidoc/systems/index.ko.html">ko</a> | <a href="../../apidoc/systems/index.de.html">de</a> | <a href="../../apidoc/systems/index.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      GET /katello/api/systems<br>
+      GET /katello/api/systems
+        <code>DEPRECATED</code>
+      <br>
       <small>List content hosts</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /katello/api/organizations/:organization_id/systems<br>
+      POST /katello/api/systems/post_index
+        <code>DEPRECATED</code>
+      <br>
+      <small>List content hosts when you have a query string parameter that will cause a 414.</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /katello/api/organizations/:organization_id/systems
+        <code>DEPRECATED</code>
+      <br>
       <small>List content hosts in an organization</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /katello/api/environments/:environment_id/systems<br>
+      GET /katello/api/environments/:environment_id/systems
+        <code>DEPRECATED</code>
+      <br>
       <small>List content hosts in environment</small>
-    </h1>
-  </div>
-  <div class='page-header'>
-    <h1>
-      GET /katello/api/host_collections/:host_collection_id/systems<br>
-      <small>List content hosts in a host collection</small>
     </h1>
   </div>
 
@@ -87,9 +99,12 @@
       
 <p>Filter content host by name</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -108,9 +123,12 @@
       
 <p>Filter content host by subscribed pool</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -129,9 +147,12 @@
       
 <p>Filter content host by uuid</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -150,9 +171,12 @@
       
 <p>Specify the organization</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -171,9 +195,12 @@
       
 <p>Filter by environment</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -182,7 +209,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>host_collection_id </strong><br>
+      <strong>content_view_id </strong><br>
       <small>
         optional
         
@@ -190,11 +217,14 @@
     </td>
     <td>
       
-<p>Filter by host collection</p>
+<p>Filter by content view</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -213,9 +243,12 @@
       
 <p>Search string</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -234,9 +267,12 @@
       
 <p>Page number, starting at 1</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -255,9 +291,12 @@
       
 <p>Number of results per page to return</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -276,9 +315,12 @@
       
 <p>Sort field and order, eg. ‘name DESC’</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -297,9 +339,12 @@
       
 <p>Whether or not to show all results</p>
 
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -318,9 +363,12 @@
       
 <p>Hash version of ‘order’ param</p>
 
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -338,9 +386,12 @@
       
 <p>Field to sort the results on</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -359,9 +410,12 @@
       
 <p>How to order the sorted results (e.g. ASC for ascending)</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -373,8 +427,11 @@
     </tbody>
   </table>
 
+
+
 </div>
 
+  
 
         
       </div>
@@ -382,7 +439,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>

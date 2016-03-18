@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API-Dokumentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.de.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Lifecycle environments
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/lifecycle_environments.ca.html">ca</a> | <a href="../apidoc/lifecycle_environments.sv_SE.html">sv_SE</a> | <a href="../apidoc/lifecycle_environments.zh_CN.html">zh_CN</a> | <a href="../apidoc/lifecycle_environments.gl.html">gl</a> | <a href="../apidoc/lifecycle_environments.it.html">it</a> | <a href="../apidoc/lifecycle_environments.pt_BR.html">pt_BR</a> | <a href="../apidoc/lifecycle_environments.es.html">es</a> | <a href="../apidoc/lifecycle_environments.ja.html">ja</a> | <a href="../apidoc/lifecycle_environments.en_GB.html">en_GB</a> | <a href="../apidoc/lifecycle_environments.ru.html">ru</a> | <a href="../apidoc/lifecycle_environments.fr.html">fr</a> | <a href="../apidoc/lifecycle_environments.en.html">en</a> | <a href="../apidoc/lifecycle_environments.ko.html">ko</a> | <b><a href="../apidoc/lifecycle_environments.de.html">de</a></b> | <a href="../apidoc/lifecycle_environments.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Lifecycle environments
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+  <div>
+<h1 id="description">Description</h1>
+
+<p>An environment is a basic organization structure that groups systems, products, repositories, etc. Every system belongs to one environment and it’s isolated inside so that it can see only content that is in its environment.</p>
+
+<h2 id="chains">Chains</h2>
+
+<p>Environments are ordered into chains and their content (propducts, repositories, tempaltes, packages) can be moved to an environment only from its prior environment. You can have for example chain like:</p>
+
+<pre><code>Library -&gt; Development -&gt; Testing -&gt; Production</code></pre>
+
+<p>Each change in an environment is done through a changeset in an action called promotion.</p>
+
+<h2 id="library">Library</h2>
+
+<p>Library is a special environment that has no ascendant: All the content starts in this environment. More chains can start from the library environment but no further branching of a chain is enabled.</p>
+</div>
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/lifecycle_environments/index.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/environments
+          </a>
+          <br>
+          <small>Umgebungen in Organisation auflisten</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/environments
+          </a>
+          <br>
+          <small>Umgebungen in Organisation auflisten</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Organisations-ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>library </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>“true” angeben, um nur Library-Umgebungen zu sehen</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>nur Umgebungen mit diesem Namen filtern</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/lifecycle_environments/show.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/environments/:id
+          </a>
+          <br>
+          <small>Umgebung anzeigen</small>
+        </h2>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/environments/:environment_id
+          </a>
+          <br>
+          <small>Umgebung anzeigen</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID der Umgebung</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID der Organisation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/lifecycle_environments/create.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/environments
+          </a>
+          <br>
+          <small>Umgebung erstellen</small>
+        </h2>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/organizations/:organization_id/environments
+          </a>
+          <br>
+          <small>Umgebung in einer Organisation erstellen</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name der Organisation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name der Umgebung</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>label </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Kennung der Umgebung</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Beschreibung der Umgebung</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>prior_id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of an environment that is prior to the new environment in the chain. It has to be either the ID of Library or the ID of an environment at the end of a chain.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/lifecycle_environments/update.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/environments/:id
+          </a>
+          <br>
+          <small>Umgebung aktualisieren</small>
+        </h2>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/organizations/:organization_id/environments/:id
+          </a>
+          <br>
+          <small>Umgebung in einer Organisation aktualisieren</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID der Umgebung</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name der Organisation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>new_name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Neuer Name für die Umgebung</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Beschreibung der Umgebung</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/lifecycle_environments/destroy.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/environments/:id
+          </a>
+          <br>
+          <small>Umgebung löschen</small>
+        </h2>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/organizations/:organization_id/environments/:id
+          </a>
+          <br>
+          <small>Umgebung in einer Organisation löschen</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID der Umgebung</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Organisations-ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/lifecycle_environments/paths.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-paths'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/environments/paths
+          </a>
+          <br>
+          <small>Umgebungspfade auflisten</small>
+        </h2>
+    </div>
+
+
+    <div id='description-paths' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Organisations-ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>permission_type </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>The associated permission type. One of (readable | promotable) Default: readable</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/lifecycle_environments/repositories.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-repositories'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/environments/:id/repositories
+          </a>
+          <br>
+          <small>List repositories available in the environment</small>
+        </h2>
+    </div>
+
+
+    <div id='description-repositories' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Umgebungs-ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Organisations-ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Inhaltsansichts-ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

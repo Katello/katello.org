@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Capsule content
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/capsule_content.ca.html">ca</a> | <a href="../apidoc/capsule_content.sv_SE.html">sv_SE</a> | <a href="../apidoc/capsule_content.zh_CN.html">zh_CN</a> | <a href="../apidoc/capsule_content.gl.html">gl</a> | <a href="../apidoc/capsule_content.it.html">it</a> | <a href="../apidoc/capsule_content.pt_BR.html">pt_BR</a> | <a href="../apidoc/capsule_content.es.html">es</a> | <a href="../apidoc/capsule_content.ja.html">ja</a> | <a href="../apidoc/capsule_content.en_GB.html">en_GB</a> | <a href="../apidoc/capsule_content.ru.html">ru</a> | <a href="../apidoc/capsule_content.fr.html">fr</a> | <a href="../apidoc/capsule_content.en.html">en</a> | <a href="../apidoc/capsule_content.ko.html">ko</a> | <a href="../apidoc/capsule_content.de.html">de</a> | <a href="../apidoc/capsule_content.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -52,7 +58,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/capsules/:id/content/lifecycle_environments
-          </a><br>
+          </a>
+          <br>
           <small>List the lifecycle environments attached to the capsule</small>
         </h2>
     </div>
@@ -86,9 +93,12 @@
       
 <p>Id of the capsule</p>
 
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -107,9 +117,12 @@
       
 <p>Id of the organization to limit environments on</p>
 
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -119,6 +132,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -132,7 +147,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/capsules/:id/content/available_lifecycle_environments
-          </a><br>
+          </a>
+          <br>
           <small>List the lifecycle environments not attached to the capsule</small>
         </h2>
     </div>
@@ -166,9 +182,12 @@
       
 <p>Id of the capsule</p>
 
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -187,9 +206,12 @@
       
 <p>Id of the organization to limit environments on</p>
 
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -199,6 +221,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -212,7 +236,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/capsules/:id/content/lifecycle_environments
-          </a><br>
+          </a>
+          <br>
           <small>Add lifecycle environments to the capsule</small>
         </h2>
     </div>
@@ -246,9 +271,12 @@
       
 <p>Id of the capsule</p>
 
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -267,9 +295,12 @@
       
 <p>Id of the lifecycle environment</p>
 
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -279,6 +310,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -292,7 +325,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/capsules/:id/content/lifecycle_environments/:environment_id
-          </a><br>
+          </a>
+          <br>
           <small>Remove lifecycle environments from the capsule</small>
         </h2>
     </div>
@@ -326,9 +360,12 @@
       
 <p>Id of the capsule</p>
 
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -347,9 +384,12 @@
       
 <p>Id of the lifecycle environment</p>
 
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -359,6 +399,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -372,7 +414,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/capsules/:id/content/sync
-          </a><br>
+          </a>
+          <br>
           <small>Synchronize the content to the capsule</small>
         </h2>
     </div>
@@ -406,9 +449,12 @@
       
 <p>Id of the capsule</p>
 
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -427,9 +473,12 @@
       
 <p>Id of the environment to limit the synchronization on</p>
 
-        <br>
-        Value: Integer
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -440,9 +489,166 @@
     </tbody>
   </table>
 
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/capsule_content/sync_status.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-sync_status'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/capsules/:id/content/sync
+          </a>
+          <br>
+          <small>Get current capsule synchronization status</small>
+        </h2>
+    </div>
+
+
+    <div id='description-sync_status' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the capsule</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the organization to get the status for</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/capsule_content/cancel_sync.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-cancel_sync'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/capsules/:id/content/sync
+          </a>
+          <br>
+          <small>Cancel running capsule synchronization.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-cancel_sync' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the capsule</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -450,7 +656,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

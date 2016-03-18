@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API-Dokumentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.de.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Sync plans
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/sync_plans.ca.html">ca</a> | <a href="../apidoc/sync_plans.sv_SE.html">sv_SE</a> | <a href="../apidoc/sync_plans.zh_CN.html">zh_CN</a> | <a href="../apidoc/sync_plans.gl.html">gl</a> | <a href="../apidoc/sync_plans.it.html">it</a> | <a href="../apidoc/sync_plans.pt_BR.html">pt_BR</a> | <a href="../apidoc/sync_plans.es.html">es</a> | <a href="../apidoc/sync_plans.ja.html">ja</a> | <a href="../apidoc/sync_plans.en_GB.html">en_GB</a> | <a href="../apidoc/sync_plans.ru.html">ru</a> | <a href="../apidoc/sync_plans.fr.html">fr</a> | <a href="../apidoc/sync_plans.en.html">en</a> | <a href="../apidoc/sync_plans.ko.html">ko</a> | <b><a href="../apidoc/sync_plans.de.html">de</a></b> | <a href="../apidoc/sync_plans.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Sync plans
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/sync_plans/index.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/sync_plans
+          </a>
+          <br>
+          <small>Synchronisationspläne auflisten</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/sync_plans
+          </a>
+          <br>
+          <small></small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Synchronisationspläne nach Organisationsnamen oder Kennung filtern</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>nach Name filtern</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sync_date </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>nach Synchronisationsdatum filtern</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>interval </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>nach Intervall filtern</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>hourly</code>, <code>daily</code>, <code>weekly</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/sync_plans/show.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/sync_plans/:id
+          </a>
+          <br>
+          <small>Synchronisationsplan anzeigen</small>
+        </h2>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/sync_plans/:id
+          </a>
+          <br>
+          <small>Synchronisationsplan anzeigen</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Synchronisationspläne nach Organisationsnamen oder Kennung filtern</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Numerische ID des Synchronisationsplans</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/sync_plans/create.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/organizations/:organization_id/sync_plans
+          </a>
+          <br>
+          <small>Synchronisationsplan erstellen</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Synchronisationspläne nach Organisationsnamen oder Kennung filtern</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name des Synchronisationsplans</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>interval </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Häufigkeit der Synchronisation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>hourly</code>, <code>daily</code>, <code>weekly</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sync_date </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Startdatum und -zeit der Synchronisation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Beschreibung des Synchronisationsplans</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>enabled </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>aktiviert oder deaktiviert die Synchronisation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/sync_plans/update.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/organizations/:organization_id/sync_plans/:id
+          </a>
+          <br>
+          <small>Synchronisationsplan aktualisieren</small>
+        </h2>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/sync_plans/:id
+          </a>
+          <br>
+          <small>Synchronisationsplan aktualisieren</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Synchronisationspläne nach Organisationsnamen oder Kennung filtern</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Numerische ID des Synchronisationsplans</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name des Synchronisationsplans</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>interval </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Häufigkeit der Synchronisation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>hourly</code>, <code>daily</code>, <code>weekly</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sync_date </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Startdatum und -zeit der Synchronisation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Beschreibung des Synchronisationsplans</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>enabled </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>aktiviert oder deaktiviert die Synchronisation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/sync_plans/destroy.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/organizations/:organization_id/sync_plans/:id
+          </a>
+          <br>
+          <small>Synchronisationsplan löschen</small>
+        </h2>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/sync_plans/:id
+          </a>
+          <br>
+          <small>Synchronisationsplan löschen</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Synchronisationspläne nach Organisationsnamen oder Kennung filtern</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Numerische ID des Synchronisationsplans</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/sync_plans/add_products.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-add_products'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/organizations/:organization_id/sync_plans/:id/add_products
+          </a>
+          <br>
+          <small>Produkte zum Synchronisationsplan hinzufügen</small>
+        </h2>
+    </div>
+
+
+    <div id='description-add_products' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID des Synchronisationsplans</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_ids </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Liste mit Produkt-IDs, die zum Synchronisationsplan hinzugefügt werden sollen</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/sync_plans/remove_products.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-remove_products'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/organizations/:organization_id/sync_plans/:id/remove_products
+          </a>
+          <br>
+          <small>Produkte aus Synchronisationsplan entfernen</small>
+        </h2>
+    </div>
+
+
+    <div id='description-remove_products' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID des Synchronisationsplans</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_ids </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Liste mit Produkt-IDs, die vom Synchronisationsplan entfernt werden sollen</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/sync_plans/sync.de.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-sync'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/sync_plans/:id/sync
+          </a>
+          <br>
+          <small>Initiate a sync of the products attached to the sync plan</small>
+        </h2>
+        <h2>
+          <a href='#description-sync'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/organizations/:organization_id/sync_plans/:id/sync
+          </a>
+          <br>
+          <small>Initiate a sync of the products attached to the sync plan</small>
+        </h2>
+    </div>
+
+
+    <div id='description-sync' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parameter</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Parametername</th>
+        <th>Beschreibung</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        verpflichtend
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID des Synchronisationsplans</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

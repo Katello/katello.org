@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Auth source ldaps
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/auth_source_ldaps.ca.html">ca</a> | <a href="../apidoc/auth_source_ldaps.sv_SE.html">sv_SE</a> | <a href="../apidoc/auth_source_ldaps.zh_CN.html">zh_CN</a> | <a href="../apidoc/auth_source_ldaps.gl.html">gl</a> | <a href="../apidoc/auth_source_ldaps.it.html">it</a> | <a href="../apidoc/auth_source_ldaps.pt_BR.html">pt_BR</a> | <a href="../apidoc/auth_source_ldaps.es.html">es</a> | <a href="../apidoc/auth_source_ldaps.ja.html">ja</a> | <a href="../apidoc/auth_source_ldaps.en_GB.html">en_GB</a> | <a href="../apidoc/auth_source_ldaps.ru.html">ru</a> | <a href="../apidoc/auth_source_ldaps.fr.html">fr</a> | <a href="../apidoc/auth_source_ldaps.en.html">en</a> | <a href="../apidoc/auth_source_ldaps.ko.html">ko</a> | <a href="../apidoc/auth_source_ldaps.de.html">de</a> | <a href="../apidoc/auth_source_ldaps.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -52,8 +58,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/auth_source_ldaps
-          </a><br>
-          <small>List all authsource ldaps</small>
+          </a>
+          <br>
+          <small>List all LDAP authentication sources</small>
         </h2>
     </div>
 
@@ -76,6 +83,54 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>sort results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>page </strong><br>
       <small>
         optional
@@ -86,9 +141,12 @@
       
 <p>paginate results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -107,9 +165,12 @@
       
 <p>number of entries per request</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -119,6 +180,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -132,8 +195,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/auth_source_ldaps/:id
-          </a><br>
-          <small>Show an authsource ldap.</small>
+          </a>
+          <br>
+          <small>Show an LDAP authentication source</small>
         </h2>
     </div>
 
@@ -164,9 +228,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -176,6 +243,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -189,8 +258,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/auth_source_ldaps
-          </a><br>
-          <small>Create an auth_source_ldap.</small>
+          </a>
+          <br>
+          <small>Create an LDAP authentication source</small>
         </h2>
     </div>
 
@@ -215,15 +285,18 @@
     <td>
       <strong>auth_source_ldap </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -239,9 +312,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -258,9 +334,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -279,9 +358,12 @@
       
 <p>defaults to 389</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -298,9 +380,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -317,9 +402,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -338,9 +426,12 @@
       
 <p>required if onthefly_register is true</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -359,9 +450,12 @@
       
 <p>required if onthefly_register is true</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -380,9 +474,12 @@
       
 <p>required if onthefly_register is true</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -401,9 +498,12 @@
       
 <p>required if onthefly_register is true</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -422,9 +522,12 @@
       
 <p>required if onthefly_register is true</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -441,9 +544,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -460,9 +566,36 @@
     </td>
     <td>
       
-        <br>
-        Value: boolean
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>auth_source_ldap[usergroup_sync] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>sync external user groups on login</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -479,9 +612,84 @@
     </td>
     <td>
       
-        <br>
-        Value: boolean
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>auth_source_ldap[groups_base] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>groups base DN</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>auth_source_ldap[server_type] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>type of the LDAP server</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>free_ipa</code>, <code>active_directory</code>, <code>posix</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>auth_source_ldap[ldap_filter] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>LDAP filter</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -492,6 +700,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -505,8 +715,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/auth_source_ldaps/:id
-          </a><br>
-          <small>Update an auth_source_ldap.</small>
+          </a>
+          <br>
+          <small>Update an LDAP authentication source</small>
         </h2>
     </div>
 
@@ -537,9 +748,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -550,15 +764,18 @@
     <td>
       <strong>auth_source_ldap </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -574,9 +791,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -593,9 +813,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -614,9 +837,12 @@
       
 <p>defaults to 389</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -633,9 +859,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -652,9 +881,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -673,9 +905,12 @@
       
 <p>required if onthefly_register is true</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -694,9 +929,12 @@
       
 <p>required if onthefly_register is true</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -715,9 +953,12 @@
       
 <p>required if onthefly_register is true</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -736,9 +977,12 @@
       
 <p>required if onthefly_register is true</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -757,9 +1001,12 @@
       
 <p>required if onthefly_register is true</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -776,9 +1023,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -795,9 +1045,36 @@
     </td>
     <td>
       
-        <br>
-        Value: boolean
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>auth_source_ldap[usergroup_sync] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>sync external user groups on login</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -814,9 +1091,84 @@
     </td>
     <td>
       
-        <br>
-        Value: boolean
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>auth_source_ldap[groups_base] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>groups base DN</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>auth_source_ldap[server_type] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>type of the LDAP server</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>free_ipa</code>, <code>active_directory</code>, <code>posix</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>auth_source_ldap[ldap_filter] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>LDAP filter</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -827,6 +1179,71 @@
 
     </tbody>
   </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/auth_source_ldaps/test.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-test'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/auth_source_ldaps/:id/test
+          </a>
+          <br>
+          <small>Test LDAP connection</small>
+        </h2>
+    </div>
+
+
+    <div id='description-test' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
 
     </div>
     <hr>
@@ -840,8 +1257,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/auth_source_ldaps/:id
-          </a><br>
-          <small>Delete an auth_source_ldap.</small>
+          </a>
+          <br>
+          <small>Delete an LDAP authentication source</small>
         </h2>
     </div>
 
@@ -872,9 +1290,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -885,9 +1306,12 @@
     </tbody>
   </table>
 
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -895,7 +1319,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

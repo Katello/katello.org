@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Parameters
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/parameters.ca.html">ca</a> | <a href="../apidoc/parameters.sv_SE.html">sv_SE</a> | <a href="../apidoc/parameters.zh_CN.html">zh_CN</a> | <a href="../apidoc/parameters.gl.html">gl</a> | <a href="../apidoc/parameters.it.html">it</a> | <a href="../apidoc/parameters.pt_BR.html">pt_BR</a> | <a href="../apidoc/parameters.es.html">es</a> | <a href="../apidoc/parameters.ja.html">ja</a> | <a href="../apidoc/parameters.en_GB.html">en_GB</a> | <a href="../apidoc/parameters.ru.html">ru</a> | <a href="../apidoc/parameters.fr.html">fr</a> | <a href="../apidoc/parameters.en.html">en</a> | <a href="../apidoc/parameters.ko.html">ko</a> | <a href="../apidoc/parameters.de.html">de</a> | <a href="../apidoc/parameters.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -37,8 +41,10 @@
 </div>
 
   <div>
-<p>These API calls are related to <b>nested parameters for host, domain, hostgroup, operating system</b>. If you are looking for <a href='common_parameters.html'>global parameters</a>, go to <a href='common_parameters.html'>this link</a>.</p>
+<p>These API calls are related to <b>nested parameters for a host, domain, host group, operating system</b>. If you are looking for <a href='common_parameters.html'>global parameters</a>, go to <a href='common_parameters.html'>this link</a>.</p>
 </div>
+
+
 
 
 
@@ -55,8 +61,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hosts/:host_id/parameters
-          </a><br>
-          <small>List all parameters for host</small>
+          </a>
+          <br>
+          <small>List all parameters for a host</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -64,8 +71,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hostgroups/:hostgroup_id/parameters
-          </a><br>
-          <small>List all parameters for hostgroup</small>
+          </a>
+          <br>
+          <small>List all parameters for a host group</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -73,8 +81,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/domains/:domain_id/parameters
-          </a><br>
-          <small>List all parameters for domain</small>
+          </a>
+          <br>
+          <small>List all parameters for a domain</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -82,8 +91,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/operatingsystems/:operatingsystem_id/parameters
-          </a><br>
-          <small>List all parameters for operating system</small>
+          </a>
+          <br>
+          <small>List all parameters for an operating system</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -91,8 +101,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/locations/:location_id/parameters
-          </a><br>
-          <small>List all parameters for location</small>
+          </a>
+          <br>
+          <small>List all parameters for a location</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -100,8 +111,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/organizations/:organization_id/parameters
-          </a><br>
-          <small>List all parameters for organization</small>
+          </a>
+          <br>
+          <small>List all parameters for an organization</small>
         </h2>
     </div>
 
@@ -132,11 +144,14 @@
     </td>
     <td>
       
-<p>id of host</p>
+<p>ID of host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -153,11 +168,14 @@
     </td>
     <td>
       
-<p>id of hostgroup</p>
+<p>ID of host group</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -174,11 +192,14 @@
     </td>
     <td>
       
-<p>id of domain</p>
+<p>ID of domain</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -195,11 +216,14 @@
     </td>
     <td>
       
-<p>id of operating system</p>
+<p>ID of operating system</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -216,11 +240,14 @@
     </td>
     <td>
       
-<p>id of location</p>
+<p>ID of location</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -237,11 +264,62 @@
     </td>
     <td>
       
-<p>id of organization</p>
+<p>ID of organization</p>
 
-        <br>
-        Value: String
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>sort results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -260,9 +338,12 @@
       
 <p>paginate results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -281,9 +362,12 @@
       
 <p>number of entries per request</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -293,6 +377,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -306,8 +392,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hosts/:host_id/parameters/:id
-          </a><br>
-          <small>Show a nested parameter for host</small>
+          </a>
+          <br>
+          <small>Show a nested parameter for a host</small>
         </h2>
         <h2>
           <a href='#description-show'
@@ -315,8 +402,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hostgroups/:hostgroup_id/parameters/:id
-          </a><br>
-          <small>Show a nested parameter for hostgroup</small>
+          </a>
+          <br>
+          <small>Show a nested parameter for a host group</small>
         </h2>
         <h2>
           <a href='#description-show'
@@ -324,8 +412,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/domains/:domain_id/parameters/:id
-          </a><br>
-          <small>Show a nested parameter for domain</small>
+          </a>
+          <br>
+          <small>Show a nested parameter for a domain</small>
         </h2>
         <h2>
           <a href='#description-show'
@@ -333,8 +422,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/operatingsystems/:operatingsystem_id/parameters/:id
-          </a><br>
-          <small>Show a nested parameter for operating system</small>
+          </a>
+          <br>
+          <small>Show a nested parameter for an operating system</small>
         </h2>
         <h2>
           <a href='#description-show'
@@ -342,8 +432,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/locations/:location_id/parameters/:id
-          </a><br>
-          <small>Show a nested parameter for location</small>
+          </a>
+          <br>
+          <small>Show a nested parameter for a location</small>
         </h2>
         <h2>
           <a href='#description-show'
@@ -351,8 +442,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/organizations/:organization_id/parameters/:id
-          </a><br>
-          <small>Show a nested parameter for organization</small>
+          </a>
+          <br>
+          <small>Show a nested parameter for an organization</small>
         </h2>
     </div>
 
@@ -383,11 +475,14 @@
     </td>
     <td>
       
-<p>id of host</p>
+<p>ID of host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -404,11 +499,14 @@
     </td>
     <td>
       
-<p>id of hostgroup</p>
+<p>ID of host group</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -425,11 +523,14 @@
     </td>
     <td>
       
-<p>id of domain</p>
+<p>ID of domain</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -446,11 +547,14 @@
     </td>
     <td>
       
-<p>id of operating system</p>
+<p>ID of operating system</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -467,11 +571,14 @@
     </td>
     <td>
       
-<p>id of location</p>
+<p>ID of location</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -488,11 +595,14 @@
     </td>
     <td>
       
-<p>id of organization</p>
+<p>ID of organization</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -509,11 +619,14 @@
     </td>
     <td>
       
-<p>id of parameter</p>
+<p>ID of parameter</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -523,6 +636,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -536,8 +651,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/hosts/:host_id/parameters
-          </a><br>
-          <small>Create a nested parameter for host</small>
+          </a>
+          <br>
+          <small>Create a nested parameter for a host</small>
         </h2>
         <h2>
           <a href='#description-create'
@@ -545,8 +661,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/hostgroups/:hostgroup_id/parameters
-          </a><br>
-          <small>Create a nested parameter for hostgroup</small>
+          </a>
+          <br>
+          <small>Create a nested parameter for a host group</small>
         </h2>
         <h2>
           <a href='#description-create'
@@ -554,8 +671,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/domains/:domain_id/parameters
-          </a><br>
-          <small>Create a nested parameter for domain</small>
+          </a>
+          <br>
+          <small>Create a nested parameter for a domain</small>
         </h2>
         <h2>
           <a href='#description-create'
@@ -563,8 +681,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/operatingsystems/:operatingsystem_id/parameters
-          </a><br>
-          <small>Create a nested parameter for operating system</small>
+          </a>
+          <br>
+          <small>Create a nested parameter for an operating system</small>
         </h2>
         <h2>
           <a href='#description-create'
@@ -572,8 +691,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/locations/:location_id/parameters
-          </a><br>
-          <small>Create a nested parameter for location</small>
+          </a>
+          <br>
+          <small>Create a nested parameter for a location</small>
         </h2>
         <h2>
           <a href='#description-create'
@@ -581,8 +701,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/organizations/:organization_id/parameters
-          </a><br>
-          <small>Create a nested parameter for organization</small>
+          </a>
+          <br>
+          <small>Create a nested parameter for an organization</small>
         </h2>
     </div>
 
@@ -613,11 +734,14 @@
     </td>
     <td>
       
-<p>id of host</p>
+<p>ID of host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -634,11 +758,14 @@
     </td>
     <td>
       
-<p>id of hostgroup</p>
+<p>ID of host group</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -655,11 +782,14 @@
     </td>
     <td>
       
-<p>id of domain</p>
+<p>ID of domain</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -676,11 +806,14 @@
     </td>
     <td>
       
-<p>id of operating system</p>
+<p>ID of operating system</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -697,11 +830,14 @@
     </td>
     <td>
       
-<p>id of location</p>
+<p>ID of location</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -718,11 +854,14 @@
     </td>
     <td>
       
-<p>id of organization</p>
+<p>ID of organization</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -733,15 +872,18 @@
     <td>
       <strong>parameter </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -757,9 +899,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -776,9 +921,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -789,6 +937,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -802,8 +952,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/hosts/:host_id/parameters/:id
-          </a><br>
-          <small>Update a nested parameter for host</small>
+          </a>
+          <br>
+          <small>Update a nested parameter for a host</small>
         </h2>
         <h2>
           <a href='#description-update'
@@ -811,8 +962,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/hostgroups/:hostgroup_id/parameters/:id
-          </a><br>
-          <small>Update a nested parameter for hostgroup</small>
+          </a>
+          <br>
+          <small>Update a nested parameter for a host group</small>
         </h2>
         <h2>
           <a href='#description-update'
@@ -820,8 +972,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/domains/:domain_id/parameters/:id
-          </a><br>
-          <small>Update a nested parameter for domain</small>
+          </a>
+          <br>
+          <small>Update a nested parameter for a domain</small>
         </h2>
         <h2>
           <a href='#description-update'
@@ -829,8 +982,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/operatingsystems/:operatingsystem_id/parameters/:id
-          </a><br>
-          <small>Update a nested parameter for operating system</small>
+          </a>
+          <br>
+          <small>Update a nested parameter for an operating system</small>
         </h2>
         <h2>
           <a href='#description-update'
@@ -838,8 +992,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/locations/:location_id/parameters/:id
-          </a><br>
-          <small>Update a nested parameter for location</small>
+          </a>
+          <br>
+          <small>Update a nested parameter for a location</small>
         </h2>
         <h2>
           <a href='#description-update'
@@ -847,8 +1002,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/organizations/:organization_id/parameters/:id
-          </a><br>
-          <small>Update a nested parameter for organization</small>
+          </a>
+          <br>
+          <small>Update a nested parameter for an organization</small>
         </h2>
     </div>
 
@@ -879,11 +1035,14 @@
     </td>
     <td>
       
-<p>id of host</p>
+<p>ID of host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -900,11 +1059,14 @@
     </td>
     <td>
       
-<p>id of hostgroup</p>
+<p>ID of host group</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -921,11 +1083,14 @@
     </td>
     <td>
       
-<p>id of domain</p>
+<p>ID of domain</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -942,11 +1107,14 @@
     </td>
     <td>
       
-<p>id of operating system</p>
+<p>ID of operating system</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -963,11 +1131,14 @@
     </td>
     <td>
       
-<p>id of location</p>
+<p>ID of location</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -984,11 +1155,14 @@
     </td>
     <td>
       
-<p>id of organization</p>
+<p>ID of organization</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1005,11 +1179,14 @@
     </td>
     <td>
       
-<p>id of parameter</p>
+<p>ID of parameter</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1020,15 +1197,18 @@
     <td>
       <strong>parameter </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1044,9 +1224,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1063,9 +1246,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1076,6 +1262,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -1089,8 +1277,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/hosts/:host_id/parameters/:id
-          </a><br>
-          <small>Delete a nested parameter for host</small>
+          </a>
+          <br>
+          <small>Delete a nested parameter for a host</small>
         </h2>
         <h2>
           <a href='#description-destroy'
@@ -1098,8 +1287,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/hostgroups/:hostgroup_id/parameters/:id
-          </a><br>
-          <small>Delete a nested parameter for hostgroup</small>
+          </a>
+          <br>
+          <small>Delete a nested parameter for a host group</small>
         </h2>
         <h2>
           <a href='#description-destroy'
@@ -1107,8 +1297,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/domains/:domain_id/parameters/:id
-          </a><br>
-          <small>Delete a nested parameter for domain</small>
+          </a>
+          <br>
+          <small>Delete a nested parameter for a domain</small>
         </h2>
         <h2>
           <a href='#description-destroy'
@@ -1116,8 +1307,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/operatingsystems/:operatingsystem_id/parameters/:id
-          </a><br>
-          <small>Delete a nested parameter for operating system</small>
+          </a>
+          <br>
+          <small>Delete a nested parameter for an operating system</small>
         </h2>
         <h2>
           <a href='#description-destroy'
@@ -1125,8 +1317,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/locations/:location_id/parameters/:id
-          </a><br>
-          <small>Delete a nested parameter for location</small>
+          </a>
+          <br>
+          <small>Delete a nested parameter for a location</small>
         </h2>
         <h2>
           <a href='#description-destroy'
@@ -1134,8 +1327,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/organizations/:organization_id/parameters/:id
-          </a><br>
-          <small>Delete a nested parameter for organization</small>
+          </a>
+          <br>
+          <small>Delete a nested parameter for an organization</small>
         </h2>
     </div>
 
@@ -1166,11 +1360,14 @@
     </td>
     <td>
       
-<p>id of host</p>
+<p>ID of host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1187,11 +1384,14 @@
     </td>
     <td>
       
-<p>id of hostgroup</p>
+<p>ID of host group</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1208,11 +1408,14 @@
     </td>
     <td>
       
-<p>id of domain</p>
+<p>ID of domain</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1229,11 +1432,14 @@
     </td>
     <td>
       
-<p>id of operating system</p>
+<p>ID of operating system</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1250,11 +1456,14 @@
     </td>
     <td>
       
-<p>id of location</p>
+<p>ID of location</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1271,11 +1480,14 @@
     </td>
     <td>
       
-<p>id of organization</p>
+<p>ID of organization</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1292,11 +1504,14 @@
     </td>
     <td>
       
-<p>id of parameter</p>
+<p>ID of parameter</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1306,6 +1521,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -1319,8 +1536,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/hosts/:host_id/parameters
-          </a><br>
-          <small>Delete all nested parameters for host</small>
+          </a>
+          <br>
+          <small>Delete all nested parameters for a host</small>
         </h2>
         <h2>
           <a href='#description-reset'
@@ -1328,8 +1546,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/hostgroups/:hostgroup_id/parameters
-          </a><br>
-          <small>Delete all nested parameters for hostgroup</small>
+          </a>
+          <br>
+          <small>Delete all nested parameters for a host group</small>
         </h2>
         <h2>
           <a href='#description-reset'
@@ -1337,8 +1556,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/domains/:domain_id/parameters
-          </a><br>
-          <small>Delete all nested parameters for domain</small>
+          </a>
+          <br>
+          <small>Delete all nested parameters for a domain</small>
         </h2>
         <h2>
           <a href='#description-reset'
@@ -1346,8 +1566,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/operatingsystems/:operatingsystem_id/parameters
-          </a><br>
-          <small>Delete all nested parameters for operating system</small>
+          </a>
+          <br>
+          <small>Delete all nested parameters for an operating system</small>
         </h2>
         <h2>
           <a href='#description-reset'
@@ -1355,8 +1576,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/locations/:location_id/parameters
-          </a><br>
-          <small>Delete all nested parameter for location</small>
+          </a>
+          <br>
+          <small>Delete all nested parameter for a location</small>
         </h2>
         <h2>
           <a href='#description-reset'
@@ -1364,8 +1586,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/organizations/:organization_id/parameters
-          </a><br>
-          <small>Delete all nested parameter for organization</small>
+          </a>
+          <br>
+          <small>Delete all nested parameter for an organization</small>
         </h2>
     </div>
 
@@ -1396,11 +1619,14 @@
     </td>
     <td>
       
-<p>id of host</p>
+<p>ID of host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1417,11 +1643,14 @@
     </td>
     <td>
       
-<p>id of hostgroup</p>
+<p>ID of host group</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1438,11 +1667,14 @@
     </td>
     <td>
       
-<p>id of domain</p>
+<p>ID of domain</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1459,11 +1691,14 @@
     </td>
     <td>
       
-<p>id of operating system</p>
+<p>ID of operating system</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1480,11 +1715,14 @@
     </td>
     <td>
       
-<p>id of location</p>
+<p>ID of location</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1501,11 +1739,14 @@
     </td>
     <td>
       
-<p>id of organization</p>
+<p>ID of organization</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1516,9 +1757,12 @@
     </tbody>
   </table>
 
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -1526,7 +1770,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

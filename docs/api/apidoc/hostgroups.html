@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Hostgroups
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/hostgroups.ca.html">ca</a> | <a href="../apidoc/hostgroups.sv_SE.html">sv_SE</a> | <a href="../apidoc/hostgroups.zh_CN.html">zh_CN</a> | <a href="../apidoc/hostgroups.gl.html">gl</a> | <a href="../apidoc/hostgroups.it.html">it</a> | <a href="../apidoc/hostgroups.pt_BR.html">pt_BR</a> | <a href="../apidoc/hostgroups.es.html">es</a> | <a href="../apidoc/hostgroups.ja.html">ja</a> | <a href="../apidoc/hostgroups.en_GB.html">en_GB</a> | <a href="../apidoc/hostgroups.ru.html">ru</a> | <a href="../apidoc/hostgroups.fr.html">fr</a> | <a href="../apidoc/hostgroups.en.html">en</a> | <a href="../apidoc/hostgroups.ko.html">ko</a> | <a href="../apidoc/hostgroups.de.html">de</a> | <a href="../apidoc/hostgroups.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -52,8 +58,39 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hostgroups
-          </a><br>
-          <small>List all hostgroups.</small>
+          </a>
+          <br>
+          <small>List all host groups</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/puppetclasses/:puppetclass_id/hostgroups
+          </a>
+          <br>
+          <small>List all host groups for a Puppet class</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/locations/:location_id/hostgroups
+          </a>
+          <br>
+          <small>List all host groups per location</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/organizations/:organization_id/hostgroups
+          </a>
+          <br>
+          <small>List all host groups per organization</small>
         </h2>
     </div>
 
@@ -76,6 +113,78 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>puppetclass_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of Puppet class</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Scope by locations</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Scope by organizations</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>search </strong><br>
       <small>
         optional
@@ -86,9 +195,12 @@
       
 <p>filter results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -107,9 +219,12 @@
       
 <p>sort results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -128,9 +243,12 @@
       
 <p>paginate results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -149,9 +267,12 @@
       
 <p>number of entries per request</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -161,6 +282,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -174,8 +297,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hostgroups/:id
-          </a><br>
-          <small>Show a hostgroup.</small>
+          </a>
+          <br>
+          <small>Show a host group</small>
         </h2>
     </div>
 
@@ -206,9 +330,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -218,6 +345,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -231,8 +360,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/hostgroups
-          </a><br>
-          <small>Create an hostgroup.</small>
+          </a>
+          <br>
+          <small>Create a host group</small>
         </h2>
     </div>
 
@@ -257,15 +387,18 @@
     <td>
       <strong>hostgroup </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -281,9 +414,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -300,9 +436,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -319,9 +458,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -338,9 +480,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -357,9 +502,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -376,9 +524,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -395,9 +546,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -414,9 +568,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -433,9 +590,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -452,9 +612,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -471,9 +634,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -490,9 +656,126 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[content_source_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[content_view_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[lifecycle_environment_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[location_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE locations with given ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[organization_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE organizations with given ids.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -503,6 +786,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -516,8 +801,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/hostgroups/:id
-          </a><br>
-          <small>Update an hostgroup.</small>
+          </a>
+          <br>
+          <small>Update a host group</small>
         </h2>
     </div>
 
@@ -548,9 +834,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -561,15 +850,18 @@
     <td>
       <strong>hostgroup </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -585,9 +877,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -604,9 +899,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -623,9 +921,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -642,9 +943,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -661,9 +965,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -680,9 +987,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -699,9 +1009,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -718,9 +1031,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -737,9 +1053,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -756,9 +1075,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -775,9 +1097,12 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -794,9 +1119,126 @@
     </td>
     <td>
       
-        <br>
-        Value: number.
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[content_source_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[content_view_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[lifecycle_environment_id] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[location_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE locations with given ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>hostgroup[organization_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE organizations with given ids.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -807,6 +1249,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -820,8 +1264,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/hostgroups/:id
-          </a><br>
-          <small>Delete an hostgroup.</small>
+          </a>
+          <br>
+          <small>Delete a host group</small>
         </h2>
     </div>
 
@@ -852,9 +1297,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -865,9 +1313,75 @@
     </tbody>
   </table>
 
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/hostgroups/clone.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-clone'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/hostgroups/:id/clone
+          </a>
+          <br>
+          <small>Clone a host group</small>
+        </h2>
+    </div>
+
+
+    <div id='description-clone' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -875,7 +1389,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

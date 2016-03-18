@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Lifecycle environments
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/lifecycle_environments.ca.html">ca</a> | <a href="../apidoc/lifecycle_environments.sv_SE.html">sv_SE</a> | <a href="../apidoc/lifecycle_environments.zh_CN.html">zh_CN</a> | <a href="../apidoc/lifecycle_environments.gl.html">gl</a> | <a href="../apidoc/lifecycle_environments.it.html">it</a> | <a href="../apidoc/lifecycle_environments.pt_BR.html">pt_BR</a> | <a href="../apidoc/lifecycle_environments.es.html">es</a> | <a href="../apidoc/lifecycle_environments.ja.html">ja</a> | <a href="../apidoc/lifecycle_environments.en_GB.html">en_GB</a> | <a href="../apidoc/lifecycle_environments.ru.html">ru</a> | <a href="../apidoc/lifecycle_environments.fr.html">fr</a> | <a href="../apidoc/lifecycle_environments.en.html">en</a> | <a href="../apidoc/lifecycle_environments.ko.html">ko</a> | <a href="../apidoc/lifecycle_environments.de.html">de</a> | <a href="../apidoc/lifecycle_environments.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -56,6 +60,8 @@
 
 
 
+
+
 <div class='accordion' id='accordion'>
 
     <hr>
@@ -69,7 +75,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/environments
-          </a><br>
+          </a>
+          <br>
           <small>List environments in an organization</small>
         </h2>
         <h2>
@@ -78,7 +85,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/environments
-          </a><br>
+          </a>
+          <br>
           <small>List environments in an organization</small>
         </h2>
     </div>
@@ -112,9 +120,12 @@
       
 <p>organization identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -133,9 +144,12 @@
       
 <p>set true if you want to see only library environments</p>
 
-        <br>
-        Value: Must be one of: true, false.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>true</code>, <code>false</code>.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -154,9 +168,12 @@
       
 <p>filter only environments containing this name</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -166,6 +183,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -179,7 +198,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/environments/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show an environment</small>
         </h2>
         <h2>
@@ -188,7 +208,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/environments/:environment_id
-          </a><br>
+          </a>
+          <br>
           <small>Show an environment</small>
         </h2>
     </div>
@@ -222,9 +243,12 @@
       
 <p>ID of the environment</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -243,9 +267,12 @@
       
 <p>ID of the organization</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -255,6 +282,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -268,7 +297,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/environments
-          </a><br>
+          </a>
+          <br>
           <small>Create an environment</small>
         </h2>
         <h2>
@@ -277,7 +307,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/organizations/:organization_id/environments
-          </a><br>
+          </a>
+          <br>
           <small>Create an environment in an organization</small>
         </h2>
     </div>
@@ -311,9 +342,12 @@
       
 <p>name of organization</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -332,9 +366,36 @@
       
 <p>name of the environment</p>
 
-        <br>
-        Value: String
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>label </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>label of the environment</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -353,9 +414,12 @@
       
 <p>description of the environment</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -364,7 +428,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>prior </strong><br>
+      <strong>prior_id </strong><br>
       <small>
         required
         
@@ -372,11 +436,14 @@
     </td>
     <td>
       
-<p>Name of an environment that is prior to the new environment in the chain. It has to be either ‘Library’ or an environment at the end of a chain.</p>
+<p>ID of an environment that is prior to the new environment in the chain. It has to be either the ID of Library or the ID of an environment at the end of a chain.</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
 
     </td>
 
@@ -386,6 +453,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -399,7 +468,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/environments/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update an environment</small>
         </h2>
         <h2>
@@ -408,7 +478,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/organizations/:organization_id/environments/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update an environment in an organization</small>
         </h2>
     </div>
@@ -442,9 +513,12 @@
       
 <p>ID of the environment</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -463,9 +537,12 @@
       
 <p>name of the organization</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -484,9 +561,12 @@
       
 <p>new name to be given to the environment</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -505,30 +585,12 @@
       
 <p>description of the environment</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>prior </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Name of an environment that is prior to the new environment in the chain. It has to be either ‘Library’ or an environment at the end of a chain.</p>
-
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -538,6 +600,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -551,7 +615,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/environments/:id
-          </a><br>
+          </a>
+          <br>
           <small>Destroy an environment</small>
         </h2>
         <h2>
@@ -560,7 +625,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/organizations/:organization_id/environments/:id
-          </a><br>
+          </a>
+          <br>
           <small>Destroy an environment in an organization</small>
         </h2>
     </div>
@@ -594,9 +660,12 @@
       
 <p>ID of the environment</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -615,9 +684,12 @@
       
 <p>organization identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -627,6 +699,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -640,7 +714,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/environments/paths
-          </a><br>
+          </a>
+          <br>
           <small>List environment paths</small>
         </h2>
     </div>
@@ -674,9 +749,12 @@
       
 <p>organization identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -695,9 +773,12 @@
       
 <p>The associated permission type. One of (readable | promotable) Default: readable</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -707,6 +788,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -720,7 +803,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/environments/:id/repositories
-          </a><br>
+          </a>
+          <br>
           <small>List repositories available in the environment</small>
         </h2>
     </div>
@@ -754,9 +838,12 @@
       
 <p>environment identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -775,9 +862,12 @@
       
 <p>organization identifier</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -796,9 +886,12 @@
       
 <p>content view identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -809,9 +902,12 @@
     </tbody>
   </table>
 
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -819,7 +915,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

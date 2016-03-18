@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -29,13 +30,38 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/packages/index.ca.html">ca</a> | <a href="../../apidoc/packages/index.sv_SE.html">sv_SE</a> | <a href="../../apidoc/packages/index.zh_CN.html">zh_CN</a> | <a href="../../apidoc/packages/index.gl.html">gl</a> | <a href="../../apidoc/packages/index.it.html">it</a> | <a href="../../apidoc/packages/index.pt_BR.html">pt_BR</a> | <a href="../../apidoc/packages/index.es.html">es</a> | <a href="../../apidoc/packages/index.ja.html">ja</a> | <a href="../../apidoc/packages/index.en_GB.html">en_GB</a> | <a href="../../apidoc/packages/index.ru.html">ru</a> | <a href="../../apidoc/packages/index.fr.html">fr</a> | <a href="../../apidoc/packages/index.en.html">en</a> | <a href="../../apidoc/packages/index.ko.html">ko</a> | <a href="../../apidoc/packages/index.de.html">de</a> | <a href="../../apidoc/packages/index.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      GET /katello/api/repositories/:repository_id/packages<br>
+      GET /katello/api/packages
+      <br>
+      <small>List packages</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /katello/api/content_views/:content_view_id/filters/:filter_id/packages
+      <br>
+      <small>List packages</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /katello/api/content_view_filters/:content_view_filter_id/packages
+      <br>
+      <small>List packages</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /katello/api/repositories/:repository_id/packages
+      <br>
       <small>List packages</small>
     </h1>
   </div>
@@ -59,6 +85,78 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>organization identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_version_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>content view version identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_filter_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>content view filter identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>repository_id </strong><br>
       <small>
         optional
@@ -67,11 +165,62 @@
     </td>
     <td>
       
-<p>Repository id to list packages for</p>
+<p>repository identifier</p>
 
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>environment identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ids </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ids to filter content by</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -90,9 +239,12 @@
       
 <p>Search string</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -111,9 +263,12 @@
       
 <p>Page number, starting at 1</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -132,9 +287,12 @@
       
 <p>Number of results per page to return</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -153,9 +311,12 @@
       
 <p>Sort field and order, eg. ‘name DESC’</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -174,9 +335,12 @@
       
 <p>Whether or not to show all results</p>
 
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -195,9 +359,12 @@
       
 <p>Hash version of ‘order’ param</p>
 
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -215,9 +382,12 @@
       
 <p>Field to sort the results on</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -236,9 +406,12 @@
       
 <p>How to order the sorted results (e.g. ASC for ascending)</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -250,8 +423,11 @@
     </tbody>
   </table>
 
+
+
 </div>
 
+  
 
         
       </div>
@@ -259,7 +435,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>

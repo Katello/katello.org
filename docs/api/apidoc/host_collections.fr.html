@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><span class="translation_missing" title="translation missing: fr.apipie.api_documentation">Api Documentation</span></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.fr.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Host collections
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/host_collections.ca.html">ca</a> | <a href="../apidoc/host_collections.sv_SE.html">sv_SE</a> | <a href="../apidoc/host_collections.zh_CN.html">zh_CN</a> | <a href="../apidoc/host_collections.gl.html">gl</a> | <a href="../apidoc/host_collections.it.html">it</a> | <a href="../apidoc/host_collections.pt_BR.html">pt_BR</a> | <a href="../apidoc/host_collections.es.html">es</a> | <a href="../apidoc/host_collections.ja.html">ja</a> | <a href="../apidoc/host_collections.en_GB.html">en_GB</a> | <a href="../apidoc/host_collections.ru.html">ru</a> | <b><a href="../apidoc/host_collections.fr.html">fr</a></b> | <a href="../apidoc/host_collections.en.html">en</a> | <a href="../apidoc/host_collections.ko.html">ko</a> | <a href="../apidoc/host_collections.de.html">de</a> | <a href="../apidoc/host_collections.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Host collections
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_collections/show.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/host_collections/:id
+          </a>
+          <br>
+          <small>Afficher une collection d'hôte</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID de la collection d’hôtes</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_collections/index.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/host_collections
+          </a>
+          <br>
+          <small>Répertorier les collections d'hôtes</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/organizations/:organization_id/host_collections
+          </a>
+          <br>
+          <small>Énumérer les collections d'hôtes dans une organisation</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/activation_keys/:activation_key_id/host_collections
+          </a>
+          <br>
+          <small>Énumérer les collections d'hôtes dans une clé d'activation</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/hosts/:host_id/host_collections
+          </a>
+          <br>
+          <small>Énumérer les collections d'hôtes contenant un hôte de contenu.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Rechercher une chaîne</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Numéro de la page, commençant par 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Nombre de résultats par page à renvoyer</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Trier le champ et l’ordre, ex : ‘name DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_results </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Afficher tous les résultats ou pas</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Version Hash des paramètres d’« ordre »</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[by] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Champs dans lequel trier les résultats</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[order] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Comment classer les résultats triés (ex : ASC for ascending ou CRO pour croissant)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>identifiant de l’organisation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>nom de la collection d’hôte avec lequel filtrer</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>activation_key_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>identifiant de la clé d’activation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter products by host id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>available_for </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Interpret specified object to return only Host Collections that can be associated with specified object. The value ‘host’ is supported.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_collections/create.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/host_collections
+          </a>
+          <br>
+          <small>Créer une collection d'hôte</small>
+        </h2>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/organizations/:organization_id/host_collections
+          </a>
+          <br>
+          <small>Créer une collection d'hôte</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>identifiant de l’organisation</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Nom de la collection d’hôtes</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_ids </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>List of host ids to replace the hosts in host collection</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>max_hosts </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Maximum number of hosts in the host collection</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>unlimited_hosts </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not the host collection may have unlimited hosts</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_collections/update.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/host_collections/:id
+          </a>
+          <br>
+          <small>Mettre à jour une collection d'hôte</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID de la collection d’hôtes</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Nom de la collection d’hôtes</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_ids </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>List of host ids to replace the hosts in host collection</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>max_hosts </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Maximum number of hosts in the host collection</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>unlimited_hosts </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not the host collection may have unlimited hosts</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_collections/add_hosts.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-add_hosts'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/host_collections/:id/add_hosts
+          </a>
+          <br>
+          <small>Add host to the host collection</small>
+        </h2>
+    </div>
+
+
+    <div id='description-add_hosts' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID de la collection d’hôtes</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_ids </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of host ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_collections/remove_hosts.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-remove_hosts'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/host_collections/:id/remove_hosts
+          </a>
+          <br>
+          <small>Remove hosts from the host collection</small>
+        </h2>
+    </div>
+
+
+    <div id='description-remove_hosts' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID de la collection d’hôtes</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_ids </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of host ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_collections/destroy.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/host_collections/:id
+          </a>
+          <br>
+          <small>Détruire une collection d'hôtes</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID de la collection d’hôtes</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_collections/copy.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-copy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/host_collections/:id/copy
+          </a>
+          <br>
+          <small>Faire une copie d'une collection d'hôte</small>
+        </h2>
+    </div>
+
+
+    <div id='description-copy' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID de la collection d’hôtes</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Nouveau nom de la collection d’hôtes</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

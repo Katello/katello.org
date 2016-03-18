@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Puppetclasses
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/puppetclasses.ca.html">ca</a> | <a href="../apidoc/puppetclasses.sv_SE.html">sv_SE</a> | <a href="../apidoc/puppetclasses.zh_CN.html">zh_CN</a> | <a href="../apidoc/puppetclasses.gl.html">gl</a> | <a href="../apidoc/puppetclasses.it.html">it</a> | <a href="../apidoc/puppetclasses.pt_BR.html">pt_BR</a> | <a href="../apidoc/puppetclasses.es.html">es</a> | <a href="../apidoc/puppetclasses.ja.html">ja</a> | <a href="../apidoc/puppetclasses.en_GB.html">en_GB</a> | <a href="../apidoc/puppetclasses.ru.html">ru</a> | <a href="../apidoc/puppetclasses.fr.html">fr</a> | <a href="../apidoc/puppetclasses.en.html">en</a> | <a href="../apidoc/puppetclasses.ko.html">ko</a> | <a href="../apidoc/puppetclasses.de.html">de</a> | <a href="../apidoc/puppetclasses.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -52,8 +58,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/puppetclasses
-          </a><br>
-          <small>List all puppetclasses.</small>
+          </a>
+          <br>
+          <small>List all Puppet classes</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -61,8 +68,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hosts/:host_id/puppetclasses
-          </a><br>
-          <small>List all puppetclasses for host</small>
+          </a>
+          <br>
+          <small>List all Puppet classes for a host</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -70,8 +78,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hostgroups/:hostgroup_id/puppetclasses
-          </a><br>
-          <small>List all puppetclasses for hostgroup</small>
+          </a>
+          <br>
+          <small>List all Puppet classes for a host group</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -79,8 +88,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/environments/:environment_id/puppetclasses
-          </a><br>
-          <small>List all puppetclasses for environment</small>
+          </a>
+          <br>
+          <small>List all Puppet classes for an environment</small>
         </h2>
     </div>
 
@@ -111,11 +121,14 @@
     </td>
     <td>
       
-<p>id of nested host</p>
+<p>ID of host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -132,11 +145,14 @@
     </td>
     <td>
       
-<p>id of nested hostgroup</p>
+<p>ID of host group</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -153,11 +169,14 @@
     </td>
     <td>
       
-<p>id of nested environment</p>
+<p>ID of environment</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -174,11 +193,14 @@
     </td>
     <td>
       
-<p>Filter results</p>
+<p>filter results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -195,11 +217,14 @@
     </td>
     <td>
       
-<p>Sort results</p>
+<p>sort results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -218,9 +243,12 @@
       
 <p>paginate results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -239,9 +267,12 @@
       
 <p>number of entries per request</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -251,6 +282,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -264,8 +297,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/puppetclasses/:id
-          </a><br>
-          <small>Show a puppetclass</small>
+          </a>
+          <br>
+          <small>Show a Puppet class</small>
         </h2>
         <h2>
           <a href='#description-show'
@@ -273,8 +307,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hosts/:host_id/puppetclasses/:id
-          </a><br>
-          <small>Show a puppetclass for host</small>
+          </a>
+          <br>
+          <small>Show a Puppet class for host</small>
         </h2>
         <h2>
           <a href='#description-show'
@@ -282,8 +317,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/hostgroups/:hostgroup_id/puppetclasses/:id
-          </a><br>
-          <small>Show a puppetclass for hostgroup</small>
+          </a>
+          <br>
+          <small>Show a Puppet class for a host group</small>
         </h2>
         <h2>
           <a href='#description-show'
@@ -291,8 +327,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/environments/:environment_id/puppetclasses/:id
-          </a><br>
-          <small>Show a puppetclass for environment</small>
+          </a>
+          <br>
+          <small>Show a Puppet class for an environment</small>
         </h2>
     </div>
 
@@ -323,11 +360,14 @@
     </td>
     <td>
       
-<p>id of nested host</p>
+<p>ID of host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -344,11 +384,14 @@
     </td>
     <td>
       
-<p>id of nested hostgroup</p>
+<p>ID of host group</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -365,11 +408,14 @@
     </td>
     <td>
       
-<p>id of nested environment</p>
+<p>ID of environment</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -386,11 +432,14 @@
     </td>
     <td>
       
-<p>id of puppetclass</p>
+<p>ID of Puppet class</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -400,6 +449,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -413,8 +464,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/puppetclasses
-          </a><br>
-          <small>Create a puppetclass.</small>
+          </a>
+          <br>
+          <small>Create a Puppet class</small>
         </h2>
     </div>
 
@@ -439,15 +491,18 @@
     <td>
       <strong>puppetclass </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -463,9 +518,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -476,6 +534,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -489,8 +549,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/puppetclasses/:id
-          </a><br>
-          <small>Update a puppetclass.</small>
+          </a>
+          <br>
+          <small>Update a Puppet class</small>
         </h2>
     </div>
 
@@ -521,9 +582,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -534,15 +598,18 @@
     <td>
       <strong>puppetclass </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -558,9 +625,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -571,6 +641,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -584,8 +656,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/puppetclasses/:id
-          </a><br>
-          <small>Delete a puppetclass.</small>
+          </a>
+          <br>
+          <small>Delete a Puppet class</small>
         </h2>
     </div>
 
@@ -616,9 +689,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -629,9 +705,12 @@
     </tbody>
   </table>
 
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -639,7 +718,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

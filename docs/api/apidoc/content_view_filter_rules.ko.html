@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><span class="translation_missing" title="translation missing: ko.apipie.api_documentation">Api Documentation</span></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.ko.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Content view filter rules
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/content_view_filter_rules.ca.html">ca</a> | <a href="../apidoc/content_view_filter_rules.sv_SE.html">sv_SE</a> | <a href="../apidoc/content_view_filter_rules.zh_CN.html">zh_CN</a> | <a href="../apidoc/content_view_filter_rules.gl.html">gl</a> | <a href="../apidoc/content_view_filter_rules.it.html">it</a> | <a href="../apidoc/content_view_filter_rules.pt_BR.html">pt_BR</a> | <a href="../apidoc/content_view_filter_rules.es.html">es</a> | <a href="../apidoc/content_view_filter_rules.ja.html">ja</a> | <a href="../apidoc/content_view_filter_rules.en_GB.html">en_GB</a> | <a href="../apidoc/content_view_filter_rules.ru.html">ru</a> | <a href="../apidoc/content_view_filter_rules.fr.html">fr</a> | <a href="../apidoc/content_view_filter_rules.en.html">en</a> | <b><a href="../apidoc/content_view_filter_rules.ko.html">ko</a></b> | <a href="../apidoc/content_view_filter_rules.de.html">de</a> | <a href="../apidoc/content_view_filter_rules.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Content view filter rules
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/content_view_filter_rules/index.ko.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/content_view_filters/:content_view_filter_id/rules
+          </a>
+          <br>
+          <small>필터 규칙 목록 나열 </small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_filter_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>필터 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/content_view_filter_rules/create.ko.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/content_view_filters/:content_view_filter_id/rules
+          </a>
+          <br>
+          <small>필터 규칙을 생성합니다. 포함된 매개 변수는 필터 유형에 기반해야 합니다. </small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_filter_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>필터 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>패키지 또는 패키지 그룹: 이름</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>version </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>패키지: 버전</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>min_version </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>패키지: 최소 버전</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>max_version </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>패키지: 최대 버전</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>errata_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>에라타: ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>errata_ids </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>에라타: ID 또는 모든 개체 선택</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>start_date </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>에라타: 시작일 (YYYY-MM-DD)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>end_date </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>에라타: 종료일 (YYYY-MM-DD)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>types </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>에라타: 유형 (확장 기능 , 버그 수정, 보안)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>date_type </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>erratum: search using the ‘Issued On’ or ‘Updated On’ column of the errata. Values are ‘issued’/‘updated’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/content_view_filter_rules/show.ko.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/content_view_filters/:content_view_filter_id/rules/:id
+          </a>
+          <br>
+          <small>필터 규칙 정보 표시 </small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_filter_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>필터 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>규칙 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/content_view_filter_rules/update.ko.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/content_view_filters/:content_view_filter_id/rules/:id
+          </a>
+          <br>
+          <small>필터 규칙을 업데이트합니다. 포함된 매개 변수는 필터 유형에 기반해야 합니다. </small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_filter_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>필터 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>규칙 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>패키지 또는 패키지 그룹: 이름</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>version </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>패키지: 버전</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>min_version </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>패키지: 최소 버전</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>max_version </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>패키지: 최대 버전</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>errata_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>에라타: ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>start_date </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>에라타: 시작일 (YYYY-MM-DD)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>end_date </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>에라타: 종료일 (YYYY-MM-DD)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>types </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>에라타: 유형 (확장 기능 , 버그 수정, 보안)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/content_view_filter_rules/destroy.ko.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/content_view_filters/:content_view_filter_id/rules/:id
+          </a>
+          <br>
+          <small>필터 규칙 삭제 </small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: ko.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: ko.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_filter_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>필터 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: ko.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>규칙 ID</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

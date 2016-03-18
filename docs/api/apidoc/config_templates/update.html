@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -29,14 +30,18 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/config_templates/update.ca.html">ca</a> | <a href="../../apidoc/config_templates/update.sv_SE.html">sv_SE</a> | <a href="../../apidoc/config_templates/update.zh_CN.html">zh_CN</a> | <a href="../../apidoc/config_templates/update.gl.html">gl</a> | <a href="../../apidoc/config_templates/update.it.html">it</a> | <a href="../../apidoc/config_templates/update.pt_BR.html">pt_BR</a> | <a href="../../apidoc/config_templates/update.es.html">es</a> | <a href="../../apidoc/config_templates/update.ja.html">ja</a> | <a href="../../apidoc/config_templates/update.en_GB.html">en_GB</a> | <a href="../../apidoc/config_templates/update.ru.html">ru</a> | <a href="../../apidoc/config_templates/update.fr.html">fr</a> | <a href="../../apidoc/config_templates/update.en.html">en</a> | <a href="../../apidoc/config_templates/update.ko.html">ko</a> | <a href="../../apidoc/config_templates/update.de.html">de</a> | <a href="../../apidoc/config_templates/update.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      PUT /api/config_templates/:id<br>
-      <small>Update a template</small>
+      PUT /api/config_templates/:id
+      <br>
+      <small>Update a provisioning template</small>
     </h1>
   </div>
 
@@ -67,9 +72,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -80,15 +88,18 @@
     <td>
       <strong>config_template </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -106,9 +117,12 @@
       
 <p>template name</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -125,9 +139,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -144,9 +161,12 @@
     </td>
     <td>
       
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -163,9 +183,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -184,9 +207,12 @@
       
 <p>not relevant for snippet</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -205,9 +231,12 @@
       
 <p>Array of template combinations (hostgroup_id, environment_id)</p>
 
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -224,11 +253,14 @@
     </td>
     <td>
       
-<p>Array of operating systems ID to associate the template with</p>
+<p>Array of operating system IDs to associate with the template</p>
 
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -247,9 +279,60 @@
       
 <p>Whether or not the template is locked for editing</p>
 
-        <br>
-        Value: boolean
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>config_template[location_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE locations with given ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>config_template[organization_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE organizations with given ids.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -261,8 +344,11 @@
     </tbody>
   </table>
 
+
+
 </div>
 
+  
 
         
       </div>
@@ -270,7 +356,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>

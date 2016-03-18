@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Bookmarks
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/bookmarks.ca.html">ca</a> | <a href="../apidoc/bookmarks.sv_SE.html">sv_SE</a> | <a href="../apidoc/bookmarks.zh_CN.html">zh_CN</a> | <a href="../apidoc/bookmarks.gl.html">gl</a> | <a href="../apidoc/bookmarks.it.html">it</a> | <a href="../apidoc/bookmarks.pt_BR.html">pt_BR</a> | <a href="../apidoc/bookmarks.es.html">es</a> | <a href="../apidoc/bookmarks.ja.html">ja</a> | <a href="../apidoc/bookmarks.en_GB.html">en_GB</a> | <a href="../apidoc/bookmarks.ru.html">ru</a> | <a href="../apidoc/bookmarks.fr.html">fr</a> | <a href="../apidoc/bookmarks.en.html">en</a> | <a href="../apidoc/bookmarks.ko.html">ko</a> | <a href="../apidoc/bookmarks.de.html">de</a> | <a href="../apidoc/bookmarks.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -52,8 +58,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/bookmarks
-          </a><br>
-          <small>List all bookmarks.</small>
+          </a>
+          <br>
+          <small>List all bookmarks</small>
         </h2>
     </div>
 
@@ -76,6 +83,54 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>sort results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>page </strong><br>
       <small>
         optional
@@ -86,9 +141,12 @@
       
 <p>paginate results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -107,9 +165,12 @@
       
 <p>number of entries per request</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -119,6 +180,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -132,8 +195,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/bookmarks/:id
-          </a><br>
-          <small>Show a bookmark.</small>
+          </a>
+          <br>
+          <small>Show a bookmark</small>
         </h2>
     </div>
 
@@ -164,9 +228,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -176,6 +243,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -189,8 +258,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/bookmarks
-          </a><br>
-          <small>Create a bookmark.</small>
+          </a>
+          <br>
+          <small>Create a bookmark</small>
         </h2>
     </div>
 
@@ -215,15 +285,18 @@
     <td>
       <strong>bookmark </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -239,9 +312,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -258,9 +334,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -277,9 +356,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -296,9 +378,12 @@
     </td>
     <td>
       
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -309,6 +394,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -322,8 +409,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/bookmarks/:id
-          </a><br>
-          <small>Update a bookmark.</small>
+          </a>
+          <br>
+          <small>Update a bookmark</small>
         </h2>
     </div>
 
@@ -354,9 +442,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -367,15 +458,18 @@
     <td>
       <strong>bookmark </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -391,9 +485,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -410,9 +507,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -429,9 +529,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -448,9 +551,12 @@
     </td>
     <td>
       
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -461,6 +567,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -474,8 +582,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/bookmarks/:id
-          </a><br>
-          <small>Delete a bookmark.</small>
+          </a>
+          <br>
+          <small>Delete a bookmark</small>
         </h2>
     </div>
 
@@ -506,9 +615,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -519,9 +631,12 @@
     </tbody>
   </table>
 
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -529,7 +644,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

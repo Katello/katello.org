@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -29,32 +30,39 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/smart_variables/index.ca.html">ca</a> | <a href="../../apidoc/smart_variables/index.sv_SE.html">sv_SE</a> | <a href="../../apidoc/smart_variables/index.zh_CN.html">zh_CN</a> | <a href="../../apidoc/smart_variables/index.gl.html">gl</a> | <a href="../../apidoc/smart_variables/index.it.html">it</a> | <a href="../../apidoc/smart_variables/index.pt_BR.html">pt_BR</a> | <a href="../../apidoc/smart_variables/index.es.html">es</a> | <a href="../../apidoc/smart_variables/index.ja.html">ja</a> | <a href="../../apidoc/smart_variables/index.en_GB.html">en_GB</a> | <a href="../../apidoc/smart_variables/index.ru.html">ru</a> | <a href="../../apidoc/smart_variables/index.fr.html">fr</a> | <a href="../../apidoc/smart_variables/index.en.html">en</a> | <a href="../../apidoc/smart_variables/index.ko.html">ko</a> | <a href="../../apidoc/smart_variables/index.de.html">de</a> | <a href="../../apidoc/smart_variables/index.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      GET /api/smart_variables<br>
+      GET /api/smart_variables
+      <br>
       <small>List all smart variables</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /api/hosts/:host_id/smart_variables<br>
+      GET /api/hosts/:host_id/smart_variables
+      <br>
       <small>List of smart variables for a specific host</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /api/hostgroups/:hostgroup_id/smart_variables<br>
-      <small>List of smart variables for a specific hostgroup</small>
+      GET /api/hostgroups/:hostgroup_id/smart_variables
+      <br>
+      <small>List of smart variables for a specific host group</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /api/puppetclasses/:puppetclass_id/smart_variables<br>
-      <small>List of smart variables for a specific puppetclass</small>
+      GET /api/puppetclasses/:puppetclass_id/smart_variables
+      <br>
+      <small>List of smart variables for a specific Puppet class</small>
     </h1>
   </div>
 
@@ -85,9 +93,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -104,9 +115,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -123,9 +137,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -142,11 +159,14 @@
     </td>
     <td>
       
-<p>Filter results</p>
+<p>filter results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -165,9 +185,12 @@
       
 <p>sort results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -186,9 +209,12 @@
       
 <p>paginate results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -207,9 +233,12 @@
       
 <p>number of entries per request</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -220,8 +249,11 @@
     </tbody>
   </table>
 
+
+
 </div>
 
+  
 
         
       </div>
@@ -229,7 +261,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>

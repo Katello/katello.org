@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><span class="translation_missing" title="translation missing: it.apipie.api_documentation">Api Documentation</span></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.it.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/content_view_filter_rules.it.html'>
+      Content view filter rules
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>update</li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/content_view_filter_rules/update.ca.html">ca</a> | <a href="../../apidoc/content_view_filter_rules/update.sv_SE.html">sv_SE</a> | <a href="../../apidoc/content_view_filter_rules/update.zh_CN.html">zh_CN</a> | <a href="../../apidoc/content_view_filter_rules/update.gl.html">gl</a> | <b><a href="../../apidoc/content_view_filter_rules/update.it.html">it</a></b> | <a href="../../apidoc/content_view_filter_rules/update.pt_BR.html">pt_BR</a> | <a href="../../apidoc/content_view_filter_rules/update.es.html">es</a> | <a href="../../apidoc/content_view_filter_rules/update.ja.html">ja</a> | <a href="../../apidoc/content_view_filter_rules/update.en_GB.html">en_GB</a> | <a href="../../apidoc/content_view_filter_rules/update.ru.html">ru</a> | <a href="../../apidoc/content_view_filter_rules/update.fr.html">fr</a> | <a href="../../apidoc/content_view_filter_rules/update.en.html">en</a> | <a href="../../apidoc/content_view_filter_rules/update.ko.html">ko</a> | <a href="../../apidoc/content_view_filter_rules/update.de.html">de</a> | <a href="../../apidoc/content_view_filter_rules/update.zh_TW.html">zh_TW</a> ]
+</li>
+
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      PUT /katello/api/content_view_filters/:content_view_filter_id/rules/:id
+      <br>
+      <small>Aggiorna regola per il filtro. I parametri inclusi devono basarsi sul tipo di filtro.</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+
+
+  <h2><span class="translation_missing" title="translation missing: it.apipie.params">Params</span></h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: it.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: it.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_filter_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: it.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>identificatore filtro</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: it.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>identificatore regole</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: it.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>pacchetto o gruppo di pacchetti: nome</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>version </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: it.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>pacchetto: versione</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>min_version </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: it.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>pacchetto: versione minima</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>max_version </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: it.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>pacchetto; versione massima</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>errata_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: it.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>erratum: id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>start_date </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: it.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>erratum: data di inizio (ANNO-MESE-GIORNO)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>end_date </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: it.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>erratum: data di fine (ANNO-MESE-GIORNO)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>types </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: it.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>erratum: tipi (enhancement, bugfix, security)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

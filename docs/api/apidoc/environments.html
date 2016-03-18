@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Environments
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/environments.ca.html">ca</a> | <a href="../apidoc/environments.sv_SE.html">sv_SE</a> | <a href="../apidoc/environments.zh_CN.html">zh_CN</a> | <a href="../apidoc/environments.gl.html">gl</a> | <a href="../apidoc/environments.it.html">it</a> | <a href="../apidoc/environments.pt_BR.html">pt_BR</a> | <a href="../apidoc/environments.es.html">es</a> | <a href="../apidoc/environments.ja.html">ja</a> | <a href="../apidoc/environments.en_GB.html">en_GB</a> | <a href="../apidoc/environments.ru.html">ru</a> | <a href="../apidoc/environments.fr.html">fr</a> | <a href="../apidoc/environments.en.html">en</a> | <a href="../apidoc/environments.ko.html">ko</a> | <a href="../apidoc/environments.de.html">de</a> | <a href="../apidoc/environments.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -52,7 +58,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/smart_proxies/:id/import_puppetclasses
-          </a><br>
+          </a>
+          <br>
           <small>Import puppet classes from puppet proxy.</small>
         </h2>
         <h2>
@@ -61,8 +68,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/smart_proxies/:smart_proxy_id/environments/:id/import_puppetclasses
-          </a><br>
-          <small>Import puppet classes from puppet proxy for particular environment.</small>
+          </a>
+          <br>
+          <small>Import puppet classes from puppet proxy for an environment</small>
         </h2>
         <h2>
           <a href='#description-import_puppetclasses'
@@ -70,8 +78,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/environments/:environment_id/smart_proxies/:id/import_puppetclasses
-          </a><br>
-          <small>Import puppet classes from puppet proxy for particular environment.</small>
+          </a>
+          <br>
+          <small>Import puppet classes from puppet proxy for an environment</small>
         </h2>
     </div>
 
@@ -102,9 +111,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -121,9 +133,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -140,9 +155,12 @@
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -159,9 +177,12 @@
     </td>
     <td>
       
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -178,11 +199,14 @@
     </td>
     <td>
       
-<p>Optional comma-deliminated string containing either ‘new,updated,obsolete’ used to limit the import_puppetclasses actions</p>
+<p>Optional comma-delimited string containing either ‘new’, ‘updated’, or ‘obsolete’ that is used to limit the imported Puppet classes</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -192,6 +216,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -205,8 +231,39 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/environments
-          </a><br>
-          <small>List all environments.</small>
+          </a>
+          <br>
+          <small>List all environments</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/puppetclasses/:puppetclass_id/environments
+          </a>
+          <br>
+          <small>List environments of Puppet class</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/locations/:location_id/environments
+          </a>
+          <br>
+          <small>List environments per location</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/organizations/:organization_id/environments
+          </a>
+          <br>
+          <small>List environments per organization</small>
         </h2>
     </div>
 
@@ -229,6 +286,78 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>puppetclass_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of Puppet class</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Scope by locations</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Scope by organizations</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>search </strong><br>
       <small>
         optional
@@ -237,11 +366,14 @@
     </td>
     <td>
       
-<p>Filter results</p>
+<p>filter results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -258,11 +390,14 @@
     </td>
     <td>
       
-<p>Sort results</p>
+<p>sort results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -281,9 +416,12 @@
       
 <p>paginate results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -302,9 +440,12 @@
       
 <p>number of entries per request</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -314,6 +455,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -327,8 +470,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/environments/:id
-          </a><br>
-          <small>Show an environment.</small>
+          </a>
+          <br>
+          <small>Show an environment</small>
         </h2>
     </div>
 
@@ -359,9 +503,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -371,6 +518,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -384,8 +533,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/environments
-          </a><br>
-          <small>Create an environment.</small>
+          </a>
+          <br>
+          <small>Create an environment</small>
         </h2>
     </div>
 
@@ -410,15 +560,18 @@
     <td>
       <strong>environment </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -434,9 +587,60 @@
     </td>
     <td>
       
-        <br>
-        Value: String
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>environment[location_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE locations with given ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>environment[organization_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE organizations with given ids.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -447,6 +651,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -460,8 +666,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/environments/:id
-          </a><br>
-          <small>Update an environment.</small>
+          </a>
+          <br>
+          <small>Update an environment</small>
         </h2>
     </div>
 
@@ -492,9 +699,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -505,15 +715,18 @@
     <td>
       <strong>environment </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -529,9 +742,60 @@
     </td>
     <td>
       
-        <br>
-        Value: String
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>environment[location_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE locations with given ids</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>environment[organization_ids] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>REPLACE organizations with given ids.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -542,6 +806,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -555,8 +821,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/environments/:id
-          </a><br>
-          <small>Delete an environment.</small>
+          </a>
+          <br>
+          <small>Delete an environment</small>
         </h2>
     </div>
 
@@ -587,9 +854,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -600,9 +870,12 @@
     </tbody>
   </table>
 
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -610,7 +883,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

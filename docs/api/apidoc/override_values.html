@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Override values
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/override_values.ca.html">ca</a> | <a href="../apidoc/override_values.sv_SE.html">sv_SE</a> | <a href="../apidoc/override_values.zh_CN.html">zh_CN</a> | <a href="../apidoc/override_values.gl.html">gl</a> | <a href="../apidoc/override_values.it.html">it</a> | <a href="../apidoc/override_values.pt_BR.html">pt_BR</a> | <a href="../apidoc/override_values.es.html">es</a> | <a href="../apidoc/override_values.ja.html">ja</a> | <a href="../apidoc/override_values.en_GB.html">en_GB</a> | <a href="../apidoc/override_values.ru.html">ru</a> | <a href="../apidoc/override_values.fr.html">fr</a> | <a href="../apidoc/override_values.en.html">en</a> | <a href="../apidoc/override_values.ko.html">ko</a> | <a href="../apidoc/override_values.de.html">de</a> | <a href="../apidoc/override_values.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -52,8 +58,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/smart_variables/:smart_variable_id/override_values
-          </a><br>
-          <small>List of override values for a specific smart_variable</small>
+          </a>
+          <br>
+          <small>List of override values for a specific smart variable</small>
         </h2>
         <h2>
           <a href='#description-index'
@@ -61,7 +68,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/smart_class_parameters/:smart_class_parameter_id/override_values
-          </a><br>
+          </a>
+          <br>
           <small>List of override values for a specific smart class parameter</small>
         </h2>
     </div>
@@ -93,9 +101,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -112,9 +123,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -133,9 +147,12 @@
       
 <p>paginate results</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -154,9 +171,12 @@
       
 <p>number of entries per request</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -166,6 +186,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -179,8 +201,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/smart_variables/:smart_variable_id/override_values/:id
-          </a><br>
-          <small>Show an override value for a specific smart_variable</small>
+          </a>
+          <br>
+          <small>Show an override value for a specific smart variable</small>
         </h2>
         <h2>
           <a href='#description-show'
@@ -188,7 +211,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /api/smart_class_parameters/:smart_class_parameter_id/override_values/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show an override value for a specific smart class parameter</small>
         </h2>
     </div>
@@ -220,9 +244,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -239,9 +266,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -258,9 +288,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -270,6 +303,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -283,8 +318,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/smart_variables/:smart_variable_id/override_values
-          </a><br>
-          <small>Create an override value for a specific smart_variable</small>
+          </a>
+          <br>
+          <small>Create an override value for a specific smart variable</small>
         </h2>
         <h2>
           <a href='#description-create'
@@ -292,7 +328,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /api/smart_class_parameters/:smart_class_parameter_id/override_values
-          </a><br>
+          </a>
+          <br>
           <small>Create an override value for a specific smart class parameter</small>
         </h2>
     </div>
@@ -324,9 +361,34 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>smart_class_parameter_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -337,15 +399,18 @@
     <td>
       <strong>override_value </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -355,15 +420,20 @@
     <td>
       <strong>override_value[match] </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: String
+<p>Override match</p>
 
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -374,15 +444,42 @@
     <td>
       <strong>override_value[value] </strong><br>
       <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Override value</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>override_value[use_puppet_default] </strong><br>
+      <small>
         optional
         , nil allowed
       </small>
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -393,6 +490,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -406,8 +505,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/smart_variables/:smart_variable_id/override_values/:id
-          </a><br>
-          <small>Update an override value for a specific smart_variable</small>
+          </a>
+          <br>
+          <small>Update an override value for a specific smart variable</small>
         </h2>
         <h2>
           <a href='#description-update'
@@ -415,7 +515,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /api/smart_class_parameters/:smart_class_parameter_id/override_values/:id
-          </a><br>
+          </a>
+          <br>
           <small>Update an override value for a specific smart class parameter</small>
         </h2>
     </div>
@@ -439,17 +540,64 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>override_value </strong><br>
+      <strong>smart_variable_id </strong><br>
       <small>
         optional
-        , nil allowed
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: Hash
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>smart_class_parameter_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>override_value </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -460,14 +608,19 @@
       <strong>override_value[match] </strong><br>
       <small>
         optional
-        , nil allowed
+        
       </small>
     </td>
     <td>
       
-        <br>
-        Value: String
+<p>Override match</p>
 
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -479,14 +632,41 @@
       <strong>override_value[value] </strong><br>
       <small>
         optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Override value</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>override_value[use_puppet_default] </strong><br>
+      <small>
+        optional
         , nil allowed
       </small>
     </td>
     <td>
       
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -497,6 +677,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -510,8 +692,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/smart_variables/:smart_variable_id/override_values/:id
-          </a><br>
-          <small>Delete an override value for a specific smart_variable</small>
+          </a>
+          <br>
+          <small>Delete an override value for a specific smart variable</small>
         </h2>
         <h2>
           <a href='#description-destroy'
@@ -519,7 +702,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /api/smart_class_parameters/:smart_class_parameter_id/override_values/:id
-          </a><br>
+          </a>
+          <br>
           <small>Delete an override value for a specific smart class parameter</small>
         </h2>
     </div>
@@ -543,6 +727,50 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>smart_variable_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>smart_class_parameter_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>id </strong><br>
       <small>
         required
@@ -551,9 +779,12 @@
     </td>
     <td>
       
-        <br>
-        Value: string from 2 to 128 characters containting only alphanumeric characters, space, &#x27;_&#x27;, &#x27;-&#x27; with no leading or trailing space..
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
 
     </td>
 
@@ -564,9 +795,12 @@
     </tbody>
   </table>
 
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -574,7 +808,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

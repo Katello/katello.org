@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Documentación de la API</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.es.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/content_views.es.html'>
+      Content views
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>remove</li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/content_views/remove.ca.html">ca</a> | <a href="../../apidoc/content_views/remove.sv_SE.html">sv_SE</a> | <a href="../../apidoc/content_views/remove.zh_CN.html">zh_CN</a> | <a href="../../apidoc/content_views/remove.gl.html">gl</a> | <a href="../../apidoc/content_views/remove.it.html">it</a> | <a href="../../apidoc/content_views/remove.pt_BR.html">pt_BR</a> | <b><a href="../../apidoc/content_views/remove.es.html">es</a></b> | <a href="../../apidoc/content_views/remove.ja.html">ja</a> | <a href="../../apidoc/content_views/remove.en_GB.html">en_GB</a> | <a href="../../apidoc/content_views/remove.ru.html">ru</a> | <a href="../../apidoc/content_views/remove.fr.html">fr</a> | <a href="../../apidoc/content_views/remove.en.html">en</a> | <a href="../../apidoc/content_views/remove.ko.html">ko</a> | <a href="../../apidoc/content_views/remove.de.html">de</a> | <a href="../../apidoc/content_views/remove.zh_TW.html">zh_TW</a> ]
+</li>
+
+
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      PUT /katello/api/content_views/:id/remove
+      <br>
+      <small>Eliminar versiones y/o entornos de una vista de contenido y volver a asignar sistemas y llaves</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+
+
+
+
+  <h2>Parámetros</h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nombre del parámetro</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        requerido
+        
+      </small>
+    </td>
+    <td>
+      
+<p>identificador numérico de la vista de contenido</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_ids </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>identificadores numéricos de entornos para eliminar</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_version_ids </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>identificadores de versión de vista de contenido para borrar</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>system_content_view_id </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>vista de contenido a la que reasignar sistemas huérfanos</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>system_environment_id </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>entorno para reasignar sistemas huérfanos</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>key_content_view_id </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>vista de contenido a la que reasignar claves de activación huérfanas</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>key_environment_id </strong><br>
+      <small>
+        opcional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>entorno para reasignar llaves de activación huérfanas</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

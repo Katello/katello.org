@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -29,25 +30,34 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/systems/create.ca.html">ca</a> | <a href="../../apidoc/systems/create.sv_SE.html">sv_SE</a> | <a href="../../apidoc/systems/create.zh_CN.html">zh_CN</a> | <a href="../../apidoc/systems/create.gl.html">gl</a> | <a href="../../apidoc/systems/create.it.html">it</a> | <a href="../../apidoc/systems/create.pt_BR.html">pt_BR</a> | <a href="../../apidoc/systems/create.es.html">es</a> | <a href="../../apidoc/systems/create.ja.html">ja</a> | <a href="../../apidoc/systems/create.en_GB.html">en_GB</a> | <a href="../../apidoc/systems/create.ru.html">ru</a> | <a href="../../apidoc/systems/create.fr.html">fr</a> | <a href="../../apidoc/systems/create.en.html">en</a> | <a href="../../apidoc/systems/create.ko.html">ko</a> | <a href="../../apidoc/systems/create.de.html">de</a> | <a href="../../apidoc/systems/create.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      POST /katello/api/systems<br>
+      POST /katello/api/systems
+        <code>DEPRECATED</code>
+      <br>
       <small>Register a content host</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      POST /katello/api/environments/:environment_id/systems<br>
+      POST /katello/api/environments/:environment_id/systems
+        <code>DEPRECATED</code>
+      <br>
       <small>Register a content host in environment</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      POST /katello/api/host_collections/:host_collection_id/systems<br>
+      POST /katello/api/host_collections/:host_collection_id/systems
+        <code>DEPRECATED</code>
+      <br>
       <small>Register a content host in environment</small>
     </h1>
   </div>
@@ -81,9 +91,12 @@
       
 <p>Name of the content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -102,9 +115,12 @@
       
 <p>Description of the content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -123,9 +139,12 @@
       
 <p>Physical location of the content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -144,9 +163,12 @@
       
 <p>Key-value hash of content host-specific facts</p>
 
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -164,9 +186,12 @@
       
 <p>Any number of facts about this content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -186,9 +211,12 @@
       
 <p>Type of the content host, it should always be ‘system’</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -207,9 +235,12 @@
       
 <p>IDs of the virtual guests running on this content host</p>
 
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -228,9 +259,12 @@
       
 <p>List of products installed on the content host</p>
 
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -249,9 +283,12 @@
       
 <p>Release version of the content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -270,9 +307,12 @@
       
 <p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -291,9 +331,12 @@
       
 <p>Last check-in time of this content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -312,9 +355,12 @@
       
 <p>Specify the organization</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -333,9 +379,12 @@
       
 <p>Specify the environment</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -354,9 +403,12 @@
       
 <p>Specify the content view</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -365,7 +417,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>host_collection_id </strong><br>
+      <strong>host_collection_ids </strong><br>
       <small>
         optional
         
@@ -373,11 +425,14 @@
     </td>
     <td>
       
-<p>Specify the host collection</p>
+<p>Specify the host collections as an array</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -388,8 +443,11 @@
     </tbody>
   </table>
 
+
+
 </div>
 
+  
 
         
       </div>
@@ -397,7 +455,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>

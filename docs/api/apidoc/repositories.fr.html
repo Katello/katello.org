@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><span class="translation_missing" title="translation missing: fr.apipie.api_documentation">Api Documentation</span></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.fr.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Repositories
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/repositories.ca.html">ca</a> | <a href="../apidoc/repositories.sv_SE.html">sv_SE</a> | <a href="../apidoc/repositories.zh_CN.html">zh_CN</a> | <a href="../apidoc/repositories.gl.html">gl</a> | <a href="../apidoc/repositories.it.html">it</a> | <a href="../apidoc/repositories.pt_BR.html">pt_BR</a> | <a href="../apidoc/repositories.es.html">es</a> | <a href="../apidoc/repositories.ja.html">ja</a> | <a href="../apidoc/repositories.en_GB.html">en_GB</a> | <a href="../apidoc/repositories.ru.html">ru</a> | <b><a href="../apidoc/repositories.fr.html">fr</a></b> | <a href="../apidoc/repositories.en.html">en</a> | <a href="../apidoc/repositories.ko.html">ko</a> | <a href="../apidoc/repositories.de.html">de</a> | <a href="../apidoc/repositories.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Repositories
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/index.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/repositories
+          </a>
+          <br>
+          <small>Liste de référentiels activés</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/content_views/:id/repositories
+          </a>
+          <br>
+          <small>Liste de référentiels pour un affichage de contenu</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID d’une organisation dans laquelle afficher les référentiels</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID d’un produit pour lequel afficher les référentiels</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID d’un environnement dans lequel afficher les référentiels</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID d’un affichage de contenu dans lequel afficher les référentiels</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_version_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID d’une version d’affichage de contenu sur laquelle afficher les référentiels</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>erratum_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of an erratum to find repositories that contain the erratum</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>rpm_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of a package to find repositories that contain the rpm</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>library </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>afficher les référentiels dans la Bibliothèque et l’affichage de contenu par défaut</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_type </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>limité aux référentiels de cette heure uniquement</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>nom du référentiel</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>available_for </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>interpret specified object to return only Repositories that can be associated with specified object. Only ‘content_view’ is supported.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Rechercher une chaîne</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Numéro de la page, commençant par 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Nombre de résultats par page à renvoyer</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Trier le champ et l’ordre, ex : ‘name DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_results </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Afficher tous les résultats ou pas</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Version Hash des paramètres d’« ordre »</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[by] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Champs dans lequel trier les résultats</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[order] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Comment classer les résultats triés (ex : ASC for ascending ou CRO pour croissant)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/create.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories
+          </a>
+          <br>
+          <small>Créer un référentiel personnalisé</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>label </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Produit auquel le référentiel appartient</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>url </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>URL de la source du référentiel</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>gpg_key_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>id de la clé gpg qui sera assignée au nouveau référentiel</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>unprotected </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>vrai si ce référentiel peut être publié via HTTP</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_type </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>type of repo (either ‘yum’, ‘puppet’, ‘docker’, or ‘ostree’)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>checksum_type </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>somme de contrôle du référentiel, actuellement ‘sha1’ &amp; ‘sha256’ sont pris en charge.‘</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>docker_upstream_name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>nom du référentiel docker en amont</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>download_policy </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>download policy for yum repos (either ‘immediate’, ‘on_demand’, or ‘background’)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>immediate</code>, <code>on_demand</code>, <code>background</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ostree_branches </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>list of ostree branch refs associated to an rpm ostree repository</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>mirror_on_sync </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>true if this repository when synced has to be mirrored from the source and stale rpms removed.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/repository_types.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-repository_types'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/repositories/repository_types
+          </a>
+          <br>
+          <small>Show the available repository types</small>
+        </h2>
+    </div>
+
+
+    <div id='description-repository_types' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>creatable </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>When set to ‘True’ repository types that are creatable will be returned</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/show.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/repositories/:id
+          </a>
+          <br>
+          <small>Afficher un référentiel personnalisé</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID du référentiel</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/sync.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-sync'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories/:id/sync
+          </a>
+          <br>
+          <small>Synchroniser un référentiel</small>
+        </h2>
+    </div>
+
+
+    <div id='description-sync' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID du référentiel</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>source_url </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>temporarily override feed URL for sync</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>incremental </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>perform an incremental import</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/export.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-export'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories/:id/export
+          </a>
+          <br>
+          <small>Export a repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-export' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Repository identifier</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>export_to_iso </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Export to ISO format</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>iso_mb_size </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>maximum size of each ISO in MB</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>since </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Optional date of last export (ex: 2010-01-01T12:00:00Z)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Date in the form of YYYY-MM-DD.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/update.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id
+          </a>
+          <br>
+          <small>Mettre à jour un référentiel personnalisé</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Nouveau nom du référentiel</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID du référentiel</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>gpg_key_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID d’une clé gpg qui sera assignée à ce référentiel</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>unprotected </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>vrai si ce référentiel peut être publié via HTTP</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>checksum_type </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>somme de contrôle du référentiel, actuellement ‘sha1’ &amp; ‘sha256’ sont pris en charge.‘</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>url </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>le flux url du référentiel d’origine</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>docker_upstream_name </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>nom du référentiel docker en amont</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>download_policy </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>download policy for yum repos (either ‘immediate’, ‘on_demand’, or ‘background’)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>immediate</code>, <code>on_demand</code>, <code>background</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ostree_branches </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>list of ostree branch refs associated to an rpm ostree repository</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>mirror_on_sync </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>true if this repository when synced has to be mirrored from the source and stale rpms removed.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/destroy.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /katello/api/repositories/:id
+          </a>
+          <br>
+          <small>Détruire un référentiel personnalisé</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/sync_complete.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-sync_complete'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories/sync_complete
+          </a>
+          <br>
+          <small></small>
+        </h2>
+    </div>
+
+
+    <div id='description-sync_complete' class='collapse accordion-body'>
+      
+<p>URL for post sync notification from pulp</p>
+
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>token </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>jeton secret partagé</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>payload </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>payload[repo_id] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>call_report </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>call_report[task_id] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/remove_content.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-remove_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/remove_packages
+          </a>
+          <br>
+          <small></small>
+        </h2>
+        <h2>
+          <a href='#description-remove_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/remove_docker_manifests
+          </a>
+          <br>
+          <small></small>
+        </h2>
+        <h2>
+          <a href='#description-remove_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/remove_puppet_modules
+          </a>
+          <br>
+          <small></small>
+        </h2>
+        <h2>
+          <a href='#description-remove_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/remove_content
+          </a>
+          <br>
+          <small></small>
+        </h2>
+    </div>
+
+
+    <div id='description-remove_content' class='collapse accordion-body'>
+      
+<p>Remove content from a repository</p>
+
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID du référentiel</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ids </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of content ids to remove</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/upload_content.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-upload_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /katello/api/repositories/:id/upload_content
+          </a>
+          <br>
+          <small>Télécharger le contenu dans le référentiel</small>
+        </h2>
+    </div>
+
+
+    <div id='description-upload_content' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID du référentiel</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Fichiers de contenu à télécharger. Il peut s’agir d’un fichier unique ou d’un ensemble de fichiers.</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>File</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/import_uploads.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-import_uploads'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/repositories/:id/import_uploads
+          </a>
+          <br>
+          <small>Importer les téléchargements dans un référentiel</small>
+        </h2>
+    </div>
+
+
+    <div id='description-import_uploads' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id de référentiel</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>upload_ids </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Ensemble d’id de téléchargement à importer</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/gpg_key_content.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-gpg_key_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/repositories/:id/gpg_key_content
+          </a>
+          <br>
+          <small>Renvoyer le contenu d'une clé gpg de référentiel, utilisé directement par yum</small>
+        </h2>
+    </div>
+
+
+    <div id='description-gpg_key_content' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

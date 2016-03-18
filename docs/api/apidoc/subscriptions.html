@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Subscriptions
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/subscriptions.ca.html">ca</a> | <a href="../apidoc/subscriptions.sv_SE.html">sv_SE</a> | <a href="../apidoc/subscriptions.zh_CN.html">zh_CN</a> | <a href="../apidoc/subscriptions.gl.html">gl</a> | <a href="../apidoc/subscriptions.it.html">it</a> | <a href="../apidoc/subscriptions.pt_BR.html">pt_BR</a> | <a href="../apidoc/subscriptions.es.html">es</a> | <a href="../apidoc/subscriptions.ja.html">ja</a> | <a href="../apidoc/subscriptions.en_GB.html">en_GB</a> | <a href="../apidoc/subscriptions.ru.html">ru</a> | <a href="../apidoc/subscriptions.fr.html">fr</a> | <a href="../apidoc/subscriptions.en.html">en</a> | <a href="../apidoc/subscriptions.ko.html">ko</a> | <a href="../apidoc/subscriptions.de.html">de</a> | <a href="../apidoc/subscriptions.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -42,6 +46,8 @@
 
 
 
+
+
 <div class='accordion' id='accordion'>
 
     <hr>
@@ -55,7 +61,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/subscriptions
-          </a><br>
+          </a>
+          <br>
           <small>List organization subscriptions</small>
         </h2>
         <h2>
@@ -63,18 +70,10 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            GET /katello/api/systems/:system_id/subscriptions
-          </a><br>
-          <small>List a system's subscriptions</small>
-        </h2>
-        <h2>
-          <a href='#description-index'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/activation_keys/:activation_key_id/subscriptions
-          </a><br>
-          <small>List an activation key's subscriptions</small>
+            GET /katello/api/subscriptions
+          </a>
+          <br>
+          <small></small>
         </h2>
     </div>
 
@@ -97,6 +96,198 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Search string</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Page number, starting at 1</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>per_page </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Number of results per page to return</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>order </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Sort field and order, eg. ‘name DESC’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>full_results </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Whether or not to show all results</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sort </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Hash version of ‘order’ param</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[by] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Field to sort the results on</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>sort[order] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>How to order the sorted results (e.g. ASC for ascending)</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>organization_id </strong><br>
       <small>
         required
@@ -107,9 +298,12 @@
       
 <p>Organization ID</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -118,7 +312,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>system_id </strong><br>
+      <strong>host_id </strong><br>
       <small>
         optional
         
@@ -126,11 +320,14 @@
     </td>
     <td>
       
-<p>UUID of the system</p>
+<p>id of a host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -149,9 +346,108 @@
       
 <p>Activation key ID</p>
 
-        <br>
-        Value: String
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>available_for </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Object to show subscriptions available for, either ‘host’ or ‘activation_key’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>match_host </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Ignore subscriptions that are unavailable to the specified host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>match_installed </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Return subscriptions that match installed products of the specified host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>no_overlap </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Return subscriptions which do not overlap with a currently-attached subscription</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -161,6 +457,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -174,7 +472,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/subscriptions/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a subscription</small>
         </h2>
         <h2>
@@ -183,7 +482,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/subscriptions/:id
-          </a><br>
+          </a>
+          <br>
           <small>Show a subscription</small>
         </h2>
     </div>
@@ -217,9 +517,12 @@
       
 <p>Organization identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -238,9 +541,12 @@
       
 <p>Subscription identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -250,6 +556,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -262,26 +570,10 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            POST /katello/api/subscriptions/:id
-          </a><br>
-          <small>Add a subscription to a resource</small>
-        </h2>
-        <h2>
-          <a href='#description-create'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            POST /katello/api/systems/:system_id/subscriptions
-          </a><br>
-          <small>Add a subscription to a system</small>
-        </h2>
-        <h2>
-          <a href='#description-create'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
             POST /katello/api/activation_keys/:activation_key_id/subscriptions
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Add a subscription to an activation key</small>
         </h2>
     </div>
@@ -315,30 +607,12 @@
       
 <p>Subscription Pool uuid</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>system_id </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>UUID of the system</p>
-
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -357,9 +631,12 @@
       
 <p>ID of the activation key</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -378,9 +655,12 @@
       
 <p>Quantity of this subscriptions to add</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -399,9 +679,12 @@
       
 <p>Array of subscriptions to add</p>
 
-        <br>
-        Value: Must be an Array of nested elements
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
 
     </td>
 
@@ -419,9 +702,12 @@
       
 <p>Subscription Pool uuid</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -440,9 +726,12 @@
       
 <p>Quantity of this subscriptions to add</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -453,6 +742,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -465,26 +756,10 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            DELETE /katello/api/subscriptions/:id
-          </a><br>
-          <small>Unattach a subscription</small>
-        </h2>
-        <h2>
-          <a href='#description-destroy'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            DELETE /katello/api/systems/:system_id/subscriptions/:id
-          </a><br>
-          <small>Unattach a subscription</small>
-        </h2>
-        <h2>
-          <a href='#description-destroy'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
             DELETE /katello/api/activation_keys/:activation_key_id/subscriptions/:id
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Unattach a subscription</small>
         </h2>
     </div>
@@ -518,30 +793,12 @@
       
 <p>Subscription ID</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>system_id </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>UUID of the system</p>
-
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -560,60 +817,23 @@
       
 <p>activation key ID</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>subscriptions </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Array of subscriptions to add</p>
-
-        <br>
-        Value: Must be an Array of nested elements
-
-
-    </td>
-
-  </tr>
-
-    <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>subscriptions[id] </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Subscription Pool uuid</p>
-
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
   </tr>
 
   
-
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -627,7 +847,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/organizations/:organization_id/subscriptions/upload
-          </a><br>
+          </a>
+          <br>
           <small>Upload a subscription manifest</small>
         </h2>
         <h2>
@@ -636,7 +857,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/subscriptions/upload
-          </a><br>
+          </a>
+          <br>
           <small>Upload a subscription manifest</small>
         </h2>
     </div>
@@ -670,9 +892,12 @@
       
 <p>Organization id</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -691,9 +916,12 @@
       
 <p>Subscription manifest file</p>
 
-        <br>
-        Value: File
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>File</p>
+</li>
+        </ul>
 
     </td>
 
@@ -712,9 +940,12 @@
       
 <p>repository url</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -724,6 +955,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -737,7 +970,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/organizations/:organization_id/subscriptions/refresh_manifest
-          </a><br>
+          </a>
+          <br>
           <small>Refresh previously imported manifest for Red Hat provider</small>
         </h2>
     </div>
@@ -771,9 +1005,12 @@
       
 <p>Organization id</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -783,6 +1020,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -796,7 +1035,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/organizations/:organization_id/subscriptions/delete_manifest
-          </a><br>
+          </a>
+          <br>
           <small>Delete manifest from Red Hat provider</small>
         </h2>
     </div>
@@ -830,9 +1070,12 @@
       
 <p>Organization id</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -842,6 +1085,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -855,7 +1100,8 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/subscriptions/manifest_history
-          </a><br>
+          </a>
+          <br>
           <small>obtain manifest history for subscriptions</small>
         </h2>
     </div>
@@ -889,131 +1135,12 @@
       
 <p>Organization ID</p>
 
-        <br>
-        Value: number.
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
-
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/subscriptions/available_system.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-available_system'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/systems/:system_id/subscriptions/available
-          </a><br>
-          <small>List available subscriptions</small>
-        </h2>
-    </div>
-
-
-    <div id='description-available_system' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>system_id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>UUID of the system</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>match_system </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Return subscriptions that match system</p>
-
-        <br>
-        Value: boolean
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>match_installed </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Return subscriptions that match installed</p>
-
-        <br>
-        Value: boolean
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>no_overlap </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Return subscriptions that don’t overlap</p>
-
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1023,10 +1150,13 @@
 
     </tbody>
   </table>
+
+
 
     </div>
 </div>
 
+  
 
         
       </div>
@@ -1034,7 +1164,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -25,7 +26,10 @@
     Systems
     
   </li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/systems.ca.html">ca</a> | <a href="../apidoc/systems.sv_SE.html">sv_SE</a> | <a href="../apidoc/systems.zh_CN.html">zh_CN</a> | <a href="../apidoc/systems.gl.html">gl</a> | <a href="../apidoc/systems.it.html">it</a> | <a href="../apidoc/systems.pt_BR.html">pt_BR</a> | <a href="../apidoc/systems.es.html">es</a> | <a href="../apidoc/systems.ja.html">ja</a> | <a href="../apidoc/systems.en_GB.html">en_GB</a> | <a href="../apidoc/systems.ru.html">ru</a> | <a href="../apidoc/systems.fr.html">fr</a> | <a href="../apidoc/systems.en.html">en</a> | <a href="../apidoc/systems.ko.html">ko</a> | <a href="../apidoc/systems.de.html">de</a> | <a href="../apidoc/systems.zh_TW.html">zh_TW</a> ]
+</li>
+
 </ul>
 
 <div class='page-header'>
@@ -35,6 +39,8 @@
     <small></small>
   </h1>
 </div>
+
+
 
 
 
@@ -52,7 +58,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List content hosts</small>
         </h2>
         <h2>
@@ -60,8 +68,21 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
+            POST /katello/api/systems/post_index
+          </a>
+            <code>DEPRECATED</code>
+          <br>
+          <small>List content hosts when you have a query string parameter that will cause a 414.</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
             GET /katello/api/organizations/:organization_id/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List content hosts in an organization</small>
         </h2>
         <h2>
@@ -70,17 +91,10 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/environments/:environment_id/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>List content hosts in environment</small>
-        </h2>
-        <h2>
-          <a href='#description-index'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/host_collections/:host_collection_id/systems
-          </a><br>
-          <small>List content hosts in a host collection</small>
         </h2>
     </div>
 
@@ -113,9 +127,12 @@
       
 <p>Filter content host by name</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -134,9 +151,12 @@
       
 <p>Filter content host by subscribed pool</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -155,9 +175,12 @@
       
 <p>Filter content host by uuid</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -176,9 +199,12 @@
       
 <p>Specify the organization</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -197,9 +223,12 @@
       
 <p>Filter by environment</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -208,7 +237,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>host_collection_id </strong><br>
+      <strong>content_view_id </strong><br>
       <small>
         optional
         
@@ -216,11 +245,14 @@
     </td>
     <td>
       
-<p>Filter by host collection</p>
+<p>Filter by content view</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -239,9 +271,12 @@
       
 <p>Search string</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -260,9 +295,12 @@
       
 <p>Page number, starting at 1</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -281,9 +319,12 @@
       
 <p>Number of results per page to return</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -302,9 +343,12 @@
       
 <p>Sort field and order, eg. ‘name DESC’</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -323,9 +367,12 @@
       
 <p>Whether or not to show all results</p>
 
-        <br>
-        Value: boolean
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>boolean</p>
+</li>
+        </ul>
 
     </td>
 
@@ -344,9 +391,12 @@
       
 <p>Hash version of ‘order’ param</p>
 
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -364,9 +414,12 @@
       
 <p>Field to sort the results on</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -385,9 +438,12 @@
       
 <p>How to order the sorted results (e.g. ASC for ascending)</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -398,6 +454,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -411,7 +469,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Register a content host</small>
         </h2>
         <h2>
@@ -420,7 +480,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/environments/:environment_id/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Register a content host in environment</small>
         </h2>
         <h2>
@@ -429,7 +491,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             POST /katello/api/host_collections/:host_collection_id/systems
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Register a content host in environment</small>
         </h2>
     </div>
@@ -463,9 +527,12 @@
       
 <p>Name of the content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -484,9 +551,12 @@
       
 <p>Description of the content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -505,9 +575,12 @@
       
 <p>Physical location of the content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -526,9 +599,12 @@
       
 <p>Key-value hash of content host-specific facts</p>
 
-        <br>
-        Value: Hash
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
 
     </td>
 
@@ -546,9 +622,12 @@
       
 <p>Any number of facts about this content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -568,9 +647,12 @@
       
 <p>Type of the content host, it should always be ‘system’</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -589,9 +671,12 @@
       
 <p>IDs of the virtual guests running on this content host</p>
 
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -610,9 +695,12 @@
       
 <p>List of products installed on the content host</p>
 
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -631,9 +719,12 @@
       
 <p>Release version of the content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -652,9 +743,12 @@
       
 <p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -673,9 +767,12 @@
       
 <p>Last check-in time of this content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -694,9 +791,12 @@
       
 <p>Specify the organization</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -715,9 +815,12 @@
       
 <p>Specify the environment</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -736,9 +839,12 @@
       
 <p>Specify the content view</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -747,7 +853,7 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>host_collection_id </strong><br>
+      <strong>host_collection_ids </strong><br>
       <small>
         optional
         
@@ -755,11 +861,14 @@
     </td>
     <td>
       
-<p>Specify the host collection</p>
+<p>Specify the host collections as an array</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -769,6 +878,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -782,7 +893,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             PUT /katello/api/systems/:id
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Update content host information</small>
         </h2>
     </div>
@@ -816,177 +929,12 @@
       
 <p>UUID of the content host</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>name </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Name of the content host</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>description </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Description of the content host</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>location </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Physical location of the content host</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>facts </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Key-value hash of content host-specific facts</p>
-
-        <br>
-        Value: Hash
-
-
-    </td>
-
-  </tr>
-
-    <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>facts[fact] </strong><br>
-      <small>
-        optional
-        , nil allowed
-      </small>
-    </td>
-    <td>
-      
-<p>Any number of facts about this content host</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>type </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Type of the content host, it should always be ‘system’</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>guest_ids </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>IDs of the virtual guests running on this content host</p>
-
-        <br>
-        Value: Array
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>installed_products </strong><br>
-      <small>
-        optional
-        , nil allowed
-      </small>
-    </td>
-    <td>
-      
-<p>List of products installed on the content host</p>
-
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1005,9 +953,12 @@
       
 <p>Release version of the content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1026,30 +977,12 @@
       
 <p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>last_checkin </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Last check-in time of this content host</p>
-
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1068,9 +1001,12 @@
       
 <p>Specify the environment</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1089,9 +1025,36 @@
       
 <p>Specify the content view</p>
 
-        <br>
-        Value: String
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_collection_ids </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Specify the host collections as an array</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1101,6 +1064,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -1114,7 +1079,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems/:id
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Show a content host</small>
         </h2>
     </div>
@@ -1148,236 +1115,12 @@
       
 <p>UUID of the content host</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
-
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/systems/available_host_collections.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-available_host_collections'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/systems/:id/available_host_collections
-          </a><br>
-          <small>List host collections the content host does not belong to</small>
-        </h2>
-    </div>
-
-
-    <div id='description-available_host_collections' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>search </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Search string</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>page </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Page number, starting at 1</p>
-
-        <br>
-        Value: number.
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>per_page </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Number of results per page to return</p>
-
-        <br>
-        Value: number.
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>order </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Sort field and order, eg. ‘name DESC’</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>full_results </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Whether or not to show all results</p>
-
-        <br>
-        Value: boolean
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>sort </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Hash version of ‘order’ param</p>
-
-        <br>
-        Value: Hash
-
-
-    </td>
-
-  </tr>
-
-    <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>sort[by] </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Field to sort the results on</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>sort[order] </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>How to order the sorted results (e.g. ASC for ascending)</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>name </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>host collection name to filter by</p>
-
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1387,6 +1130,8 @@
 
     </tbody>
   </table>
+
+
 
     </div>
     <hr>
@@ -1400,7 +1145,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             DELETE /katello/api/systems/:id
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Unregister a content host</small>
         </h2>
     </div>
@@ -1434,68 +1181,12 @@
       
 <p>UUID of the content host</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
-
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/systems/package_profile.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-package_profile'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/systems/:id/packages
-          </a><br>
-          <small>List packages installed on the content host</small>
-        </h2>
-    </div>
-
-
-    <div id='description-package_profile' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>UUID of the content host</p>
-
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1506,280 +1197,7 @@
     </tbody>
   </table>
 
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/systems/refresh_subscriptions.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-refresh_subscriptions'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            PUT /katello/api/systems/:id/refresh_subscriptions
-          </a><br>
-          <small>Trigger a refresh of subscriptions, auto-attaching if enabled</small>
-        </h2>
-    </div>
 
-
-    <div id='description-refresh_subscriptions' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>UUID of the content host</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
-
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/systems/errata.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-errata'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/systems/:id/errata
-          </a><br>
-          <small>List errata available for the content host</small>
-        </h2>
-    </div>
-
-
-    <div id='description-errata' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>UUID of the content host</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
-
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/systems/report.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-report'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/environments/:environment_id/systems/report
-          </a><br>
-          <small>Get content host reports for the environment</small>
-        </h2>
-        <h2>
-          <a href='#description-report'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/organizations/:organization_id/systems/report
-          </a><br>
-          <small>Get content host reports for the organization</small>
-        </h2>
-    </div>
-
-
-    <div id='description-report' class='collapse accordion-body'>
-      
-
-
-
-
-
-
-    </div>
-    <hr>
-    <div class='pull-right small'>
-      <a href='../apidoc/systems/pools.html'> >>> </a>
-    </div>
-    <div>
-        <h2>
-          <a href='#description-pools'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /katello/api/systems/:id/pools
-          </a><br>
-          <small>List pools a content host is subscribed to</small>
-        </h2>
-    </div>
-
-
-    <div id='description-pools' class='collapse accordion-body'>
-      
-
-
-
-
-
-  <h3>Params</h3>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>id </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>UUID of the content host</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>match_system </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Match pools to content host</p>
-
-        <br>
-        Value: Must be one of: true, false.
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>match_installed </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Match pools to installed</p>
-
-        <br>
-        Value: Must be one of: true, false.
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>no_overlap </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>allow overlap</p>
-
-        <br>
-        Value: Must be one of: true, false.
-
-
-    </td>
-
-  </tr>
-
-  
-
-    </tbody>
-  </table>
 
     </div>
     <hr>
@@ -1793,7 +1211,9 @@
            data-toggle='collapse'
            data-parent='#accordion'>
             GET /katello/api/systems/:id/releases
-          </a><br>
+          </a>
+            <code>DEPRECATED</code>
+          <br>
           <small>Show releases available for the content host</small>
         </h2>
     </div>
@@ -1829,9 +1249,12 @@
       
 <p>UUID of the content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -1842,9 +1265,214 @@
     </tbody>
   </table>
 
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/systems/content_override.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-content_override'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /katello/api/systems/:id/content_override
+          </a>
+          <br>
+          <small>Set content overrides for the content host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-content_override' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_override </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Content override parameters</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Hash</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_override[content_label] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Label of the content</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>content_override[value] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Override to 0/1, or ‘default’</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be one of: <code>0</code>, <code>1</code>, <code>default</code>.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/systems/product_content.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-product_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /katello/api/systems/:id/product_content
+          </a>
+          <br>
+          <small>Get content overrides for the content host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-product_content' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the content host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
     </div>
 </div>
 
+  
 
         
       </div>
@@ -1852,7 +1480,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>

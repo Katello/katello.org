@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><span class="translation_missing" title="translation missing: fr.apipie.api_documentation">Api Documentation</span></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.fr.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Host subscriptions
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/host_subscriptions.ca.html">ca</a> | <a href="../apidoc/host_subscriptions.sv_SE.html">sv_SE</a> | <a href="../apidoc/host_subscriptions.zh_CN.html">zh_CN</a> | <a href="../apidoc/host_subscriptions.gl.html">gl</a> | <a href="../apidoc/host_subscriptions.it.html">it</a> | <a href="../apidoc/host_subscriptions.pt_BR.html">pt_BR</a> | <a href="../apidoc/host_subscriptions.es.html">es</a> | <a href="../apidoc/host_subscriptions.ja.html">ja</a> | <a href="../apidoc/host_subscriptions.en_GB.html">en_GB</a> | <a href="../apidoc/host_subscriptions.ru.html">ru</a> | <b><a href="../apidoc/host_subscriptions.fr.html">fr</a></b> | <a href="../apidoc/host_subscriptions.en.html">en</a> | <a href="../apidoc/host_subscriptions.ko.html">ko</a> | <a href="../apidoc/host_subscriptions.de.html">de</a> | <a href="../apidoc/host_subscriptions.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Host subscriptions
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_subscriptions/index.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/subscriptions
+          </a>
+          <br>
+          <small>List a host's subscriptions</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_subscriptions/auto_attach.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-auto_attach'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/hosts/:host_id/subscriptions/auto_attach
+          </a>
+          <br>
+          <small>Trigger an auto-attach of subscriptions</small>
+        </h2>
+    </div>
+
+
+    <div id='description-auto_attach' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_subscriptions/events.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-events'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/hosts/:host_id/subscriptions/events
+          </a>
+          <br>
+          <small>List subscription events for the host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-events' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_subscriptions/remove_subscriptions.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-remove_subscriptions'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/hosts/:host_id/subscriptions/remove_subscriptions
+          </a>
+          <br>
+          <small></small>
+        </h2>
+    </div>
+
+
+    <div id='description-remove_subscriptions' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>subscriptions </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Array of subscriptions to remove</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>subscriptions[id] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Subscription Pool id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>subscriptions[quantity] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.optional">Optional</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>If specified, remove the first instance of a subscription with matching id and quantity</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/host_subscriptions/add_subscriptions.fr.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-add_subscriptions'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/hosts/:host_id/subscriptions/add_subscriptions
+          </a>
+          <br>
+          <small>Add a subscription to a host</small>
+        </h2>
+    </div>
+
+
+    <div id='description-add_subscriptions' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3><span class="translation_missing" title="translation missing: fr.apipie.params">Params</span></h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.param_name">Param Name</span></th>
+        <th><span class="translation_missing" title="translation missing: fr.apipie.description">Description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_id </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Id of the host</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>subscriptions </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Ensemble d’abonnements à ajouter</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an Array of nested elements</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>subscriptions[id] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Subscription Pool id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>subscriptions[quantity] </strong><br>
+      <small>
+        <span class="translation_missing" title="translation missing: fr.apipie.required">Required</span>
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Quantité de cet abonnement à ajouter</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

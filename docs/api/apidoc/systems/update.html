@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -29,13 +30,18 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/systems/update.ca.html">ca</a> | <a href="../../apidoc/systems/update.sv_SE.html">sv_SE</a> | <a href="../../apidoc/systems/update.zh_CN.html">zh_CN</a> | <a href="../../apidoc/systems/update.gl.html">gl</a> | <a href="../../apidoc/systems/update.it.html">it</a> | <a href="../../apidoc/systems/update.pt_BR.html">pt_BR</a> | <a href="../../apidoc/systems/update.es.html">es</a> | <a href="../../apidoc/systems/update.ja.html">ja</a> | <a href="../../apidoc/systems/update.en_GB.html">en_GB</a> | <a href="../../apidoc/systems/update.ru.html">ru</a> | <a href="../../apidoc/systems/update.fr.html">fr</a> | <a href="../../apidoc/systems/update.en.html">en</a> | <a href="../../apidoc/systems/update.ko.html">ko</a> | <a href="../../apidoc/systems/update.de.html">de</a> | <a href="../../apidoc/systems/update.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      PUT /katello/api/systems/:id<br>
+      PUT /katello/api/systems/:id
+        <code>DEPRECATED</code>
+      <br>
       <small>Update content host information</small>
     </h1>
   </div>
@@ -69,177 +75,12 @@
       
 <p>UUID of the content host</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>name </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Name of the content host</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>description </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Description of the content host</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>location </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Physical location of the content host</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>facts </strong><br>
-      <small>
-        required
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Key-value hash of content host-specific facts</p>
-
-        <br>
-        Value: Hash
-
-
-    </td>
-
-  </tr>
-
-    <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>facts[fact] </strong><br>
-      <small>
-        optional
-        , nil allowed
-      </small>
-    </td>
-    <td>
-      
-<p>Any number of facts about this content host</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>type </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Type of the content host, it should always be ‘system’</p>
-
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>guest_ids </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>IDs of the virtual guests running on this content host</p>
-
-        <br>
-        Value: Array
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>installed_products </strong><br>
-      <small>
-        optional
-        , nil allowed
-      </small>
-    </td>
-    <td>
-      
-<p>List of products installed on the content host</p>
-
-        <br>
-        Value: Array
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -258,9 +99,12 @@
       
 <p>Release version of the content host</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -279,30 +123,12 @@
       
 <p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
 
-        <br>
-        Value: String
-
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>last_checkin </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Last check-in time of this content host</p>
-
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -321,9 +147,12 @@
       
 <p>Specify the environment</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -342,9 +171,36 @@
       
 <p>Specify the content view</p>
 
-        <br>
-        Value: String
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>host_collection_ids </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Specify the host collections as an array</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be an array of any type</p>
+</li>
+        </ul>
 
     </td>
 
@@ -355,8 +211,11 @@
     </tbody>
   </table>
 
+
+
 </div>
 
+  
 
         
       </div>
@@ -364,7 +223,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Documentação da API</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.pt_BR.html'>Foreman v2</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Recurring logics
+    
+  </li>
+  <li class='pull-right'>
+  &nbsp;[ <a href="../apidoc/recurring_logics.ca.html">ca</a> | <a href="../apidoc/recurring_logics.sv_SE.html">sv_SE</a> | <a href="../apidoc/recurring_logics.zh_CN.html">zh_CN</a> | <a href="../apidoc/recurring_logics.gl.html">gl</a> | <a href="../apidoc/recurring_logics.it.html">it</a> | <b><a href="../apidoc/recurring_logics.pt_BR.html">pt_BR</a></b> | <a href="../apidoc/recurring_logics.es.html">es</a> | <a href="../apidoc/recurring_logics.ja.html">ja</a> | <a href="../apidoc/recurring_logics.en_GB.html">en_GB</a> | <a href="../apidoc/recurring_logics.ru.html">ru</a> | <a href="../apidoc/recurring_logics.fr.html">fr</a> | <a href="../apidoc/recurring_logics.en.html">en</a> | <a href="../apidoc/recurring_logics.ko.html">ko</a> | <a href="../apidoc/recurring_logics.de.html">de</a> | <a href="../apidoc/recurring_logics.zh_TW.html">zh_TW</a> ]
+</li>
+
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Recurring logics
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/recurring_logics/index.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /foreman_tasks/api/recurring_logics
+          </a>
+          <br>
+          <small>List recurring logics</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+
+
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/recurring_logics/show.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /foreman_tasks/api/recurring_logics/:id
+          </a>
+          <br>
+          <small>Show recurring logic details</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parâmentros</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nome parâmetro</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        requerido
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of the recurring logic</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/recurring_logics/cancel.pt_BR.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-cancel'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /foreman_tasks/api/recurring_logics/:id/cancel
+          </a>
+          <br>
+          <small>Cancel recurring logic</small>
+        </h2>
+    </div>
+
+
+    <div id='description-cancel' class='collapse accordion-body'>
+      
+
+
+
+
+
+  <h3>Parâmentros</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nome parâmetro</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        requerido
+        
+      </small>
+    </td>
+    <td>
+      
+<p>ID of the recurring logic</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>string from 2 to 128 characters containing only alphanumeric characters, space, ‘<em>‘, ‘-’ with no leading or trailing space..</em></p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+
+
+    </div>
+</div>
+
+  
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

@@ -3,18 +3,19 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
@@ -29,19 +30,24 @@
     <span class='divider'>/</span>
   </li>
   <li class='active'>show</li>
-  
+  <li class='pull-right'>
+  &nbsp;[ <a href="../../apidoc/errata/show.ca.html">ca</a> | <a href="../../apidoc/errata/show.sv_SE.html">sv_SE</a> | <a href="../../apidoc/errata/show.zh_CN.html">zh_CN</a> | <a href="../../apidoc/errata/show.gl.html">gl</a> | <a href="../../apidoc/errata/show.it.html">it</a> | <a href="../../apidoc/errata/show.pt_BR.html">pt_BR</a> | <a href="../../apidoc/errata/show.es.html">es</a> | <a href="../../apidoc/errata/show.ja.html">ja</a> | <a href="../../apidoc/errata/show.en_GB.html">en_GB</a> | <a href="../../apidoc/errata/show.ru.html">ru</a> | <a href="../../apidoc/errata/show.fr.html">fr</a> | <a href="../../apidoc/errata/show.en.html">en</a> | <a href="../../apidoc/errata/show.ko.html">ko</a> | <a href="../../apidoc/errata/show.de.html">de</a> | <a href="../../apidoc/errata/show.zh_TW.html">zh_TW</a> ]
+</li>
+
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      GET /katello/api/errata/:id<br>
+      GET /katello/api/errata/:id
+      <br>
       <small>Show an erratum</small>
     </h1>
   </div>
   <div class='page-header'>
     <h1>
-      GET /katello/api/repositories/:repository_id/errata/:id<br>
+      GET /katello/api/repositories/:repository_id/errata/:id
+      <br>
       <small>Show an erratum</small>
     </h1>
   </div>
@@ -75,9 +81,12 @@
       
 <p>repository identifier</p>
 
-        <br>
-        Value: number.
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>number.</p>
+</li>
+        </ul>
 
     </td>
 
@@ -94,11 +103,14 @@
     </td>
     <td>
       
-<p>erratum identifier</p>
+<p>an erratum identifier</p>
 
-        <br>
-        Value: String
-
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>String</p>
+</li>
+        </ul>
 
     </td>
 
@@ -109,8 +121,11 @@
     </tbody>
   </table>
 
+
+
 </div>
 
+  
 
         
       </div>
@@ -118,7 +133,7 @@
     <hr>
     <footer></footer>
   </div>
-  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
