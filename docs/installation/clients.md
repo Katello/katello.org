@@ -19,39 +19,39 @@ Install the appropriate Katello client release packages.  For CentOS 6, you will
      <option value="el5">Enterprise Linux 5 (CentOS, etc.)</option>
      <option value="el6">Enterprise Linux 6 (CentOS, etc.)</option>
      <option value="el7">Enterprise Linux 7 (CentOS, etc.)</option>
-     <option value="fc20">Fedora 20</option>
-     <option value="fc21">Fedora 21</option>
+     <option value="f22">Fedora 22</option>
+     <option value="f23">Fedora 23</option>
   </select>
 </p>
 
 <div id="el5" markdown="1">
 ```bash
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/RHEL/5Server/x86_64/katello-client-repos-latest.rpm
+yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/el5/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
 <div id="el6" style="display:none;" markdown="1">
 ```bash
 wget https://copr.fedoraproject.org/coprs/dgoodwin/subscription-manager/repo/epel-6/dgoodwin-subscription-manager-epel-6.repo -O /etc/yum.repos.d/dgoodwin-subscription-manager-epel-6.repo
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/RHEL/6Server/x86_64/katello-client-repos-latest.rpm
+yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/el6/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
 <div id="el7" style="display:none;" markdown="1">
 ```bash
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/RHEL/7Server/x86_64/katello-client-repos-latest.rpm
+yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/el7/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
-<div id="fc20" style="display:none;" markdown="1">
+<div id="f22" style="display:none;" markdown="1">
 ```bash
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/RHEL/Fedora/20/x86_64/katello-client-repos-latest.rpm
+yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/f22/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
-<div id="fc21" style="display:none;" markdown="1">
+<div id="f23" style="display:none;" markdown="1">
 ```bash
-yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/RHEL/Fedora/21/x86_64/katello-client-repos-latest.rpm
+yum install -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/f23/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
