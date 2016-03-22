@@ -6,224 +6,76 @@ sidebar: sidebars/documentation.html
 
 # Backup
 
-## Prepare Backup
+In the following sections, these assumptions are being made with respect to making the backup:
 
-In the following sections we will be using `/backup` directory as our targed directory that will hold backup archives. Let's prepare it now.
+ * `/tmp/backup` will be used as the target for backups
+ * All commands are executed as `root`
 
-All the following commands are executed under `root` system account.
+## Option One: Offline repositories backup
 
-```
-export BDIR=/backup
-umask 0027
-mkdir -p $BDIR
-chgrp postgres $BDIR
-chmod 770 $BDIR
-cd $BDIR
-```
-
-## Backup system files
-
-It is necessary to backup configuration files and important data files. Being in the `$BDIR` execute:
+By default, the whole Katello instance will be turned off completely for the entire backup.
 
 ```
-tar --selinux -czvf config_files.tar.gz \
-/etc/foreman-installer \
-/etc/foreman \
-/etc/elasticsearch \
-/etc/candlepin \
-/etc/pulp \
-/etc/pki/katello \
-/etc/pki/pulp \
-/etc/gofer \
-/etc/qpid \
-/etc/qpidc.conf \
-/etc/qpidd.conf \
-/etc/sysconfig/katello \
-/etc/sysconfig/foreman \
-/etc/sysconfig/elasticsearch \
-/root/ssl-build \
-/var/www/html/pub \
-/usr/share/katello/candlepin-cert.crt
-
-tar --selinux -czvf elastic_data.tar.gz /var/lib/elasticsearch
+# katello-backup /tmp/backup
 ```
 
-Please note some of these directories are created after `foreman-installer` is executed for the first time.
+## Option Two: Online repositories backup
 
-## Repositories
-
-For backing up Pulp repositories we will not use compression program, because RPM files have usually low compression ration and depending on the instance size the `pulp_data.tar` archive can be quite big.
-
-### Option One: Online repositories backup
-
-There are two options to backup repositories. First one is to do checksum of all timestamps, do the backup and do the checksum again. If both checksums match, the online backup is correct and can be used. Otherwise you need to start over. Pulp does not support online repositories backup.
+Backing up the repositories can take an extensive amount of time. You can perform a backup while online. In order for this procedure to succeed, you must not change or update the repositories database until the backup procedure is complete. Thus, you must avoid publishing, adding, or deleting content views, promoting content view versions, adding, changing, or deleting sync-plans, and adding, deleting, or syncing repositories during this time. To perform an online-backup of the repositories, run:
 
 ```
-find /var/lib/pulp -printf '%T@\n' | md5sum
-tar --selinux -cvf pulp_data.tar /var/lib/pulp /var/www/pub
-find /var/lib/pulp -printf '%T@\n' | md5sum
+# katello-backup --online-backup /tmp/backup
 ```
 
-Tip: Use rsync for speeding up file copying so checksums are likely to match.
+## Option Three: Skip repositories backup
 
-### Option Two: Offline repositories backup
-
-The second option is to bring Pulp server down and do the backup, then to start it up. Please note yum clients and Katello won't be able to connect and all actions with repositories will fail.
+There may be situations in which you want to see a system without its repository information. You can skip backing up the Pulp database with the following option:
 
 ```
-katello-service stop
-tar --selinux -cvf pulp_data.tar /var/lib/pulp /var/www/pub
-katello-service start
+# katello-backup --skip-pulp /tmp/backup
 ```
 
-
-## Backup PostgreSQL
-
-In this section we are going to backup Katello PostgreSQL database. `pg_dump` performs on-line database backups, therefore it is not necessary to stop PostgreSQL or Katello and this process does not block logged users, but it can take minutes to finish depending on size of databases.
-
-```
-su postgres -c "pg_dump -Fc foreman > $BDIR/foreman.dump"
-su postgres -c "pg_dump -Fc candlepin > $BDIR/candlepin.dump"
-```
-
-## Backup MongoDB
-
-To backup pulp database (MongoDB) on-line tool can be used while the database is running. In the `$BDIR` execute the following command:
-
-```
-mongodump --host localhost --out $BDIR/mongo_dump
-```
-
-Please note the tool should create `$BDIR/mongo_dump/pulp_database` directory with a bunch of json files. You can optionally compress the data - the ratio should be quite good. For more information consult `mongodump` man page or visit http://www.mongodb.org/display/DOCS/Backups
-
-
-### Optional: Offline Database Backup
-
-We have backed up databases with on-line tools in the next paragraphs, but you can also backup data offline files using the following commands. Please note whole Katello instance must be turned off completely. We recommended to do this optional backup from time to time during your maintanance windows.
-
-```
-tar --selinux -czvf mongo_data.tar.gz /var/lib/mongodb
-tar --selinux -czvf pgsql_data.tar.gz /var/lib/pgsql/data/
-```
+Please note you would not be able to restore a Katello instance from a directory where the Pulp database was skipped.
 
 ## Final check-up
 
+After a successful backup, the backup directory should have the following files:
+
 ```
-ls $BDIR
-candlepin.dump
+# ls /tmp/backup
 config_files.tar.gz
-elastic_data.tar.gz
-foreman.dump
-mongo_dump/
-pulp_data.tar
-```
-
-If you did offline database backups, you will see additional two files:
-
-```
 mongo_data.tar.gz
 pgsql_data.tar.gz
+```
+
+Additionally, if you ran the backup without skipping the Pulp database, you will see the additional file:
+
+```
+pulp_data.tar
 ```
 
 Katello instance should be up and running. Next chapter is dedicated to restoring a backup.
 
 # Restore
 
-## Prepare restore
+All the following commands are executed under `root` system account.
 
-Before starting restore process, make sure you have the system in the same configuration, it is recommended to make sure the very same package versions and errata is applied as it was on the original system. Also make sure SELinux contexts are correct:
-
-```
-restorecon -Rnv /
-```
-
-We are assuming restore is going to happen on the same server the instance from the backup was installed on. All services must be stopped prior restoring the data (if installed):
+Please note only backups that include the Pulp database can be restored. To verify that your backup directory is usable, make sure it has the following files:
 
 ```
-katello-service stop
+# ls /tmp/backup
+config_files.tar.gz
+mongo_data.tar.gz
+pgsql_data.tar.gz
+pulp_data.tar
 ```
 
-If the original system is not avaiable it is necessary to reinstall the same version of Katello, restore the files, and then run `foreman-installer --scenario katello`.  **The hostname must rename the same, otherwise you will need to regenerate all SSL certificates.**
+Once verified, simply run:
 
 ```
-yum -y install katello
-tar --selinux -xzvf config_files.tar.gz -C /tmp
-foreman-installer --scenario katello
+# katello-restore /tmp/backup
 ```
 
-Please note the following process describes full Katello backup restore and it deletes all data that are still loaded. Make sure you are restoring the correct instance. All commands are executed as root in the directory with backup archives created in the Backup chapter above.
-
-```
-export BDIR=/backup
-chgrp postgres -R $BDIR
-cd $BDIR
-```
-
-## Restore system files
-
-Note: It is a good idea to make additional backup of configuration files before they gets overwritten from the backup. You can do this executing command from Step 2 from the Backup section (Backup the configuration and data files), so the files can be extracted and examined with a GNU diff tool if a problem occurs.
-
-System files restore must be done as root as well. Please double check you are extracting on the correct host. To restore all system files the following commands must be executed from the $BDIR directory:
-
-```
-tar --selinux -xzvf config_files.tar.gz -C /
-tar --selinux -xzvf elastic_data.tar.gz -C /
-tar --selinux -xvf pulp_data.tar -C /
-```
-
-## Restore PostgreSQL databases
-
-First of all we need to drop existing database, if there is any. Make sure PostgreSQL is running and drop all databases we are going to restore.
-
-```
-service postgresql start
-su postgres -c "dropdb foreman"
-su postgres -c "dropdb candlepin"
-```
-
-If you get an error `database xxx is being accessed by other users` during database drop step, make sure all processes are stopped by running:
-
-```
-katello-service stop
-```
-
-To restore Katello and Candlepin PostgreSQL databases use the following commands.
-
-```
-su postgres -c "pg_restore -C -d postgres $BDIR/foreman.dump"
-su postgres -c "pg_restore -C -d postgres $BDIR/candlepin.dump"
-```
-
-For more info about PostgreSQL backups consult pg_restore manual page or visit http://www.postgresql.org/docs/8.4/static/backup.html
-
-## Restore MongoDB database
-
-First make sure MongoDB is running:
-
-```
-service mongod start
-```
-
-To recover the MongoDB database, make sure the old data are deleted:
-
-```
-echo 'db.dropDatabase();' | mongo pulp_database
-```
-
-You will need to provide `--username` and `--password` when In the directory with backup archives execute the following command:
-
-```
-mongorestore --host localhost mongo_dump/pulp_database/
-```
-
-For more information consult `mongorestore` man page or visit http://www.mongodb.org/display/DOCS/Backups
-
-## Finish restore
-
-Now it's the time to start all processes.
-
-```
-katello-service start
-```
+This command will require verification in order to proceed, as the method will destruct all databases before restoring them. Once the procedure is finished, all processes will be online, and all databases and system configuration will be reverted to the state and the time of the backup.
 
 Check log files for errors, such as `/var/log/foreman/production.log` and `/var/log/messages`.
