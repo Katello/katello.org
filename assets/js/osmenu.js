@@ -7,8 +7,8 @@ $(document).ready(function(){
             'el5': [],
             'el6': [],
             'el7': [],
-            'fc20': [],
-            'fc21': []
+            'f22': [],
+            'f23': []
         };
 
         function show(os) {
