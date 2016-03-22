@@ -27,8 +27,6 @@ For previous stable versions - {% for version in site.versions %}[{{ version }}]
 
 For development installation instructions see - [development install](/docs/installation/development.html).
 
-For Katello 1.4 users looking for information on how to transition to 2.0, please see - [Transition Guide](/docs/installation/2.0-transition.html).
-
 Note: After installation of Katello, be sure to trust Katello's CA certificate on your system.  This is required for the encrypted NoVNC connections. You will find `katello-default-ca.crt` in the `/pub` directory of your Katello server (e.g. `http://katello.example.com/pub/katello-default-ca.crt`).
 
 ## Hardware Requirements
@@ -91,7 +89,7 @@ yum-config-manager --enable rhel-6-server-optional-rpms
 
 <div id="el6" markdown="1">
 ```bash
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/katello/RHEL/6Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/katello/el6/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://yum.theforeman.org/{{ site.foreman_version }}/el6/x86_64/foreman-release.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
 yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
@@ -111,7 +109,7 @@ yum-config-manager --enable rhel-7-server-extras-rpms
 
 <div id="el7" style="display: none;" markdown="1">
 ```bash
-yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/katello/el7/x86_64/katello-repos-latest.rpm
 yum -y localinstall http://yum.theforeman.org/{{ site.foreman_version  }}/el7/x86_64/foreman-release.rpm
 yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 yum -y localinstall http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
