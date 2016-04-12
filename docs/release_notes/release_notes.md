@@ -20,7 +20,7 @@ The installer has been updated to use the foreman-installer with a new feature k
 
 ### Host Unification
 
-Prior to Katello 2.0, Hosts were represented by two objects, Hosts and Content Hosts. Under some cercumstances these two objects would be linked together but under other workflows they were not. In addition only one Host could exist with a given hostname but many Content Hosts could be registered with the same hostname. As part of Katello 3.0 we have attempted to unify hosts and content hosts into a single object. The "Content Hosts" page still exists but eventually everything there would be integerated into a unified Hosts ui.
+Prior to Katello 2.0, Hosts were represented by two objects, Hosts and Content Hosts. Under some circumstances these two objects would be linked together but under other workflows they were not. In addition only one Host could exist with a given hostname but many Content Hosts could be registered with the same hostname. As part of Katello 3.0 we have attempted to unify hosts and content hosts into a single object. The "Content Hosts" page still exists but eventually everything there would be integrated into a unified Hosts ui.
 
 As a result of Host Unification there are many subtle changes:
 
@@ -64,7 +64,7 @@ The ability to cancel synchronizations as well as showing the content counts are
 
 ### Inter-Server Sync
 
-Users may now perform exports and imports of yum repositories to disk, either as a series of directories or as ISO files. This is especially useful for users in "air-gapped" network envionrments, where a Katello server might not have access to the Internet. Note that Inter-Server Sync (ISS) replaces the katello-disconnected tool. Additional information is available at (http://www.katello.org/docs/user_guide/disconnected/)[http://www.katello.org/docs/user_guide/disconnected/].
+Users may now perform exports and imports of yum repositories to disk, either as a series of directories or as ISO files. This is especially useful for users in "air-gapped" network environments, where a Katello server might not have access to the Internet. Note that Inter-Server Sync (ISS) replaces the katello-disconnected tool. Additional information is available at (http://www.katello.org/docs/user_guide/disconnected/)[http://www.katello.org/docs/user_guide/disconnected/].
 
 ### 
 
