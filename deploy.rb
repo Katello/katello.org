@@ -27,7 +27,7 @@ class Deployer
     remote ||= 'origin'
     make_builddir
     make_deploymentdir
-    clone_version('nightly', remote)
+    clone_version('base', remote)
 
     self.pr = pr_details(pr)
     puts "Testing PR #{self.pr[:id]} against branch #{self.pr[:target]}" unless self.pr.empty?
@@ -37,7 +37,7 @@ class Deployer
     puts "Versions found: #{versions.to_s}"
     puts "Version aliases found: #{version_aliases.inspect}"
     clone_versions(remote)
-    build_nightly
+    build_base
     build_versions(@versions, remote)
   end
 
@@ -67,31 +67,32 @@ class Deployer
   end
 
   def find_version_aliases
-    config = YAML.load_file(BUILD_DIR + '/nightly/_config.yml')
+    config = YAML.load_file(BUILD_DIR + '/base/_config.yml')
     config['version_aliases'] || {}
   end
 
   def find_versions
     puts "Detecting available Katello versions"
 
-    Dir.chdir(BUILD_DIR + '/nightly') do
+    Dir.chdir(BUILD_DIR + '/base') do
       result = syscall('git branch -a')
 
       result = result.split("\n").select do |branch|
         branch.include?('remotes/origin/KATELLO-')
       end
 
-      result.collect do |version|
+      results = result.collect do |version|
         version.split('-').last
       end
+      results.unshift("nightly")
     end
   end
 
-  def build_nightly
+  def build_base
     puts "Building nightly..."
     reset_nightly
 
-    Dir.chdir(BUILD_DIR + '/nightly') do
+    Dir.chdir(BUILD_DIR + '/base') do
       build_pr_branch('master')
       set_config('versions' =>  self.versions, 'version_aliases' => self.version_aliases)
       syscall("cat _config.build.yml")
@@ -100,8 +101,9 @@ class Deployer
       cleanup_config
     end
 
-    FileUtils.cp_r('_build/nightly/_site/.', "public/")
-    FileUtils.cp_r('_build/nightly/gpg/', "public/")
+    FileUtils.cp_r('_build/base/_site/.', "public/")
+    FileUtils.cp_r('_build/base/gpg/', "public/")
+    FileUtils.rm_rf(Dir.glob('public/docs/*'))
   end
 
   def build_versions(versions, remote)
@@ -112,7 +114,11 @@ class Deployer
     puts "Building version #{version}"
     reset_nightly
 
-    branch = "remotes/origin/KATELLO-#{version}"
+    if version == 'nightly'
+      branch = "remotes/origin/master"
+    else
+      branch = "remotes/origin/KATELLO-#{version}"
+    end
 
     FileUtils.rmdir('public/docs/' + version)
 
@@ -122,7 +128,7 @@ class Deployer
 
     build_pr_branch(branch.split('/').last)
 
-    Dir.chdir(BUILD_DIR + '/nightly') do
+    Dir.chdir(BUILD_DIR + '/base') do
       set_config('version' => version, 'versions' => self.versions, 'version_aliases' => self.version_aliases)
 
       syscall("rm -rf docs/")
@@ -142,7 +148,7 @@ class Deployer
   private
 
   def reset_nightly
-    Dir.chdir(BUILD_DIR + '/nightly') do
+    Dir.chdir(BUILD_DIR + '/base') do
       syscall('git reset HEAD --hard')
     end
   end
@@ -150,7 +156,7 @@ class Deployer
   def copy_version(version)
     puts "Copying #{version}"
 
-    FileUtils.cp_r("_build/nightly/_site/docs/#{version}/.", "public/docs/#{version}")
+    FileUtils.cp_r("_build/base/_site/docs/#{version}/.", "public/docs/#{version}")
   end
 
   def jekyll_build
