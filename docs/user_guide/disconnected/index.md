@@ -45,7 +45,8 @@ content-view version export` (step 2). It is exported to the location set in
 "pulp_export_destination" in the Settings page, under the Katello tab. This
 must be set by the user prior to the first export or else an error will be
 raised. Please be aware that the location needs to be readable and writable by
-the `foreman` user.
+the `foreman` user. SELinux permissions also need to be set on the export location
+with the type `foreman_var_run_t` as well as foreman user and group ownership.
 
 You can select to either export as a plain set of directories, or as a set of
 ISO files. The "iso_size_mb" parameter sets how large you would like each ISO
