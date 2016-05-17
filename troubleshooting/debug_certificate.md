@@ -14,7 +14,7 @@ To generate a debug certificate for a given Organization from the UI, navigate t
 
 ![Generate Debug Certificate](./debug_certificate.png)
 
-To generate a debug certificate using the API, see [Debug Certificate API](http://www.katello.org/docs/api/apidoc/organizations.html#description-download_debug_certificate).
+To generate a debug certificate using the API, see [Debug Certificate API](http://www.katello.org/docs/nightly/api/apidoc/organizations.html#description-download_debug_certificate).
 
 In either case, you will get the Private Key and Certificate returned to you in a format such as :
 
