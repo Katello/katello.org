@@ -25,7 +25,7 @@ script: osmenu.js
 For previous stable versions - {% for version in site.versions %}[{{ version }}](/docs/{{ version }}/installation/index.html) {% endfor %}
 {% endif %}
 
-For development installation instructions see - [development install](/docs/installation/development.html).
+For development installation instructions see - [development install](/docs/nightly/installation/development.html).
 
 Note: After installation of Katello, be sure to trust Katello's CA certificate on your system.  This is required for the encrypted NoVNC connections. You will find `katello-default-ca.crt` in the `/pub` directory of your Katello server (e.g. `http://katello.example.com/pub/katello-default-ca.crt`).
 
