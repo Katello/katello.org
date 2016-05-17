@@ -6,7 +6,7 @@ sidebar: sidebars/documentation.html
 
 # Capsule Upgrade
 
-Katello supports upgrades from version 2.0.  For users transitioning from 1.4, please see - [Transition Guide](/docs/installation/2.0-transition.html).
+Katello supports upgrades from version 2.0.  For users transitioning from 1.4, please see - [Transition Guide](/docs/nightly/installation/2.0-transition.html).
 
 ## Step 1 - Operating System
 
