@@ -28,6 +28,16 @@ See the [User Guide](/docs/{{ site.version }}/user_guide/capsules/index.html) fo
 
 ## Installation
 
+### Install needed packages:
+
+The same yum repositories need to be configured on the Capsule server as the main Katello server. See the installation guide for the [list of required repositories](/docs/{{ site.version }}/installation/index.html#required-repositories).
+
+Once you get the repositories configured, install the foreman-installer-katello package on the capsule
+
+```
+yum install -y foreman-installer-katello
+```
+
 ### Generate Certificates for the Capsules
 
 Prior to installing the Capsule, we need to generate certificates on the main **Katello** server:
@@ -66,14 +76,6 @@ Installing             Done                     [100%] [.....................]
                     --pulp-oauth-secret     "TPk42MYZ42nAE3rZvyLBh7Lxob3nEUi8"\
                     --certs-tar             "~/mycapsule.example.com-certs.tar"
   The full log is at /var/log/capsule-certs-generate.log
-```
-
-### Install needed packages:
-
-The same yum repositories need to be configured on the Capsule server as the main Katello server. See the installation guide for the [list of required repositories](/docs/{{ site.version }}/installation/index.html#required-repositories).
-
-```
-yum install -y foreman-installer-katello
 ```
 
 ### Install Capsule
