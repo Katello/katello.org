@@ -1,0 +1,6 @@
+file=$OPENSHIFT_REPO_DIR/public
+
+if [ ! -f $file ] || [ ! -L $file ]; then
+  rm $OPENSHIFT_REPO_DIR/public
+  ln -s $OPENSHIFT_DATA_DIR/public $OPENSHIFT_REPO_DIR/public
+fi
