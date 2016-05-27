@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Puppet Integration
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Managing Puppet Content

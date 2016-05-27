@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Documentation
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Katello Documentation

@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: 2.0 Release Notes
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Katello 2.0 (Oktoberfest) Release Notes

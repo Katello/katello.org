@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: "Bastion: Adding a Custom Module"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Adding a Custom Module

@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: "Bastion: The Katello UI Engine"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Bastion: The Katello UI Engine

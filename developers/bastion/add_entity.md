@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: "Bastion: Add Entity"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Basics of Adding a New Entity
