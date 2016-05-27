@@ -11,7 +11,7 @@ layout: base
 
 {% if page.sidebar %}
   <section class="container has-sidebar">
-    {% include {{page.sidebar}} %}
+      {% include {{ page.sidebar | replace: '!VERSION!', site.version }} %}
 {% else %}
   <section class="container">
 {% endif %}

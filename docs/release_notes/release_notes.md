@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: 2.1 Release Notes
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Katello 2.1 (Winter Warmer) Release Notes

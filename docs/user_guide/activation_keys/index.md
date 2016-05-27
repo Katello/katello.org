@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Activation Keys
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Activation Keys

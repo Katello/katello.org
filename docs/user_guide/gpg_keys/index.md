@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: GPG Keys
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Managing Content Hosts using GPG Keys

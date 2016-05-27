@@ -1,7 +1,7 @@
 ---
 layout: base
 title: "Development Installation"
-sidebar: sidebars/documentation.html
+sidebar: sidebars/!VERSION!/documentation.html
 ---
 
 # Development Installation
