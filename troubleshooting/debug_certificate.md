@@ -32,22 +32,17 @@ Cert: -----BEGIN CERTIFICATE-----
 
 If you wish to use the certificate to browse content via Firefox, do the following:
 
- 1. Copy the output of the above command from {{{-----BEGIN RSA PRIVATE KEY-----}}} to {{{-----END RSA PRIVATE KEY-----}}} inclusive to a file called key.pem
- 1. Copy the output of the above command from {{{-----BEGIN CERTIFICATE-----}}} to {{{-----END CERTIFICATE-----}}} inclusive to a file called cert.pem
+ 1. Copy the contents of the above file from `-----BEGIN RSA PRIVATE KEY-----` to `-----END RSA PRIVATE KEY-----` inclusive to a file called key.pem
+ 1. Copy the contents of the above file from `-----BEGIN CERTIFICATE-----` to `-----END CERTIFICATE-----` inclusive to a file called cert.pem
  1. Run the following command to create a pkcs12 file:
 ```
 openssl pkcs12 -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES -export -in cert.pem -inkey key.pem -out [NAME].pfx -name [NAME]
 ```
  1. Provide a password when prompted.
  1. Using the preferences tab, import the resulting pfx file into your browser (Edit->Preferences->Advanced Tab -> View Certificates -> Import)
- 1. On the Katello server, edit the /etc/httpd/conf.d/pulp.conf file. Add the following line in the {{{<Directory /var/www/pub/repos>}}} Stanza:
-```
-    Options +Indexes
-```
- 1. Restart Apache on the server.
  1. Point your browser at http://[FQDN]/pulp/repos/[ORG_NAME]
 
-To use curl to access the repository, you can provide --cert and --key options. Provided the cert is in {{{~/cert.pem}}} and key in {{{~/key.cert}}}, the following command will let you access any repository data in the organization. To check the access to a repository, checking the availability of repodata/repomd.xml is usually a good idea (make sure key.pem and cert.pem are '''absolute paths''' otherwise it silently fails):
+To use curl to access the repository, you can provide --cert and --key options. Provided the cert is in `~/cert.pem` and key in `~/key.cert`, the following command will let you access any repository data in the organization. To check the access to a repository, checking the availability of repodata/repomd.xml is usually a good idea (make sure key.pem and cert.pem are '''absolute paths''' otherwise it silently fails):
 
 ```
 curl -k --cert ~/cert.pem --key ~/key.pem https://katello.example.com/pulp/repos/test/Dev/custom/zoo/base-two/repodata/repomd.xml
