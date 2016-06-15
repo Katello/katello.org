@@ -25,6 +25,17 @@ foreman-rake katello:preupgrade_content_host_check
 
 The command will print the number of Content Hosts that will be deleted upon upgrade and generate a csv with the full list including the uuid, name, last checkin date, and a reason for their deletion.
 
+# Upgrade Caveat
+
+At the time of release, upgrades don't properly copy exsting installer configuration to the new scenario based installer. The fix for this is in the installer library Kafo version 0.7.4 which won't be released until Foreman 1.11.3 is released. IF you are planning to do an upgrade you have two options:
+
+  1. Wait for Foreman 1.11.3 and rubygem-kafo-0.7.4
+  2. Install Kafo 0.7.4 from our Koji prior to upgrading any other RPMs
+    * el7: [rubygem-kafo-0.7.4-1.el7](http://koji.katello.org/packages/rubygem-kafo/0.7.4/1.el7/noarch/rubygem-kafo-0.7.4-1.el7.noarch.rpm)
+    * el6: [rubygem-kafo-0.7.4-1.el6](http://koji.katello.org/packages/rubygem-kafo/0.7.4/1.el6/noarch/rubygem-kafo-0.7.4-1.el6.noarch.rpm)
+
+If you have any further questions please reach out to us on IRC or the user mailing list prior to upgrading.
+
 ## Step 1 - Backup
 
 If Katello is running on a Virtual Machine, we reccomend to take a snapshot prior to upgrading. Otherwise, take a backup of the relevant databases by following the [instructions here](/docs/{{ site.version }}/user_guide/backup/).

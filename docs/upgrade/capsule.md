@@ -8,6 +8,17 @@ sidebar: sidebars/documentation.html
 
 Katello supports upgrades from version 2.0.  For users transitioning from 1.4, please see - [Transition Guide](/docs/nightly/installation/2.0-transition.html).
 
+# Upgrade Caveat
+
+At the time of release, upgrades don't properly copy exsting installer configuration to the new scenario based installer. The fix for this is in the installer library Kafo version 0.7.4 which won't be released until Foreman 1.11.3 is released. IF you are planning to do an upgrade you have two options:
+
+  1. Wait for Foreman 1.11.3 and rubygem-kafo-0.7.4
+  2. Install Kafo 0.7.4 from our Koji prior to upgrading any other RPMs
+    * el7: [rubygem-kafo-0.7.4-1.el7](http://koji.katello.org/packages/rubygem-kafo/0.7.4/1.el7/noarch/rubygem-kafo-0.7.4-1.el7.noarch.rpm)
+    * el6: [rubygem-kafo-0.7.4-1.el6](http://koji.katello.org/packages/rubygem-kafo/0.7.4/1.el6/noarch/rubygem-kafo-0.7.4-1.el6.noarch.rpm)
+
+If you have any further questions please reach out to us on IRC or the user mailing list prior to upgrading.
+
 ## Step 1 - Operating System
 
 Ensure your operating system is fully up-to-date:
