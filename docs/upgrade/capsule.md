@@ -89,18 +89,3 @@ The installer with the --upgrade flag will run the right database migrations for
 **Congratulations! You have now successfully upgraded your Capsule to {% if site.version %}{{ site.version }} For a rundown of what was added, please see [release notes](/docs/{{ site.version }}/release_notes/release_notes.html).{% else %}the latest nightly{% endif %}!**
 
 If for any reason, the above steps failed, please review /var/log/foreman-installer/capsule.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
-
-## Manual Steps
-
-**Pulp**
-
-```
-# sudo -u apache pulp-manage-db
-```
-
-There are some packages that are no longer needed by pulp and optionally can be removed.
-
-```
-# yum remove -y pulp-nodes-common pulp-nodes-child
-```
-
