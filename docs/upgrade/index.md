@@ -83,39 +83,3 @@ The installer with the --upgrade flag will run the right database migrations for
 
 
 If for any reason, the above steps failed, please review /var/log/foreman-installer/katello.log -- if any of the "Upgrade step" tasks failed, you may try to run them manaully below to aid in troubleshooting.
-
-## Manual Steps
-
-**Candlepin**
-
-The database password is stored in /var/lib/puppet/foreman_cache_data/candlepin_db_password.
-
-```
-# /usr/share/candlepin/cpdb --update --password <PASSWORD>
-```
-
-**Pulp**
-
-```
-# sudo -u apache pulp-manage-db
-```
-
-There are some packages that are no longer needed by pulp and optionally can be removed.
-
-```
-# yum remove -y pulp-nodes-common pulp-nodes-parent
-```
-
-**Foreman**
-
-```
-# foreman-rake db:migrate
-# katello-service restart
-# foreman-rake db:seed
-```
-
-**Errata import**
-
-```
-# foreman-rake katello:upgrades:2.1:import_errata
-```
