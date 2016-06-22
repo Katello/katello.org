@@ -2,12 +2,12 @@ name: Katello
 baseurl:
 markdown: KramdownPygments
 highlighter: pygments
-latest: 2.4
+latest: 3.0
 
 foreman_version: nightly
 
 version_aliases:
-  '3.0':  3.0-RC
+
 kramdown:
   auto_id: true
   input: GFM
