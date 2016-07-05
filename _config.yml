@@ -2,7 +2,7 @@ name: Katello
 baseurl:
 markdown: KramdownPygments
 highlighter: pygments
-latest: 2.4
+latest: 3.0
 
 foreman_version: 1.11
 
