@@ -27,14 +27,12 @@ The command will print the number of Content Hosts that will be deleted upon upg
 
 # Upgrade Caveat
 
-At the time of release, upgrades don't properly copy exsting installer configuration to the new scenario based installer. The fix for this is in the installer library Kafo version 0.7.4 which won't be released until Foreman 1.11.3 is released. IF you are planning to do an upgrade you have two options:
+The upgrade of Pulp has the potential to take a lengthy amount of time. This is not an error, the migrations Pulp is performing are moving data and symlinks around which, depending on the amount of synced content and content views (thus symlinks) can result in long upgrade times. So if the upgrade Pulp step is taking a long time, please be patient. We advise users to plan their outage windows for upgrade around this potential. Some examples from the community of upgrade times:
 
-  1. Wait for Foreman 1.11.3 and rubygem-kafo-0.7.4
-  2. Install Kafo 0.7.4 from our Koji prior to upgrading any other RPMs
-    * el7: [rubygem-kafo-0.7.4-1.el7](http://koji.katello.org/packages/rubygem-kafo/0.7.4/1.el7/noarch/rubygem-kafo-0.7.4-1.el7.noarch.rpm)
-    * el6: [rubygem-kafo-0.7.4-1.el6](http://koji.katello.org/packages/rubygem-kafo/0.7.4/1.el6/noarch/rubygem-kafo-0.7.4-1.el6.noarch.rpm)
-
-If you have any further questions please reach out to us on IRC or the user mailing list prior to upgrading.
+~18 hours for 1.5TB /var/lib/pulp
+~6 hours for 176GB /var/lib/pulp
+~2 hours for 290GB /var/lib/pulp
+~2-3 hours for 270GB /var/lib/pulp
 
 ## Step 1 - Backup
 
