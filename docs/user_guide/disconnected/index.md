@@ -43,9 +43,8 @@ to the downstream server (step 1).
 Content is exported via either `hammer repository export` or `hammer
 content-view version export` (step 2). It is exported to the location set in
 "pulp_export_destination" in the Settings page, under the Katello tab. This
-must be set by the user prior to the first export or else an error will be
-raised. Please be aware that the location needs to be readable and writable by
-the `foreman` user.
+defaults to `/var/lib/pulp/katello_export`.  Please be aware that the location
+needs to be readable and writable by the `foreman` user.
 
 You can select to either export as a plain set of directories, or as a set of
 ISO files. The "iso_size_mb" parameter sets how large you would like each ISO
@@ -55,10 +54,15 @@ single-layer DVD.
 ### Importing
 
 Importing (step 3) can be done in one of two ways. The first way is to make the
-export available via HTTP to the importing Satellite instance. Simply put the
-export in `/var/www/pub/export`. After that, edit your CDN location from the
-manifest import page to point to "http://localhost/export/path/to/export" and
-the Red Hat Repos page will then work as expected, using your exported data.
+export available via HTTP to the importing Katello instance. Simply put the
+export in `/var/www/html/pub/export`, either via copy or symlink. After that,
+edit your CDN location from the manifest import page to point to
+"http://<hostname>/export/path/to/export" and the Red Hat Repos page will then
+work as expected, using your exported data. Please be sure to use 'http' and
+not 'https' when altering the CDN url. Katello by default only supports the CA
+certificate for `cdn.redhat.com`. This is a [known
+limitation](http://projects.theforeman.org/issues/16392) that will be addressed
+in a future version.
 
 The second way is to perform a repository sync via hammer, specifiying the
 source location. Please see the `hammer repository sync` command for more
