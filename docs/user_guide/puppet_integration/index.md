@@ -50,7 +50,9 @@ chmod 755 /modules
 pulp-puppet-module-builder --output-dir=/modules --url=git@mygitserver.com:mymodules.git --branch=develop
 ```
 
-This will checkout the 'develop' branch of the Git repository located at 'git@mygitserver.com:mymodules.git' and publish them to the `/modules` directory. Then, from within Katello, simply set the url on your Puppet Repository to 'file://modules'. You can now sync the Repository just like any other Repository.
+This will checkout the 'develop' branch of the Git repository located at 'git@mygitserver.com:mymodules.git' and publish them to the `/modules` directory. If you have SELinux enabled, in order to sync from the file system, you'll need to apply a label to the files in order for the system to access them. Two options are httpd_sys_r_content_t or pulp_tmp_t. Note: if you choose httpd_sys_r_content_t then the webserver can also read the files so that may or may not be good. One way to apply these labels would be to use the chcon command.
+
+Next, from within Katello, simply set the url on your Puppet Repository to 'file://modules'. You can now sync the Repository just like any other Repository.
 
 If you are running this on a remote machine, you will need to publish the containing to folder to a location accessible by HTTP or HTTPS.
 
