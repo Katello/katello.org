@@ -48,6 +48,10 @@ Update packages:
 # yum update -y
 ```
 
+```
+# yum install katello-capsule
+```
+
 ## Step 4 - Regenerate Certificates
 
 On the Katello server, regenerate the certificates tarball for your capsule:

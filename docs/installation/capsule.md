@@ -32,10 +32,10 @@ See the [User Guide](/docs/{{ site.version }}/user_guide/capsules/index.html) fo
 
 The same yum repositories need to be configured on the Capsule server as the main Katello server. See the installation guide for the [list of required repositories](/docs/{{ site.version }}/installation/index.html#required-repositories).
 
-Once you get the repositories configured, install the foreman-installer-katello package on the capsule
+Once you get the repositories configured, install the katello-capsule package on the capsule
 
 ```
-yum install -y foreman-installer-katello
+yum install -y katello-capsule
 ```
 
 ### Generate Certificates for the Capsules
