@@ -77,14 +77,20 @@ nvm use 0.10
 npm install -g phantomjs bower grunt-cli
 ```
 
+### Initialize Bastion Dependencies
+
+```
+cd ~/path/to/mykatello/engines/bastion_katello
+rake bastion:setup
+```
 
 ### Installing Local Packages
 
-Ensure you are in the engines/bastion directory or change to the directory.
+Ensure you are in the engines/bastion_katello directory or change to the directory.
 Install the local node modules defined within package.json:
 
 ```bash
-cd ~/path/to/mykatello/engines/bastion
+cd ~/path/to/mykatello/engines/bastion_katello
 npm install
 ```
 
