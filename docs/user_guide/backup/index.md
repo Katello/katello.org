@@ -37,6 +37,26 @@ There may be situations in which you want to see a system without its repository
 
 Please note you would not be able to restore a Katello instance from a directory where the Pulp database was skipped.
 
+
+## Option Four: Incremental backup
+
+Incremental backups can be used to only store the changes since the last backup:
+
+First take a full backup:
+```
+# katello-backup /tmp/backup/full
+```
+
+Take 1st incremental backup
+```
+# katello-backup /tmp/backup/incremntal1 --incremental /tmp/backup/full
+```
+
+Take 2nd incremental backup
+```
+# katello-backup /tmp/backup/incremntal2 --incremental /tmp/backup/incremntal1
+```
+
 ## Final check-up
 
 After a successful backup, the backup directory should have the following files:
@@ -57,6 +77,8 @@ pulp_data.tar
 Katello instance should be up and running. Next chapter is dedicated to restoring a backup.
 
 # Restore
+
+## Full restore
 
 All the following commands are executed under `root` system account.
 
@@ -79,3 +101,13 @@ Once verified, simply run:
 This command will require verification in order to proceed, as the method will destruct all databases before restoring them. Once the procedure is finished, all processes will be online, and all databases and system configuration will be reverted to the state and the time of the backup.
 
 Check log files for errors, such as `/var/log/foreman/production.log` and `/var/log/messages`.
+
+## Incremental restore
+
+Incremental backups need to be restored sequentially starting with the oldest:
+
+```
+# katello-restore /tmp/backup/full
+# katello-restore /tmp/backup/incremntal1
+# katello-restore /tmp/backup/incremntal2
+```
