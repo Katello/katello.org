@@ -34,7 +34,7 @@ Note: After installation of Katello, be sure to trust Katello's CA certificate o
 Katello may be installed onto a baremetal host or on a virtual guest.  The minimum requirements are:
 
 * Two Logical CPUs
-* 4 GB of memory (8 GB highly recommended)
+* 8 GB of memory (12 GB highly recommended)
 * The filesystem holding /var/lib/pulp needs to be large, but may vary depending on how many different Operating Systems you wish to syncronize:
   * Allocate 30 GB of space for each operating system.  Even though an operating system may not take up this much space now, this allows space for future updates that will be syncronized later.
 * The path /var/spool/squid/ is used as a temporary location for some types of repository syncs and may grow to consume 10s of GB of space before the files are migrated to /var/lib/pulp.  You may wish to put this on the same partition as /var/lib/pulp.
