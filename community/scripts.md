@@ -7,7 +7,7 @@ sidebar: sidebars/community.html
 # Scripts
 
 ## Uploading an RPM with Python
-Allows for uploading a single file to a repository.  Can be used as standalone, but provides an excellent example for uploading a package via python.
+Allows for uploading a single file to a repository.  Can be used as standalone, but provides an excellent example for uploading a package via python. Note this script only works for Katello 3.2+.
 
 Usage:
 

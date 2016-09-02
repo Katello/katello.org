@@ -3,6 +3,7 @@
 import requests
 import argparse
 import sys
+import hashlib
 
 def getorganization(foremansettings, org_name):
     request_url = foremansettings.url + '/katello/api/organizations'
@@ -71,12 +72,19 @@ def upload_package(foremansettings, repository_id, upload_id, package):
             offset += len(chunk)
             chunk = f.read(chunksize)
 
-def import_package(foremansettings, repository_id, upload_id):
+def import_package(foremansettings, repository_id, upload_id, package):
     request_url = foremansettings.url + '/katello/api/repositories/{0}/import_uploads'.format(repository_id)
+
+    size = 0
+    checksum = hashlib.sha256()
+    with open(package, 'r') as f:
+        contents = f.read()
+        size = len(contents)
+        checksum.update(contents)
 
     r = requests.put(request_url,
                       headers={'Content-Type': 'application/json'},
-                      json={'upload_ids': [upload_id]},
+                      json={'uploads': [{'id': upload_id, 'size': size, 'name': package, 'checksum': checksum.hexdigest()}]},
                       verify=foremansettings.verifyssl,
                       auth=foremansettings.auth)
 
@@ -131,7 +139,6 @@ if __name__ == '__main__':
 
     upload_package(foremansettings, repository_id, upload_id, pkgname)
 
-    import_package(foremansettings, repository_id, upload_id)
+    import_package(foremansettings, repository_id, upload_id, pkgname)
 
     delete_upload_id(foremansettings, repository_id, upload_id)
-
