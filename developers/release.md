@@ -27,78 +27,42 @@ There are a number of repositories that will need to be tagged and branched thro
 ```
 git clone https://github.com/Katello/katello
 git clone https://github.com/Katello/katello-installer.git
-git clone https://github.com/Katello/katello-misc
-git clone https://github.com/Katello/katello-agent
-git clone https://github.com/Katello/hammer-cli-katello
-```
-
-Note that some repositories contain multiple spec-files and thus packages:
-
-```
-katello
-  rubygem-katello.spec
-  deploy/katello.spec
-
-katello-misc
-  certs-tools/katello-certs-tools.spec
-  repos/katello-repos.spec
-  utils/katello-utils.spec
-
-katello-agent
-  katello-agent.spec
-
-katello-installer
-  katello-installer.spec
-
-hammer-cli-katello
-  rubygem-hammer_cli_katello.spec
+git clone https://github.com/Katello/katello-packaging
 ```
 
 ### Step 4: Get Your Branch On
 
-On the date and time you previously warned the community branching would occur on, do the following for each repository EXCEPT `hammer-cli-katelo`.
+On the date and time you previously warned the community branching would occur on, do the following for each repository.
 
-The first step is to create the X.Y branch. Take a moment to review the layout of each repository from Step 3. The idea with this step is to checkout the master branch for a given repository, ensure its set to the current upstream master, set a tag point for where you are going to branch for EACH spec file (aka package) that lives in a given repository and then create the branch. For example, the katello repository contains two packages (spec files) at `/` and `/deploy` (likewise, again, looking back at Step 3, katello-misc contains multiple packages):
+The first step is to create the X.Y branch. The idea with this step is to checkout the master branch for a given repository, ensure its set to the current upstream master.
 
 ```
 cd katello
 git fetch origin
 git checkout master
 git reset origin/master --hard
-tito tag
-cd deploy/
-tito tag
 git checkout -b KATELLO-X.Y
-```
-
-Update the releasers and tito configuration for each package (some repositories contain multiple packages, see Step 3 for list):
-
-```
-VER=X.Y sed -i "s#/katello-nightly-rhel/#/katello-$VER-rhel/#g" rel-eng/*
-git commit -a -m 'Updating rel-eng for X.Y'
 git push origin KATELLO-X.Y
 ```
 
-Now we set master to start from the version after the one we are working on releasing X.Y+1, for each package, ensuring you are in the directory the spec file exists:
+Now we set master to start from the version after the one we are working on releasing X.Y+1 For the Katello repositoriy, the gem version file needs updating to the next release. First, open:
 
 ```
 git checkout master
-```
-
-For any of the gems, update the gem version file and the spec file to X.Y.0 and make sure to reset the release to 1. For example,
-
-```
 vim lib/katello/version.rb
-vim rubygem-katello.spec
-git commit -a -m 'Version bump to X.Y.0'
 ```
+
+Now change the version in the file and save it. For example, if currently working on the release for 3.2, change the version to 3.3.0. Make a commit bumping the version and push it to master.
+
+```
+git commit -a -m 'Version bump to X.Y.0'
+git push origin master
+```
+
+For the katello-installer the `VERSION` file will need to be updated with the new version and pushed to master. For example, if releasing 3.2, you would update `VERSION` to 3.3.0 and push that to master.
+
 
 Now for all of the repositories including the gems, tag and push the starting place for the next version:
-
-```
-tito tag --use-version=X.Y+1.0
-git push origin master && git push --tags
-```
 
 For `hammer-cli-katello`:
 
