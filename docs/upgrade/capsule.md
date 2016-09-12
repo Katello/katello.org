@@ -49,7 +49,7 @@ Update packages:
 ```
 
 ```
-# yum install katello-capsule
+# yum install foreman-installer-katello
 ```
 
 ## Step 4 - Regenerate Certificates
