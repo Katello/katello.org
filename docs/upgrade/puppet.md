@@ -26,7 +26,10 @@ When planning your upgrade, keep in mind the following compatbility matrix:
 | Puppet 3 Server | Compatible                                     | Not Compatible   |
 | Puppet 4 Server | Compatible (requires conf changes on client)   | Compatible       |
 
-Detailed information about Puppet client support is available in the [Puppet documentation](https://docs.puppet.com/puppet/4.0/reference/upgrade_agent.html).
+
+When provisioning new clients that should use Puppet 4, set a parameter called 'enable-puppet4' to 'true', so the templates know which package to install and where to place the configuration.  This parameter can be placed at the host, host group, or another appropriate level of the hierarchy.
+
+Further information about Puppet client support is available in the [Puppet documentation](https://docs.puppet.com/puppet/4.0/reference/upgrade_agent.html).
 
 ### Syntax changes in Puppet 4
 
