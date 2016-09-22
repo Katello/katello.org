@@ -119,8 +119,13 @@ yum -y install foreman-release-scl
 </div>
 
 ## Installation
+After setting up the appropriate repositories, update your system:
 
-After setting up the appropriate repositories, install Katello:
+```bash
+yum -y update
+```
+
+Then install Katello:
 
 ```bash
 yum -y install katello
