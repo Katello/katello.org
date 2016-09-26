@@ -12,6 +12,34 @@ For the full release notes, see the [Changelog](https://github.com/Katello/katel
 For the full release notes, see the [Changelog](https://github.com/Katello/katello/blob/master/CHANGELOG.md).
 {% endif %}
 
+## Notable Features
+
+### Puppet 4 Support
+
+Puppet 4 is now supported by Katello. For more information, visit [the Puppet upgrade page](http://www.katello.org/docs/nightly/upgrade/puppet.html)
+
+### Content Host Subscriptions Bulk Actions
+
+Users can now attach Subscriptions to multiple Content Hosts in the UI via bulk actions. Similar functionality is also available via hammer under ```hammer host subscriptions``` subcommands.
+
+### File type repository updates
+
+In Katello 3.1, the file repository type was added for storing generic files in Katello. The 3.2 release brings with it the ability to add those file repositories to a content view. Now you can you snapshot your generic files into views and push them through environments just as you would for RPM or Puppet content. This can be used to create a production set of Python packages, Rubygems, tarballs or even Debian repositories. In addition, an API has been added for viewing file content in your Katello just as you would any other content type.
+
+### Searchable ostree repos
+
+Adds a new menu item 'Content -> OSTree Branches' that enables one to search OSTree branches across different content views/lifecycle environments.
+
+### Create/update Composite Content View by Content View names in hammer
+
+Versions of published content views can be added or removed from a composite content view via hammer. The version number and content view ID can now be used to identify the content view version to add to the composite content view. For example, to add version 1.2 of content view with ID 1 to composite view composite_cv:
+
+`hammer content-view add-version --name composite_cv --content-view-version 1.2 --content-view-version-content-view-id 1 --organization 'Default Organization'`
+
+You can remove a version in a similar way:
+
+`hammer content-view remove-version --name composite_cv --content-view-version 1.2 --content-view-version-content-view-id 1 --organization 'Default Organization'`
+
 ## Features
 
 ### Capsule
