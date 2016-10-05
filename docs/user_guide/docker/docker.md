@@ -10,7 +10,7 @@ Katello can be used to manage and deploy [Docker](https://www.docker.com/) conte
 
 ## What is Docker?
 
-Docker is a tool used to manage Linux containers. To read more about Docker, [check out the official Docker site](https://www.docker.com/whatisdocker/). Docker repositories, which contain images and tags, can be retrieved, stored, managed, and deployed from Katello.
+Docker is a tool used to manage Linux containers. To read more about Docker, [check out the official Docker site](https://www.docker.com/what-docker/). Docker repositories, which contain images and tags, can be retrieved, stored, managed, and deployed from Katello.
 
 ## How to sync a Docker repository
 
