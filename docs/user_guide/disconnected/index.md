@@ -44,7 +44,9 @@ Content is exported via either `hammer repository export` or `hammer
 content-view version export` (step 2). It is exported to the location set in
 "pulp_export_destination" in the Settings page, under the Katello tab. This
 defaults to `/var/lib/pulp/katello_export`.  Please be aware that the location
-needs to be readable and writable by the `foreman` user.
+needs to be readable and writable by the `foreman` user. SELinux permissions
+also need to be set on the export location with the type
+`httpd_sys_rw_content_t` as well as `foreman` user and group ownership.
 
 You can select to either export as a plain set of directories, or as a set of
 ISO files. The "iso_size_mb" parameter sets how large you would like each ISO
