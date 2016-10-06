@@ -21,38 +21,31 @@ Update the Katello client release packages:
      <option value="el5">Enterprise Linux 5 (CentOS, etc.)</option>
      <option value="el6">Enterprise Linux 6 (CentOS, etc.)</option>
      <option value="el7">Enterprise Linux 7 (CentOS, etc.)</option>
-     <option value="fc20">Fedora 20</option>
-     <option value="fc21">Fedora 21</option>
+     <option value="fc23">Fedora 23</option>
   </select>
 </p>
 
 <div id="el5" markdown="1">
 ```bash
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/RHEL/5Server/x86_64/katello-client-repos-latest.rpm
+yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/el5/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
 <div id="el6" style="display:none;" markdown="1">
 ```bash
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/RHEL/6Server/x86_64/katello-client-repos-latest.rpm
+yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/el6/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
 <div id="el7" style="display:none;" markdown="1">
 ```bash
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/RHEL/7Server/x86_64/katello-client-repos-latest.rpm
+yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/el7/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
-<div id="fc20" style="display:none;" markdown="1">
+<div id="fc23" style="display:none;" markdown="1">
 ```bash
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/RHEL/Fedora/20/x86_64/katello-client-repos-latest.rpm
-```
-</div>
-
-<div id="fc21" style="display:none;" markdown="1">
-```bash
-yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/RHEL/Fedora/21/x86_64/katello-client-repos-latest.rpm
+yum update -y http://fedorapeople.org/groups/katello/releases/yum/{{ site.version }}/client/fc23/x86_64/katello-client-repos-latest.rpm
 ```
 </div>
 
