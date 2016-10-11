@@ -1,20 +1,20 @@
 ---
 layout: documentation
-title: Github Workflow
+title: GitHub Workflow
 sidebar: sidebars/developer_guide.html
 ---
 
-# Github Workflow
+# GitHub Workflow
 
-We use git for version control and Github to help us manage our git repos. This document is a high-level summary about how we as an organization use Github.
+We use git for version control and GitHub to help us manage our git repos. This document is a high-level summary about how we as an organization use GitHub.
 
 ## Contributing Code
 
-Anyone can to contribute to Katello. In order to contribute, you should open a new pull request for the relevant repo on Github.
+Anyone can to contribute to Katello. In order to contribute, you should open a new pull request for the relevant repo on GitHub.
 
-To get started, first sign up for a Github account if you don't already have one. Then visit the repository you'd like to work on (e.g. https://github.com/Katello/katello) and fork it to your account.
+To get started, first sign up for a GitHub account if you don't already have one. Then visit the repository you'd like to work on (e.g. https://github.com/Katello/katello) and fork it to your account.
 
-Be sure to branch locally in git and then once your changes are made, commit your changes and push back to your Github repo. Once you've pushed, open a new pull request either through the web interface or by using [hub](https://github.com/github/hub).
+Be sure to branch locally in git and then once your changes are made, commit your changes and push back to your GitHub repo. Once you've pushed, open a new pull request either through the web interface or by using [hub](https://github.com/github/hub).
 
 By default, we develop new code in the master branch. If we are working on large features, we sometimes create separate branches but by default code will most likely be merged to master.
 
