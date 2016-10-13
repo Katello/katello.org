@@ -1,40 +1,49 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
   <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
     <a class="logo" href="{{ site.baseurl }}/">
       <img src="{{ site.baseurl }}/assets/images/default-logo.png" alt="Katello"/>
       <span>Katello</span>
     </a>
   </div>
-  <div class="container">
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Documentation<i class="caret"></i></a>
-        <ul class="dropdown-menu">
-            {% for version in site.versions reversed %}
-              <li>
-                <a href="/docs/{{ version }}/" {% if site.latest == version %}style="font-weight: bold;"{% endif %}>
-                  {% if site.version_aliases[version] %}
-                    {{ site.version_aliases[version] }}
-                  {% else %}
-                    {{ version }}
-                  {% endif %}
-                </a>
-              </li>
-            {% endfor %}
-        </ul>
-      </li>
-      <li>
-        <a href="{{ site.baseurl }}/developers/index.html">Developers</a>
-      </li>
-      <li>
-        <a href="{{ site.baseurl }}/community/index.html">Community</a>
-      </li>
-      <li>
-        <a href="{{ site.baseurl }}/media/index.html">Media</a>
-      </li>
-      <li>
-        <a href="{{ site.baseurl }}/troubleshooting/index.html">Troubleshooting</a>
-      </li>
-    </ul>
+    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Documentation<i class="caret"></i></a>
+          <ul class="dropdown-menu">
+              {% for version in site.versions reversed %}
+                <li>
+                  <a href="/docs/{{ version }}/" {% if site.latest == version %}style="font-weight: bold;"{% endif %}>
+                    {% if site.version_aliases[version] %}
+                      {{ site.version_aliases[version] }}
+                    {% else %}
+                      {{ version }}
+                    {% endif %}
+                  </a>
+                </li>
+              {% endfor %}
+          </ul>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/developers/index.html">Developers</a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/community/index.html">Community</a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/media/index.html">Media</a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/troubleshooting/index.html">Troubleshooting</a>
+        </li>
+      </ul>
+
+    </div>
   </div>
 </nav>

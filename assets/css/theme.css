@@ -300,3 +300,32 @@ iframe {
   border: none;
   height: 800px;
 }
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 1.8em !important;
+    }
+  
+    h2.page-title {
+        font-size: 1.2em !important;
+    }
+  
+    .context-nav {
+      float: none;
+    }
+  
+    .section {
+      margin-left: 0 !important;
+    }
+  
+    .get-started {
+      padding: 5px 9px;
+      float: none;
+    }
+  
+    .foreman-katello-logos {
+      display: none;
+    }
+    
+}
