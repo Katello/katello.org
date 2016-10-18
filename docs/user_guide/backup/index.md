@@ -47,12 +47,12 @@ First take a full backup:
 # katello-backup /tmp/backup/full
 ```
 
-Take 1st incremental backup
+Take 1st incremental backup:
 ```
 # katello-backup /tmp/backup/incremntal1 --incremental /tmp/backup/full
 ```
 
-Take 2nd incremental backup
+Take 2nd incremental backup:
 ```
 # katello-backup /tmp/backup/incremntal2 --incremental /tmp/backup/incremntal1
 ```
