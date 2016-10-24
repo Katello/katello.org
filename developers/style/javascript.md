@@ -172,5 +172,5 @@ It should be rare to have to manually manipulate the DOM but follow these guidel
 ## Checking Your Code
 
 We use [JSHint](http://www.jshint.com/) (a community driven fork of JSLint) to maintain the quality
-of the Javascript code in Katello. For more information about how to run JSHint, see the [Linting
-section of our Bastion guide](/developers/bastion/index.html#linting).
+of the Javascript code in Katello. For more information about how to run JSHint, see the [developing
+section of Bastion](https://github.com/Katello/bastion#developing-bastion).
