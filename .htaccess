@@ -1,7 +1,11 @@
 # Redirects for migration to theforeman.org
 Redirect /media/index.html https://theforeman.org/media.html
+
 Redirect /developers/bastion/ https://github.com/Katello/bastion#bastion-angularjs-based-foreman-ui-engine
 Redirect /developers/bastion/add_custom_module.html https://github.com/Katello/bastion#plugins
 Redirect /developers/bastion/add_entity.html https://github.com/Katello/bastion#basics-of-adding-a-new-entity
 Redirect /developers/bastion/dependencies.html https://github.com/Katello/bastion#dependencies
 Redirect /developers/bastion/i18n.html https://github.com/Katello/bastion#i18n
+
+Redirect /community/index.html https://theforeman.org/support.html
+Redirect /community/index.html#contribute https://theforeman.org/contribute.html
