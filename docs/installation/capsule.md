@@ -28,9 +28,13 @@ See the [User Guide](/docs/{{ site.version }}/user_guide/capsules/index.html) fo
 
 ## Installation
 
-### Install needed packages:
+### Setup Repositories:
 
-The same yum repositories need to be configured on the Capsule server as the main Katello server. See the installation guide for the [list of required repositories](/docs/{{ site.version }}/installation/index.html#required-repositories).
+Setup the necessary repositories on your capsule
+
+{% include repositories.html %}
+
+### Install needed packages:
 
 Once you get the repositories configured, install the katello-capsule package on the capsule
 
