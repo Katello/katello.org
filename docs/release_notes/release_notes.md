@@ -12,6 +12,12 @@ For the full release notes, see the [Changelog](https://github.com/Katello/katel
 For the full release notes, see the [Changelog](https://github.com/Katello/katello/blob/master/CHANGELOG.md).
 {% endif %}
 
+## Known Issues
+
+### Capsule install fails on first run
+
+In 3.2.0, capsule installs currently fail with a "Connection Refused" error. This is a [known bug](http://projects.theforeman.org/issues/16653) and we are doing our best to fix it. Luckily, there is an easy workaround - run the capsule installer a second time and you shouldn't see this error again.
+
 ## Notable Features
 
 ### Puppet 4 Support

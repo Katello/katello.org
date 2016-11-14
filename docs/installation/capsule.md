@@ -83,3 +83,7 @@ Installing             Done                     [100%] [.....................]
 Use the provide installation command from `capsule-certs-generate`, and tailor for your own purposes as needed.  The defaults will give you a Capsule ready for Content-related services.
 
 See the [User Guide](/docs/{{ site.version }}/user_guide/capsules/index.html) to learn about setting up provisioning related services, as well as the [Foreman manual](http://theforeman.org/manuals/latest/index.html#4.3SmartProxies)
+
+### IMPORTANT NOTE FOR 3.2.0 CAPSULE INSTALLS
+
+In 3.2.0, capsule installs currently fail with a "Connection Refused" error. This is a [known bug](http://projects.theforeman.org/issues/16653) and we are doing our best to fix it. Luckily, there is an easy workaround - run the capsule installer a second time and you shouldn't see this error again.
