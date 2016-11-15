@@ -9,3 +9,7 @@ Redirect /developers/bastion/i18n.html https://github.com/Katello/bastion#i18n
 
 Redirect /community/index.html https://theforeman.org/support.html
 Redirect /community/index.html#contribute https://theforeman.org/contribute.html
+
+Redirect /troubleshooting/index.html https://theforeman.org/plugins/katello/troubleshooting/index.html
+Redirect /troubleshooting/faq.html https://theforeman.org/plugins/katello/troubleshooting/index.html#frequently-asked-questions
+Redirect /troubleshooting/debug_certificate.html https://theforeman.org/plugins/katello/troubleshooting/index.html#debug-certificate
