@@ -13,3 +13,34 @@ Redirect /community/index.html#contribute https://theforeman.org/contribute.html
 Redirect /troubleshooting/index.html https://theforeman.org/plugins/katello/troubleshooting/index.html
 Redirect /troubleshooting/faq.html https://theforeman.org/plugins/katello/troubleshooting/index.html#frequently-asked-questions
 Redirect /troubleshooting/debug_certificate.html https://theforeman.org/plugins/katello/troubleshooting/index.html#debug-certificate
+
+Redirect /docs/3.2/user_guide/red_hat_content/content.html https://theforeman.org/plugins/katello/3.2/red_hat_content/index.html
+Redirect /docs/3.1/user_guide/red_hat_content/content.html https://theforeman.org/plugins/katello/3.1/red_hat_content/index.html
+Redirect /docs/3.0/user_guide/red_hat_content/content.html https://theforeman.org/plugins/katello/3.0/red_hat_content/index.html
+Redirect /docs/2.4/user_guide/red_hat_content/content.html https://theforeman.org/plugins/katello/2.4/red_hat_content/index.html
+
+Redirect /docs/3.2/user_guide/content_views/content_views.html https://theforeman.org/plugins/katello/3.2/content_views/index.html
+Redirect /docs/3.1/user_guide/content_views/content_views.html https://theforeman.org/plugins/katello/3.1/content_views/index.html
+Redirect /docs/3.0/user_guide/content_views/content_views.html https://theforeman.org/plugins/katello/3.0/content_views/index.html
+Redirect /docs/2.4/user_guide/content_views/content_views.html https://theforeman.org/plugins/katello/2.4/content_views/index.html
+
+Redirect /docs/3.2/user_guide/docker/docker.html https://theforeman.org/plugins/katello/3.2/docker/index.html
+Redirect /docs/3.1/user_guide/docker/docker.html https://theforeman.org/plugins/katello/3.1/docker/index.html
+Redirect /docs/3.0/user_guide/docker/docker.html https://theforeman.org/plugins/katello/3.0/docker/index.html
+Redirect /docs/2.4/user_guide/docker/docker.html https://theforeman.org/plugins/katello/2.4/docker/index.html
+
+Redirect /docs/3.2/user_guide/lifecycle_environments/environment.html https://theforeman.org/plugins/katello/3.2/lifecycle_environments/index.html
+Redirect /docs/3.1/user_guide/lifecycle_environments/environment.html https://theforeman.org/plugins/katello/3.1/lifecycle_environments/index.html
+Redirect /docs/3.0/user_guide/lifecycle_environments/environment.html https://theforeman.org/plugins/katello/3.0/lifecycle_environments/index.html
+Redirect /docs/2.4/user_guide/lifecycle_environments/environment.html https://theforeman.org/plugins/katello/2.4/lifecycle_environments/index.html
+
+Redirect /docs/3.2/user_guide/content/content.html https://theforeman.org/plugins/katello/3.2/content/index.html
+Redirect /docs/3.1/user_guide/content/content.html https://theforeman.org/plugins/katello/3.1/content/index.html
+Redirect /docs/3.0/user_guide/content/content.html https://theforeman.org/plugins/katello/3.0/content/index.html
+Redirect /docs/2.4/user_guide/content/content.html https://theforeman.org/plugins/katello/2.4/content/index.html
+
+RedirectMatch 301 /docs/3.2/(.*) https://theforeman.org/plugins/katello/3.2/$1
+RedirectMatch 301 /docs/3.1/(.*) https://theforeman.org/plugins/katello/3.1/$1
+RedirectMatch 301 /docs/3.0/(.*) https://theforeman.org/plugins/katello/3.0/$1
+RedirectMatch 301 /docs/2.4/(.*) https://theforeman.org/plugins/katello/2.4/$1
+RedirectMatch 301 /docs/nightly/(.*) https://theforeman.org/plugins/katello/nightly/$1
