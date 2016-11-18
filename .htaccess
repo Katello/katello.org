@@ -10,9 +10,9 @@ Redirect /developers/bastion/i18n.html https://github.com/Katello/bastion#i18n
 Redirect /community/index.html https://theforeman.org/support.html
 Redirect /community/index.html#contribute https://theforeman.org/contribute.html
 
-Redirect /troubleshooting/index.html https://theforeman.org/plugins/katello/troubleshooting/index.html
-Redirect /troubleshooting/faq.html https://theforeman.org/plugins/katello/troubleshooting/index.html#frequently-asked-questions
-Redirect /troubleshooting/debug_certificate.html https://theforeman.org/plugins/katello/troubleshooting/index.html#debug-certificate
+Redirect /troubleshooting/index.html https://theforeman.org/plugins/katello/nightly/troubleshooting/index.html
+Redirect /troubleshooting/faq.html https://theforeman.org/plugins/katello/nightly/troubleshooting/index.html#frequently-asked-questions
+Redirect /troubleshooting/debug_certificate.html https://theforeman.org/plugins/katello/nightly/troubleshooting/index.html#debug-certificate
 
 Redirect /docs/3.2/user_guide/red_hat_content/content.html https://theforeman.org/plugins/katello/3.2/red_hat_content/index.html
 Redirect /docs/3.1/user_guide/red_hat_content/content.html https://theforeman.org/plugins/katello/3.1/red_hat_content/index.html
