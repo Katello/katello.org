@@ -36,9 +36,7 @@ class Deployer
     self.version_aliases = find_version_aliases
     puts "Versions found: #{versions.to_s}"
     puts "Version aliases found: #{version_aliases.inspect}"
-    clone_versions(remote)
     build_base
-    build_versions(@versions, remote)
   end
 
   def make_builddir
@@ -84,7 +82,6 @@ class Deployer
       results = result.collect do |version|
         version.split('-').last
       end
-      results.unshift("nightly")
     end
   end
 
