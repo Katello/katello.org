@@ -44,3 +44,5 @@ RedirectMatch 301 /docs/3.1/(.*) https://theforeman.org/plugins/katello/3.1/$1
 RedirectMatch 301 /docs/3.0/(.*) https://theforeman.org/plugins/katello/3.0/$1
 RedirectMatch 301 /docs/2.4/(.*) https://theforeman.org/plugins/katello/2.4/$1
 RedirectMatch 301 /docs/nightly/(.*) https://theforeman.org/plugins/katello/nightly/$1
+
+RedirectMatch 301 /developers/(.*) https://theforeman.org/plugins/katello/developers.html
