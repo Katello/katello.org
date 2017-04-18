@@ -5,6 +5,7 @@ highlighter: pygments
 latest: 3.2
 
 foreman_version: nightly
+version: nightly
 
 kramdown:
   auto_id: true
