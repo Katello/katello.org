@@ -4,7 +4,7 @@ markdown: KramdownPygments
 highlighter: pygments
 latest: 3.2
 
-foreman_version: nightly
+foreman_version: 1.12
 
 kramdown:
   auto_id: true
